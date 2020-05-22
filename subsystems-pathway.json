@@ -1,15 +1,17 @@
 {
-	"title": "Subsystems, Components, and Internals",
-	"icon": "fa-openshift",
-	"courses": [{
-			"external_link": "https://learn.openshift.com/subsystems/container-internals-lab-2-0-part-1",
+	"title": "OpenShift::Subsystems, Components, and Internals",
+	"icon": "fa-kubernetes",
+	"description": "Откройте для себя, OpenShift::Subsystems, Components, and Internals.",
+	"courses": [
+		{
 			"course_id": "container-internals-lab-2-0-part-1",
-			"title": "Linux Container Internals 2.0 - Lab 1: Introduction to Containers"
+			"title": "Linux Container Internals 2.0 - Lab 1: Введение в контейнеры.",
+			"description": "В этом сценарии, вы получите общее представление о движущихся частях, составляющих типичную контейнерную архитектуру. ."
 		},
 		{
-			"external_link": "https://learn.openshift.com/subsystems/container-internals-lab-2-0-part-2",
 			"course_id": "container-internals-lab-2-0-part-2",
-			"title": "Linux Container Internals 2.0 - Lab 2: Container Images"
+			"title": "Linux Container Internals 2.0 - Lab 2: Образы контейнеров. Container Images",
+			"description": "В этом сценарии, исследуете как образы контейнеров создаются, маркируются, организуются и используются ."
 		},
 		{
 			"external_link": "https://learn.openshift.com/subsystems/container-internals-lab-2-0-part-3",
