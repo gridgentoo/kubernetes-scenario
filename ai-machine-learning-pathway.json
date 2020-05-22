@@ -44,9 +44,9 @@
       "description": "В этом сценарии, Thoth выдает рекомендации, ориентированные на конкретную конфигурацию вашего оборудования, которую вы используете внутри кластера."
     },
     {
-      "external_link": "https://learn.openshift.com/ai-machine-learning/thoth-s2i-provenance/",
       "course_id": "thoth-s2i-provenance",
-      "title": "Thoth S2I build with Provenance check on OpenShift"
+      "title": "Thoth рекомендации, для построения S2I с Provenance check в OpenShift",
+      "description": "В этом сценарии, Зачем использовать проверку Thoth provenance в процессе сборки s2i?."
     },
     {
       "external_link": "https://learn.openshift.com/ai-machine-learning/thoth-cli/",
