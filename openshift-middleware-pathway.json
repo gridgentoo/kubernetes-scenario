@@ -82,9 +82,12 @@
         "course_id": "pipelines",
         "title": "Начало работы с OpenShift Pipelines",
         "description": "Tekton - это фреймворк открытым исходным кодом для CI/CD, OpenShift Pipelines - это облачное решение (CI/CD) с использованием Tekton."
-      }
-
-      
+      },
+      {
+        "course_id": "serverless",
+        "title": "Начало работы с OpenShift Serverless",
+        "description": "Serverless - это модель, которая позволяет создавать и запускать приложения, поэтому при возникновении события запуска приложение автоматически масштабируется."
+      }      
       
     ]
   }
