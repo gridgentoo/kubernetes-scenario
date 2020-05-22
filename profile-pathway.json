@@ -64,7 +64,12 @@
         "title": "OpenShift::Operators в OpenShift",
         "description": "Изучите методы построения, Building Operators в OpenShift.",
         "id": "operatorframework"
-      }
+      },
+      {
+        "title": "OpenShift::AI and Machine Learning",
+        "description": "Изучите методы построения, AI and Machine Learning в OpenShift.",
+        "id": "ai-machine-learning"
+      }      
       
     ],
     "scenarios": []
