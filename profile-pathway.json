@@ -54,6 +54,11 @@
         "title": "Kubernetes Машинное обучение",
         "description": "Изучите методы построения, моделирования и обслуживания решений для машинного обучения в Kubernetes.",
         "id": "kubernetes-ml"
+      },
+      {
+        "title": "OpenShift::Subsystems, Components, and Internals",
+        "description": "Изучите методы построения, Подсистемы, компоненты и внутренние компоненты в OpenShift.",
+        "id": "subsystems"
       }
       
     ],

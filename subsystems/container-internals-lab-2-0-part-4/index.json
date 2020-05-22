@@ -1,0 +1,50 @@
+{
+    "icon": "fa-openshift",
+    "title": "Linux Container Internals 2.0 - Lab 4: Container Host",
+    "description": "",
+    "pathwayTitle": "OpenShift",
+    "difficulty": "Advanced",
+    "time": "20-30 minutes",
+    "backend": {
+      "trainingid": "openshift-3-11",
+      "imageid": "openshift-3-11",
+        "port": 8443
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+	"terminals": [{"name": "T1", "target": "host01"}, {"name": "T2", "target": "host01"}],
+        "hideintro": false,
+        "hidefinish": false
+    },
+    "details": {
+        "steps": [{
+            "title": "Container Engines & The Linux Kernel",
+            "text": "01-engines-kernel.md"
+        }, {
+            "title": "Step by step creation of a container",
+            "text": "02-create-container.md"
+        }, {
+            "title": "SELinux & sVirt: Dynamically generated contexts to protect your containers",
+            "text": "03-selinux-svirt.md"
+        }, {
+            "title": "Cgroups: Dynamically created with container instantiation",
+            "text": "04-cgroups.md"
+        }, {
+            "title": "SECCOMP: Limiting how a containerized process can interact with the kernel",
+            "text": "05-seccomp.md"
+        }],
+        "intro": {
+            "courseData": "background.sh",
+            "code": "foreground.sh",
+            "text": "intro.md"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+          "host01": [{"file": "route.json", "target": "/root/"}]
+        }
+    }
+}
