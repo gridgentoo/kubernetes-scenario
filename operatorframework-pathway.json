@@ -14,19 +14,19 @@
       "description": "В этом сценарии, Оператор etcd управляет кластерами etcd, развернутыми в Kubernetes, и автоматизирует задачи, связанные с работой кластера etcd."
     },
     {
-      "external_link": "https://learn.openshift.com/operatorframework/go-operator-podset/",
       "course_id": "go-operator-podset",
-      "title": "Operator SDK with Go"
+      "title": "Operator SDK with Go",
+      "description": "В этом сценарии, Операторы упрощают управление сложными приложениями с отслеживанием состояния поверх Kubernetes."
     },
     {
-      "external_link": "https://learn.openshift.com/operatorframework/operator-lifecycle-manager/",
       "course_id": "operator-lifecycle-manager",
-      "title": "Operator Lifecycle Manager"
+      "title": "Operator Lifecycle Manager",
+      "description": "В этом сценарии, Operator Lifecycle Manager является компонентом Operator Framework."
     },
-   {
-      "external_link": "https://learn.openshift.com/operatorframework/helm-operator/",
+    {
       "course_id": "helm-operator",
-      "title": "Operator SDK with Helm"
+      "title": "Operator SDK with Helm",
+      "description": "В этом сценарии, мы создадим CockroachDB Operator из существующей CockroachDB Helm Chart."
     }
   ]
 }
