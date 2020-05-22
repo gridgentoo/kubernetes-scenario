@@ -1,0 +1,27 @@
+{
+  "title": "Ansible Оператор и Оператор SDK",
+  "icon": "fa-kubernetes",
+  "description": "(Discover)Откройте для себя Ansible - это инструмент, управления конфигурацией и развертывания приложений. .",
+  "courses": [
+    {
+      "course_id": "ansible-refresher",
+      "title": "Ansible Refresher.",
+      "description": "Начните здесь, чтобы узнать, использовать Ansible для управления конфигурацией и развертывания приложений."
+    },
+    {
+      "course_id": "ansible-k8s-modules",
+      "title": "Ansible Kubernetes модули.",
+      "description": "Начните здесь, чтобы узнать, использовать Ansible Kubernetes модули."
+    },
+    {
+      "course_id": "ansible-operator-overview",
+      "title": "Краткий обзор Ansible Operator.",
+      "description": "Начните здесь, чтобы узнать, использовать Ansible Operator."
+    },
+    {
+      "course_id": "ansible-mcrouter-operator",
+      "title": "Mcrouter Operator работает на Ansible Operator.",
+      "description": "Начните здесь, чтобы узнать, использовать Mcrouter Operator."
+    }
+  ]
+}

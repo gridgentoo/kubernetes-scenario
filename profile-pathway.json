@@ -74,7 +74,12 @@
         "title": "OpenShift::Adding Persistence",
         "description": "Изучите методы построения, Persistence хранилище на основе OpenShift Container Storage в OpenShift.",
         "id": "persistence"
-      }   
+      },
+      {
+        "title": "Ansible Operator and the Operator SDK",
+        "description": "Изучите, как использовании Ansible для управления жизненным циклом приложений в Kubernetes.",
+        "id": "ansibleop"
+      }    
       
     ],
     "scenarios": []
