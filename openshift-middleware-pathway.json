@@ -1,0 +1,58 @@
+{
+  "title": "Kubernetes Приложения",
+  "icon": "fa-kubernetes",
+  "description": "(Discover)Откройте для себя различные приложения, которые вы можете легко запустить on Kubernetes.",
+  "courses": [
+      {
+        "course_id": "middleware-quarkus",
+        "title": "Разработка с Quarkus",
+        "description": "Quarkus - это собственный Java-стек Kubernetes, созданный специально для GraalVM."
+      },
+      {
+        "course_id": "middleware-vertx",
+        "title": "Eclipse Vert.x разработка",
+        "description": "В этом сценарии вы узнаете, как начать разработку приложения Java EE 8 с использованием JBoss Enterprise Application Platform в OpenShift."
+      },
+      {
+        "course_id": "middleware-spring-boot",
+        "title": "Spring и Spring Boot разработка",
+        "description": "Запустим Spring и Spring Boot в Kubernetes."
+      },
+      {
+        "course_id": "middleware-javaee8",
+        "title": "Начало работы с JBoss EAP в OpenShift",
+        "description": "В этом сценарии вы узнаете, как начать разработку приложения Java EE 8 с использованием JBoss Enterprise Application Platform в OpenShift."
+      },
+      {
+        "course_id": "middleware-kogito",
+        "title": "Разработка с Kogito",
+        "description": "Внедрение архитектурного стиля микросервисов. Kogito, Business Automation охватывает область применения бизнес-процессов"
+      },
+      {
+        "course_id": "middleware-camelk",
+        "title": "Начало работы с Camel K",
+        "description": "Camel K - это облегченная интегрированная среда, которая изначально работает в Kubernetes и специально разработана для микросервисных архитектур."
+      },
+      {
+        "course_id": "amq-getting-started-broker",
+        "title": "Обмен сообщениями приложений с Openshift",
+        "description": "AMQ Broker - это многопротокольный брокер сообщений на Java. Он построен на эффективном асинхронном ядре."
+      },
+      {
+        "course_id": "rhoar-getting-started-thorntail",
+        "title": "Thorntail development",
+        "description": "Thorntail предлагает инновационный подход к упаковке и запуску приложений Java EE, упаковывая их с достаточным количеством времени выполнения сервера Java EE."
+      },
+      {
+        "course_id": "rhoar-getting-started-rhdg",
+        "title": "Начало работы с Data Grid в OpenShift",
+        "description": "Red Hat Data Grid (RHDG) - это хранилище данных в памяти с открытым исходным кодом, которое: Хранит данные в памяти (RAM), обеспечивая быстрое время отклика с низкой задержкой и очень высокую пропускную способность.."
+      },
+      {
+        "course_id": "rhoar-getting-started-nodejs",
+        "title": "Начало работы с Node.js в OpenShift",
+        "description": "В сценарии, вы возьмете существующее примерное приложение Node.js и измените его для решения проблем микросервиса."
+      },
+
+    ]
+  }

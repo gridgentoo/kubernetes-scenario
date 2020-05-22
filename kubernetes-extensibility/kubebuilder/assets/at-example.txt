@@ -1,0 +1,3 @@
+echo "Something from the past told me to do this now: $(date --utc +%FT%TZ)" > "/tmp/at-example-result.txt"
+ls -l >> "/tmp/at-example-result.txt"
+echo "I'm done with this command list." >> "/tmp/at-example-result.txt"

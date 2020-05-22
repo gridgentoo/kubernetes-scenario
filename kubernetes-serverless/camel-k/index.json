@@ -1,0 +1,66 @@
+{
+  "private": true,
+  "title": "Camel K (coming soon)",
+  "description": "Discovering how Camel K runs on Kubernetes.",
+  "difficulty":	"Introduction",
+  "time":	"10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Container Registry",
+        "text": "step2-registry.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Camel K",
+        "text": "step3-camel-k.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Hello World from Camel K",
+        "text": "step4-hello.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "TODO",
+        "text": "step5.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Removing Camel K, Knative, Istio and your Functions",
+        "text": "step10.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "master": [
+        {"file": "*.yaml", "target": "~/"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster2-running"
+  }
+}

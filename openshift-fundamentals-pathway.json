@@ -1,0 +1,67 @@
+{
+    "title": "Kubernetes Приложения",
+    "icon": "fa-kubernetes",
+    "description": "(Discover)Откройте для себя различные приложения, которые вы можете легко запустить on Kubernetes.",
+    "courses": [
+      {
+        "course_id": "getting-started",
+        "title": "Начало работы с OpenShift для разработчиков.",
+        "description": "Начните здесь, чтобы узнать, как развертывать OpenShift."
+      },
+      {
+        "course_id": "cluster-access",
+        "title": "Вход в кластер OpenShift.",
+        "description": "Изучите, как войти в OpenShift с помощью веб-консоли и с помощью инструмента командной строки oc."
+      },
+      {
+        "course_id": "developing-with-odo",
+        "title": "Развертывание приложений с odo",
+        "description": "Узнайте, как использовать инструмент командной строки OpenShift Do (odo) для создания и развертывания приложений в OpenShift."
+      },
+      {
+        "course_id": "deploying-images",
+        "title": "Развертывание приложений из Images.",
+        "description": "Изучите, как развернуть приложение в OpenShift с помощью веб-консоли и с помощью инструмента командной строки oc."
+      },
+      {
+        "course_id": "deploying-python",
+        "title": "Развертывание приложений из исходного кода.",
+        "description": "Изучите, как развернуть приложение из исходного кода, содержащегося в Git-репозитории, используя конструктор Source-to-Image."
+      },
+      {
+        "course_id": "resource-objects",
+        "title": "Использование CLI для управления объектами Resource Objects.",
+        "description": "Изучите, как определить, какие объекты ресурсов были созданы, связанные с вашим приложением."
+      },
+      {
+        "course_id": "port-forwarding",
+        "title": "Подключение к базе данных с помощью переадресации портов - Port Forwarding.",
+        "description": "Изучите, как получить доступ к базе данных с помощью интерактивной оболочки, а также как использовать переадресацию портов."
+      },
+      {
+        "course_id": "transferring-files",
+        "title": "Передача файлов в контейнер, и из контейнеров.",
+        "description": "Изучите, как передавать файлы между вашей local machine и работающим контейнером."
+      },
+      {
+        "course_id": "federated-clusters",
+        "title": "Введение в федеративные кластеры с Kubefed.",
+        "description": "Изучите, как развернуть федерации на основе Kubernetes KubeFed."
+      },
+      {
+        "course_id": "gitops-introduction",
+        "title": "Введение в GitOps с OpenShift.",
+        "description": "В этом сценарии мы собираемся изучить GitOps."
+      },
+      {
+        "course_id": "gitops-multicluster",
+        "title": "Мульти-кластер GitOps с OpenShift.",
+        "description": "Изучите, как развернуть приложение на несколько кластеров, и выполнение канареечного развертывание -canary deployment, с помощью GitOps."
+      },
+      {
+        "course_id": "deploy-prometheus-grafana",
+        "title": "Как настроить  Prometheus и Grafana на OpenShift.",
+        "description": "Изучите, как использовать Prometheus для хранения метрик из приложения, и использовать Grafana для визуализации собранных метрик."
+      }
+    ]
+  }

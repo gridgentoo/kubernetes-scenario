@@ -1,0 +1,66 @@
+{
+  "private": true,
+  "title": "Riff",
+  "description": "Riff is for functions. Discovering how Riff runs on Kubernetes using Knative and Istio.",
+  "difficulty":	"Introduction",
+  "time":	"20 minutes",  
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Riff",
+        "text": "step2-init.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Initialize Riff",
+        "text": "step3-install.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Create Function",
+        "text": "step4-create.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Invoke Function",
+        "text": "step5-invoke.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Delete Function",
+        "text": "step6-delete.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+  },
+  "finish": {
+      "text": "finish.md"
+  },
+  "assets": {
+      "host01": [
+        {"file": "*.yaml", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

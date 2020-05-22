@@ -1,0 +1,17 @@
+{
+    "title": "Kubernetes Machine Learning",
+    "icon": "fa-kubernetes",
+    "description": "Learn techniques for building, modeling and serving Machine Learning solutions on Kubernetes.",
+    "courses": [
+      {
+        "course_id": "kubeflow-playground",
+        "title": "Kubeflow Playground",
+        "description": "Discover Kubeflow on Kubernetes."
+      },
+      {
+        "course_id": "kubeflow-installation",
+        "title": "Kubeflow Raw Installation",
+        "description": "Discover How to Install Kubeflow on Kubernetes."
+      }
+    ]
+  }

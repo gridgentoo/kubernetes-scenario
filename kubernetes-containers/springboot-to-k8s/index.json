@@ -1,0 +1,80 @@
+{
+  "pathwayTitle": "Spring Boot to Kubernetes",
+  "title": "Spring Boot to Kubernetes",
+  "description": "From a blank slate to a Spring Boot app running on Kubernetes.",
+  "difficulty":	"Beginner",
+  "time":	"15 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Container Registry",
+        "text": "step2-registry.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Generate Spring Boot Source",
+        "text": "step3-create-app.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Add Logic",
+        "text": "step4-edit-code.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Define Container",
+        "text": "step5-dockerfile.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Build, Tag and Push",
+        "text": "step6-push-container.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Deploy Application",
+        "text": "step7-deploy.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Verify Application",
+        "text": "step8-run.md"
+      }
+    ],
+    "intro": {
+      "title": "Spring Boot to Kubernetes",
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "Dockerfile", "target": "/root"},
+        {"file": "*.yaml", "target": "/root"},
+        {"file": "*.java", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Hello App", "port": 32500}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

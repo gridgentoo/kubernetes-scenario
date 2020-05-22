@@ -1,0 +1,61 @@
+{
+  "private": "true",
+  "title": "Knative",
+  "description": "Kubernetes-based platform to build, deploy, and manage modern serverless workloads.",
+  "difficulty":	"Introduction",
+  "time":	"20 minutes",  
+  "details": {
+    "steps": [
+      {
+        "title": "Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Knative",
+        "text": "step2-install.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Deploy Application",
+        "text": "step3-deploy.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Invoke Application",
+        "text": "step4-invoke.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Delete Application",
+        "text": "step5-delete.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+  },
+  "finish": {
+      "text": "finish.md"
+  },
+  "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "title": "Kubernetes Приложения",
+    "icon": "fa-kubernetes",
+    "description": "(Discover)Откройте для себя различные приложения, которые вы можете легко запустить on Kubernetes.",
+    "courses": [
+        {
+          "course_id": "getting-started",
+          "title": "Getting Started with Quarkus",
+          "description": "Quarkus - это собственный Java-стек Kubernetes, созданный специально для GraalVM."
+        },
+        {
+          "course_id": "middleware-javaee8",
+          "title": "Начало работы с JBoss EAP в OpenShift",
+          "description": "В этом сценарии вы узнаете, как начать разработку приложения Java EE 8 с использованием JBoss Enterprise Application Platform в OpenShift."
+        },
+        {
+          "course_id": "middleware-vertx",
+          "title": "Eclipse Vert.x development",
+          "description": "В этом сценарии вы узнаете, как начать разработку приложения Java EE 8 с использованием JBoss Enterprise Application Platform в OpenShift."
+        },
+        {
+          "course_id": "middleware-spring-boot",
+          "title": "Spring and Spring Boot development",
+          "description": "Запустим Spring и Spring Boot в Kubernetes."
+        }
+      ]
+    }

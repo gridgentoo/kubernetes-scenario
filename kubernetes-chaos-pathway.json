@@ -1,0 +1,24 @@
+{
+    "title": "Kubernetes Chaos",
+    "icon": "fa-kubernetes",
+    "description": "Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system’s capability to withstand turbulent conditions in production.",
+    "courses": [
+      {
+        "course_id": "kubeinvaders",
+        "title": "KubeInvaders",
+        "description": "Destroy Pods as if they were aliens."
+      },
+      {
+        "course_id": "kube-monkey",
+        "title": "Kube Monkey",
+        "description": "Randomly delete Kubernetes Pods to encourage development of failure-resilient services."
+      },
+      {
+        "course_id": "chaoskube",
+        "title": "Chaoskube",
+        "description": "Periodically kills random pods in your Kubernetes cluster."
+      }
+
+    ]
+  }
+  

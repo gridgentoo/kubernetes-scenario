@@ -1,0 +1,66 @@
+{
+  "title": "Develop an Operator with Kubebuilder",
+  "description": "Learn how to control custom resources with Kubebuilder based Operators.",
+  "difficulty":	"Intermediate",
+  "time":	"25 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install KUDO",
+        "text": "step2-install.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Create Operator from Scratch",
+        "text": "step3-create.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Package Operator",
+        "text": "step4-package.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Initialize KUDO",
+        "text": "step5-initialize.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Host Your Operator in Local Repo",
+        "text": "step6-host-operator.md",
+        "code": "clear.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/dev",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

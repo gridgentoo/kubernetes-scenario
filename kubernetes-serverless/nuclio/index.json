@@ -1,0 +1,66 @@
+{
+  "title": "Nuclio",
+  "description": "Discovering how Nuclio runs on Kubernetes.",
+  "difficulty":	"Introduction",
+  "time":	"20 minutes",  
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Container Registry",
+        "text": "step2-registry.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Nuclio",
+        "text": "step3-nuclio.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Nuclio CLI",
+        "text": "step4-nuctl.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Nuclio Portal",
+        "text": "step5-portal.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Deploy a Function",
+        "text": "step6-deploy.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*.yaml", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
+      {"name": "Nuclio Dashboard", "port": 31000}
+    ]
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

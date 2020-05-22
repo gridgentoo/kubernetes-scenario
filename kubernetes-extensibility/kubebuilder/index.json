@@ -1,0 +1,96 @@
+{
+  "title": "Develop an Operator with Kubebuilder",
+  "description": "Learn how to control custom resources with Kubebuilder based Operators.",
+  "difficulty":	"Intermediate",
+  "time":	"30 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "The at Command",
+        "text": "step2-at.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Kubebuilder",
+        "text": "step3-install.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Initialize Kuberbuilder Project",
+        "text": "step4-init.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Add API",
+        "text": "step5-add-api.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Define CRD in at_types.go",
+        "text": "step6-def-crd.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Create Resource from Definition",
+        "text": "step7-create-resource.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Controller",
+        "text": "step8-controller.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Controller Support Functions",
+        "text": "step9-support-functions.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Watch Pods",
+        "text": "step10-watch-pods.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Kubernetes Events",
+        "text": "step11-events.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Create Fresh At Resource",
+        "text": "step12-summary.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "at-example.txt", "target": "/opt/go/src", "chmod": "+x"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/opt/go/src",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

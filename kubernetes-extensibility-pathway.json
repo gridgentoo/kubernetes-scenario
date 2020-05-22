@@ -1,0 +1,33 @@
+{
+    "title": "Kubernetes Extensibility",
+    "icon": "fa-kubernetes",
+    "description": "Learn techniques for extending Kubernetes beyond its default features and resources with plugins, CRDs and Operators.",
+    "courses": [
+      {
+        "course_id": "crds",
+        "title": "Custom Resource Definitions",
+        "description": "Extending Kubernetes with your own custom resources (CRDs)."
+      },
+      {
+        "course_id": "kubectl-plugins",
+        "title": "Kubectl CLI Plugins",
+        "description": "Extend Kubernetes with plugins added to the kubectl CLI tool."
+      },
+      {
+        "course_id": "kubectl-plugin-dev",
+        "title": "Kubectl CLI Plugin Development",
+        "description": "Extend Kubernetes with plugins added to the kubectl CLI tool."
+      },
+      {
+        "course_id": "kubebuilder",
+        "title": "Develop an Operator with Kubebuilder",
+        "description": "Learn how to control custom resources with Kubebuilder based Operators."
+      },
+      {
+        "course_id": "kudo",
+        "title": "Develop an Operator with KUDO",
+        "description": "Learn how to control custom resources with KUDO based Operators."
+      }
+    ]
+  }
+  

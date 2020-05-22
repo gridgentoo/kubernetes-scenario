@@ -1,0 +1,15 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: efk-master-volume
+  labels:
+    type: local
+spec:
+  storageClassName: elasticsearch-master
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/efk-master"
+  

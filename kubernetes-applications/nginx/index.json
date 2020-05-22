@@ -1,0 +1,53 @@
+{
+  "pathwayTitle": "Nginx",
+  "title": "Nginx",
+  "description": "Discovering how Nginx runs on Kubernetes.",
+  "difficulty":	"Introduction",
+  "time":	"10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Deploy Nginx with CLI Technique",
+        "text": "step2-deploy-cli.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Deploy Nginx with Manifest Technique",
+        "text": "step3-deploy-yaml.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*.yaml", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
+      {"name": "Nginx-One", "port": 31111},
+      {"name": "Nginx-Two", "port": 31112}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster2-running"
+  }
+}

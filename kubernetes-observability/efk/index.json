@@ -1,0 +1,70 @@
+{
+  "title": "Logging with EFK",
+  "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent Bit, and Kibana (EFK).",
+  "difficulty":	"Beginner",
+  "time":	"20 minutes",
+  "details": {
+    "steps": [
+      { 
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      { 
+        "title": "Deploy ElasticSearch",
+        "text": "step2-elasticsearch.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Deploy Fluent Bit",
+        "text": "step3-fluent.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Deploy Kibana",
+        "text": "step4-kibana.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Verify Running Stack",
+        "text": "step5-verify.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Generate Log Events",
+        "text": "step6-generate.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "View Log Events",
+        "text": "step7-view.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*.yaml", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}  
+      ]
+    }
+  },
+  "environment": {
+		"showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+		"icon": "fa-kubernetes",
+		"dashboards": [
+		  {"name": "Kubernetes Dashboard", "port": 30000},
+		  {"name": "Kibana", "port": 31000}
+		]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

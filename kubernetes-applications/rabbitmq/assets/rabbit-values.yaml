@@ -1,0 +1,12 @@
+# To install:
+# kubectl create namespace rabbit
+# helm install my-rabbit stable/rabbitmq-ha --namespace rabbit -f rabbit-values.yaml
+
+replicas: 3
+
+service:
+  type: NodePort 
+  managerNodePort: 31000
+
+rabbitmqUsername: guest
+rabbitmqPassword: guest

@@ -1,0 +1,68 @@
+{
+  "title": "Kubernetes API",
+  "description": "Discover the API through which you can control all Kubernetes objects.",
+  "difficulty":	"Beginner",
+  "time":	"15 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "API via Command Line",
+        "text": "step2-kc-api.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Proxy",
+        "text": "step3-proxy.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "API-Resources",
+        "text": "step4-api-resources.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Explaining Resources",
+        "text": "step5-explain.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "API-Versions",
+        "text": "step6-api-versions.md",
+        "code": "clear.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ],
+    "terminals": [
+      {"name": "Terminal 2", "target": "host01"}
+    ]    
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

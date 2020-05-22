@@ -1,0 +1,58 @@
+{
+  "private": "true",
+  "pathwayTitle": "oci",
+  "title": "OCI Containers",
+  "description": "Disecting the OCI container format",
+  "difficulty":	"Introduction",
+  "time":	"10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "TODO",
+        "text": "step1-.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Pull and Save",
+        "text": "step2-save.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Expand",
+        "text": "step3-expand.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "TODO",
+        "text": "step4-.md",
+        "code": "clear.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*.yaml", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster2-running"
+  }
+}

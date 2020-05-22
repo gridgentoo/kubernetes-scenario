@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: r-shiny
+spec:
+  template:
+    metadata:
+      labels:
+        app: r-shiny
+    spec:
+      containers:
+      - name: shiny-server
+        image: markedmondson1234/shiny-server
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3838
+          name: shiny-port
+      restartPolicy: Always
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: r-shiny
+  labels:
+    app: r-shiny
+spec:
+  type: NodePort
+  ports:
+  - port: 3838
+    targetPort: shiny-port
+    nodePort: 31111
+    protocol: TCP
+  selector:
+    app: r-shiny

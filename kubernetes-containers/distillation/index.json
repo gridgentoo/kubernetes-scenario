@@ -1,0 +1,89 @@
+{
+  "pathwayTitle": "Distilling Java Containers",
+  "title": "Distilling Java Containers",
+  "description": "Applying the Distillation Pattern to Containers.",
+  "difficulty":	"Intermediate",
+  "time":	"30 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Container Registry",
+        "text": "step2-registry.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Registry Web Interface",
+        "text": "step3-registry-ui.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "A Java App, ListDir",
+        "text": "step4-app.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Into a Slim Container",
+        "text": "step5-single-stage-slim.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Into an Alpine Container",
+        "text": "step6-single-stage-alpine.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Into a Multi-Stage Container",
+        "text": "step7-multi-stage-jar.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "JLink",
+        "text": "step8-jlink.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "JLink into an Alpine Container",
+        "text": "step9-multi-stage-jlink.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "App as Native Binary",
+        "text": "step10-multi-stage-native.md",
+        "code": "clear.sh"
+      }
+    ],
+    "intro": {
+      "title": "Distilling Java Containers",
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*.yaml", "target": "~/"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Registry", "port": 31000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "pathwayTitle": "chaoskube",
+  "title": "Chaoskube",
+  "description": "Periodically kills random pods in your Kubernetes cluster.",
+  "difficulty":	"Introduction",
+  "time":	"15 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Chaoskube",
+        "text": "step2-install.md"
+      },
+      {
+        "title": "Add Applications",
+        "text": "step3-add-pods.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Observe the Chaos",
+        "text": "step4-observe.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*.yaml", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster2-running"
+  }
+}

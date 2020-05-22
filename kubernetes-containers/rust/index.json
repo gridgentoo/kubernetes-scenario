@@ -1,0 +1,66 @@
+{
+  "pathwayTitle": "go",
+  "title": "Go Apps in Containers on Kubernetes",
+  "description": "Packaging Go Applications in Containers.",
+  "difficulty":	"Introduction",
+  "time":	"10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Grab Some Source",
+        "text": "step2-source.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Smallest Go App",
+        "text": "step3-hello.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Basic App Container",
+        "text": "step4-basic-container.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Microservice App Container",
+        "text": "step5-ms-container.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Run on Kubernetes",
+        "text": "step6-run-on-k8s.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*.yaml", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster2-running"
+  }
+}

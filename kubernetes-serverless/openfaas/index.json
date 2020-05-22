@@ -1,0 +1,89 @@
+{
+  "title": "OpenFaaS",
+  "description": "Discovering how OpenFaaS runs on Kubernetes.",
+  "difficulty":	"Introduction",
+  "time":	"20 minutes",  
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Preparations",
+        "text": "step2-prepare.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Container Registry",
+        "text": "step3-registry.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install OpenFaaS",
+        "text": "step4-install.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "OpenFaaS CLI",
+        "text": "step5-cli.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "OpenFaaS Portal",
+        "text": "step6-portal.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "CLI Commands",
+        "text": "step7-cli.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "First Python Function",
+        "text": "step8-python.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Observability",
+        "text": "step9-observe.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Scaling",
+        "text": "step10-scaling.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*.yaml", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}, 
+      {"name": "OpenFaaS Portal", "port": 31112},
+      {"name": "Grafana", "port": 31122},
+      {"name": "Prometheus", "port": 31120},
+      {"name": "Alerts", "port": 31121}
+    ]
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

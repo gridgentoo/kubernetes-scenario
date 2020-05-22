@@ -1,0 +1,65 @@
+{
+  "title": "Jobs",
+  "description": "Explore the Jobs resource and how the pattern can be applied.",
+  "difficulty":	"Intermediate",
+  "time":	"25 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Run Single Job",
+        "text": "step2-job1.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Job from Resource",
+        "text": "step3-job2.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Job Failure",
+        "text": "step4-failure.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Parallelism",
+        "text": "step5-parallel.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Work Queue",
+        "text": "step6-queue.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Queue Portal", "port": 31001}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

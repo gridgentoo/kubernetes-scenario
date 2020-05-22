@@ -1,0 +1,23 @@
+{
+    "title": "Kubernetes Приложения",
+    "icon": "fa-kubernetes",
+    "description": "(Discover)Откройте для себя различные приложения, которые вы можете легко запустить on Kubernetes.",
+    "courses": [
+      {
+        "course_id": "nginx",
+        "title": "Nginx",
+        "description": "Начните здесь, чтобы узнать, как развертывать Nginx-приложение в Kubernetes."
+      },
+      {
+        "course_id": "r-shiny",
+        "title": "R Shiny Application",
+        "description": "Запустим R based Shiny приложения в Kubernetes."
+      },
+      {
+        "course_id": "rabbitmq",
+        "title": "RabbitMQ",
+        "description": "Запустим RabbitMQ в Kubernetes."
+      }
+    ]
+  }
+  

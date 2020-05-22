@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bipedal
+  labels:
+    app: bipedal
+spec:
+  containers:
+    - name: container-a
+      image: chentex/random-logger
+    - name: container-b
+      image: chentex/random-logger

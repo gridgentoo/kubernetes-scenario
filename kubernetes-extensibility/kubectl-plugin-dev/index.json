@@ -1,0 +1,91 @@
+{
+  "title": "Kubectl CLI Plugin Development",
+  "description": "Extend Kubernetes with your custom plugin added to the kubectl CLI tool.",
+  "difficulty":	"Intermediate",
+  "time":	"25 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Your Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Clone Skeleton Source",
+        "text": "step2-clone.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Compile",
+        "text": "step3-compile.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Run",
+        "text": "step4-run.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install",
+        "text": "step5-install.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Test Against Cluster",
+        "text": "step6-test.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Inspect Plugin Source",
+        "text": "step7-inspect-source.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Command for Pod List",
+        "text": "step8-pod-list.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Command Flags",
+        "text": "step9-flags.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "RESTifarian Pod List",
+        "text": "step10-rest-client.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Adding a Pod",
+        "text": "step11-add-pod.md",
+        "code": "clear.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/dev",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

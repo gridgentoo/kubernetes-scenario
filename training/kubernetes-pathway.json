@@ -1,0 +1,132 @@
+{
+  "title": "Kubernetes Workshop",
+  "description": "Learn Kubernetes with your hands and mind.",
+  "courses": [
+    {
+      "title": "First App",
+      "description": "Run your first application on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/first-app",
+      "course_id": "first-app"
+    },
+    {
+      "title": "Nginx",
+      "description": "Discovering how Nginx runs on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-applications/nginx",
+      "course_id": "nginx"
+    },
+    {
+      "title": "RabbitMQ",
+      "description": "Discovering how RabbitMQ runs on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-applications/rabbitmq",
+      "course_id": "rabbitmq"
+    },
+    {
+      "title": "R Shiny",
+      "description": "Discovering how Shiny applications run on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-applications/r-shiny",
+      "course_id": "r-shiny"
+    },
+    {
+      "title": "Pods to Services Communication",
+      "description": "How Pods communicate with Services using a DNS.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/connectivity",
+      "course_id": "connectivity"
+    },
+    {
+      "title": "Sidecar Containers",
+      "description": "Two containers in a Pod can share data through a shared mount.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/sidecar",
+      "course_id": "sidecar"
+    },
+    {
+      "title": "Kubernetes ConfigMaps and Secrets",
+      "description": "The fundamentals of ConfigMaps and Secrets",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/configmap-secret",
+      "course_id": "configmap-secret"
+    },
+    {
+      "title": "Jobs",
+      "description": "Explore the Jobs resource and how the pattern can be applied.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/jobs",
+      "course_id": "jobs"
+    },
+    {
+      "title": "Basic Kubernetes Observability",
+      "description": "Inspection of a Kubernetes cluster.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-observability/basics",
+      "course_id": "basics"
+    },
+    {
+      "title": "Logging with EFK",
+      "description": "Learn how to aggregate logs on Kubernetes. Logging with ElasticsSearch, Fluent Bit, and Kibana (EFK).",
+      "pathway_id": "javajon",
+      "id": "kubernetes-observability/efk",
+      "course_id": "efk"
+    },
+    {
+      "title": "Harbor Registry",
+      "description": "Learn how the Harbor registry delivers rich features along with Clair security scanning.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-pipelines/harbor",
+      "course_id": "harbor"
+    },
+    {
+      "title": "Helm Package Manager",
+      "description": "Learn how to use Helm, the package manager for Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-pipelines/helm",
+      "course_id": "helm"
+    },
+    {
+      "title": "SonarQube",
+      "description": "Code Analysis with SonarQube on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-pipelines/sonarqube",
+      "course_id": "sonarqube"
+    },
+    {
+      "title": "Kubeless",
+      "description": "Discovering how Kubeless runs on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-serverless/kubeless",
+      "course_id": "kubeless"
+    },
+    {
+      "title": "OpenFaaS",
+      "description": "Discovering how OpenFaaS runs on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-serverless/openfaas",
+      "course_id": "openfaas"
+    },
+    {
+      "title": "Spring Boot to Kubernetes",
+      "description": "From a blank slate to a Spring Boot app running on Kubernetes.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/springboot-to-k8s",
+      "course_id": "springboot-to-k8s"
+    },
+    {
+      "title": "Distilling Java Containers",
+      "description": "Applying the Distillation Pattern to Containers.",
+      "pathway_id": "javajon",
+      "id": "kubernetes-fundamentals/distillation",
+      "course_id": "distillation"
+    },
+    {
+      "title": "Deploying Istio to Kubernetes",
+      "description": "Learn how to deploy Istio to a Kubernetes cluster",
+      "pathway_id": "istio",
+      "id": "workshop/deploying-istio",
+      "course_id": "deploying-istio"
+    }    
+  ]
+}

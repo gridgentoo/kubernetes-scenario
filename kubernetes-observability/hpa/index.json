@@ -1,0 +1,67 @@
+{
+	"title": "Scaling Your Applications, Automatically",
+	"description": "Discover how the Horizontal Pod Autoscalar (HPA) can give you consistent performance while saving costs.",
+	"time": "15 minutes",
+	"details": {
+	  "steps": [
+		{
+		  "title": "Your Kubernetes Cluster",
+		  "text": "step1-k8s.md",
+		  "code": "clear.sh"
+		},
+		{
+		  "title": "Install Metrics Server",
+		  "text": "step2-metrics-server.md",
+		  "code": "clear.sh"
+		},
+		{
+		  "title": "Deploy Sample Application",
+		  "text": "step3-deploy-app.md",
+		  "code": "clear.sh"
+		},
+		{
+		  "title": "Apply Pressure",
+		  "text": "step4-increase-load.md",
+		  "code": "clear.sh"
+		},
+		{
+		  "title": "Declare HPA Criteria",
+		  "text": "step5-apply-hpa.md",
+		  "code": "clear.sh"
+		},
+		{
+		  "title": "Decrease Load",
+		  "text": "step6-decrease-load.md"
+		}
+	  ],
+	  "intro": {
+		"text": "intro.md",
+		"code": "env-init.sh",
+		"credits": "[Jonathan Johnson](http://www.dijure.com)"
+	  },
+	  "finish": {
+		"text": "finish.md"
+	  },
+	  "assets": {
+		"host01": [
+			{"file": "*.yaml", "target": "/root"},
+			{ "file": "token.sh", "target": "/usr/local/bin", "chmod": "+x" }
+		]
+	  }
+	},
+	"environment": {
+	  "showdashboard": true,
+	  "uilayout": "terminal",
+	  "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+	  "icon": "fa-kubernetes",
+	  "dashboards": [
+		{
+		  "name": "Kubernetes Dashboard",
+		  "port": 30000
+		}
+	  ]
+	},
+	"backend": {
+	  "imageid": "kubernetes-cluster-running"
+	}
+  }

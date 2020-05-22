@@ -1,0 +1,59 @@
+{
+	"title": "Basic Kubernetes Observability",
+	"description": "Inspection of a Kubernetes cluster.",
+	"time":	"15 minutes",
+	"details": {
+	  "steps": [
+		{
+		  "title": "Your Kubernetes Cluster",
+		  "text": "step1-k8s.md",
+		  "code": "clear.sh"
+		},
+		{
+		  "title": "Sample Application",
+		  "text": "step2-app.md",
+		  "code": "clear.sh"
+		},
+		{
+		  "title": "Resource Inspection",
+		  "text": "step3-kubectl.md",
+		  "code": "clear.sh"
+		},
+		{
+			"title": "cAdvisor",
+			"text": "step4-cadvisor.md",
+			"code": "clear.sh"
+		},
+		{
+		  "title": "Metrics Server",
+		  "text": "step5-metrics-server.md"
+		}
+	  ],
+	  "intro": {
+		"text": "intro.md",
+		"code": "env-init.sh",
+		"credits": "[Jonathan Johnson](http://www.dijure.com)"
+	  },
+	  "finish": {
+		"text": "finish.md"
+	  },
+	  "assets": {
+		"host01": [
+		  {"file": "*.yaml", "target": "/root"},
+		  {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+		]
+	  }
+	},
+	"environment": {
+		"showdashboard": true,
+		"uilayout": "terminal",
+		"uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+		"icon": "fa-kubernetes",
+		"dashboards": [
+		  {"name": "Kubernetes Dashboard", "port": 30000}
+		]
+	},	
+	"backend": {
+	  "imageid": "kubernetes-cluster-running"
+	}
+  }

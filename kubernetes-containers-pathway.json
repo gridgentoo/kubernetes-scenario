@@ -1,0 +1,28 @@
+{
+    "title": "Containers for Kubernetes",
+    "icon": "fa-kubernetes",
+    "description": "Изучите, как делать билды distilled containers, особенно когда они работают в Kubernetes.",
+    "courses": [    
+      {
+        "course_id": "oci",
+        "title": "OCI Containers",
+        "description": "Disecting the OCI container format"
+      },
+      {
+        "course_id": "go",
+        "title": "Go-приложения в Containers в Kubernetes",
+        "description": "Упаковка Go-приложения в контейнерах"
+      },
+      {
+        "course_id": "springboot-to-k8s",
+        "title": "Spring Boot в Kubernetes",
+        "description": "От чистого листа до приложения Spring Boot, работающего в Kubernetes"
+      },
+      {
+        "course_id": "distillation",
+        "title": "Distilling Java Containers",
+        "description": "Применение паттерна Container Distillation для приложений на основе Java."
+      }
+    ]
+  }
+  

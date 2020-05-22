@@ -1,0 +1,62 @@
+{
+    "courses": [
+      {
+        "title": "Основы Kubernetes",
+        "description": "Изучите основные building blocks Kubernetes с практическими объяснениями.",
+        "id": "kubernetes-fundamentals"
+      },
+      {
+        "title": "Основы OpenShift",
+        "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
+        "id": "openshift-fundamentals"
+      },
+      {
+        "title": "Kubernetes Приложения",
+        "description": "(Discover)-Откройте для себя различные приложения, которые вы можете легко запустить в Kubernetes.",
+        "id": "kubernetes-applications"
+      },
+      {
+        "title": "OpenShift Приложения",
+        "description": "Сборка приложений на OpenShift с практическими объяснениями.",
+        "id": "openshift-middleware"
+      },
+      {
+        "title": "Контейнеры для Kubernetes",
+        "description": "Изучите, как строить distilled containers, особенно когда они работают в Kubernetes..",
+        "id": "kubernetes-containers"
+      },
+      {
+        "title": "Kubernetes Serverless",
+        "description": "(Discover)-Откройте  для себя различные методы запуска приложений и функций в Kubernetes.",
+        "id": "kubernetes-serverless"
+      },
+      {
+        "title": "Kubernetes Pipelines",
+        "description": "Discover Откройте для себя различные инструменты и методы для CI-непрерывной доставки в Kubernetes.",
+        "id": "kubernetes-pipelines"
+      },
+      {
+        "title": "Kubernetes Observability",
+        "description": "Изучите техники проверки-inspecting Kubernetes и ваших приложений, распределенных-distributed по cluster.",
+        "id": "kubernetes-observability"
+      },
+      {
+        "title": "Kubernetes Extensibility (Расширяемость)",
+        "description": "Изучите методы расширения Kubernetes за пределы возможностей и ресурсов по умолчанию",
+        "id": "kubernetes-extensibility"
+      },
+      {
+        "title": "Kubernetes Chaos",
+        "description": "Chaos Engineering это дисциплина экспериментов над системой, чтобы укрепить уверенность в способности системы противостоять турбулентным условиям - turbulent conditions in production.",
+        "id": "kubernetes-chaos"
+      },
+      {
+        "title": "Kubernetes Машинное обучение",
+        "description": "Изучите методы построения, моделирования и обслуживания решений для машинного обучения в Kubernetes.",
+        "id": "kubernetes-ml"
+      }
+      
+    ],
+    "scenarios": []
+  }
+  
