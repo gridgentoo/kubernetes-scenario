@@ -34,9 +34,9 @@
       "description": "В этом сценарии, как использовать API-клиент Prometheus для Python для сбора и обработки данных метрик временных рядов Prometheus."
     },
     {
-      "external_link": "https://learn.openshift.com/ai-machine-learning/prometheus-timeseries-forecasting/",
       "course_id": "prometheus-timeseries-forecasting",
-      "title": "Time series forecasting for Prometheus metrics"
+      "title": "Прогнозирование временных рядов для метрик Prometheus",
+      "description": "В этом сценарии, вы научитесь обучать модели машинного обучения SARIMA, метрикам Prometheus для прогнозирования временных рядов и прогнозирования аномалий."
     },
     {
       "external_link": "https://learn.openshift.com/ai-machine-learning/thoth-s2i-advise/",
