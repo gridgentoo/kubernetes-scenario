@@ -5,12 +5,12 @@
     "courses": [
       {
 		"course_id": "container-internals-lab-2-0-part-1",
-		"title": "Linux Container Internals 2.0 - Lab 1: Введение в контейнеры.",
+		"title": "Контейнеры Linux 2.0 - Лабораторная работа 1: Введение в контейнеры.",
 		"description": "В этом сценарии, вы получите общее представление о движущихся частях, составляющих типичную контейнерную архитектуру. ."
       },
       {
 		"course_id": "container-internals-lab-2-0-part-2",
-		"title": "Linux Container Internals 2.0 - Lab 2: Container Images",
+		"title": "Контейнеры Linux 2.0 - Лабораторная работа 2: Container Images",
 		"description": "В этом сценарии, исследуете как образы контейнеров создаются, маркируются, организуются и используются ."
 	  },
 	  {
