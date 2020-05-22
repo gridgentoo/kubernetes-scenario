@@ -4,16 +4,16 @@
   "description": "Откройте для себя, ИИ и машинное обучение на OpenShift.",
   "courses": [
     {
-      "course_id": "jupyter-notebookso",
+      "course_id": "jupyter-notebooks",
       "title": "Развертывание образа ноутбука Jupyter Notebook.",
       "description": "В этом сценарии мы задеплоим Image ноутбука Jupyter Notebook."
     },
     {
-      "external_link": "https://learn.openshift.com/ai-machine-learning/custom-notebooks/",
       "course_id": "custom-notebooks",
-      "title": "Building Custom Notebook Images"
+      "title": "Создание кастомизированных Notebook Images.",
+      "description": "В этом сценарии создадим собственный образ container image, который включает в себя набор Jupyter notebooks и необходимые им пакеты, в OpenShift."
     },
-    {
+      {
       "external_link": "https://learn.openshift.com/ai-machine-learning/jupyter-workspace/",
       "course_id": "jupyter-workspace",
       "title": "Persistent Workspace for Notebooks"
