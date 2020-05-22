@@ -19,9 +19,9 @@
       "description": "В этом сценарии, рассмотрим как Persistent Workspace Ноутбуки Jupyter и JupyterHub могут быть развернуты в OpenShift."
     },
     {
-      "external_link": "https://learn.openshift.com/ai-machine-learning/jupyterhub-service/",
       "course_id": "jupyterhub-service",
-      "title": "Deploying JupyterHub as a Service"
+      "title": "Развертывание JupyterHub в качестве службы Service.",
+      "description": "В этом сценарии, как можно развернуть JupyterHub, чтобы создать сервис для одновременного предоставления ноутбуков Jupyter нескольким пользователям."
     },
     {
       "external_link": "https://learn.openshift.com/ai-machine-learning/jupyterhub-workspace/",
