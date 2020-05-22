@@ -49,9 +49,9 @@
       "description": "В этом сценарии, Зачем использовать проверку Thoth provenance в процессе сборки s2i?."
     },
     {
-      "external_link": "https://learn.openshift.com/ai-machine-learning/thoth-cli/",
       "course_id": "thoth-cli",
-      "title": "Thoth Thamos CLI Guide"
+      "title": "Thoth рекомендации, для построения S2I с Provenance check в OpenShift",
+      "description": "В этом сценарии, Thamos Advise для простого приложения TensorFlow Python с использованием Thamos CLI."
     }
   ]
 }
