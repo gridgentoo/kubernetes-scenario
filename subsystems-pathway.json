@@ -10,7 +10,7 @@
 		},
 		{
 			"course_id": "container-internals-lab-2-0-part-2",
-			"title": "Linux Container Internals 2.0 - Lab 2: Образы контейнеров. Container Images",
+			"title": "Linux Container Internals 2.0 - Lab 2: Container Images",
 			"description": "В этом сценарии, исследуете как образы контейнеров создаются, маркируются, организуются и используются ."
 		},
 		{
