@@ -69,7 +69,12 @@
         "title": "OpenShift::AI and Machine Learning",
         "description": "Изучите методы построения, AI and Machine Learning в OpenShift.",
         "id": "ai-machine-learning"
-      }      
+      },    
+      {
+        "title": "OpenShift::Adding Persistence",
+        "description": "Изучите методы построения, Persistence хранилище на основе OpenShift Container Storage в OpenShift.",
+        "id": "persistence"
+      }   
       
     ],
     "scenarios": []
