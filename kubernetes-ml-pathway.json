@@ -6,12 +6,12 @@
       {
         "course_id": "kubeflow-playground",
         "title": "Kubeflow Playground",
-        "description": "Discover Kubeflow on Kubernetes."
+        "description": "Откройте для себя Kubeflow в Kubernetes."
       },
       {
         "course_id": "kubeflow-installation",
         "title": "Kubeflow Raw Installation",
-        "description": "Discover How to Install Kubeflow on Kubernetes."
+        "description": "Узнайте, как установить Kubeflow на Kubernetes."
       }
     ]
   }

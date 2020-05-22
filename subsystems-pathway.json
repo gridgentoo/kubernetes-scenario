@@ -1,42 +1,46 @@
 {
-	"title": "OpenShift::Subsystems, Components, and Internals",
-	"icon": "fa-kubernetes",
-	"description": "Откройте для себя, OpenShift::Subsystems, Components, and Internals.",
-	"courses": [
-		{
-			"course_id": "container-internals-lab-2-0-part-1",
-			"title": "Linux Container Internals 2.0 - Lab 1: Введение в контейнеры.",
-			"description": "В этом сценарии, вы получите общее представление о движущихся частях, составляющих типичную контейнерную архитектуру. ."
-		},
-		{
-			"course_id": "container-internals-lab-2-0-part-2",
-			"title": "Linux Container Internals 2.0 - Lab 2: Container Images",
-			"description": "В этом сценарии, исследуете как образы контейнеров создаются, маркируются, организуются и используются ."
-		},
-		{
-			"course_id": "container-internals-lab-2-0-part-3",
-			"title": "Контейнеры Linux 2.0 - Лабораторная работа 3: Container Registries",
-			"description": "В этом сценарии, для чего нужны Container Registries и как они работают."
-		},
-		\		{
-			"course_id": "container-internals-lab-2-0-part-4",
-			"title": "Контейнеры Linux 2.0 - Лабораторная работа 4: Container Hosts",
-			"description": "В этом сценарии, как конкретный хост на самом деле запускает образы контейнеров - от взаимодействия контейнерных процессов с ядром Linux до демона docker."
-		},
-		{
-			"external_link": "https://learn.openshift.com/subsystems/container-internals-lab-2-0-part-5",
-			"course_id": "container-internals-lab-2-0-part-5",
-			"title": "Linux Container Internals 2.0 - Lab 5: Container Orchestration"
-		},
-		{
-			"external_link": "https://learn.openshift.com/subsystems/container-internals-lab-2-0-part-6",
-			"course_id": "container-internals-lab-2-0-part-6",
-			"title": "Linux Container Internals 2.0 - Lab 6: Container Standards"
-		},
-		{
-			"external_link": "https://learn.openshift.com/subsystems/container-internals-lab-2-0-part-7",
-			"course_id": "container-internals-lab-2-0-part-7",
-			"title": "Linux Container Internals 2.0 - Lab 7: Container Tools Ecosystem"
-		}
-	]
-}
+    "title": "OpenShift::Subsystems, Components, and Internals",
+    "icon": "fa-kubernetes",
+    "description": "Откройте для себя, OpenShift::Subsystems, Components, and Internals..",
+    "courses": [
+      {
+		"course_id": "container-internals-lab-2-0-part-1",
+		"title": "Linux Container Internals 2.0 - Lab 1: Введение в контейнеры.",
+		"description": "В этом сценарии, вы получите общее представление о движущихся частях, составляющих типичную контейнерную архитектуру. ."
+      },
+      {
+		"course_id": "container-internals-lab-2-0-part-2",
+		"title": "Linux Container Internals 2.0 - Lab 2: Container Images",
+		"description": "В этом сценарии, исследуете как образы контейнеров создаются, маркируются, организуются и используются ."
+	  },
+	  {
+		"course_id": "container-internals-lab-2-0-part-3",
+		"title": "Контейнеры Linux 2.0 - Лабораторная работа 3: Container Registries",
+		"description": "В этом сценарии, для чего нужны Container Registries и как они работают."
+	  },
+	  {
+		"course_id": "container-internals-lab-2-0-part-4",
+		"title": "Контейнеры Linux 2.0 - Лабораторная работа 4: Container Hosts",
+		"description": "В этом сценарии, как конкретный хост на самом деле запускает образы контейнеров - от взаимод. контейнерных процессов с ядром Linux."
+	  }
+	  {
+		"course_id": "container-internals-lab-2-0-part-5",
+		"title": "Контейнеры Linux 2.0 - Лабораторная работа 5: Container Orchestration",
+		"description": "В этом сценарии,  как образы контейнеров создаются, маркируются, организуются и используются"
+	  },
+	  {
+		"course_id": "container-internals-lab-2-0-part-6",
+		"title": "Контейнеры Linux 2.0 - Лабораторная работа 6: Container Standard",
+		"description": "Эта лаборатория ориентирована на понимание некоторых стандартов контейнеров, которые управляют этим пространством. ."
+	  },
+	  {
+		"course_id": "container-internals-lab-2-0-part-7",
+		"title": "Контейнеры Linux 2.0 - Лабораторная работа 7: Container Tools Ecosystem",
+		"description": "Эта лаборатория поможет вам понять, как использовать некоторые другие совместимые с OCI инструменты, такие как Podman, Buildah и Skopeo."
+	  }
+	  
+	  
+    ]
+  }
+
+
