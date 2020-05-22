@@ -9,9 +9,9 @@
       "description": "В этом сценарии, дадим обзор основных принципов API Kubernetes."
     },
     {
-      "external_link": "https://learn.openshift.com/operatorframework/etcd-operator/",
       "course_id": "etcd-operator",
-      "title": "Etcd Operator"
+      "title": "Основы Etcd Operator",
+      "description": "В этом сценарии, Оператор etcd управляет кластерами etcd, развернутыми в Kubernetes, и автоматизирует задачи, связанные с работой кластера etcd."
     },
     {
       "external_link": "https://learn.openshift.com/operatorframework/go-operator-podset/",
@@ -23,27 +23,7 @@
       "course_id": "operator-lifecycle-manager",
       "title": "Operator Lifecycle Manager"
     },
-    {
-      "external_link": "https://learn.openshift.com/ansibleop/ansible-refresher/",
-      "course_id": "ansible-refresher",
-      "title": "Ansible Refresher"
-    },
-    {
-      "external_link": "https://learn.openshift.com/ansibleop/ansible-k8s-modules/",
-      "course_id": "ansible-k8s-modules",
-      "title": "Ansible Kubernetes Modules"
-    },
-    {
-      "external_link": "https://learn.openshift.com/ansibleop/ansible-operator-overview/",
-      "course_id": "ansible-operator-overview",
-      "title": "Ansible Operator Overview"
-    },
-    {
-      "external_link": "https://learn.openshift.com/ansibleop/ansible-mcrouter-operator/",
-      "course_id": "ansible-mcrouter-operator",
-      "title": "Mcrouter Operator powered by Ansible Operator"
-    },
-    {
+   {
       "external_link": "https://learn.openshift.com/operatorframework/helm-operator/",
       "course_id": "helm-operator",
       "title": "Operator SDK with Helm"
