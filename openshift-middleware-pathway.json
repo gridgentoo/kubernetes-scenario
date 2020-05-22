@@ -67,7 +67,13 @@
         "course_id": "dm7-dmn-introduction",
         "title": "Модели решений и нотации (DMN) с Decision Manager в OpenShift",
         "description": "Сценарий, как создать свою первую Службу принятия решений на основе модели решений и нотации (DMN) в Red Hat Decision Manager."
+      },
+      {
+        "course_id": "java-batch-processing",
+        "title": "ETL Batch процессинг Java EE с помощью OpenShift, WildFly и JBeret",
+        "description": "Сценарий, ETL Batch процессинг  (извлечение, преобразование и загрузка), формирование выписки по счету, сканирование безопасности, анализ финансового портфеля и т. д."
       }
-
+      
+      
     ]
   }
