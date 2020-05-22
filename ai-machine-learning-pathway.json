@@ -24,11 +24,11 @@
       "description": "В этом сценарии, как можно развернуть JupyterHub, чтобы создать сервис для одновременного предоставления ноутбуков Jupyter нескольким пользователям."
     },
     {
-      "external_link": "https://learn.openshift.com/ai-machine-learning/jupyterhub-workspace/",
       "course_id": "jupyterhub-workspace",
-      "title": "Multi-user Workspace Using JupyterHub"
+      "title": "Многопользовательская Workspace с использованием JupyterHub.",
+      "description": "В этом сценарии, как обеспечить постоянные Workspace для нескольких пользователей для работы с ноутбуками Jupyter с помощью JupyterHub."
     },
-    {
+     {
       "external_link": "https://learn.openshift.com/ai-machine-learning/prometheus-api-client/",
       "course_id": "prometheus-api-client",
       "title": "Prometheus metrics for Data Science on OpenShift"
