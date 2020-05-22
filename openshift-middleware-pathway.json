@@ -77,6 +77,11 @@
         "course_id": "debezium-getting-started",
         "title": "Начало работы с Debezium в OpenShift",
         "description": "Сценарий, Debezium использует потоковую платформу Kafka, Debezium - это набор распределенных сервисов, которые фиксируют изменения на уровне строк в ваших базах данных."
+      },
+      {
+        "course_id": "pipelines",
+        "title": "Начало работы с OpenShift Pipelines",
+        "description": "Tekton - это фреймворк открытым исходным кодом для CI/CD, OpenShift Pipelines - это облачное решение (CI/CD) с использованием Tekton."
       }
 
       
