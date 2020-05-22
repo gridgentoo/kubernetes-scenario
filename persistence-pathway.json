@@ -1,16 +1,17 @@
 {
   "title": "Adding Persistence to OpenShift",
-  "icon": "fa-openshift",
+  "icon": "fa-kubernetes",
+  "description": "(Discover)Откройте для себя Persistent Storage, которые вы можете запустить на основе OpenShift Container Storage.",
   "courses": [
     {
-      "external_link": "https://learn.openshift.com/persistence/persistent-intro/",
       "course_id": "persistent-intro",
-      "title": "Making Persistent Storage Calls in Your Application"
+      "title": "Создайте Persistent Storage хранилища в вашем приложении.",
+      "description": "В этом сценарии мы обнаружим три различных варианта Persistent Storage хранилища для OpenShift."
     },
     {
-      "external_link": "https://learn.openshift.com/persistence/persistent-elasticsearch/",
       "course_id": "persistent-elasticsearch",
-      "title": "Persistent Storage for Elasticsearch Powered by OpenShift Container Storage"
+      "title": "Создайте Persistent Storage хранилища в вашем приложении.",
+      "description": "Persistent Storage для Elasticsearch на основе OpenShift Container Storage."
     }
   ]
 }
