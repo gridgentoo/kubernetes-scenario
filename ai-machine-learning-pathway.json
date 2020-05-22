@@ -1,11 +1,12 @@
 {
-  "title": "AI and Machine Learning on OpenShift",
-  "icon": "fa-openshift",
+  "title": "ИИ и машинное обучение на OpenShift",
+  "icon": "fa-kubernetes",
+  "description": "Откройте для себя, ИИ и машинное обучение на OpenShift.",
   "courses": [
     {
-      "external_link": "https://learn.openshift.com/ai-machine-learning/jupyter-notebooks/",
-      "course_id": "jupyter-notebooks",
-      "title": "Deploying a Jupyter Notebook Image"
+      "course_id": "jupyter-notebookso",
+      "title": "Развертывание образа ноутбука Jupyter Notebook.",
+      "description": "В этом сценарии мы задеплоим Image ноутбука Jupyter Notebook."
     },
     {
       "external_link": "https://learn.openshift.com/ai-machine-learning/custom-notebooks/",
