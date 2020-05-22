@@ -28,10 +28,10 @@
       "title": "Многопользовательская Workspace с использованием JupyterHub.",
       "description": "В этом сценарии, как обеспечить постоянные Workspace для нескольких пользователей для работы с ноутбуками Jupyter с помощью JupyterHub."
     },
-     {
-      "external_link": "https://learn.openshift.com/ai-machine-learning/prometheus-api-client/",
+    {
       "course_id": "prometheus-api-client",
-      "title": "Prometheus metrics for Data Science on OpenShift"
+      "title": "Prometheus метрики для Data Science на OpenShift.",
+      "description": "В этом сценарии, как использовать API-клиент Prometheus для Python для сбора и обработки данных метрик временных рядов Prometheus."
     },
     {
       "external_link": "https://learn.openshift.com/ai-machine-learning/prometheus-timeseries-forecasting/",
