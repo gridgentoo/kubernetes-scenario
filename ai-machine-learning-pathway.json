@@ -13,10 +13,10 @@
       "title": "Создание кастомизированных Notebook Images.",
       "description": "В этом сценарии создадим собственный образ container image, который включает в себя набор Jupyter notebooks и необходимые им пакеты, в OpenShift."
     },
-      {
-      "external_link": "https://learn.openshift.com/ai-machine-learning/jupyter-workspace/",
+    {
       "course_id": "jupyter-workspace",
-      "title": "Persistent Workspace for Notebooks"
+      "title": "Создание Persistent Workspace пространство для Notebook.",
+      "description": "В этом сценарии, рассмотрим как Persistent Workspace Ноутбуки Jupyter и JupyterHub могут быть развернуты в OpenShift."
     },
     {
       "external_link": "https://learn.openshift.com/ai-machine-learning/jupyterhub-service/",
