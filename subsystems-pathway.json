@@ -14,14 +14,14 @@
 			"description": "В этом сценарии, исследуете как образы контейнеров создаются, маркируются, организуются и используются ."
 		},
 		{
-			"external_link": "https://learn.openshift.com/subsystems/container-internals-lab-2-0-part-3",
 			"course_id": "container-internals-lab-2-0-part-3",
-			"title": "Linux Container Internals 2.0 - Lab 3: Container Registries"
+			"title": "Контейнеры Linux 2.0 - Лабораторная работа 3: Container Registries",
+			"description": "В этом сценарии, для чего нужны Container Registries и как они работают."
 		},
-		{
-			"external_link": "https://learn.openshift.com/subsystems/container-internals-lab-2-0-part-4",
+		\		{
 			"course_id": "container-internals-lab-2-0-part-4",
-			"title": "Linux Container Internals 2.0 - Lab 4: Container Hosts"
+			"title": "Контейнеры Linux 2.0 - Лабораторная работа 4: Container Hosts",
+			"description": "В этом сценарии, как конкретный хост на самом деле запускает образы контейнеров - от взаимодействия контейнерных процессов с ядром Linux до демона docker."
 		},
 		{
 			"external_link": "https://learn.openshift.com/subsystems/container-internals-lab-2-0-part-5",
