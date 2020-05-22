@@ -59,6 +59,11 @@
         "title": "OpenShift::Subsystems, Components, and Internals",
         "description": "Изучите методы построения, Подсистемы, компоненты и внутренние компоненты в OpenShift.",
         "id": "subsystems"
+      },
+      {
+        "title": "OpenShift::Operators в OpenShift",
+        "description": "Изучите методы построения, Building Operators в OpenShift.",
+        "id": "operatorframework"
       }
       
     ],
