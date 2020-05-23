@@ -6,32 +6,32 @@
       {
         "course_id": "kubeless",
         "title": "Kubeless",
-        "description": "The Kubernetes Native Serverless Framework. Build advanced applications with FaaS on Kubernetes."
+        "description": "Фреймворк Kubernetes Native Serverless. Создавайте расширенные приложения с FaaS на Kubernetes."
       },
       {
         "course_id": "openfaas",
         "title": "OpenFaaS",
-        "description": "Build serverless functions on Kubernetes with first class support for metrics. Package your processes as functions to consume events without repetitive boiler-plate code."
+        "description": "Создавайте serverless функции на Kubernetes с первоклассной поддержкой метрик. Упакуйте ваши процессы в serverless функции для кастомизированных событий."
       },
       {
         "course_id": "nuclio",
         "title": "Nuclio",
-        "description": "Serverless Functions for Real-Time and Data-Driven Applications."
+        "description": "Serverless Functions для приложений реального времени и приложений, Data-Driven приложениями."
       },
       {
         "course_id": "knative",
         "title": "Knative (coming soon)",
-        "description": "Kubernetes-based platform to build, deploy, and manage modern serverless workloads."
+        "description": "Платформа на основе Kubernetes для создания, развертывания и управления современными serverless рабочими нагрузками."
       },
       {
         "course_id": "riff",
         "title": "Riff (coming soon)",
-        "description": "Riff is for functions. Discovering how Riff runs on Kubernetes using Knative and Istio."
+        "description": "Riff для serverless функций. Узнайте, как Riff работает на Kubernetes, используя Knative и Istio."
       },
       {
         "course_id": "camel-k",
         "title": "Camel K (coming soon)",
-        "description": "Camel-K is Apache Camel with Serverless on Knative and Kubernetes."
+        "description": "Camel-K - это Apache Camel с Serverless на Knative и Kubernetes."
       }
     ]
   }
