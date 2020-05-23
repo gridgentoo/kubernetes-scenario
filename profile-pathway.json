@@ -12,7 +12,7 @@
       },
       {
         "title": "Kubernetes Приложения",
-        "description": "(Discover)-Откройте для себя различные приложения, которые вы можете легко запустить в Kubernetes.",
+        "description": "Откройте для себя различные приложения, которые вы можете легко запустить в Kubernetes.",
         "id": "kubernetes-applications"
       },
       {
@@ -27,12 +27,12 @@
       },
       {
         "title": "Kubernetes Serverless",
-        "description": "(Discover)-Откройте  для себя различные методы запуска приложений и функций в Kubernetes.",
+        "description": "Откройте  для себя различные методы запуска приложений и функций в Kubernetes.",
         "id": "kubernetes-serverless"
       },
       {
         "title": "Kubernetes Pipelines",
-        "description": "Discover Откройте для себя различные инструменты и методы для CI-непрерывной доставки в Kubernetes.",
+        "description": "Откройте для себя различные инструменты и методы для CI-непрерывной доставки в Kubernetes.",
         "id": "kubernetes-pipelines"
       },
       {
