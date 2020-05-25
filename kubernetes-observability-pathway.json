@@ -1,37 +1,37 @@
 {
     "title": "Kubernetes Observability",
     "icon": "fa-kubernetes",
-    "description": "Learn techniques for inspecting Kubernetes and your applications distributed across a cluster.",
+    "description": "Изучите техники проверки Kubernetes и ваших приложений, распределенных по кластеру.",
     "courses": [
       {
         "course_id": "basics",
-        "title": "Basic Kubernetes Observability",
-        "description": "Inspection of a Kubernetes cluster."
+        "title": "Основы Kubernetes Observability",
+        "description": "Инспекция кластера Kubernetes."
       },
       {
         "course_id": "cli-logging",
         "title": "Kubernetes Logging",
-        "description": "Discover where your app logs are stored and how to inspect them."
+        "description": "Узнайте, где хранятся logs вашего приложения и как их проверить."
       },
       {
         "course_id": "efk",
         "title": "Logging with EFK",
-        "description": "Learn how to implement centralized logging using an ElasticsSearch, Fluent Bit, and Kibana (EFK) stack on Kubernetes."
+        "description": "Узнайте, как реализовать централизованное ведение logging  с использованием стека ElasticsSearch, Fluent Bit и Kibana (EFK) в Kubernetes."
       },
       {
         "course_id": "hpa",
-        "title": "Scaling Your Applications, Automatically",
-        "description": "Discover how the Horizontal Pod Autoscalar (HPA) can give you consistent performance while saving costs."
+        "title": "Scaling вашего приложения, автоматически",
+        "description": "Узнайте, как работает горизонтальный Pod Autoscalar (HPA) может дать вам consistent performance при экономии затрат."
       },
       {
         "course_id": "monitoring",
         "title": "Prometheus (coming soon)",
-        "description": "Learn how to monitor applications on Kubernetes."
+        "description": "Изучите, как мониторить приложения в Kubernetes."
       },
       {
         "course_id": "tracing",
         "title": "Transaction tracing (coming soon)",
-        "description": "Learn how to trace applications on Kubernetes."
+        "description": "Изучите, как делать trace приложения в Kubernetes."
       }
     ]
   }
