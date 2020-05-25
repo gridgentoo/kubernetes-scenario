@@ -1,32 +1,32 @@
 {
     "title": "Kubernetes Pipelines",
     "icon": "fa-kubernetes",
-    "description": "Discover different tools and techniques for continuous delivery on Kubernetes.",
+    "description": "Откройте для себя различные инструменты и техники для непрерывной доставки в Kubernetes.",
     "courses": [
       {
         "course_id": "registries",
         "title": "Container Registry",
-        "description": "Learn how to setup and interact with a private container registry on Kubernetes."
+        "description": "Изучите, как настроить и взаимодействовать с реестром private container registry в Kubernetes."
       },
       {
         "course_id": "harbor",
         "title": "Harbor Registry",
-        "description": "Learn how the Harbor registry delivers rich features along with Clair security scanning."
+        "description": "Изучите, как реестр Harbor registry обеспечивает богатые возможности, наряду со сканированием Clair security scanning." 
       },
       {
         "course_id": "tekton",
         "title": "Tekton Pipelines",
-        "description": "Build and deploy a Node.js app with Tekton Pipeline."
+        "description": "Билдинг и развертывание приложения Node.js с Tekton Pipeline."
       },
       {
         "course_id": "helm",
         "title": "Helm",
-        "des,cription": "Learn how to use Helm, a package manager for Kubernetes."
+        "description": "Изучите, как использовать Helm, менеджер пакетов для Kubernetes."
       },
       {
         "course_id": "sonarqube",
         "title": "SonarQube",
-        "description": "Code Analysis with SonarQube on Kubernetes."
+        "description": "Анализ кода с помощью SonarQube в Kubernetes."
       }
     ]
   }
