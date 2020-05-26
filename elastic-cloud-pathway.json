@@ -1,0 +1,18 @@
+{
+    "title": "ELK hints based k8s autodiscover",
+    "icon": "fa-kubernetes",
+    "description": "Откройте для себя Elastic Stack.",
+    "courses": [
+      {
+        "course_id": "hints-based-discovery",
+        "title": "ELK hints основы k8s autodiscover: logs & metrics.",
+        "description": "hints, или annotaions, основы autodiscover вашей среды k8s и отправки в службу Elasticsearch Service в Elastic Cloud."
+      },
+      {
+        "course_id": "hints-based-discovery-local",
+        "title": "Autodiscover, Логгов & и сбор метрик в среде k8s с ELK.",
+        "description": "Сбор Логгов и метрик автоматизирован с помощью k8s annotations для предоставления hints в Elastic Beats."
+      }
+    ]
+  }
+  

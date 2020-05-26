@@ -1,0 +1,60 @@
+{
+  "title": "ELK hints based k8s autodiscover: logs & metrics",
+  "description": "hints, or annotaions, based autodiscover your k8s env and send to Elasticsearch Service in Elastic Cloud",
+  "details": {
+    "steps": [
+      {
+        "text": "step01-secrets.md"
+      },
+      {
+        "text": "step02-heapster.md"
+      },
+      {
+        "text": "step03-kube-state-metrics.md"
+      },
+      {
+        "text": "step04-guestbook.md"
+      },
+      {
+        "text": "step05-beats.md"
+      },
+      {
+        "text": "step06-java.md"
+      },
+      {
+        "text": "step07-hints.md"
+      },
+      {
+        "text": "step08-scale.md"
+      },
+      {
+        "text": "step09-scalingreplicaset.md"
+      },
+      {
+        "text": "step10-timeseriesvisual.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "colordiff.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*",
+          "target": "/root/course"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uieditorpath": "/root/course"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kibana
+  labels:
+    app: kibana
+    tier: frontend
+spec:
+  containers:
+  - name: kibana
+    image: docker.elastic.co/kibana/kibana:6.4.0
+    ports:
+    - containerPort: 5601
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana
+spec:
+  type: NodePort
+  ports:
+  - port: 5601
+    nodePort: 30601
+  selector:
+    app: kibana
+    tier: frontend
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana-internal
+spec:
+  ports:
+  - port: 5601
+    targetPort: 5601
+  selector:
+    app: kibana
+    tier: frontend
+---

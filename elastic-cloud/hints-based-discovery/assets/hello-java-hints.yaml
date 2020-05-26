@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello-java-deployment
+spec:
+  selector:
+    matchLabels:
+      app: hello-java-app
+  replicas: 1
+  template:
+    metadata:
+      annotations:
+        co.elastic.logs/multiline.pattern: '^[0-9]{4}-[0-9]{2}-[0-9]{2}'
+        co.elastic.logs/multiline.negate: "true"
+        co.elastic.logs/multiline.match: after
+      labels:
+        app: hello-java-app
+    spec:
+      containers:
+      - name: hello-java-app
+        image: danroscigno/hello-java:v1
+        ports:
+        - containerPort: 8080
+          name: server
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-java-service
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+    name: http
+  selector:
+    app: hello-java-app
+  type: LoadBalancer
+---
