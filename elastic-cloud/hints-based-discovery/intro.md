@@ -1,32 +1,39 @@
-### Welcome
+### Добро пожаловать
 
-To monitor an application running in Kubernetes (k8s), you need logs and metrics from the app, as well as, the k8s environment it's running in. Using Elasticsearch, Kibana, and Beats allows you to collect, search, analyze and visualize all of this data about the app and the k8s (pods, containers, etc) in one place. 
+Для мониторинга приложения, работающего в Kubernetes (k8s), вам нужны logs и метрики из приложения, в среда k8s, в которой оно выполняется. 
+Использование Elasticsearch, Kibana и Beats позволяет собирать, искать, анализировать и визуализировать все эти данные о приложении и k8s (pods, containers, etc) в одном месте.
 
-### Let's take a look at the goal
-This is one of the out of the box dashboards that you will see once you deploy the sample applications and the Beats (Elastic's lightweight shippers for logs, metrics, etc.) in this Katacoda environment and connect the Beats to the Elasticsearch Service in Elastic Cloud.  This is the Docker metrics dashboard that ships with Metricbeat.  It shows an overview of the CPU and Memory use of every container, allows you to drill in to a specific container, and the containers per node.  Looking at the dashboard is much easier than running the equivalent kubectl logs, events, top, describe, etc. commands.
+### Давайте посмотрим на цель
+
+Это одна из готовых панелей мониторинга dashboards, которые вы увидите, когда развернете примеры приложений и Beats (облегченные средства доставки Elastic для logs, metrics, etc.) в среде Katacoda подключите Beats к службе Elasticsearch в Elastic Cloud. Эта панель метрик Docker, которая поставляется вместе с Metricbeat. Это позволяет анализировать использование CPU и Memory для каждого контейнера, позволяет детализировать данные до определенного контейнера и containers per node. Смотреть на панель инструментов гораздо проще, чем запускать эквивалентные команды kubectl logs, events, top, describe, etc. commands
 
 ![Docker Dash](https://user-images.githubusercontent.com/25182304/44353691-c2bb8c00-a475-11e8-8d0e-9578c5c8cc47.png)
 
-### This is an example of annotations to specify what Beat module to use:
+### Это пример аннотаций для указания, какой модуль Beat использовать: 
 ![apache2 module hint](https://user-images.githubusercontent.com/25182304/44863869-50546400-ac4c-11e8-892d-5575af08a724.png)
 
-### This is a hint for specifying multiline parsing rule for an unknown log type:
+### Это hint для указания правила многострочного парсинга для неизвестного log type: 
 ![Spring multiline hint](https://user-images.githubusercontent.com/25182304/44864163-f86a2d00-ac4c-11e8-874c-ae01eae43864.png)
 
-### Before you hit start
-This scenario depends on having Elasticsearch and Kibana available.  The instructions call for an instance of Elasticsearch Service in Elastic Cloud.  Deploy Elasticsearch Service before starting the scenario.
+###  Перед тем как продолжить
+Этот сценарий зависит от наличия Elasticsearch и Kibana. Инструкции вызывают экземпляр службы Elasticsearch Service в Elastic Cloud. Разверните Elasticsearch Service перед запуском сценария.
+
 
 ### Create an Elastic Cloud deployment
-You can use Elasticsearch Service in Elastic Cloud ( http://cloud.elastic.co ), or a local deployment, or deploy containers from https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+Вы можете использовать Elasticsearch Service в Elastic Cloud ( http://cloud.elastic.co ), либо локальное развертывание, либо развернуть контейнеры с https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 
-If this is your first experience with the Elastic stack I would recommend Elastic Cloud; and don't worry, you do not need a credit card.
+Если это ваш первый опыт использования стека Elastic, я бы порекомендовал Elastic Cloud; и не волнуйтесь, вам не нужна кредитная карта.
 
-Make sure that you take note of the CLOUD ID and Elastic Password if you use Elastic Cloud or Elastic Cloud Enterprise.
+Обязательно обратите внимание на идентификатор CLOUD ID и Elastic Password, если вы используете Elastic Cloud или Elastic Cloud Enterprise.
 
-### A Quick Katacoda Primer
-If this is your first time using Katacoda, let me introduce some of the cool ideas:
+### Быстрый учебник по Katacoda 
 
-* In general, you don't need to type.  Most of the time, you can simply click on a command in the instructions to run it.
-* If you need access to a web browser, look for tabs at the top of the terminal window. In this course you will need two pages - one for the Guestbook application, and one for  Kibana. You should see a *Guestbook* tab and a *Kibana* tab in the terminal.  Once you have the Guestbook app running, click on the *Guestbook* tab to open it in a browser window and make some entries. Likewise, once you have Kibana running you should open that tab and look at the data.
-* Each time you start or restart a course everything gets reset. If you misconfigure something somehow, simply restart the course.
+Если вы впервые используете Katacoda, позвольте мне представить несколько интересных идей:
+
+* В общем, вам не нужно печатать команды в терменале. В большинстве случаев вы можете просто (Кликнуть - click) команду в инструкции для ее запуска. 
+* Если вам нужен доступ к веб-браузеру, поищите вкладки в верхней части окна терминала. В этом курсе вам понадобятся две страницы - одна для приложени Guestbook, а другая для Kibana. Вы должны увидеть вкладку *Guestbook* tab и вкладку *Kibana* tab в терминале.  Запустив приложение Guestbook, (Кликнуть - click) на вкладку *Guestbook* tab  чтобы открыть его в окне браузера и ввести несколько записей. Аналогично, после запуска Kibana вы должны открыть эту вкладку и посмотреть на данные.
+* Каждый раз, когда вы запускаете или перезапускаете курс, все сбрасывается. Если вы что-то неправильно настроили, просто перезапустите курс.
+
+
+
 
