@@ -1,1 +1,2 @@
-# During this tutorial we created a Kubernetes cluster, deployed a sample application, deployed Filebeat from Elastic, configured Filebeat to connect to an Elasticsearch Service deployment running in Elastic Cloud, and viewed logs and metrics in the Elasticsearch Service Kibana. #
+# В этом руководстве мы создали кластер Kubernetes, развернули пример приложения, развернули Filebeat из Elastic, сконфигурировали Filebeat для подключения к развертыванию Elasticsearch Service, работающему в Elastic Cloud, и просмотрели Логги и Метрики в Elasticsearch Service Kibana.#
+
