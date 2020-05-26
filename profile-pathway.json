@@ -81,7 +81,7 @@
         "id": "ansibleop"
       },
       {
-        "title": "Elastic Cloud on Kubernetes",
+        "title": "ELK on Kubernetes",
         "description": "Изучите, как использовании ELK в Kubernetes.",
         "id": "elk"
       }    
