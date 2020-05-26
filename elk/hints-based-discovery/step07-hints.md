@@ -1,13 +1,13 @@
-### Update the hello-java metadata
+### Обновите метаданные hello-java metadata
 
 `colordiff -U6 /root/course/hello-java.yaml /root/course/hello-java-hints.yaml`{{execute HOST1}}
 
 `kubectl apply -f /root/course/hello-java-hints.yaml `{{execute HOST1}}
 
-### Look at the changes in Kibana
-At this point you will see that the multi-line pattern annotation has been applied and the logs look as you would like. Coming from Ops, I appreciate not having to have someone with a cluster admin role stop the agent, modify the config, and restart it.  Using these annotations puts the control of what gets collected in the hands of the application owner.  Just update the manifest and apply.
+### Посмотрите на изменения в Kibana
+На этом этапе вы увидите, что multi-line pattern annotation была применена, и logs выглядят так, как вам бы хотелось. Исходя из Ops, я ценю то, что не нужно, чтобы кто-то с ролью администратора кластера останавливал агент, изменял конфигурацию и перезапускал ее. Использование этих annotations дает контроль над тем, что попадает в руки владельца приложения application owner. Просто обновите манифест и подайте заявку.
+
 
 ### View in Kibana
 
-Open your Kibana URL and look under the Dashboard link, verify that the Apache and Redis dashboards are populating.
-
+Откройте Kibana URL и перейдите по ссылке «Dashboard link», убедитесь, что в панели инструментов Apache и Redis заполнены.
