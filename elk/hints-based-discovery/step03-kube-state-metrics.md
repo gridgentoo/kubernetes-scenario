@@ -1,8 +1,8 @@
-### Check to see if kube-state-metrics is running
+### Проверьте, работает ли kube-state-metrics
 
 `kubectl get pods --namespace=kube-system | grep kube-state`{{execute HOST1}}
 
-and create it if needed (by default it will not be there)
+и создайте kube-state, при необходимости (по умолчанию его там не будет)
 
 
 `git clone https://github.com/kubernetes/kube-state-metrics.git kube-state-metrics`{{execute HOST1}}
