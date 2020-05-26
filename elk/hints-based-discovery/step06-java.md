@@ -1,10 +1,10 @@
-### Deploy the Spring hello world app
+### Разверните приложение Spring hello world app
 
 `kubectl apply -f /root/course/hello-java.yaml `{{execute HOST1}}
 
 ### View in Kibana
-The logs from the hellow world app will be available in Kibana as soon as the container spins up.  It will take about 90 seconds, so back to Kibana and look at the Apache and Redis data
+logs из приложения hello world будут доступны в Kibana, как только контейнер запустится. Это займет около 90 секунд, поэтому вернитесь в Kibana и посмотрите на данные Apache и Redis.
 
 ### Look at the Spring saved search in Discover
-These are being processed by the default Filebeat pattern, and are similar to what you would see with fluentd or other log shippers.  Next we will add annotations to the hello-java manifest to tell Filebeat how to stitch together the multi-line logs
+Они обрабатываются шаблоном Filebeat по умолчанию и похожи на то, что вы видели бы с fluentd или другими поставщиками Логгов. Далее мы добавим аннотации к манифесту hello-java, чтобы сообщить Filebeat, как объединять многострочные logs
 
