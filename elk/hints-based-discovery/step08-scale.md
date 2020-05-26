@@ -1,5 +1,5 @@
-### Scale your deployments and see new pods being monitored
-List the existing deployments:
+### Масштабируйте развертывание и мониторьте новые pods 
+Перечислите существующие развертывания:
 
 `kubectl get deployments`{{execute HOST1}}
 
@@ -11,7 +11,7 @@ redis-master            1         1         1            1           6m
 redis-slave             1         1         1            1           6m
 ```
 
-Scale the Spring app up to two replicas:
+Масштабируйте приложение Spring до двух реплик:
 
 `kubectl scale --replicas=2 deployment/hello-java-deployment`{{execute HOST1}}
 
