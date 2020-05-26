@@ -1,14 +1,14 @@
-### Deploy the Elastic Beats
+### Разверните Elastic Beats
 
 `kubectl create -f /root/course/filebeat-kubernetes.yaml `{{execute HOST1}}
 
 `kubectl create -f /root/course/metricbeat-setup.yaml`{{execute HOST1}}
 
-### Kibana overview
+### Kibana обзор
 
-While the images for Filebeat and Metricbeat download, lets look at Kibana
+Пока изображения для Filebeat и Metricbeat загружаются, давайте посмотрим на Kibana
 
-### Continue deploying Beats
+### Продолжить развертывание Beats
 
 `kubectl create -f /root/course/metricbeat-kubernetes.yaml `{{execute HOST1}}
 
