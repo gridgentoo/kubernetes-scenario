@@ -82,8 +82,8 @@
       },
       {
         "title": "Elastic Cloud on Kubernetes",
-        "description": "Изучите, как использовании Elastic Cloud в Kubernetes.",
-        "id": "elastic-cloud"
+        "description": "Изучите, как использовании ELK в Kubernetes.",
+        "id": "elk"
       }    
           
       
