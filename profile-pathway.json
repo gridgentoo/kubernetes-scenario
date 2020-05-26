@@ -79,7 +79,13 @@
         "title": "Ansible Operator and the Operator SDK",
         "description": "Изучите, как использовании Ansible для управления жизненным циклом приложений в Kubernetes.",
         "id": "ansibleop"
+      },
+      {
+        "title": "Elastic Cloud on Kubernetes",
+        "description": "Изучите, как использовании Elastic Cloud в Kubernetes.",
+        "id": "elastic-cloud"
       }    
+          
       
     ],
     "scenarios": []
