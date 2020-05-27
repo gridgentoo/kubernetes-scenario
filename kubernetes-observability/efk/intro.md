@@ -6,32 +6,33 @@
 Контейнеры должны создавать логги (logs), только в виде потоков событий (event streams) и оставлять агрегацию и маршрутизацию (aggregation and routing) для других служб в Kubernetes. 
 Этот паттерн подчеркивается как фактор [11 Logs](https://12factor.net/logs) методологии [Приложение «Двенадцать факторов» (https://12factor.net/).
 
-Commonly the three components ElasticSearch, Fluentd, and Kibana (EFK) are combined for the stack. Sometimes stack use Fluent Bit instead of Fluentd. Fluent Bit is mostly functionally the same, but lighter in features and size. Other solutions sometimes use Logstash (ELK) instead of Fluentd.
+Обычно три компонента ElasticSearch, Fluentd и Kibana (EFK) объединяются для стека. Иногда в стеке используется Fluent Bit вместо Fluentd. Fluent Bit в основном функционально одинаков, но легче по своим характеристикам и размеру. Другие решения иногда используют Logstash (ELK) вместо Fluentd.
 
-In the following steps you will learn:
+В следующих шагах вы узнаете:
 
-- How to deploy ElasticSearch, Fluentd, and Kibana
-- How to generate log events and query then in Kibana
+- Как развернуть ElasticSearch, Fluentd и Kibana
+- Как создать log events и query, в Kibana
 
 ## Forwarding: Fluent Bit ##
 
-![Fluent Bit](/javajon/courses/kubernetes-observability/efk/assets/flb_002.png "fluent Bit")
+![Fluent Bit](/kuber-ru/courses/elk/efk/assets/flb_002.png "fluent Bit")
 <div style="text-align: right">- fluentbit.io</div>
 
-[Fluentd](https://www.fluentd.org/) is an open source data collector, that lets you unify the data collection and consumption for a better use and understanding of data. In this stack Fluent Bit runs on each node (DaemonSet) and collects all the logs from /var/logs and routes them to ElasticSearch.
+[Fluentd] (https://www.fluentd.org/) - это сборщик данных data collector с открытым исходным кодом, который позволяет унифицировать сбор data collection и использование данных для лучшего использования и понимания данных. В этом стеке Fluent Bit запускается на каждом узле (DaemonSet) и собирает все Логги из /var/logs и направляет их в ElasticSearch.
 
-This example could use a lighter variation of Fluentd called [Fluent Bit](https://fluentbit.io/). Perhaps EfK, with a lower case 'f' is apropos. [Alen Komljen](https://akomljen.com/) covers the reason why in his [blog](https://akomljen.com/get-kubernetes-logs-with-efk-stack-in-5-minutes/).
+В этом примере может использоваться более легкая версия Fluentd, которая называется [Fluent Bit](https://fluentbit.io/). Возможно, EfK, в нижнем регистре 'f', кстати. 
+[Alen Komljen](https://akomljen.com/) раскрывает причину этого в своем [блоге](https://akomljen.com/get-kubernetes-logs-with-efk-stack-in-5-minutes/).
 
-Another variation for logging is the E**L**K stack that includes Logstash as a substitution for the Fluent aggregation solution.
+Другой вариант ведения логгов - это стек E**L**K , который включает Logstash в качестве замены Fluent для решения задач агрегации логгов.
 
 ## Aggregation: ElasticSearch ##
 
-Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
+Elasticsearch - это поисковая система, search engine, основанная на библиотеке Lucene. Он предоставляет распределенную полнотекстовую поисковую систему, full-text search engine, с поддержкой HTTP web interface и schema-free JSON documents.
 
 ## Viewing: Kibana ##
 
-[Kibana](https://www.elastic.co/products/kibana) is an open source data visualization plugin for Elasticsearch. It provides visualization capabilities on top of the content indexed on an Elasticsearch cluster. Users can create bar, line and scatter plots, or pie charts and maps on top of large volumes of data.
+[Kibana](https://www.elastic.co/products/kibana) - это плагин для визуализации данных с открытым исходным кодом для Elasticsearch. Он предоставляет возможности визуализации поверх содержимого, проиндексированного в кластере Elasticsearch. Пользователи могут создавать линейчатые, линейные и точечные графики или круговые диаграммы и карты поверх больших объемов данных.
 
-For Kubernetes there are a wide variety of ways to assemble EFK together, especially with a production or business critical clusters. Some solutions may leverage an ElasticSearch service outside the cluster, perhaps offered by a cloud provider. For any solution that's deployed to Kubernetes it's recommended to use Helm charts. Even with Helm charts there are a variety of solutions evolving and competing with each other.
+Для Kubernetes существует множество способов собрать EFK вместе, особенно с производственными или бизнес-критических кластеров. Некоторые решения могут использовать сервис ElasticSearch service вне кластера, возможно, предлагаемый облачным провайдером. Для любого решения, развернутого в Kubernetes, рекомендуется использовать Helm charts. Даже с Helm charts существует множество решений, которые развиваются и конкурируют друг с другом.
 
-However, this scenario is aimed to show how you can get a working stack up with reasonable ease so you can see how the components are installed and work with each other.
+Тем не менее, этот сценарий призван показать, как можно разумно упростить наращивание EFK-стека, чтобы вы могли видеть, как компоненты установлены и работают друг с другом.
