@@ -10,7 +10,7 @@
       },
       {
         "course_id": "efk",
-        "title": "Как реализовать централизованное ведение логгов с EFK",
+        "title": "Централизованное ведение логгов с EFK",
         "description": "Узнайте, как реализовать централизованное ведение logging  с использованием стека ElasticsSearch, Fluent Bit и Kibana (EFK) в Kubernetes."
       },
       {
