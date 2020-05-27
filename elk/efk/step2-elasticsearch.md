@@ -1,6 +1,6 @@
 ## Persistent Volume ##
 
-ElasticSearch will be making a PersistentVolumeClaim for its persistence. A PersistentVolume will be needed. Since this is all temporary in Katacoda, a [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) is created.
+ElasticSearch будет делать PersistentVolumeClaim за его persistence. Будет необходим PersistentVolume - постоянный объем. Поскольку все это временно в Katacoda, PersistentVolume создается на основе [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume).
 
 `mkdir -p /mnt/data/efk-master && kubectl create -f pv-master.yaml`{{execute}}
 
@@ -8,11 +8,11 @@ ElasticSearch will be making a PersistentVolumeClaim for its persistence. A Pers
 
 ## Install ElasticSearch ##
 
-Create a namespace for the installation target.
+Создайте пространство имен namespace для цели установки.
 
 `kubectl create namespace logs`{{execute}}
 
-Deploy the public Helm chart for ElasticSearch. The chart's default settings are appropriately opinionated for a production deployment. Here, some of the default settings are downsized to fit in this Katacoda cluster.
+Разверните общедоступную Helm chart для ElasticSearch. Параметры chart's по умолчанию должным образом учтены для production deployment. Здесь некоторые параметры по умолчанию уменьшены для соответствия этому кластеру Katacoda.
 
 `helm install elasticsearch stable/elasticsearch --namespace=logs \
 --set client.replicas=1 \
@@ -27,4 +27,4 @@ Deploy the public Helm chart for ElasticSearch. The chart's default settings are
 --set data.persistence.storageClass=elasticsearch-data \
 --set data.persistence.size=5Gi`{{execute}}
 
-ElasticsSearch is starting and will become available in a few minutes. In the meantime, move onto the next installation step.
+Elasticsearch запускается и станет доступным через несколько минут. А пока перейдите к следующему шагу установки.
