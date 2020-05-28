@@ -1,13 +1,13 @@
-All three installations of ElasticSearch, Fluent Bit, and Kibana are either still initializing or fully available.
+Все три установки **ElasticSearch, Fluent Bit** и **Kibana** либо все еще инициализируются, либо уже полностью доступны.
 
-To inspect the status of these deployments run this watch.
+Чтобы проверить состояние этих развертываний, запустите эти watch.
 
 `watch kubectl get deployments,pods,services --namespace=logs`{{execute}}
 
-Once complete, the Pods will move to the _Running_ state. The full stack is not ready until all the Deployment statuses move to the _Available (1)_ state.
+По завершении развертывания, Pods перейдут в состояние _Running_ . Полный stack не готов, пока все состояния развертывания не перейдут в состояние _Available (1)_.
 
-While observing the progress, **be patient, as it takes time for the stack to initialize, even with this small configuration.**
+Наблюдая за прогрессом, **наберитесь терпения, так как для инициализации stack требуется время, даже при такой небольшой конфигурации.**
 
-When all Deployments report _Available_ and the Pods report _Running_ use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Когда все сообщения развертывания стека приобретут статус _Available_ и сообщения от Подов _Running_ используют это ```clear```{{execute interrupt}} чтобы выйти из режима наблюдения watch или нажать <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-You know have a full EFK stack running. Granted this stack smaller and not configure to he highly available or with access protection, but it comprises a functional solution to get started.
+Вы знаете, что работает полный стек EFK. Разумеется, этот стек меньше по размеру и не настроен на высокую доступность или защиту доступа, но он представляет собой функциональное решение для начала работы.
