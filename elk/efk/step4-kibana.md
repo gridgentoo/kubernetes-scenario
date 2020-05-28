@@ -2,7 +2,7 @@
 
 `kubectl create namespace logs`{{execute}}
 
-Задепоим Кибану. Служба будет на порту NodePort на 31000.
+Задеплоим Кибану. Служба будет на порту NodePort на 31000.
 
 `helm install kibana stable/kibana --namespace=logs --set env.ELASTICSEARCH_HOSTS=http://elasticsearch-client:9200 --set service.type=NodePort --set service.nodePort=31000`{{execute}}
 
