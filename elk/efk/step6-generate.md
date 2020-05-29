@@ -1,8 +1,8 @@
-Запустите этот контейнер, чтобы начать генерировать случайные логги log events.
+Запустите этот контейнер, чтобы начать генерировать случайные логги **log events**.
 
 `kubectl run random-logger --image=chentex/random-logger --generator=run-pod/v1`{{execute}}
 
->Спасибо Vicente Zepeda за предоставление этого [beautifully simple container](https://github.com/chentex/random-logger).
+>Спасибо **Vicente Zepeda** за предоставление этого [beautifully simple container](https://github.com/chentex/random-logger).
 
 События log events будут выглядеть примерно так.
 
@@ -15,7 +15,7 @@
 ...
 ```
 
-Проверьте фактические события log events, которые теперь генерируются с помощью этой команды log command.
+Проверьте фактические события **log events**, которые теперь генерируются с помощью этой команды **kubectl logs**.
 
 `kubectl logs pod/random-logger`{{execute}}
 
