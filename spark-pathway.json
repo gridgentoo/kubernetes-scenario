@@ -1,7 +1,7 @@
 {
-    "title": "ELK hints based k8s autodiscover",
+    "title": "Spark on Kubernetes",
     "icon": "fa-kubernetes",
-    "description": "Откройте для себя Elastic Stack.",
+    "description": "Откройте для себя Spark.",
     "courses": [
       {
         "course_id": "singleSpark",
