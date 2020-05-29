@@ -1,0 +1,32 @@
+{
+    "title": "ELK hints based k8s autodiscover",
+    "icon": "fa-kubernetes",
+    "description": "Откройте для себя Elastic Stack.",
+    "courses": [
+      {
+        "course_id": "singleSpark",
+        "title": "Running Spark on a single server.",
+        "description": "Setup Spark in stand-alone mode on an Ubuntu server and try a few Python and Scala commands (v1.0)."
+      },
+      {
+        "course_id": "sparkzep",
+        "title": "Setup a spark on K8S /w zeppelin",
+        "description": "Setup a small spark cluster on k8s with Zepelin ."
+      },
+      {
+        "course_id": "singlekafka",
+        "title": "Single kafka install.",
+        "description": "Setup kafka on a single ubuntu machine (in progress."
+      },
+      {
+        "course_id": "beamonspark",
+        "title": "Running Beam on Spark.",
+        "description": "Setup Apache Beam on Spark and run a few simple tests."
+      },
+      {
+        "course_id": "superset",
+        "title": "Apache Superset.",
+        "description": "Run Apache Superset Docker-Compose."
+      }
+    ]
+  }

@@ -4,14 +4,14 @@
     "description": "Откройте для себя Elastic Stack.",
     "courses": [
       {
+        "course_id": "efk",
+        "title": "Централизованное ведение логов с EFK",
+        "description": "Узнайте, как реализовать централизованное ведение logging  с использованием стека ElasticsSearch, Fluent Bit и Kibana (EFK) в Kubernetes."
+      },
+      {
         "course_id": "hints-based-discovery",
         "title": "ELK hints основы k8s autodiscover: logs & metrics.",
         "description": "hints, или annotaions, основы autodiscover вашей среды k8s и отправки в службу Elasticsearch Service в Elastic Cloud."
-      },
-      {
-        "course_id": "efk",
-        "title": "Централизованное ведение логгов с EFK",
-        "description": "Узнайте, как реализовать централизованное ведение logging  с использованием стека ElasticsSearch, Fluent Bit и Kibana (EFK) в Kubernetes."
       },
       {
         "course_id": "hints-based-discovery-local",

@@ -84,7 +84,12 @@
         "title": "ELK on Kubernetes",
         "description": "Изучите, как использовании ELK в Kubernetes.",
         "id": "elk"
-      }    
+      },
+      {
+        "title": "Spark on Kubernetes",
+        "description": "Изучите, как использовании Spark в Kubernetes.",
+        "id": "spark"
+      }     
           
       
     ],

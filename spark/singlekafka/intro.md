@@ -1,0 +1,1 @@
+In this scenario we'll install kafka and and experiment with some messages/topics

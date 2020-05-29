@@ -2,7 +2,7 @@
 
 Katacoda has exposed the NodePort 31000 to access Kibana from your browser. 
 
-[Access Kibana](https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/). There is also a tab above the command-line area labeled `Kibana` that takes you to the same Kibana portal.
+[Access Kibana](https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/). Над областью командной строки с надписью `Kibana` находится вкладка, которая ведет на тот же портал Kibana. 
 
 ## Security ##
 
@@ -10,7 +10,7 @@ Katacoda has exposed the NodePort 31000 to access Kibana from your browser.
 
 ## Portal ##
 
-To see the logs collected from the random-logger service follow these steps in the Kibana portal.
+Чтобы просмотреть логи, собранные в службе **random-logger service**, выполните следующие действия на портале Kibana.
 
 1. When Kibana appears for the first time there will be a brief animation while it initializes.
 1. On the Welcome page click **_Explore on my own_**.

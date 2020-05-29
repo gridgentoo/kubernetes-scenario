@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    chart: spark-0.1.1
+    component: sparkzep-zeppelin
+    heritage: Tiller
+    release: sparkzep
+  name: sparkzep-zeppelin-contro
+  namespace: default
+spec:
+  clusterIP: 10.111.42.196
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 30466
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    component: sparkzep-zeppelin
+  sessionAffinity: None
+  type: NodePort

@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    chart: spark-0.1.1
+    component: sparkzep-spark-master
+    heritage: Tiller
+    release: sparkzep
+  name: sparkzep-spark-webui
+  namespace: default
+spec:
+  clusterIP: 10.110.17.59
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 32329
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    component: sparkzep-spark-master
+  sessionAffinity: None
+  type: NodePort
