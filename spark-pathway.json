@@ -6,7 +6,7 @@
       {
         "course_id": "sparkzep",
         "title": "Установка spark в kubernetes K8S /w zeppelin",
-        "description": "Установите небольшой spark cluster на K8s с Zeppelin."
+        "description": "Как установить небольшой spark cluster на K8s с Zeppelin."
       },
       {
         "course_id": "singleSpark",
