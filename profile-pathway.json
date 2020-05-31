@@ -91,9 +91,9 @@
         "id": "spark"
       },  
       {
-        "title": "Kafka on Kubernetes",
+        "title": "Kafka on OpenShift",
         "description": "Изучите, как использовании Kafka в Kubernetes.",
-        "id": "kafka"
+        "id": "kafka-openshift"
       }           
       
     ],
