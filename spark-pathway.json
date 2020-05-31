@@ -4,14 +4,14 @@
     "description": "Откройте для себя Spark.",
     "courses": [
       {
+        "course_id": "sparkzep",
+        "title": "Установка spark в kubernetes K8S /w zeppelin",
+        "description": "Установите небольшой spark cluster на K8s с Zeppelin."
+      },
+      {
         "course_id": "singleSpark",
         "title": "Running Spark on a single server.",
         "description": "Setup Spark in stand-alone mode on an Ubuntu server and try a few Python and Scala commands (v1.0)."
-      },
-      {
-        "course_id": "sparkzep",
-        "title": "Setup a spark on K8S /w zeppelin",
-        "description": "Setup a small spark cluster on k8s with Zepelin ."
       },
       {
         "course_id": "singlekafka",
