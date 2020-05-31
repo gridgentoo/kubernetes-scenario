@@ -89,8 +89,12 @@
         "title": "Spark on Kubernetes",
         "description": "Изучите, как использовании Spark в Kubernetes.",
         "id": "spark"
-      }     
-          
+      },  
+      {
+        "title": "Kafka on Kubernetes",
+        "description": "Изучите, как использовании Kafka в Kubernetes.",
+        "id": "kafka"
+      }           
       
     ],
     "scenarios": []
