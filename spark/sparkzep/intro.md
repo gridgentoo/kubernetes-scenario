@@ -1,7 +1,7 @@
-This scenario is in progress
+Сценарий для **spark-кластера** с **Zeppelin**.
 
-We'll be setting up a spark cluster with Zeppelin (similar to Jupiter Notebook), make a few adjustments to run on Katacoda,
+Мы установим **spark cluster** с **Zeppelin** (аналог **Jupiter Notebook**), и сделаем несколько настроек для работы с **Katacoda**,
 
-and running through a few examples for spark using Zeppelin.
+и пробегая по нескольким примерам для **spark**, используя **Zeppelin**.
 
-Remember, you only have an hour to run a katacode lab.
+Помните, у вас есть только час, чтобы запустить **katacode lab**.
