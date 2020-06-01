@@ -1,7 +1,7 @@
 {
-    "title": "Кластер Apache Kafka в OpenSfit",
+    "title": "Кластер Apache Kafka в OpenShift",
     "icon": "fa-kubernetes",
-    "description": "Откройте для себя различные приложения Kafka, которые вы можете легко запустить on OpenSfit.",
+    "description": "Откройте для себя различные приложения Kafka, которые вы можете легко запустить on OpenShift.",
     "courses": [
       {
         "course_id": "kafka",
