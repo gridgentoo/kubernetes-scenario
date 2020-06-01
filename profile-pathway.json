@@ -2,7 +2,7 @@
     "courses": [
       {
         "title": "Основы Kubernetes",
-        "description": "Изучите основные building blocks Kubernetes с практическими объяснениями.",
+        "description": "(((( Изучите основные building blocks Kubernetes с практическими объяснениями.",
         "id": "kubernetes-fundamentals"
       },
       {
