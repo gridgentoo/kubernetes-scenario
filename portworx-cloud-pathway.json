@@ -34,6 +34,16 @@
       "description": "Разверните базу данных PostgreSQL в Kubernetes, протестируйте сценарий отработки отказа HA, измените размер тома и сделайте take/restore snapshots."
     },
     {
+      "course_id": "px-minio",
+      "title": "Разверните Minio на томах Portworx volumes и используйте его для резервного копирования томов.",
+      "description": "Разверните Minio на томах Portworx volumes и используйте его для резервного копирования томов.."
+    },
+    {
+      "course_id": "px-k8s-auto-resize",
+      "title": "Автоматическое изменение размеров томов Kubernetes volumes с помощью AutoPilot.",
+      "description": "Используйте Portworx AutoPilot для динамического изменения размеров PVC на основе показателей без простоев downtime."
+    },
+    {
       "course_id": "px-kafka",
       "title": "Разверните Kafka и Zookeeper в Kubernetes, используя тома Portworx.",
       "description": "Разверните Kafka и Zookeeper в Kubernetes, используя тома Portworx."
