@@ -94,7 +94,12 @@
         "title": "Kafka on OpenShift",
         "description": "Изучите, как использовании Kafka в Kubernetes.",
         "id": "kafka-openshift"
-      }           
+      },
+      {
+        "title": "Portworx, Cloud Native Storage",
+        "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
+        "id": "portworx-cloud"
+      }              
       
     ],
     "scenarios": []
