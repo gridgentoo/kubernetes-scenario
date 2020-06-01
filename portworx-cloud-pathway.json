@@ -1,0 +1,22 @@
+{
+    "title": "Portworx, Cloud Native Storage",
+    "icon": "fa-kubernetes",
+    "description": "Откройте для себя Portworx.",
+    "courses": [
+      {
+        "course_id": "px-k8s-redis",
+        "title": "HA Redis в Kubernetes с Portworx",
+        "description": "Деплой базы данных Redis в Kubernetes с использованием Portworx, показыван сценарий отработки отказа HA"
+      },
+      {
+        "course_id": "px-k8s-sql-ha",
+        "title": "SQL Server высокой доступности с помощью Portworx в Kubernetes.",
+        "description": "без кластеризации на уровне приложений."
+      },
+      {
+        "course_id": "superset",
+        "title": "Apache Superset.",
+        "description": "Run Apache Superset Docker-Compose."
+      }
+    ]
+  }
