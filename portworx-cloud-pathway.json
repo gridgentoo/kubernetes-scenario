@@ -30,8 +30,8 @@
     },
     {
       "course_id": "px-k8s-postgres-all-in-one",
-      "title": "Аварийное переключение PostgreSQL Failover изменение размера и моментальные снимки.",
-      "description": "Разверните базу данных PostgreSQL в Kubernetes, используя Portworx, протестируйте сценарий отработки отказа HA, измените размер тома и сделайте take/restore snapshots."
+      "title": "PostgreSQL Failover изменение размера и моментальные снимки.",
+      "description": "Разверните базу данных PostgreSQL в Kubernetes, протестируйте сценарий отработки отказа HA, измените размер тома и сделайте take/restore snapshots."
     },
     {
       "course_id": "px-kafka",
