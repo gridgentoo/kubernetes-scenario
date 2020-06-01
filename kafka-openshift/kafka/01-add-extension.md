@@ -1,32 +1,32 @@
-## Import the code
+## Импортировать код
 
-Let's refresh the code we'll be using. Run the following command to clone the sample project:
+Давайте обновим код, который будем использовать. Выполните следующую команду, чтобы клонировать пример проекта:
 
 `cd /root/projects && rm -rf rhoar-getting-started && git clone https://github.com/openshift-katacoda/rhoar-getting-started`{{execute}}
 
 # The Project
 
-You start with a basic Maven-based application with the usual `pom.xml` entries for a Quarkus app.
+Вы начинаете с базового приложения на основе **Maven** с обычными записями `pom.xml` для приложения **Quarkus**.
 
-We've also included a frontend HTML file at `src/main/resources/META-INF/resources/index.html`{{open}} that will render our stream.
+Мы также включили внешний файл HTML файл `src/main/resources/META-INF/resources/index.html`{{open}}, который будет рендерить наш поток.
 
 # The Application You Will Build
 
-The app consists of 3 components that pass messages via Kafka and an in-memory stream, then uses SSE to push messages to
-the browser. It looks like:
+Приложение состоит из 3 компонентов, которые передают сообщения через **Kafka** и **in-memory stream**, а затем используют **SSE** для отправки сообщений в
+браузер. Это выглядит как:
 
 ![kafka](/openshift/assets/middleware/quarkus/kafkaarch.png)
 
-## Add Extension
+## Добавить расширение
 
-Like other exercises, we’ll need another extension to integrate Quarkus with Kafka. Install it by clicking on the following command:
+Как и другие упражнения, нам понадобится другое расширение для интеграции **Quarkus** с **Kafka**. Установите его, нажав на следующую команду:
 
 `cd /root/projects/rhoar-getting-started/quarkus/kafka &&
   mvn quarkus:add-extension -Dextensions="kafka"`{{execute}}
 
-> The first time you add the extension, new dependencies may be downloaded via maven. This should only happen once, after that things will go even faster.
+>  При первом добавлении расширения новые зависимости могут быть загружены через **maven**. Это должно произойти только один раз, после этого дела пойдут еще быстрее.
 
-This will add the necessary entries in your `pom.xml`{{open}} to bring in the Kafka extension. You'll see:
+Это добавит необходимые записи в ваш `pom.xml`{{open}} для добавления расширения **Kafka extension**. Вы увидите:
 
 ```xml
 <dependency>
@@ -36,13 +36,13 @@ This will add the necessary entries in your `pom.xml`{{open}} to bring in the Ka
 ```
 ## Live Coding
 
-**Live Coding** (also referred to as _dev mode_) allows us to run the app and make changes on the fly. Quarkus will automatically re-compile and reload the app when changes are made. This is a powerful and effecient style of developing that you find to be very useful.
+**Live Coding** (также называемый _dev mode_) позволяет нам запускать приложение и вносить изменения на лету. **Quarkus** автоматически перекомпилирует и перезагрузит приложение после внесения изменений. Это мощный и эффективный стиль **developing**, который мы считаем очень полезным.
 
-With our extension installed, let's begin Live Coding. Click on the following command to start the app in Live Coding mode:
+Установив наше расширение **extension**, давайте начнем **Live Coding**. Нажмите следующую команду, чтобы запустить приложение в режиме **Live Coding**:
 
 ```mvn compile quarkus:dev```{{execute}}
 
-You should see:
+Тебе следует увидеть:
 
 ```console
 people 1.0-SNAPSHOT (powered by Quarkus 1.3.2.Final) started in 1.598s. Listening on: http://0.0.0.0:8080
@@ -50,20 +50,20 @@ Profile dev activated. Live Coding activated.
 Installed features: [cdi, resteasy, smallrye-context-propagation, smallrye-reactive-messaging, smallrye-reactive-messaging-kafka, smallrye-reactive-streams-operators]
 ```
 
-> The first time you build the app, new dependencies may be downloaded via maven. This should only happen once, after that things will go even faster.
+> При первом создании приложения новые зависимости могут быть загружены через **Maven**. Это должно произойти только один раз, после этого дела пойдут еще быстрее.
 
-Note the amazingly fast startup time! The app is now running "locally" (within the Linux container in which this exercise runs).
+Обратите внимание на удивительно быстрое время запуска! Теперь приложение работает "locally" (в контейнере **Linux container**, в котором выполняется это упражнение).
 
-Test that the app is running by accessing the simple `hello` endpoint:
+Проверьте, запущено ли приложение, открыв простую конечную точку `hello`:
 
 `cd /root/projects/rhoar-getting-started/quarkus/kafka && \
   curl http://localhost:8080/hello`{{execute T2}}
 
-> You may need to click this command again in case it doesn't execute properly on first click
+> Возможно, вам придется  click  эту команду еще раз, если она не выполняется должным образом при первом click 
 
-you should see
+Тебе следует увидеть:
 
 ```console
 hello
 ```
-Leave the app running, and let's start adding to it.
+Оставьте приложение запущенным, и давайте начнем добавлять к нему.
