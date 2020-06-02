@@ -1,6 +1,14 @@
-## What you will learn ##
+## Что вы изучите ##
 
-In this scenario you will learn more about [Debezium](http://debezium.io/), a project that provides change data capture for any of supported databases
+[Архитектура Debezium, Kafka Connect, Apache Kafka](https://docs.google.com/document/d/1vQdTzz1tehapECtJQ3PPxVzfsoNhNRwzYgGU2hFtmwA/edit)  
+https://docs.google.com/document/d/1vQdTzz1tehapECtJQ3PPxVzfsoNhNRwzYgGU2hFtmwA/  
+
+![Архитектура Debezium](../../assets/middleware/debezium-getting-started/debezium-architecture.png)  
+![Архитектура Debezium](../../assets/middleware/debezium-getting-started/Mysql.png)  
+Простая архитектура стека **Change data capture (CDC)** с разъемом **MySQL debezium**  
+
+
+В этом сценарии вы изучите больше о [Debezium](http://debezium.io/), проекте, который обеспечивает сбор данных об изменениях для любой из поддерживаемых баз данных.
 * MySQL
 * PostgreSQL
 * MongoDB
@@ -8,26 +16,26 @@ In this scenario you will learn more about [Debezium](http://debezium.io/), a pr
 * Oracle (incubating)
 * Apache Cassandra (incubating)
 
-You will deploy a complete end-to-end solution that will capture events from database transaction logs and make those events available to processing by downstream consumers via an [Apache Kafka](https://kafka.apache.org/) broker.
+Вы развернете законченное комплексное решение **end-to-end solution**, которое будет собирать **logs** из журналов транзакций базы данных и **processing by downstream consumers** сделать эти события доступными для обработки нижестоящими **consumers** потребителями через  [Apache Kafka](https://kafka.apache.org/) **broker**.
 
-## What is Debezium? 
+## Что такое  Debezium? 
 
 ![Logo](../../assets/middleware/debezium-getting-started/debezium-logo.png)
 
-[Debezium](http://debezium.io/) is a set of distributed services capture row-level changes in your databases so that your applications can see and respond to those changes.
-Debezium records all row-level changes committed to a particular database table in a dedicated message topic.
-Each application simply reads the topic(s) they are interested in, and they see all of the events in the same order in which they occurred.
+[Debezium](http://debezium.io/) - это набор распределенных сервисов **distributed services**, которые фиксируют изменения на уровне строк в ваших базах данных, чтобы ваши приложения могли видеть и реагировать на эти изменения.
+Debezium записывает все изменения на уровне строк **row-level changes committed**, зафиксированные в конкретной таблице базы данных, в отдельной теме сообщения **message topic**.
+Каждое приложение просто читает интересующую их тему **topic(s)** и видит все события в том же порядке, в котором они произошли.
 
-Technically Debezium utilizes the [Apache Kafka](https://kafka.apache.org/) streaming platform to distribute events captured from database.
-It is a set of plug-ins for [Kafka Connect](https://kafka.apache.org/documentation/#connect) that publish messages to a [Kafka broker](https://kafka.apache.org/documentation/#uses_messaging).
+Технически Debezium использует потоковую платформу [Apache Kafka](https://kafka.apache.org/) **streaming platform** для распространения событий **events**, захваченных из базы данных.
+Это набор плагинов для  [Kafka Connect](https://kafka.apache.org/documentation/#connect) , которые публикуют сообщения **messages** для [Kafka broker](https://kafka.apache.org/documentation/#uses_messaging).
 
-The minimum components required for skeleton deployment are
-* Kafka broker - consisting of a single [Apache ZooKeeper](https://zookeeper.apache.org/) instance for cluster management and a single node of Kafka broker
-* Kafka Connect node - containing and configured to stream data from a database
-* source database
+Минимальные компоненты, необходимые для развертывания скелета **skeleton deployment**:
+* **Kafka broker** - состоит из одного экземпляра [Apache ZooKeeper](https://zookeeper.apache.org/) для управления кластером и одного узла брокера **Kafka broker**
+* **Kafka Connect node** - настроенн для потоковой передачи данных из базы данных
+* **source database**
 
-The following diagram shows the minimal deployment
+Следующая диаграмма показывает минимальное развертывание **minimal deployment**
 
 ![Minimal deployment](../../assets/middleware/debezium-getting-started/minimal-deployment.png)
 
-In the next steps we will deploy the components and get dataflow running from a MySQL database to a Kafka broker.
+На следующих шагах мы развернем компоненты и запустим поток данных **dataflow** из базы данных MySQL в **Kafka broker**.
