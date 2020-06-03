@@ -6,7 +6,7 @@
     {
       "course_id": "px-mysql",
       "title": "HA MySQL на Kubernetes с Portworx",
-      "description": "Деплой базы данных MySQL в Kubernetes с использованием Portworx, показ сценария отработки отказа HA, динамическое расширение тома и создание снимков для восстановления после ошибки пользователя"
+      "description": "Деплой базы данных MySQL в Kubernetes с использованием Portworx, сценарий отработки отказа HA, динамическое расширение тома и создание снимков для восстановления."
     },
     {
       "course_id": "px-k8s-redis",
@@ -21,7 +21,7 @@
     {
       "course_id": "px-cassandra",
       "title": "Cassandra Stateful Set on Portworx.",
-      "description": "Cassandra с сохранением состояния в Kubernetes с использованием Portworx, показ сценария отработки отказа HA, динамическое расширение тома и создание снимков для восстановления после ошибки пользователя."
+      "description": "Cassandra с сохранением состояния в Kubernetes с использованием Portworx, сценарий отработки отказа HA, динамическое расширение тома и создание снимков для восстановления."
     },
     {
       "course_id": "px-helm-mongo",
@@ -30,28 +30,28 @@
     },
     {
       "course_id": "px-k8s-postgres-all-in-one",
-      "title": "PostgreSQL Failover изменение размера и моментальные снимки.",
+      "title": "PostgreSQL Failover и моментальные снимки.",
       "description": "Разверните PostgreSQL в Kubernetes, протестируйте сценарий отработки отказа HA, измените размер тома и сделайте take/restore snapshots."
     },
     {
       "course_id": "px-minio",
-      "title": "Разверните Minio на томах Portworx volumes и используйте его для резервного копирования томов.",
-      "description": "Разверните Minio на томах Portworx volumes и используйте его для резервного копирования томов.."
+      "title": "Разверните Minio на томах Portworx volumes.",
+      "description": "Разверните Minio на томах Portworx volumes и используйте его для резервного копирования томов."
+    },
+    {
+      "course_id": "px-kafka",
+      "title": "Разверните Kafka и Zookeeper в Kubernetes, используя тома Portworx.",
+      "description": "Как задеплоить Kafka и Zookeeper в Kubernetes, используя тома Portworx."
     },
     {
       "course_id": "px-k8s-auto-resize",
       "title": "Автоматическое изменение размеров томов Kubernetes volumes с помощью AutoPilot.",
-      "description": "Используйте Portworx AutoPilot для динамического изменения размеров PVC на основе показателей без простоев downtime."
+      "description": ""
     },
     {
       "course_id": "px-k8s-kubectl-resize-volume",
       "title": "Изменение размера томов Kubernetes с помощью kubectl.",
-      "description": "Использование Kubernetes cli kubectl для изменения размера тома на лету."
-    }
-    {
-      "course_id": "px-kafka",
-      "title": "Разверните Kafka и Zookeeper в Kubernetes, используя тома Portworx.",
-      "description": "Разверните Kafka и Zookeeper в Kubernetes, используя тома Portworx."
+      "description": "Kubernetes cli kubectl для изменения размера тома на лету."
     }
   ]
 }
