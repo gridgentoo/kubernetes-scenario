@@ -1,22 +1,22 @@
 {
     "pathwayTitle": "Intro to Debezium-based change data capture",
     "icon": "fa-java",
-    "title": "Getting Started with Debezium on OpenShift",
-    "description": "In this scenario you will learn more about Debezium project and how to build a complete solution with it.",
+    "title": "Начало работы с Debezium в OpenShift",
+    "description": "В этом сценарии вы узнаете больше о проекте Debezium и о том, как создать полное решение с его помощью.",
     "difficulty": "intermediate",
-    "time": "30 minutes",
+    "time": "20 minutes",
     "details": {
         "steps": [
             {
-                "title": "Deploying a Kafka broker",
+                "title": "Развертывание Kafka брокера",
                 "text": "01-deploying-a-broker.md"
             },
             {
-                "title": "Deploying a Kafka Connect with Debezium",
+                "title": "Развертывание Kafka Connect с Debezium",
                 "text": "02-deploying-a-kafka-connect.md"
             },
             {
-                "title": "Streaming data from database",
+                "title": "Streaming- потоковая передача данных из базы данных",
                 "text": "03-streaming-data-from-database.md"
             }
         ],
