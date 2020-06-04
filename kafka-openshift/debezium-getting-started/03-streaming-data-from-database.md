@@ -1,27 +1,27 @@
-The last step to do is to create a link between Debezium and a source MySQL database.
-This is achieved via Kafka Connect [REST API](https://docs.confluent.io/current/connect/restapi.html) configuration.
+Последний шаг - создание связи между **Debezium** и исходной базой данных **MySQL**.
+Это достигается с помощью конфигурации **Kafka Connect** [REST API](https://docs.confluent.io/current/connect/restapi.html).
 
 ![Complete deployment](../../assets/middleware/debezium-getting-started/minimal-deployment.png)
 
-**1. Register database source**
+**1. Зарегистрировать источник базы данных**
 
-To register the source we need to send a `POST` request to the `/connectors` endpoint of Kafka Connect API.
-An example registration request is part of the evironment - `register.json`{{open}}.
+Для регистрации источника нам нужно отправить запрос **`POST`** в конечную точку **`/connectors`** API-интерфейса **Kafka Connect**.
+Пример **registration request **является частью **evironment**  - `register.json`{{open}}.
 
-To register the database source execute
+Для регистрации **register** источника базы данных выполните
 
 ``cat register.json | oc exec -i -c kafka my-cluster-kafka-0 -- curl -s -X POST -H "Accept:application/json" -H "Content-Type:application/json" http://my-connect-cluster-connect-api:8083/connectors -d @-``{{execute}}
 
-Check the Connect's log file to see that the registration has succeeded and change data capture has started
+Проверьте **Connect's log**, чтобы убедиться, что регистрация прошла успешно и начался сбор изменений **data capture**.
 
 ``oc logs $(oc get pods -o name -l app=strimzi-connect-s2i)``{{execute}}
 
-Now Kafka topics are created when the connector starts to capture database changes.
-Those topics could be listed using command
+Теперь **Kafka topics** создаются, когда коннектор начинает фиксировать изменения базы данных.
+Эти **topics** могут быть перечислены с помощью команды
 
 ``oc exec -c kafka my-cluster-kafka-0 -- /opt/kafka/bin/kafka-topics.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --list``{{execute}}
 
-And the topics corresponding to the database tables are
+И **topics**, соответствующие таблицам базы данных
 
     dbserver1.inventory.addresses
     dbserver1.inventory.customers
@@ -30,13 +30,13 @@ And the topics corresponding to the database tables are
     dbserver1.inventory.products
     dbserver1.inventory.products_on_hand
 
-**2. Verify that data are sourced from the MySQL server to the Kafka broker**
+**2. Verify - Убедитесь, что данные поступают с сервера MySQL брокеру Kafka**
 
-Let's check the contents of `customers` table in MySQL. The command
+Давайте проверим содержимое таблицы `customer` в MySQL. Выполните команду
 
 ``oc exec -i $(oc get pods -o custom-columns=NAME:.metadata.name --no-headers -l app=mysql) -- bash -c 'mysql -t -u $MYSQL_USER -p$MYSQL_PASSWORD -e "SELECT * from customers" inventory'``{{execute}}
 
-should yield a result
+должен получить результат
 
     +------+------------+-----------+-----------------------+
     | id   | first_name | last_name | email                 |
@@ -47,11 +47,11 @@ should yield a result
     | 1004 | Anne       | Kretchmar | annek@noanswer.org    |
     +------+------------+-----------+-----------------------+
 
-The Kafka broker should contain an equivalent list of massages in topic `dbserver1.inventory.customers` in the Debezium change event [format](http://debezium.io/docs/configuration/event-flattening/)
+Брокер **Kafka** должен содержать эквивалентный список сообщений **massages in topiс** `dbserver1.inventory.customers` в событии изменения **Debezium** [format](http://debezium.io/docs/configuration/event-flattening/)
 
 ``oc exec -c kafka my-cluster-kafka-0 -- /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic dbserver1.inventory.customers --from-beginning --max-messages 4``{{execute}}
 
->*Note:* Output formatted for the sake of readability
+>*Note:* Вывод отформатирован для удобства чтения.
 
     ...
     {
@@ -219,11 +219,11 @@ The Kafka broker should contain an equivalent list of massages in topic `dbserve
     }
     Processed a total of 4 messages
     
-If we add a new record to the table
+Если мы добавим новую запись в **table**
 
 ``oc exec -i $(oc get pods -o custom-columns=NAME:.metadata.name --no-headers -l app=mysql) -- bash -c 'mysql -t -u $MYSQL_USER -p$MYSQL_PASSWORD -e "INSERT INTO customers VALUES(default,\"John\",\"Doe\",\"john.doe@example.org\")" inventory'``{{execute}}
 
-a new message will be sent to the associated topic
+новое сообщение будет отправлено в связанный **topic**
 
 ``oc exec -c kafka my-cluster-kafka-0 -- /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic dbserver1.inventory.customers --from-beginning --max-messages 5``{{execute}}
 
@@ -393,9 +393,10 @@ a new message will be sent to the associated topic
     }
     Processed a total of 5 messages
 
-## Congratulations
+## Поздравляю
 
-You have completed the basic deployment scenario.
-Now you can add or remove data from MySQL and see the results in Kafka Broker.
+Вы завершили базовый сценарий развертывания.
+Теперь вы можете добавлять или удалять данные из **MySQL** и просматривать результаты в **Kafka Broker**.
 
-See Debezium's extensive [tutorial](http://debezium.io/docs/tutorial/) for more tips and details.
+Посмотрите обширное [учебное пособие] **Debezium ** [tutorial](http://debezium.io/docs/tutorial/) для получения дополнительных советов и деталей.
+
