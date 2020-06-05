@@ -1,18 +1,18 @@
 {
-    "pathwayTitle": "Intro to Red Hat OpenShift Application Runtimes",
+    "pathwayTitle": "Введение в среду выполнения приложений Red Hat OpenShift",
     "icon": "fa-java",
-    "title": "Getting Started with Data Grid on OpenShift",
-    "description": "Quickly get up and running with Data Grid one of the Red Hat OpenShift Application Runtimes.",
+    "title": "Начало работы с Data Grid on OpenShift",
+    "description": "Быстрое начало работы с Data Grid в среде выполнения приложений Red Hat OpenShift.",
     "difficulty": "intermediate",
     "time": "5-10 minutes",
     "details": {
         "steps": [
             {
-                "title": "Login to OpenShift",
+                "title": "Войти в OpenShift",
                 "text": "01-login-to-openshift.md"
             },
             {
-                "title": "Deploy Data Grid to OpenShift",
+                "title": "Развертывание Deploy Data Grid в OpenShift",
                 "text": "02-deploy-to-openshift.md"
             },
             {
