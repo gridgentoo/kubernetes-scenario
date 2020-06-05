@@ -11,6 +11,11 @@
         "id": "elk"
       },
       {
+        "title": "Spark on Kubernetes",
+        "description": "Изучите, как использовании Spark в Kubernetes.",
+        "id": "spark"
+      },  
+      {
         "title": "Основы Kubernetes",
         "description": "Изучите основные building blocks Kubernetes с практическими объяснениями.",
         "id": "kubernetes-fundamentals"
@@ -90,11 +95,6 @@
         "description": "Изучите, как использовании Ansible для управления жизненным циклом приложений в Kubernetes.",
         "id": "ansibleop"
       },
-      {
-        "title": "Spark on Kubernetes",
-        "description": "Изучите, как использовании Spark в Kubernetes.",
-        "id": "spark"
-      },  
       {
         "title": "Portworx, Cloud Native Storage",
         "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
