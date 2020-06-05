@@ -16,6 +16,11 @@
         "id": "spark"
       },  
       {
+        "title": "Portworx, Cloud Native Storage",
+        "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
+        "id": "portworx-cloud"
+      }, 
+      {
         "title": "Основы Kubernetes",
         "description": "Изучите основные building blocks Kubernetes с практическими объяснениями.",
         "id": "kubernetes-fundamentals"
@@ -94,12 +99,7 @@
         "title": "Ansible Operator and the Operator SDK",
         "description": "Изучите, как использовании Ansible для управления жизненным циклом приложений в Kubernetes.",
         "id": "ansibleop"
-      },
-      {
-        "title": "Portworx, Cloud Native Storage",
-        "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
-        "id": "portworx-cloud"
-      } 
+      }
     ],
     "scenarios": []
   }
