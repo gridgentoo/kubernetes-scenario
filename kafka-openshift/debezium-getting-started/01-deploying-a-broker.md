@@ -17,7 +17,7 @@
 
 ``oc get pods``{{execute}}
 
-and that it is exposed as a service
+и что это выставлено **exposed** как **service**
 
 ``oc get svc``{{execute}}
 

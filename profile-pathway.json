@@ -1,6 +1,16 @@
 {
     "courses": [
       {
+        "title": "Kafka on OpenShift",
+        "description": "Изучите, как использовании Kafka в Kubernetes.",
+        "id": "kafka-openshift"
+      },
+      {
+        "title": "ELK on Kubernetes",
+        "description": "Изучите, как использовании ELK в Kubernetes.",
+        "id": "elk"
+      },
+      {
         "title": "Основы Kubernetes",
         "description": "Изучите основные building blocks Kubernetes с практическими объяснениями.",
         "id": "kubernetes-fundamentals"
@@ -81,26 +91,15 @@
         "id": "ansibleop"
       },
       {
-        "title": "ELK on Kubernetes",
-        "description": "Изучите, как использовании ELK в Kubernetes.",
-        "id": "elk"
-      },
-      {
         "title": "Spark on Kubernetes",
         "description": "Изучите, как использовании Spark в Kubernetes.",
         "id": "spark"
       },  
       {
-        "title": "Kafka on OpenShift",
-        "description": "Изучите, как использовании Kafka в Kubernetes.",
-        "id": "kafka-openshift"
-      },
-      {
         "title": "Portworx, Cloud Native Storage",
         "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
         "id": "portworx-cloud"
-      }              
-      
+      } 
     ],
     "scenarios": []
   }
