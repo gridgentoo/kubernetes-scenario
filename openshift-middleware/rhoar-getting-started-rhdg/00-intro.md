@@ -1,17 +1,19 @@
-## Learning Objectives
+## Цели обучения
 
-This interactive tutorial shows you how to deploy and run a single instance of [RHDG](https://www.redhat.com/en/technologies/jboss-middleware/data-grid) Red Hat Data Grid on OpenShift.
+В этом интерактивном руководстве показано, как развернуть и запустить один экземпляр **single instance** [RHDG](https://www.redhat.com/en/technologies/jboss-middleware/data-grid) Red Hat Data Grid в OpenShift.
 
-You then learn how to expose the REST endpoint and invoke simple cache operations.
+Вы изучите, как открыть конечную точку **REST endpoint** и вызвать простые операции кэширования **cache operations**.
 
-## Introduction to Red Hat Data Grid
+## Введение в Red Hat Data Grid
 
 ![Logo](/openshift/assets/middleware/rhoar-getting-started-rhdg/rhdg-logo.jpg)
 
-Red Hat Data Grid (RHDG) is an open source, in-memory data store that:
+Red Hat Data Grid (RHDG) - это **in-memory data store** хранилище данных в памяти с открытым исходным кодом, которое:
 
-* Stores data in memory (RAM) to provide fast, low-latency response times and very high throughput.
-* Synchronizes data across multiple nodes for continuous availability, reliability, and elastic scalability.
-* Offers flexibility. You can use it as a distributed cache, NoSQL database, or event broker.
+* Хранит данные в памяти (RAM) **Stores data in memory (RAM),** обеспечивая быстрое время отклика с низкой задержкой **low-latency** и очень высокую пропускную способность **high throughput**.
+* Синхронизирует данные между несколькими нодами для обеспечения **continuous availability**, надежности **reliability** и эластичной масштабируемости **elastic scalability**.
+* Offers flexibility - предлагает гибкость. Вы можете использовать его в качестве распределенного кэша **distributed cache**, **NoSQL database** или **event broker**.
 
-RHDG capabilities improve application performance and scalability while reducing the need to make expensive calls to database management systems and transactional back ends.
+RHDG улучшают производительность **application performance** и масштабируемость **scalability** приложений, уменьшая необходимость совершать дорогостоящие вызовы **database management systems** и транзакционным бекэндом **transactional back ends**.
+
+<iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/OXL4EAS8RXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
