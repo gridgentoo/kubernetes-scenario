@@ -14,6 +14,6 @@ Red Hat Data Grid (RHDG) - это **in-memory data store** хранилище д
 * Синхронизирует данные между несколькими нодами для обеспечения **continuous availability**, надежности **reliability** и эластичной масштабируемости **elastic scalability**.
 * Offers flexibility - предлагает гибкость. Вы можете использовать его в качестве распределенного кэша **distributed cache**, **NoSQL database** или **event broker**.
 
-RHDG улучшают производительность **application performance** и масштабируемость **scalability** приложений, уменьшая необходимость совершать дорогостоящие вызовы **database management systems** и транзакционным бекэндом **transactional back ends**.
+RHDG улучшают производительность **application performance** и масштабируемость **scalability** приложений, уменьшая необходимость совершать дорогостоящие вызовы к **database management systems** и транзакционным бекэндом **transactional back ends**.
 
 <iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/OXL4EAS8RXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
