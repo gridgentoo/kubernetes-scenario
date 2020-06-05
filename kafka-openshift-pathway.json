@@ -4,14 +4,14 @@
     "description": "Откройте для себя различные приложения Kafka, которые вы можете легко запустить on OpenShift.",
     "courses": [
       {
-        "course_id": "kafka",
-        "title": "Реактивный стриминг с Quarkus и Kafka",
-        "description": "Как Quarkus использует MicroProfile Reactive Messaging для взаимодействия с Apache Kafka."
-      },
-      {
         "course_id": "debezium-getting-started",
         "title": "Начало работы с Debezium в OpenShift.",
         "description": "Начало работы с Debezium в OpenShift."
+      },
+      {
+        "course_id": "kafka",
+        "title": "Реактивный стриминг с Quarkus и Kafka",
+        "description": "Как Quarkus использует MicroProfile Reactive Messaging для взаимодействия с Apache Kafka."
       }
     ]
   }
