@@ -1,10 +1,19 @@
+
+В этом сценарии вы познакомитесь с [Quarkus](https://quarkus.io).
 In this scenario, you will get an introduction to [Quarkus](https://quarkus.io).
 
-## What is Quarkus?
+## Что такое Quarkus?
 
 ![Logo](/openshift/assets/middleware/quarkus/logo.png)
 
 ### Supersonic, Subatomic Java
+
+Quarkus адаптирует ваше приложение для GraalVM и HotSpot. 
+Удивительно быстрое время загрузки, невероятно низкий объем **low RSS memory** (а не только размера кучи **heap size!**), Обеспечивающий почти мгновенное увеличение масштаба **scale** и высокую плотность использования памяти **high density memory utilization** на платформах оркестровки контейнеров, таких как Kubernetes. Мы используем технику, которую мы называем загрузкой во время компиляции. 
+
+Quarkus: Supersonic Subatomic Java. 
+https://github.com/quarkusio/quarkus
+
 
 For years, the client-server architecture has been the de-facto standard to build applications. But a major shift happened. The _one model rules them all_ age is over. A new range of applications and architecture styles has emerged and impacts how code is written and how applications are deployed and executed. HTTP microservices, reactive applications, message-driven microservices and serverless are now central players in modern systems.
 
