@@ -16,6 +16,11 @@
         "id": "spark"
       },  
       {
+        "title": "Quarkus: Supersonic Subatomic Java on OpenShift",
+        "description": "Quarkus - Java-стек Kubernetes, созданный специально для GraalVM.",
+        "id": "quarkus-openshift"
+      }, 
+      {
         "title": "Portworx, Cloud Native Storage",
         "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
         "id": "portworx-cloud"
