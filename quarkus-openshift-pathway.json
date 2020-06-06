@@ -6,14 +6,14 @@
       {
         "external_link": "https://learn.openshift.com/middleware/courses/middleware-quarkus/getting-started",
         "course_id": "getting-started",
-        "title": "Getting Started with Quarkus",
-        "description": "Supersonic, Subatomic Java with Quarkus"
+        "title": "Начало работы с Quarkus",
+        "description": "Supersonic, субатомная Java c Quarkus для Kubernetes"
       },
       {
         "external_link": "https://learn.openshift.com/middleware/courses/middleware-quarkus/kafka",
         "course_id": "kafka",
-        "title": "Reactive Streaming with Quarkus and Kafka",
-        "description": "How Quarkus uses MicroProfile Reactive Messaging to interact with Apache Kafka"
+        "title": "Reactive Streaming с Quarkus и Kafka",
+        "description": "Как Quarkus использует MicroProfile Reactive Messaging для взаимодействия с Apache Kafka"
       },
       {
         "external_link": "https://learn.openshift.com/middleware/courses/middleware-quarkus/spring",

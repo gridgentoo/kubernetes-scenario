@@ -1,20 +1,21 @@
-In this exercise, you will use the Quarkus Kafka extension to build a streaming application using MicroProfile Reative
-Streams Messaging and [Apache Kafka](https://kafka.apache.org), a distributed streaming platform. 
+В этом упражнении вы будете использовать расширение Quarkus Kafka для создания потокового приложения (streaming application) с использованием MicroProfile Reative
+Streams Messaging и [Apache Kafka](https://kafka.apache.org) распределенной потоковой платформы (distributed streaming platform).
 
-## What is Apache Kafka?
+## Что такое Apache Kafka?
 
-Apache Kafka is a distributed streaming platform. A streaming platform has three key capabilities:
+Apache Kafka - это распределенная потоковая платформа. Потоковая платформа обладает тремя ключевыми возможностями:
 
-  - Publish and subscribe to streams of records, similar to a message queue or enterprise messaging system.
-  - Store streams of records in a fault-tolerant durable way.
-  - Process streams of records as they occur.
-
-Kafka is generally used for two broad classes of applications:
-
-  - Building real-time streaming data pipelines that reliably get data between systems or applications
-  - Building real-time streaming applications that transform or react to the streams of data
+  - (Publish and subscribe to streams) - убликация и подписка на потоки записей, аналогичные (message queue) очереди сообщений или корпоративной системе обмена сообщениями (enterprise messaging system).
+  - (Store streams of records) xранение потока записей in a fault-tolerant отказоустойчивом и надежном виде.
+  - (Process streams) - обработка потоков записей по мере их возникновения.
 
 
-### Other possibilities
+Кафка обычно используется для двух широких классов приложений:
 
-Learn more at [quarkus.io](https://quarkus.io), or just drive on and get hands-on!
+  - Создание (real-time streaming data pipelines) потоковых пайплайнов данных в реальном времени, которые надежно получают данные между системами или приложениями.
+  - Создание (real-time streaming) потоковых приложений в реальном времени, которые преобразуют потоки данных (transform) или реактивно реагируют на них
+
+
+### Другие возможности
+
+Узнайте больше на [quarkus.io](https://quarkus.io) или просто поезжайте и получите практический опыт!
