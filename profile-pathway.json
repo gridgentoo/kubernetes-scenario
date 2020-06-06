@@ -16,7 +16,7 @@
         "id": "spark"
       },  
       {
-        "title": "Quarkus: Supersonic Subatomic Java on OpenShift",
+        "title": "Quarkus: субатомная Java созданная для Kubernetes",
         "description": "Quarkus - Java-стек Kubernetes, созданный специально для GraalVM.",
         "id": "quarkus-openshift"
       }, 
