@@ -1,10 +1,10 @@
-In this step, you will create a straightforward application serving a `hello` endpoint. To demonstrate dependency injection this endpoint uses a `greeting` bean.
+На этом шаге вы создадите простое приложение, обслуживающее конечную точку **hello endpoint**. Чтобы продемонстрировать внедрение зависимости, эта конечная точка использует **greeting bean**
 
 ![Architecture](/openshift/assets/middleware/quarkus/arch.png)
 
-# Create basic project
+# Создать базовый проект
 
-The easiest way to create a new Quarkus project is to click to run the following command:
+Самый простой способ создать новый проект **Quarkus** - **кликните ниже**, чтобы запустить следующую команду:
 
 `mvn io.quarkus:quarkus-maven-plugin:1.3.2.Final-redhat-00001:create \
     -DprojectGroupId=org.acme \
@@ -14,16 +14,18 @@ The easiest way to create a new Quarkus project is to click to run the following
     -DclassName="org.acme.quickstart.GreetingResource" \
     -Dpath="/hello"`{{execute}}
 
-This will use the Quarkus Maven Plugin and generate a basic Maven project for you in the `getting-started` subdirectory, generating:
+Он будет использовать плагин **Quarkus Maven** и сгенерирует базовый проект **Maven project** для вас в подкаталоге `**getting-started**`, генерируя:
 
-* The Maven structure
-* An `org.acme.quickstart.GreetingResource` resource exposed on `/hello`
-* An associated unit test
-* A landing page that is accessible on `http://localhost:8080` after starting the application
-* Example `Dockerfile`s for both native and jvm modes
-* The application configuration file
+* Maven структура
+* Ресурс `org.acme.quickstart.GreetingResource`, представленный **exposed** в `/hello`   
+* Связанный **unit** тест
+* A landing page, доступная по адресу `http://localhost:8080` после запуска приложения.  
+* Пример `Dockerfile`s для нативного и **jvm modes**
+* Файл конфигурации приложения **configuration file** 
 
-Once generated, look at the `getting-started/pom.xml`{{open}}. You will find the import of the Quarkus BOM, allowing to omit the version on the different Quarkus dependencies. In addition, you can see the `quarkus-maven-plugin` responsible of the packaging of the application and also providing the development mode.
+
+После того, как сгенерировано, посмотрите на `getting-started/pom.xml`{{open}}. 
+Вы найдете импорт спецификации **Quarkus BOM**, позволяющий опустить версию для различных зависимостей **Quarkus**. Кроме того, вы можете увидеть **quarkus-maven-plugin**, отвечающий за упаковку приложения **packaging**, а также за предоставление режима разработки **development mode**.
 
 ```xml
  <dependencyManagement>
@@ -69,7 +71,7 @@ Once generated, look at the `getting-started/pom.xml`{{open}}. You will find the
   </build>
 ```
 
-If we focus on the dependencies section, you can see we are using [Quarkus extensions](https://quarkus.io/extensions/) allowing the development and testing of REST applications:
+Если мы сосредоточимся на разделе зависимостей **dependencies section,** вы увидите, что мы используем [Quarkus extensions](https://quarkus.io/extensions/), позволяющий разрабатывать и тестировать  **REST applications**:
 ```xml
   <dependencies>
     <dependency>
@@ -116,7 +118,7 @@ Now we are ready to run our application. Click here to run:
 
 ```mvn compile quarkus:dev```{{execute}}
 
-You should see:
+Тебе следует увидеть:
 
 ```console
 2019-02-28 17:05:22,347 INFO  [io.qua.dep.QuarkusAugmentor] (main) Beginning quarkus augmentation
@@ -125,9 +127,10 @@ You should see:
 2019-02-28 17:05:22,771 INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
 ```
 
-Note the amazingly fast startup time! Once started, you can request the provided endpoint in the browser [using this link](https://[[CLIENT_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/hello).
+Обратите внимание на удивительно быстрое время запуска! После запуска вы можете запросить указанную конечную точку **endpoint** в браузере [using this link](https://[[CLIENT_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/hello).
 
-You should see:
+
+Тебе следует увидеть::
 
 ```console
 hello
