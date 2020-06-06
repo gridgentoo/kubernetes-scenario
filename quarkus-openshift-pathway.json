@@ -18,26 +18,26 @@
       {
         "external_link": "https://learn.openshift.com/middleware/courses/middleware-quarkus/spring",
         "course_id": "spring",
-        "title": "Quarkus for Spring Boot Developers",
-        "description": "Use familiar Spring APIs and annotations to build a Quarkus app"
+        "title": "Quarkus Quarkus для разработчиков Spring Boot",
+        "description": "Используйте знакомые Spring APIs и annotations для создания приложения Quarkus"
       },
       {
         "external_link": "https://learn.openshift.com/middleware/courses/middleware-quarkus/monitoring",
         "course_id": "monitoring",
-        "title": "Monitoring Quarkus with Prometheus and Grafana",
-        "description": "Visualizing Quarkus application metrics with open source monitoring tools"
+        "title": "Мониторинг Quarkus с помощью Prometheus и Grafana",
+        "description": "Визуализация метрик приложений Quarkus с помощью инструментов мониторинга с открытым исходным кодом"
       },
       {
         "external_link": "https://learn.openshift.com/middleware/courses/middleware-quarkus/reactive-sql",
         "course_id": "reactive-sql",
-        "title": "Reactive programming with Quarkus Reactive SQL",
-        "description": "Reactive programming with Quarkus and the Reactive SQL extension"
+        "title": "Реактивное программирование с Quarkus Reactive SQL",
+        "description": "Реактивное программирование с Quarkus и расширением Reactive SQL"
       },
       {
         "external_link": "https://learn.openshift.com/middleware/courses/middleware-quarkus/panache",
         "course_id": "panache",
-        "title": "Effective Data with Hibernate and Panache",
-        "description": "Making entities trivial and fun to write in Quarkus"
+        "title": "Effective Data с Hibernate и Panache",
+        "description": "Создание сущностей entities, тривиально и весело писать в Quarkus"
       }
     ]
   }
