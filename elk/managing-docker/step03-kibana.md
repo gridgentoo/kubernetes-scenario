@@ -1,6 +1,6 @@
-### Deploy Kibana
+### Задеплоим Кибану **Kibana**
 
-This docker run command starts Kibana with the default configuration.  If you want to customize the configuration you can pass in environment variables or mount a configuration file.  There is more information about running the official Kibana Docker container at https://www.elastic.co/guide/en/kibana/6.4/docker.html 
+Эта команда запуска **docker** запускает **Kibana** с конфигурацией по умолчанию. Если вы хотите настроить конфигурацию, вы можете передать переменные окружения или смонтировать файл конфигурации. Более подробную информацию о запуске официального контейнера **Kibana Docker** можно найти по адресу https://www.elastic.co/guide/en/kibana/6.4/docker.html .
 
 `
 docker run -d \
@@ -14,8 +14,12 @@ docker run -d \
   docker.elastic.co/kibana/kibana:7.6.2 
 `{{execute HOST1}}
 
-### Check the health / readiness of Kibana
+### Проверим здоровье **health** / готовность **Kibana**
 
-In the run command that you just ran, there is a health check defined.  This connects to Kibana and ensures that it is available. In the output of the following command you will see the test result.  Just like the check to make sure that Elasticsearch is ready, run this command to wait until Kibana is ready.  This is necessary before deploying Beats, as the Beats need to connect to both Elasticsearch and Kibana to install the modules that customize the experience related to the apps you are running (NGINX, Apache HTTPD, etc.).
+В только что выполненной команде запуска определена проверка работоспособности **health check**. Это дает подключение к **Kibana** и обеспечивает его доступность. В выводе **output** следующей команды вы увидите результат теста **test result**. Точно так же, как **check**, чтобы убедиться, что **Elasticsearch** готов, выполните эту команду, чтобы подождать, пока **Kibana is ready** не будет готов. Это необходимо перед развертыванием **Beats**, поскольку **Beats** необходимо подключиться как к **Elasticsearch**, так и к **Kibana** для установки модулей, которые настраивают взаимодействие с приложениями, которые вы используете (NGINX, Apache HTTPD и т. Д.).
 
+Посмотри код healthstate.sh
+`nano /root/course/healthstate.sh`
+
+Запустим код healthstate.sh
 `bash /root/course/healthstate.sh kibana`{{execute HOST1}}

@@ -24,11 +24,11 @@ docker run -d \
 
 `docker inspect elasticsearch | jq -r ".[].State.Health.Status`
 
-Посмотри код **healthstate.sh**
+Посмотри код **healthstate.sh**  
 
 `nano /root/course/healthstate.sh`{{execute HOST1}}
 
 Запустим код **healthstate.sh**
- 
+
 `bash /root/course/healthstate.sh elasticsearch`{{execute HOST1}}
 
