@@ -1,17 +1,17 @@
-### The sample Guestbook application
-The application consists of:
+### Пример приложения Guestbook application
+Приложение состоит из::
 ![NGINX, Apache httpd, PHP, Redis](https://raw.githubusercontent.com/elastic/katacoda-scenarios/master/images/GuestbookArchWithNGINX.001.png)
 
-### Container configuration notes
-All of the containers that make up the application have these things in common:
-1. We set the Docker network to `course_stack`
-1. We add some labels to the container to specify how the logs and metrics should be collected. When you deploy the NGINX container there is more information on the labels.
-1. Logs are written to STDOUT and STDERR
+### Замечания по конфигурации Container
+Все **containers**, которые составляют **application**, имеют следующие общие черты:
+1. Устанавливаем для сети **Docker network** to `course_stack`
+1. Мы добавляем некоторые метки в **container**, чтобы указать, как должны собираться **logs and metrics**. При развертывании **NGINX container** на **labels** появляется больше информации.
+1. **Logs** пишутся в **STDOUT** и **STDERR**
 
-### Deploy the Guestbook application
+### Задеплоим **Guestbook application**
 
-#### Deploy Redis master
-This Redis instance receives new Guestbook entries and writes them to the cache.
+#### Задеплоим **Redis master**
+Этот **Redis instance** получает новые записи **Guestbook** и записывает их в **cache**.
 
 `docker run --name=redis-master \
   --label co.elastic.logs/module=redis \
@@ -27,8 +27,8 @@ This Redis instance receives new Guestbook entries and writes them to the cache.
   --detach=true \
   gcr.io/google_containers/redis:e2e redis-server /etc/redis/redis.conf`{{execute HOST1}}
 
-### Deploy Redis worker
-This Redis instance syncs with the master instance and returns the cached content to the frontend web server.
+### Задеплоим **Redis worker**
+Этот **Redis instance** синхронизируется с **master instance** и возвращает кэшированное содержимое **cached** на **frontend web server**.
 
 `docker run --name=redis-slave \
   --label co.elastic.logs/module=redis \
@@ -43,8 +43,8 @@ This Redis instance syncs with the master instance and returns the cached conten
   --detach=true \
   gcr.io/google_samples/gb-redisslave:v1 /bin/sh -c /run.sh`{{execute HOST1}}
 
-### Deploy Apache httpd and PHP
-Apache httpd and PHP are served from this container.
+### Задеплоим **Apache httpd** и **PHP**
+**Apache httpd** и **PHP** обслуживаются из этого контейнера **container**.
 
 `docker run \
   --name=frontend \
@@ -65,11 +65,10 @@ Apache httpd and PHP are served from this container.
 
 
 ### NGINX
-We will deploy the standard NGINX Docker image with a few configuration changes:
-1. mount a custom nginx.conf to add the x-forwarded-for IP addresses passed in by the Katacoda proxy to the access log
-1. mount a custom conf.d/default.conf allow the local 172 network to access the server status metrics and forward requests to an Apache httpd server
+1. Смонтируйте пользовательский файл **nginx.conf**, чтобы добавить **x-forwarded-for IP addresses**, передаваемые прокси-сервером **Katacoda proxy**, в журнал **access log**.
+1. Смонтируйте пользовательский файл **conf.d/default.conf**, который позволит локальной сети 172 получать доступ к **metrics** сервера и **forward requests** на **Apache httpd server**.
 
-### Start NGINX
+### Стартуем NGINX
 `docker run -d \
 --net course_stack \
 --label co.elastic.logs/module=nginx \
@@ -82,13 +81,13 @@ We will deploy the standard NGINX Docker image with a few configuration changes:
 --name nginx \
 -p 8080:8080 nginx:1.15.4`{{execute HOST1}}
 
-Note in the NGINX run command there are labels, these labels are available in the Docker environment, and the Beats detect them and configure log and metric collection.  The labels tell Filebeat that the module name **nginx** should be used to collect, parse, and visualize the logs from this container, and that the access logs are at STDOUT, while the error logs are at STDERR.  Similarly, the labels tell Metricbeat to collect metrics from the container name and port.
+Обратите внимание, что в команде запуска **NGINX** есть **labels**, эти **labels** доступны в среде **Docker**,  а **Beats** обнаруживают их и настраивают сбор **log and metric**. Метки **labels** указывают **Filebeat**, что имя модуля  **nginx** должно использоваться для сбора, анализа и визуализации журналов **logs** из этого контейнера и что журналы доступа **logs** находятся в **STDOUT**, а журналы ошибок - в **STDERR**. Точно так же **labels** говорят **Metricbeat** собирать метрики из **container name and port**.
 
-You can see these labels with the command:
+Вы можете увидеть эти **labels** с помощью команды:
 
 `docker inspect nginx | grep -A7 Labels`{{execute HOST1}}
 
-### Put some entries in the Guestbook
-Open the [Guestbook](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/)
-Type in a message and click Submit.  Send in several messages, and also change the URL by adding `/foo` to generate some 404 errors.  Now return to the Katacoda tab and continue.
+### Поместите несколько записей в **Guestbook**
+Откройте [Guestbook](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/)
+Введите **message** и **click Submit**. Отправьте несколько сообщений, а также измените URL, добавив `/foo`, чтобы сгенерировать **404 errors**. Теперь вернитесь на вкладку **Katacoda tab** и продолжайте
 
