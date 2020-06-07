@@ -1,0 +1,19 @@
+packetbeat.interfaces.device: any
+
+packetbeat.protocols:
+- type: dns
+  ports: [53]
+  include_authorities: true
+  include_additionals: true
+
+- type: http
+  ports: [80, 8080]
+
+- type: redis
+  ports: [6379,6380,6381]
+
+- type: mysql
+  ports: [3306]
+
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]

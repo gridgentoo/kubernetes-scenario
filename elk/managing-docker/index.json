@@ -1,0 +1,57 @@
+{
+  "private": false, 
+  "title": "Collect logs & metrics from your app and Docker env",
+  "description": "Automate log & metric collection from apps & Docker; then search, analyze, and visualize all in one place with Elasticsearch & Kibana",
+  "details": {
+    "steps": [
+      {
+        "text": "step01-network.md"
+      },
+      {
+        "text": "step02-elasticsearch.md"
+      },
+      {
+        "text": "step03-kibana.md"
+      },
+      {
+        "text": "step04-nginx.md"
+      },
+      {
+        "text": "step05-filebeat.md"
+      },
+      {
+        "text": "step06-metricbeat.md"
+      },
+      {
+        "text": "step08-dashboards.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "colordiff.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*",
+          "target": "/root/course"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uieditorpath": "/root/course",
+    "showdashboard": false,
+    "dashboards": [
+      { "name": "Guestbook", "port": 8080 },
+      { "name": "Kibana", "port": 5601 }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
