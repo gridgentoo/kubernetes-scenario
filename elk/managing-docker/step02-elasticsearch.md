@@ -1,6 +1,6 @@
 ### Deploy Elasticsearch 
 
-This docker run command deploys a development Elasticsearch instance.  You can read more in the [docs](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/docker.html)
+Эта команда **docker run** развертывает экземпляр **Elasticsearch instance**. Вы можете прочитать больше в [docs](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/docker.html)
 
 `
 docker run -d \
@@ -16,13 +16,19 @@ docker run -d \
   docker.elastic.co/elasticsearch/elasticsearch:7.6.2 
 `{{execute HOST1}}
 
-### Check the health / readiness of Elasticsearch
+### Проверьте здоровье **health** / готовность **Elasticsearch**
 
-In the run command that you just ran, there is a health check defined.  This connects to the cluster health API of Elasticsearch.  In the output of the following command you will see the test result.  Wait until it returns a healthy response before deploying Kibana.  It may take a minute or two to download Elasticsearch and then it takes another minute for the process to get to the ready state the first time.
+В только что выполненной команде запуска определена проверка работоспособности **health check**. Это подключается к **health API** кластера **Elasticsearch**. В выводе следующей команды вы увидите результат теста. Подождите, пока он не вернет **healthy response**, прежде чем задеплоится **Kibana**. Для загрузки **Elasticsearch** может потребоваться минута или две, а затем процессу понадобится еще одна минута, чтобы в первый раз перейти в состояние готовности **ready state**
 
-The script you will run calls this command in a loop until the `docker inspect` command returns a `healthy` state:
+Скрипт, который вы запустите, вызывает эту команду в цикле, пока команда `docker inspect` не вернет состояние `healthy` state
 
 `docker inspect elasticsearch | jq -r ".[].State.Health.Status`
 
+Посмотри код **healthstate.sh**
+
+`nano /root/course/healthstate.sh`{{execute HOST1}}
+
+Запустим код **healthstate.sh**
+ 
 `bash /root/course/healthstate.sh elasticsearch`{{execute HOST1}}
 

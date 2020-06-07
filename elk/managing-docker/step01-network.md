@@ -1,6 +1,6 @@
 ### Network
 
-Create a network shared between the app and the Elastic Stack:
+Создайте сеть **network**, совместно используемую **app** и the **Elastic Stack**:
 
 `docker network create course_stack`{{execute HOST1}}
 

@@ -15,7 +15,7 @@
       },
       {
         "course_id": "managing-docker",
-        "title": "Collect logs & metrics из вашего приложения и Docker env.",
+        "title": "Collect logs & metrics из вашего приложения, Docker env.",
         "description": "Автоматизировать сбор log & metric из apps & Docker; затем искать, анализировать и визуализировать все в одном месте с Elasticsearch & Kibana."
       },
       {
