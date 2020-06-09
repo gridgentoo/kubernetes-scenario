@@ -1,14 +1,14 @@
-Let’s now produce a native executable for our application. It improves the startup time of the application, and produces a minimal disk footprint. The executable would have everything to run the application including the "JVM" (shrunk to be just enough to run the application), and the application.
+Давайте теперь создадим собственный исполняемый файл **native executable** для нашего приложения. Это улучшает время запуска приложения и обеспечивает минимальный объем дискового пространства. Исполняемый файл будет иметь все для запуска приложения, включая **"JVM"** (сокращено, чтобы быть достаточным для запуска приложения) и **application**
 
 ![Native process](/openshift/assets/middleware/quarkus/native-image-process.png)
 
-We will be using GraalVM, which includes a native compiler for producing native images for a number of languages, including Java. It's been installed for you:
+Мы будем использовать **GraalVM**, который включает собственный компилятор **native compiler** для создания собственных **native images** для ряда языков, включая Java. Он будет инсталлирован для вас:
 
 `echo $GRAALVM_HOME`{{execute}}
 
 ## Build native image
 
-Within the `getting-started/pom.xml`{{open}} is the declaration for the Quarkus Maven plugin which contains a profile for `native-image`:
+Внутри `getting-started/pom.xml`{{open}} находится декларации для плагина **Quarkus Maven**, который содержит **profile** для `native-image`:
 
 ```xml
 
@@ -46,15 +46,16 @@ Within the `getting-started/pom.xml`{{open}} is the declaration for the Quarkus 
     </profile>
 
 ```
-We use a profile because, you will see very soon, packaging the native image takes a few seconds. However, this compilation time is only incurred _once_, as opposed to _every_ time the application starts, which is the case with other approaches for building and executing JARs.
 
-Create a native executable by clicking: `mvn clean package -Pnative -DskipTests=true`{{execute}}
+Мы используем **profile**, потому что, как вы скоро увидите, упаковка исходного **native image** занимает несколько секунд. Однако это время компиляции происходит только _once_, а не _every_  время запуска приложения, что имеет место в случае других подходов для создания и выполнения **JAR** -файлов.
 
-> Since we are on Linux in this environment, and the OS that will eventually run our application is also Linux, we can use our local OS to build the native Quarkus app. If you need to build native Linux binaries when on other OS's like Windows or Mac OS X, you can use `-Dquarkus.native.container-runtime=[podman | docker]`. You'll need either Docker or [Podman](https://podman.io) installed depending on which container runtime you want to use!
+Создайте собственный исполняемый файл **native executable**, кликнув: `mvn clean package -Pnative -DskipTests=true`{{execute}}
 
-This will take a minute or so to finish. Wait for it!
+> Поскольку в этой среде мы работаем под **Linux**, и **OS**, которая в конечном итоге будет запускать наше приложение, также является **Linux**, мы можем использовать нашу локальную **OS** для создания собственного приложения **native Quarkus app**. Если вам нужно собрать собственные двоичные файлы **Linux**, когда вы работаете в других ОС, таких как **Windows** или **Mac OS X**, вы можете использовать `-Dquarkus.native.container-runtime=[podman | docker]`. Вам понадобится либо **Docker**, либо [Podman](https://podman.io) в зависимости от того, какую среду выполнения контейнера вы хотите использовать!
 
-In addition to the regular files, the build also produces `target/getting-started-1.0-SNAPSHOT-runner`. This is a native Linux binary:
+Это займет около минуты, чтобы закончить. Подождите это!
+
+В дополнение к обычным файлам, сборка также производит `target/getting-started-1.0-SNAPSHOT-runner`. Это родной двоичный файл Linux:
 
 `file target/getting-started-1.0-SNAPSHOT-runner`{{execute}}
 
@@ -65,38 +66,38 @@ target/getting-started-1.0-SNAPSHOT-runner: ELF 64-bit LSB executable, x86-64, v
 
 ## Run native image
 
-Since our environment here is Linux, you can _just run it_:
+Поскольку наша среда здесь **Linux**, вы можете просто запустить ее _just run it_:
 
 `target/getting-started-1.0-SNAPSHOT-runner`{{execute}}
 
-Notice the amazingly fast startup time:
+Обратите внимание на удивительно быстрое время запуска:
 
 ```console
 2019-03-07 18:34:16,642 INFO  [io.quarkus] (main) Quarkus 0.21.1 started in 0.004s. Listening on: http://[::]:8080
 2019-03-07 18:34:16,643 INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
 ```
-That's 4 milliseconds. A _mere 4000 nanoseconds_.
+Это 4 миллисекунды. A _mere 4000 nanoseconds_.
 
-And extremely low memory usage as reported by the Linux `ps` utility. Click here to run this in your other Terminal tab:
+И крайне низкое использование памяти **low memory usage**, как сообщает утилита Linux `ps`. Нажмите здесь, чтобы запустить это на другой вкладке **Terminal tab**:
 
 `ps -o pid,rss,command -p $(pgrep -f runner)`{{execute T2}}
 
-You should see something like:
+Вы должны увидеть что-то вроде:
 
 ```console
   PID   RSS  COMMAND
  4831 14184 target/getting-started-1.0-SNAPSHOT-runner
 ```
 
-This shows that our process is taking around 13.8 MB of memory ([Resident Set Size](https://en.wikipedia.org/wiki/Resident_set_size), or RSS). Pretty compact!
+Это показывает, что наш процесс занимает около **13.8 MB** памяти ([Resident Set Size](https://en.wikipedia.org/wiki/Resident_set_size), or RSS). Довольно компактно!
 
-> Note that the RSS and memory usage of any app, including Quarkus, will vary depending your specific environment, and will rise as the application experiences load.
+> Обратите внимание, что использование RSS и памяти в любом приложении, **including Quarkus**, будет различаться в зависимости от конкретной среды и будет возрастать по мере загрузки приложения.
 
-Make sure the app is still working as expected (we'll use `curl` this time to access it directly):
+Убедитесь, что приложение **app** все еще работает должным образом (на этот раз мы будем использовать `curl` для прямого доступа к нему):
 
 `curl http://localhost:8080/hello/greeting/quarkus`{{execute T2}}
 
-> This will automatically open and run `curl` in a separate terminal. You can also open additional terminals with the "+" button on the tab bar to the right.
+> Это автоматически откроет и запустит `curl` в отдельном терминале. Вы также можете открыть дополнительные терминалы с помощью кнопки «+» на панели вкладок справа.
 
 ```console
 curl http://localhost:8080/hello/greeting/quarkus
@@ -107,9 +108,9 @@ Nice!
 
 ## Cleanup
 
-Go to the first Terminal tab and press `CTRL-C` to stop our native app.
+Перейдите на первую вкладку **Terminal tab** и нажмите `CTRL-C`, чтобы остановить наше нативное приложение **native app**.
 
-## Congratulations!
+## Поздравляем!
 
-You've now built a Java application as an executable JAR and a Linux native binary. Now let's give our app superpowers by deploying to OpenShift as a Linux container image.
+Теперь вы создали приложение **Java application** в виде исполняемого файла **JAR** и **Linux native binary**. Теперь давайте передадим суперспособности нашего приложения, развернув их в **OpenShift** как образ контейнера **Linux container image**.
 
