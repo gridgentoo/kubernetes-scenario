@@ -1,10 +1,11 @@
-In the previous step you created a basic RESTful Java application with Quarkus. In this step we'll add a custom bean that will use the _ArC_ extension which provides a CDI-based dependency injection [solution](https://quarkus.io/guides/cdi-reference.html) tailored for the Quarkus architecture.
+На предыдущем шаге вы создали базовое **Java**-приложение **RESTful** с **Quarkus**. На этом шаге мы добавим  **custom bean**, который будет использовать расширение _ArC_, которое обеспечивает внедрение зависимостей на основе **CDI** [solution](https://quarkus.io/guides/cdi-reference.html), адаптированное для архитектуры **Quarkus**.
 
-## Add Custom Bean
 
-Let’s modify the application and add a companion bean. Open a new file by clicking: `getting-started/src/main/java/org/acme/quickstart/GreetingService.java`{{open}}.
+## Добавить пользовательский Bean
 
-Next, click **Copy to Editor** to add the following code to this file:
+Давайте изменим приложение и добавим компонент **bean**. Откройте новый файл, кликнув: `getting-started/src/main/java/org/acme/quickstart/GreetingService.java`{{open}}.
+
+Затем кликните **Copy to Editor** , чтобы добавить следующий код в этот файл:
 
 <pre class="file" data-filename="./getting-started/src/main/java/org/acme/quickstart/GreetingService.java" data-target="replace">
 package org.acme.quickstart;
@@ -23,7 +24,7 @@ public class GreetingService {
 }
 </pre>
 
-Next, open the `getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`{{open}} class and then click **Copy To Editor** once again to inject the new bean and create a new endpoint using it:
+Затем откройте класс `getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`{{open}} и затем нажмите **Copy To Editor** еще раз, чтобы добавить новый **bean**-компонент и создать новая конечную точку **endpoint**, использующая это:
 
 <pre class="file" data-filename="./getting-started/src/main/java/org/acme/quickstart/GreetingResource.java" data-target="replace">
 package org.acme.quickstart;
@@ -56,20 +57,21 @@ public class GreetingResource {
 }
 </pre>
 
-## Inspect the results
 
-Since we still have our app running using `mvn quarkus:dev`, when you make these changes and reload the endpoint, Quarkus will notice all of these changes and live reload them.
+## Проверьте результаты
 
-Check that it works as expected by loading the new endpoint by [clicking here](https://[[CLIENT_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/hello/greeting/quarkus).
+Поскольку наше приложение все еще работает с использованием  `mvn quarkus:dev`, при внесении этих изменений и перезагрузке конечной точки **endpoint**, **Quarkus** заметит все эти изменения и перезагрузит **live reload** их в режиме реального времени.
 
-Note we are exercising our new bean using the `/hello/greeting` endpoint, and you should see
+Проверьте, работает ли он должным образом, загрузив новую конечную точку **endpoint**, нажав [clicking here](https://[[CLIENT_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/hello/greeting/quarkus).
+
+Обратите внимание, что мы используем наш новый компонент **bean** с использованием конечной точки  `/hello/greeting`, и вы должны увидеть
 
 ```console
 hello quarkus from master
 ```
 
-> In this case, `master` is the hostname of the local host we are running on. It will be different later on when deployed to OpenShift!
+> В этом случае `master` - это имя локального хоста **hostname of the local host**, на котором мы работаем. Это будет отличаться позже при развертывании в **OpenShift**!
 
-## Congratulations!
+## Поздравляем!
 
-It's a familiar CDI-based environment for you Enterprise Java developers out there, with powerful mechanisms to reload your code _as you type_ (or very close to realtime). In the next step, we'll package and run it as a standalone executable JAR, which should also be familiar to microservice developers.
+Это знакомая основанная на **CDI-based environment** среда для вас, разработчиков **Enterprise Java**, с мощными механизмами для перезагрузки вашего кода, когда вы _as you type_ (или очень близко к реальному времени). На следующем шаге мы упакуем **package** и запустим его как автономный исполняемый файл **JAR**, который также должен быть знаком разработчикам микросервисов.
