@@ -16,8 +16,8 @@
 
 Он будет использовать плагин **Quarkus Maven** и сгенерирует базовый проект **Maven project** для вас в подкаталоге `**getting-started**`, генерируя:
 
-* Maven структура
-* Ресурс `org.acme.quickstart.GreetingResource`, представленный **exposed** в `/hello`   
+* **Maven** структура
+* Ресурс **org.acme.quickstart.GreetingResource**, представленный **exposed** в `/hello`   
 * Связанный **unit** тест
 * A landing page, доступная по адресу `http://localhost:8080` после запуска приложения.  
 * Пример `Dockerfile`s для нативного и **jvm modes**
@@ -91,7 +91,7 @@
   </dependencies>
 ```
 
-During the project creation, the `getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`{{open}} file has been created with the following endpoint:
+Во время создания проекта `getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`{{open}} файл был создан со следующей конечной точкой **endpoint**:
 
 ```java
 @Path("/hello")
@@ -104,17 +104,17 @@ public class GreetingResource {
     }
 }
 ```
-It’s a very simple REST endpoint, returning "hello" to requests on `/hello`.
+Это очень простая конечная точка **REST endpoint**, возвращающая "hello" запросам в `/hello`.
 
-> Compared to vanilla JAX-RS, with Quarkus there is no need to create an `Application` class. It’s supported but not required. In addition, only one instance of the resource is created and not one per request. You can configure this using the different `*Scoped` annotations (`ApplicationScoped`, `RequestScoped`, etc).
+> По сравнению с ванильным **JAX-RS**, в **Quarkus** нет необходимости создавать класс `Application`. Это поддерживается, но не обязательно. Кроме того, создается только один экземпляр ресурса **one instance**, а не один на **per request**. Вы можете настроить это, используя различные аннотации `*Scoped` annotations (`ApplicationScoped`, `RequestScoped`, etc).
 
-# Running the Application
+# Запуск приложения
 
-First, change to the directory in which the project was created:
+Сначала перейдите в **directory**, в котором был создан проект:
 
 `cd /root/projects/quarkus/getting-started`{{execute}}
 
-Now we are ready to run our application. Click here to run:
+Теперь мы готовы запустить наше приложение. Кликните здесь, чтобы запустить:
 
 ```mvn compile quarkus:dev```{{execute}}
 
@@ -137,17 +137,17 @@ hello
 ```
 It's working!
 
-Now, let's exercise the **live reload** capabilities of Quarkus. Click here to open the endpoint:  `getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`{{open}}. Change `return "hello";` to `return "hola";` on line 14 in the editor. Don't save. Don't recompile or restart anything. Just try to reload the brower (or [click here](https://[[CLIENT_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/hello) again.)
+Теперь давайте попробуем возможности **live reload**  в **Quarkus**. Кликните здесь, чтобы открыть конечную точку **endpoint**: `getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`{{open}}.. Замените `return "hello";` на `return "hola";` в строке 14 в редакторе. Не экономь, Не recompile и не перезапустите ничего. Просто попробуйте перезагрузить браузер (или [click here](https://[[CLIENT_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/hello) еще раз.)
 
-You should see the updated `hola` message.
+Вы должны увидеть обновленное сообщение `hola`.
 
-Wow, how cool is that? Supersonic Subatomic live reload! Go ahead and change it a few more times and access the endpoint again. And we're just getting started.
+Вау, как это круто? Сверхзвуковая субатомная живая перезагрузка! Идите вперед и измените его еще несколько раз и снова получите доступ к конечной точке **endpoint**. И мы только начинаем.
 
-> `quarkus:dev` runs Quarkus in development mode. This enables live reload with background compilation, which means that when you modify your Java files your resource files and refresh your browser these changes will automatically take effect.
-> This will also listen for a debugger on port `5005`. If your want to wait for the debugger to attach before running you can pass `-Ddebug` on the command line. If you don’t want the debugger at all you can use `-Ddebug=false`.
+> `quarkus:dev` запускает **Quarkus** в режиме **development mode**. Это дает возможность перезагрузки в реальном времени с фоновой компиляцией, что означает, что когда вы изменяете свои файлы Java, файлы ресурсов и обновляете браузер, эти изменения автоматически вступают в силу.
+> Это позволит прослушивать **debugger** на порту `5005`. Если вы хотите дождаться подключения **debugger** перед запуском, вы можете передать `-Ddebug` в командной строке. Если вам вообще не нужен отладчик, вы можете использовать `-Ddebug=false`.
 
-# Congratulations!
+# Поздравляю!
 
-You've seen how to build a basic app, package it as an executable JAR and start it up very quickly. We'll leave the app running and rely on hot reload for the next steps.
+Вы видели, как создать базовое приложение, упаковать его как исполняемый файл **JAR** и запустить его очень быстро. Мы оставим приложение запущенным и будем полагаться на горячую перезагрузку **hot reloaв** для следующих шагов.
 
-In the next step we'll inject a custom bean to showcase Quarkus' CDI capabilities.
+На следующем шаге мы добавим пользовательский компонент для демонстрации возможностей **Quarkus CDI**.
