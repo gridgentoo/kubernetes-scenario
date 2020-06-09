@@ -31,7 +31,7 @@ The _one model rules them all_ age is over. Появился новый диап
 
 ### Функции как Service и Serverless
 
-You can use any of the Quarkus features in your function and benefit from the fast startup and low memory utilization. With Quarkus, you can embrace this new world without having to change your programming language.
+Вы можете использовать любые функции **Quarkus** в своей функции и получать выгоду от быстрого запуска и низкого использования памяти **low memory utilization.** С **Quarkus** вы можете охватить этот новый мир без необходимости менять язык программирования.
 
 Благодаря их **stellar startup** запуска и низкому использованию памяти **low memory usage** вы можете реализовать функции с использованием Quarkus для использования в **serverless** средах, таких как **AWS Lambda**. Вы можете использовать любые функции **Quarkus** в своей функции и получать выгоду от быстрого запуска и **low memory utilization**. С Quarkus вы можете охватить этот новый мир без необходимости менять язык программирования.
 
