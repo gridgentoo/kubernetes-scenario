@@ -21,6 +21,12 @@
         "id": "quarkus-openshift"
       }, 
       {
+        "title": "Mastering Ethereum",
+        "description": "Введение в Mastering Ethereum.",
+        "id": "mastering-ethereum"
+      }, 
+
+      {
         "title": "Portworx, Cloud Native Storage",
         "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
         "id": "portworx-cloud"

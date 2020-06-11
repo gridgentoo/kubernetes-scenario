@@ -1,0 +1,78 @@
+{
+  "title": "Machine Learning on the Ethereum Blockchain",
+  "description": "Introduction to Mastering Ethereum",
+  "difficulty": "Advanced",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Machine Learning & AI",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Building a smart contract machine learning marketplace",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "The prediction function",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "The cost function",
+      "text": "steps/4/text.md"
+    },
+  {
+      "title": "The cost function cont...",
+      "text": "steps/5/text.md"
+    },
+    {
+      "title": "The optimization algorithm",
+      "text": "steps/6/text.md"
+  },
+  {
+    "title": "The optimization algorithm cont...",
+    "text": "steps/7/text.md"
+  },
+  {
+    "title": "The train function",
+    "text": "steps/8/text.md"
+  },
+  {
+    "title": "The train function cont...",
+    "text": "steps/9/text.md"
+  },
+  {
+    "title": "The train function",
+    "text": "steps/10/text.md"
+  },
+  {
+    "title": "",
+    "text": "steps/11/text.md"
+  },
+  {
+    "title": "",
+    "text": "steps/12/text.md"
+  },
+  {
+    "title": "",
+    "text": "steps/13/text.md"
+  },
+  {
+    "title": "",
+    "text": "steps/14/text.md"
+  }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "vscode",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "vscode"
+  }
+}

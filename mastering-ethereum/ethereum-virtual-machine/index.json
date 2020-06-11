@@ -1,0 +1,45 @@
+{
+  "title": "The EVM in depth",
+  "description": "Introduction to Mastering Ethereum",
+  "difficulty": "Advanced",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Ethereum Virtual Machine",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Explaining the EVM",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Operation of smart contracts in the EVM",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Smart Contract's Bytecode",
+      "text": "steps/4/text.md"
+    },
+  {
+      "title": "Smart Contract's Bytecode",
+      "text": "steps/5/text.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "Example.sol"
+  ],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "title": "Creating a Blockchain-based Social Media Platform",
+  "description": "Introduction to Mastering Ethereum",
+  "difficulty": "Advanced",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Ethereum",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "The initial concept",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Creating the user interface",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Configuring the webpack style",
+      "text": "steps/4/text.md"
+    },
+  {
+      "title": "Setting up the initial structure",
+      "text": "steps/5/text.md"
+    },
+    {
+      "title": "Rendering hashtags",
+      "text": "steps/6/text.md"
+  },
+  {
+    "title": "Rendering hashtags cont...",
+    "text": "steps/7/text.md"
+  },
+  {
+    "title": "Rendering hashtags cont...",
+    "text": "steps/8/text.md"
+  },
+  {
+    "title": "Improving the appearance",
+    "text": "steps/9/text.md"
+  },
+  {
+    "title": "Building the smart contract",
+    "text": "steps/10/text.md"
+  },
+  {
+    "title": "Planning the design process",
+    "text": "steps/11/text.md"
+  },
+  {
+    "title": "Building the smart contract",
+    "text": "steps/12/text.md"
+  },
+  {
+    "title": "Setting up the data structures",
+    "text": "steps/13/text.md"
+  },
+  {
+    "title": "Documenting the future functions",
+    "text": "steps/14/text.md"
+  },
+  {
+    "title": "Implementing the adding content function",
+    "text": "steps/15/text.md"
+  },
+  {
+    "title": "Creating the promotion engine",
+    "text": "steps/16/text.md"
+  },
+  {
+    "title": "Implementing the getter functions",
+    "text": "steps/17/text.md"
+  },
+  {
+    "title": "Finishing the dApp",
+    "text": "steps/18/text.md"
+  },
+  {
+    "title": "Setting up the smart contract instance",
+    "text": "steps/19/text.md"
+  },
+  {
+    "title": "Decentralizing your data",
+    "text": "steps/20/text.md"
+  },
+  {
+    "title": "Decentralizing your data cont..",
+    "text": "steps/21/text.md"
+  },
+  {
+    "title": "Creating the hashtag component",
+    "text": "steps/22/text.md"
+  },
+  {
+    "title": "Creating the hashtag getter",
+    "text": "steps/23/text.md"
+  },
+  {
+    "title": "Creating the publishing functionality",
+    "text": "steps/24/text.md"
+  }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "vscode",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "vscode"
+  }
+}

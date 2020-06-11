@@ -1,0 +1,4 @@
+Ethereum is an open source system that can be implemented in different languages to provide people with the option to interact using their preferred tool. Some of those full-node implementations are Geth and Parity. We will explore how they differ and what the best scenario to use them is in this section.
+
+#### Protocol implementations
+The Ethereum implementations that we will cover are Geth, Parity, Mist, and Embark. Why these four only? It's because they are the most popular implementations, which give you the power to fully execute all the capabilities of the blockchain. Things like mining, making transactions, downloading the entire blockchain, interacting with your deployed contracts, and creating accounts are possible with all of them.

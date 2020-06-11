@@ -1,0 +1,6 @@
+It seems intuitive – a wallet is a place where you store your crypto funds – but in reality, wallets are much more complex than they appear. Wallets connect to the Ethereum blockchain to find your latest balance, which is accessible via smart contracts, dApps, or via the blockchain client itself. Ethereum clients download the entire chain data, and they are able to search for the transactions associated with your account. Some of them will be transfers, while others can be smart contract executions where you pay gas. At the end, it's possible to obtain your current balance just by reading the transactions contained in the latest block with your address, as shown in the following diagram where balances are being updated after several transactions:
+
+![](https://github.com/fenago/katacoda-scenarios/raw/master/mastering-ethereum/ethereum-wallet/steps/2/wallet.JPG)
+
+Since security is a big issue when dealing with money, wallets have to protect every vulnerable area in which your credentials may be used. Your private keys, your seed, and your address shouldn't be easily accessible by anyone. That's the reason why there are different wallet implementations. They can be online or offline, and you can go a step further by using offline hardware wallets made specifically to store cryptocurrencies.
+

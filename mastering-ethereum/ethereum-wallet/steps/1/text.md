@@ -1,0 +1,2 @@
+
+Ethereum wallets are as diverse as you can imagine. From software wallets, to hardware and even paper wallets, the choice of selecting the best wallet for your needs is increasingly difficult if you don't understand the differences. That's why in this section we'll explore the options when it comes to wallets so that you choose the best one for every project.

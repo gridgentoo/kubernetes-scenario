@@ -1,0 +1,3 @@
+The smart contract that we are going to build will serve as the backend for our decentralized application by storing all the messages, hashtags, and users. In our application, we want to keep users anonymous; that's why they are represented as addresses instead of usernames – to direct people's attention to what's being talked about, not to who is delivering the message.
+
+As you already know, we'll create a hashtag-focused social media platform without images or video. That's why all of our data will be stored in a combination of mappings and arrays.

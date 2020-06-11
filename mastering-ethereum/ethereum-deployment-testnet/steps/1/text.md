@@ -1,0 +1,3 @@
+Developing smart contracts is a complex task in which you have to move between different environments to efficiently test the quality of your applications. That's why there are many different testnets in which you can deploy your code, to experiment with how your contracts behave with different rules and mining algorithms for improving their quality. 
+
+In this scenario, you'll discover where `Rinkeby` fits into the world of securing smart contracts.

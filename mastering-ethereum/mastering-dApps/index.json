@@ -1,0 +1,48 @@
+{
+  "title": "Mastering dApps",
+  "description": "Introduction to Mastering Ethereum",
+  "difficulty": "Advanced",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Clone Repository",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "File Structure",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Installing the required packages",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Setting up webpack",
+      "text": "steps/4/text.md"
+    },
+  {
+      "title": "Setting up the source folder",
+      "text": "steps/5/text.md"
+    },
+    {
+      "title": "Compile using webpack",
+      "text": "steps/6/text.md"
+  }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "vscode",
+    "showdashboard": true,
+    "dashboards": [{"name": "dApp", "port": 8080}],
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "vscode"
+  }
+}

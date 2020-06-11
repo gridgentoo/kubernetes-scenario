@@ -1,0 +1,5 @@
+You are already familiar with PoA from pruvate blockchain scenario where you went through a basic introduction of how to use Puppeth to generate a Clique network. `Clique` is the name of the PoA algorithm used by Rinkeby. It is very similar to PoS and consists of selecting a small portion of miners, around 25, which act as validators for creating new blocks that will be proposed to the chain.
+
+Each validator places a stake to the block they want to be accepted as the next one and, after a period of a few seconds, the block with the largest amount of staked ETH is chosen. Validators don't lose their staked ETH if they behave within the rules, but if they become Byzantine, they risk losing their stake as a punishment.
+
+This consensus algorithm works because the identities of the validators are public so that others know when a miner is acting maliciously. To become a validator, each user has to make some sensitive data public to protect the network.

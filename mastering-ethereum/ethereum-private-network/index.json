@@ -1,0 +1,47 @@
+{
+  "title": "Private Ethereum Network",
+  "description": "Introduction to Mastering Ethereum",
+  "difficulty": "Advanced",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Installing Geth & Puppeth",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Creating accounts",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Puppeth",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Puppeth",
+      "text": "steps/4/text.md"
+    },
+  {
+      "title": "Genesis",
+      "text": "steps/5/text.md"
+    },
+    {
+        "title": "Initialize Blockchain",
+        "text": "steps/6/text.md"
+  }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": false,
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

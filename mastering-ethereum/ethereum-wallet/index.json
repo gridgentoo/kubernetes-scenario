@@ -1,0 +1,59 @@
+{
+  "title": "Ethereum Wallets",
+  "description": "Introduction to Mastering Ethereum",
+  "difficulty": "Advanced",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Choosing a wallet for Ethereum",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Understanding the concept of an Ethereum wallet",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Choosing MyEtherWallet",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Using MetaMask",
+      "text": "steps/4/text.md"
+    },
+  {
+      "title": "Understanding hardware wallets",
+      "text": "steps/5/text.md"
+    },
+    {
+        "title": "Using Ledger",
+        "text": "steps/6/text.md"
+  },
+    {
+        "title": "Using Trezor",
+        "text": "steps/7/text.md"
+  },
+  {
+      "title": "Learning to use multi-signature wallets",
+      "text": "steps/8/text.md"
+  }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "config.yaml"
+  ],
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "VS Code", "port": 23000}],
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

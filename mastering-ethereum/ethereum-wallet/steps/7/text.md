@@ -1,0 +1,7 @@
+Trezor is another popular hardware wallet with a distinct flat design, also with two buttons, and a high quality black and white display. This device comes in a sealed package that must be completely broken to access the wallet to ensure that nobody touches your Trezor before you get it in your hands for the first time, due to the massive damage that it could cause when used by a hacker.
+
+You'll also get several small pieces of cardboard to write down your unique seed for recovering your account in case you lose access to the wallet. Make sure you don't lose those paper wallets since they will be required whenever Trezor's firmware updates:
+
+![](https://github.com/fenago/katacoda-scenarios/raw/master/mastering-ethereum/ethereum-wallet/steps/7/account.JPG)
+
+The two buttons are used to confirm transactions after you've checked that they correspond to the ones shown on your computer. This is an additional security layer to prevent people from sending funds to the wrong addresses. It also supports hundreds of cryptocurrencies and has the same security features of the Ledger Nano. In the end, it comes down to personal preference, since most of these hardware wallets function the same way and are secure enough.
