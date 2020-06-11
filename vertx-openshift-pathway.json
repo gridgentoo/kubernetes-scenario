@@ -1,0 +1,32 @@
+{
+    "title": "Mastering Ethereum",
+    "icon": "fa-kubernetes",
+    "description": "Введение в Mastering Ethereum.",
+    "courses": [
+      {
+        "course_id": "getting-started-vertx",
+        "title": "Getting Started with Vert.x",
+        "description": "Основное введение в Vert.x в Red Hat OpenShift."
+      },
+      {
+        "course_id": "quote-generator",
+        "title": "MicroTrader App Part 1: Quote Generator",
+        "description": "Vert.x Asynchronous APIs, RESTful endpoints, Publishing to Event Bus. Разрабатываемое приложение Vert.x называется Micro-Trader и состоит из нескольких микросервисов"
+      },
+      {
+        "course_id": "portfolio-service",
+        "title": "MicroTrader App Part 2: Portfolio Service",
+        "description": "Event Bus Extras, Publishing Services. В портфельном сервисе мы предоставляем Event Bus Service для управления нашим портфелем. "
+      },
+      {
+        "course_id": "compulsive-traders",
+        "title": "MicroTrader App Part 3: Compulsive Traders",
+        "description": "Polyglot Services with RX Java 2."
+      },
+      {
+        "course_id": "audit-service",
+        "title": "MicroTrader App Part 4: Audit Service",
+        "description": "Async JDBC, Vert.x Web Async API, Kubernetes Secrets. Служба аудита записывает акции, которые вы покупаете и продаете, в базу данных."
+      }
+    ]
+  }

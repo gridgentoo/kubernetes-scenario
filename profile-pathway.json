@@ -26,6 +26,11 @@
         "id": "mastering-ethereum"
       }, 
       {
+        "title": "Vert.x модель биржевых сценариев для микросервисов в OpenShift",
+        "description": "Vert.x называется Micro-Trader и состоит из нескольких микросервисов.",
+        "id": "vertx-openshift"
+      }, 
+      {
         "title": "Portworx, Cloud Native Storage",
         "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
         "id": "portworx-cloud"
