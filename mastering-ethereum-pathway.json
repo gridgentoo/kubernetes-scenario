@@ -1,0 +1,47 @@
+{
+    "title": "Mastering Ethereum",
+    "icon": "fa-kubernetes",
+    "description": "Введение в Mastering Ethereum.",
+    "courses": [
+      {
+        "course_id": "ethereum-virtual-machine",
+        "title": "Ethereum Virtual Machine (EVM)",
+        "description": "В этой лабораторной работе мы подробно рассмотрим виртуальную машину Ethereum (EVM)."
+      },
+      {
+        "course_id": "ethereum-protocol-implementations",
+        "title": "Ethereum protocol implementations",
+        "description": "В этой лабораторной работе мы узнаем о реализации протокола Ethereum."
+      },
+      {
+        "course_id": "ethereum-private-network",
+        "title": "Private Ethereum Network",
+        "description": "В этой лаборатории мы создадим частную сеть Ethereum."
+      },
+      {
+        "course_id": "ethereum-wallet",
+        "title": "Ethereum Wallets",
+        "description": "В этой лаборатории мы узнаем о кошельках Ethereum."
+      },
+      {
+        "course_id": "mastering-dapps",
+        "title": "Ethereum Wallets",
+        "description": "В этой лаборатории мы рассмотрим dApp."
+      },
+      {
+        "course_id": "ethereum-deployment-testnet",
+        "title": "Ethereum Wallets",
+        "description": "В этой лабораторной работе мы узнаем о развертывании в Testnet."
+      },
+      {
+        "course_id": "machine-learning-ethereum-blockchain",
+        "title": "Machine Learning on the Ethereum Blockchain",
+        "description": "В этой лабораторной работе мы рассмотрим машинное обучение на блокчейне Ethereum."
+      },
+      {
+        "course_id": "blockchain-based-social-media-platform",
+        "title": "Creating a Blockchain-based Social Media Platform",
+        "description": "В этой лабораторной работе мы создадим платформу для социальных сетей на основе блокчейна."
+      }
+    ]
+  }

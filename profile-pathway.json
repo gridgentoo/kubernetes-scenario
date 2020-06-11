@@ -22,10 +22,9 @@
       }, 
       {
         "title": "Mastering Ethereum",
-        "description": "Введение в Mastering Ethereum.",
+        "description": "Технология ETHEREUM — платформа для создания децентрализованных онлайн-сервисов на базе блокчейна.",
         "id": "mastering-ethereum"
       }, 
-
       {
         "title": "Portworx, Cloud Native Storage",
         "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
