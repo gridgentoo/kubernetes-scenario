@@ -1,0 +1,48 @@
+{
+    "title": "Helm пакетный менеджер для Kubernetes",
+    "icon": "fa-kubernetes",
+    "description": "Откройте для себя Helm.",
+    "courses": [
+      {
+        "course_id": "redis",
+        "title": "Helm. Redis on Kubernetes.",
+        "description": "В этой лабораторной работе мы научимся запускать Redis on Kubernetes."
+      }, 
+      {
+        "course_id": "pipeline-jenkins",
+        "title": "CI/CD pipeline with Jenkins and Kubernetes",
+        "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
+      },
+      {
+        "course_id": "sonarqube",
+        "title": "SonarQube on Kubernetes.",
+        "description": "Анализ кода с помощью SonarQube в Kubernetes."
+      },
+      {
+        "course_id": "jenkins",
+        "title": "CI/CD pipeline with Jenkins and Kubernetes.",
+        "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
+      },
+      {
+        "course_id": "kube-ops",
+        "title": "kube-ops on Kubernetes",
+        "description": "показывает текущий статус всех подов и нод кластера с помощью dashboard, написанного на JavaScript."
+      },          
+      {
+        "course_id": "nginx",
+        "title": "Nginx on Kubernetes",
+        "description": "Начните здесь, чтобы узнать, как развертывать Nginx-приложение в Kubernetes."
+      },
+      {
+        "course_id": "r-shiny",
+        "title": "R Shiny Application",
+        "description": "Запустим R based Shiny приложения в Kubernetes."
+      },
+      {
+        "course_id": "rabbitmq",
+        "title": "RabbitMQ on Kubernetes",
+        "description": "Запустим RabbitMQ в Kubernetes."
+      }
+    ]
+  }
+  

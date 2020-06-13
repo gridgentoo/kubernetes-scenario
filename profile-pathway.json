@@ -46,9 +46,9 @@
         "id": "openshift-fundamentals"
       },
       {
-        "title": "Kubernetes Приложения",
-        "description": "Откройте для себя различные приложения, которые вы можете легко запустить в Kubernetes.",
-        "id": "kubernetes-applications"
+        "title": "Helm пакетный менеджер для Kubernetes",
+        "description": "Откройте для себя пакетный менеджер Helm.",
+        "id": "helm"
       },
       {
         "title": "OpenShift Приложения",

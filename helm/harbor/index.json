@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "title": "Harbor Registry",
   "description": "Learn how the Harbor registry delivers rich features along with Clair security scanning.",
   "difficulty":	"Intermediate",
