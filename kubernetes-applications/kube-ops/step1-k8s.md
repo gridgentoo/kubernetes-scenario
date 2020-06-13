@@ -37,4 +37,9 @@ kubectl cluster-info`{{execute}}
 
 `helm install ops-view stable/kube-ops-view --namespace=kube-system -f values.yaml`{{execute}}
 
+Для запуска контейнеров **kube-ops-view** требуется несколько минут. Чтобы получить полный статус **provisioning** этой последовательности, выполните эту проверку.
+
+`watch kubectl get deployments,pods,services --namespace kube-system`{{execute}}
+
+
 
