@@ -19,10 +19,11 @@ kubectl cluster-info`{{execute}}
 
 `token.sh`{{execute}}
 
-## Делой приложения ##
+## Делой приложения. Редактирование Helm чартов.##
 
 `helm repo list`{{execute}}
 
+**kube-ops-view** - показывает состояние кластера **Kubernetes**. Найдем ее в репозитории.
 Поиск чарта **kube-ops**
 
 `helm search hub kube-ops`{{execute}}
@@ -31,9 +32,24 @@ kubectl cluster-info`{{execute}}
 
 `helm show values stable/kube-ops-view`{{execute}}
 
-отправил вывод **stdout** от **helm show** в **values.yaml**
+Выгрузим ее манифест в отдельный файл **values.yaml**.
+Отправим вывод **stdout** от **helm show** в **values.yaml**
 
 `helm show values stable/kube-ops-view > values.yaml`{{execute}}
+
+Открываем **values.yaml** файл и видим весь состав чарта. По сути это просто описание нескольких абстракций **Kubernetes**, которые нужны для работы панели. 
+По-умолчанию панель **kube-ops-view** устанавливается без поддержки **ingress** и не включен **rbac**. Без **rbac** состояние кластера она не сможет отображать. Давайте это исправим. Добавляем в секцию **ingress** и **rbac** параметры.
+
+```
+ingress:
+  enabled: true
+  path: /
+  hostname: kou.cluster.local
+rbac:
+  create: true
+```
+
+Устанавливаем чарт, используя измененный манифест чарта **values.yaml**.
 
 `helm install ops-view stable/kube-ops-view --namespace=kube-system -f values.yaml`{{execute}}
 

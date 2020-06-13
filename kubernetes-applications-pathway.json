@@ -24,6 +24,11 @@
         "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
       },
       {
+        "course_id": "sonarqube",
+        "title": "SonarQube on Kubernetes.",
+        "description": "Анализ кода с помощью SonarQube в Kubernetes."
+      },
+      {
         "course_id": "rabbitmq",
         "title": "RabbitMQ",
         "description": "Запустим RabbitMQ в Kubernetes."

@@ -1,0 +1,41 @@
+image:
+  tag: 7.9.2-community
+
+service:
+  type: NodePort
+  # Chart does not allow setting of actual nodePort number, so a
+  # patch after installation is applied. 
+  # (https://github.com/helm/charts/blob/master/stable/sonarqube/templates/service.yaml)
+
+persistence:
+  storageClass: manual
+  enabled: false
+  size: 10Gi
+  accessMode: ReadWriteOnce
+
+postgresql:
+  persistence:
+    size: 10Gi
+    storageClass: manual
+
+sonarProperties:
+  sonar.forceAuthentication: false
+
+# https://docs.sonarqube.org/display/PLUG/Plugin+Version+Matrix
+plugins:
+  install:
+    - 'https://binaries.sonarsource.com/Distribution/sonar-java-plugin/sonar-java-plugin-5.13.0.18197.jar'
+    - 'https://github.com/SonarQubeCommunity/sonar-pmd/releases/download/3.2.1/sonar-pmd-plugin-3.2.1.jar'
+    - 'https://github.com/spotbugs/sonar-findbugs/releases/download/3.11.0/sonar-findbugs-plugin-3.11.0.j ar'
+    - 'https://github.com/checkstyle/sonar-checkstyle/releases/download/4.20/checkstyle-sonar-plugin-4.20.jar'
+
+    # Consider many other plugins like these. Omitted from this scenario as it slows down demonstration
+    # - 'https://github.com/willemsrb/sonar-jdepend-plugin/releases/download/sonar-jdepend-plugin-1.1.1/sonar-jdepend-plugin-1.1.1.jar'
+    # - 'https://github.com/racodond/sonar-jproperties-plugin/releases/download/2.6/sonar-jproperties-plugin-2.6.jar'
+    # - 'https://github.com/stevespringett/dependency-check-sonar-plugin/releases/download/1.2.4/sonar-dependency-check-plugin-1.2.4.jar'
+    # - 'https://github.com/willemsrb/sonar-issueresolver-plugin/releases/download/sonar-issueresolver-plugin-1.0.2/sonar-issueresolver-plugin-1.0.2.jar'
+    # - 'https://github.com/racodond/sonar-json-plugin/releases/download/2.3/sonar-json-plugin-2.3.jar'
+    # - 'https://github.com/sbaudoin/sonar-yaml/releases/download/v1.4.2/sonar-yaml-plugin-1.4.2.jar'
+    # - 'https://github.com/sbaudoin/sonar-ansible/releases/download/v2.2.0/sonar-ansible-extras-plugin-2.2.0.jar'
+    # - 'https://github.com/sbaudoin/sonar-shellcheck/releases/download/v2.1.0/sonar-shellcheck-plugin-2.1.0.jar'
+    # - 'https://github.com/QualInsight/qualinsight-plugins-sonarqube-smell/releases/download/qualinsight-plugins-sonarqube-smell-4.0.0/qualinsight-sonarqube-smell-plugin-4.0.0.jar'
