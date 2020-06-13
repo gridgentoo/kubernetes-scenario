@@ -1,7 +1,7 @@
 {
-  "pathwayTitle": "RabbitMQ",
-  "title": "RabbitMQ",
-  "description": "Discovering how RabbitMQ runs on Kubernetes.",
+  "pathwayTitle": "kube-ops-view",
+  "title": "kube-ops-view",
+  "description": "Discovering how kube-ops-view runs on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
   "details": {
@@ -12,12 +12,12 @@
         "code": "clear.sh"
       },
       {
-        "title": "Deploy RabbitMQ",
+        "title": "Deploy kube-ops-view",
         "text": "step2.md",
         "code": "clear.sh"
       },
       {
-        "title": "RabbitMQ Portal",
+        "title": "kube-ops-view Portal",
         "text": "step3.md",
         "code": "clear.sh"
       }
