@@ -66,11 +66,6 @@
         "id": "kubernetes-serverless"
       },
       {
-        "title": "Kubernetes Pipelines",
-        "description": "Откройте для себя различные инструменты и методы для CI-непрерывной доставки в Kubernetes.",
-        "id": "kubernetes-pipelines"
-      },
-      {
         "title": "Kubernetes Observability",
         "description": "Изучите техники проверки-inspecting Kubernetes и ваших приложений, распределенных-distributed по cluster.",
         "id": "kubernetes-observability"
