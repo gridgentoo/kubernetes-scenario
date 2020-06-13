@@ -19,6 +19,11 @@
         "description": "показывает текущий статус всех подов и нод кластера с помощью dashboard, написанного на JavaScript."
       },
       {
+        "course_id": "pipeline-jenkins",
+        "title": "CI/CD pipeline with Jenkins and Kubernetes",
+        "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
+      },
+      {
         "course_id": "rabbitmq",
         "title": "RabbitMQ",
         "description": "Запустим RabbitMQ в Kubernetes."

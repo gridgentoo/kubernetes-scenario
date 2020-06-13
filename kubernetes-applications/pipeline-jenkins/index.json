@@ -1,0 +1,66 @@
+{
+  "title": "Module 6 - CI/CD pipeline with Jenkins and Kubernetes",
+  "description": "In this lab, we will learn learn how to run a simple CI/CD pipeline with Jenkins and Kubernetes.",
+  "difficulty": "intermediate",
+  "time": "15-20 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": "/.answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Kubernetes Cluster",
+        "text": "step1.md"
+      },
+      {
+        "title": "Monitoring",
+        "text": "step2.md"
+      },
+      {
+        "title": "Install Jenkins",
+        "text": "step3.md"
+      },
+      {
+        "title": "Canary Deployment",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "Developer(s): [William Hearn](https://sylus.ca) and [Zachary Seguin](https://zacharyseguin.ca)",
+      "courseData": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "dashboards": [
+      {
+        "name": "Dashboard",
+        "href": "https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com"
+      },
+      {
+        "name": "Jenkins Portal",
+        "href": "https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com"
+      }
+    ],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mDigital Academy training.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}
