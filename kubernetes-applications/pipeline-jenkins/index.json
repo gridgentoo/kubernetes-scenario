@@ -1,6 +1,6 @@
 {
-  "title": "Module 6 - CI/CD pipeline with Jenkins and Kubernetes",
-  "description": "In this lab, we will learn learn how to run a simple CI/CD pipeline with Jenkins and Kubernetes.",
+  "title": "CI/CD pipeline with Jenkins and Kubernetes",
+  "description": "В этой лабораторной работе мы научимся запускать простой конвейер CI/CD pipeline c Jenkins and Kubernetes.",
   "difficulty": "intermediate",
   "time": "15-20 minutes",
   "details": {
