@@ -1,13 +1,39 @@
-Create a namespace for the installation target.
+Скачаем пакет kube-ops-view
 
-`kubectl create namespace rabbit`{{execute}}
+`helm pull stable/kube-ops-view`{{execute}}
 
-Provisioning RabbitMQ on Kubernetes is easy, just install this [Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
+`ll | grep kube`{{execute}} 
 
-`helm install my-rabbit stable/rabbitmq-ha --namespace rabbit -f rabbit-values.yaml`{{execute}}
+`tar -zxvf kube-ops-view-1.2.0.tgz`{{execute}}
 
-The RabbitMQ containers take a few minutes to start. To get a complete status of provisioning this sequence, run this inspection.
+Смотрим Meta-данные
 
-`watch kubectl get deployments,pods,services --namespace rabbit`{{execute}}
+`cd kube-ops-view`{{execute}}
 
-In a few moments the 3 Pods (RabbitMQ _Nodes_) labeled `pod/my-rabbit-rabbitmq-ha-[0|1|2]` will appear and move to the _Running_ status. Once all are running, discontinue the watch. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+`ls`{{execute}}
+
+`nano Chart.yaml`{{execute}}
+
+Смотрим настройки helm
+
+`nano values.yaml`{{execute}}
+
+В папке templates лежат файлы **Манифестов**
+
+`cd templates`{{execute}}
+
+`ls`{{execute}}
+
+Настройка файла ingress.yaml
+
+`nano ingress.yaml`{{execute}}
+
+Настройка файла service.yaml
+
+`nano service.yaml`{{execute}}
+
+Настройка файла deployment.yaml
+
+`nano deployment.yaml`{{execute}}
+
+
