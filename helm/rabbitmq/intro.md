@@ -2,6 +2,8 @@
 
 <img align="right" src="./assets/rabbitmq.png">
 
+RabbitMQ — программный брокер сообщений на основе стандарта AMQP — тиражируемое связующее программное обеспечение, ориентированное на обработку сообщений. Создан на основе системы Open Telecom Platform, написан на языке Erlang, в качестве движка базы данных для хранения сообщений использует Mnesia. 
+
 Robust messaging for applications to connect and scale. RabbitMQ is an open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).
 
 These next steps provide an ideal place to start deploying and running one of your first application on Kubernetes. With a Kubernetes cluster and a CLI tool called `kubectl` and `helm`, a few steps will get RabbitMQ running.
