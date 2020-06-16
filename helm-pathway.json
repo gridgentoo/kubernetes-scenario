@@ -4,9 +4,14 @@
     "description": "Откройте для себя Helm.",
     "courses": [
       {
+        "course_id": "rabbitmq",
+        "title": "RabbitMQ on Kubernetes",
+        "description": "Запустим RabbitMQ в Kubernetes."
+      },
+      {
         "course_id": "redis",
-        "title": "Helm. Redis on Kubernetes.",
-        "description": "В этой лабораторной работе мы научимся запускать Redis on Kubernetes."
+        "title": "Redis on Kubernetes.",
+        "description": "Запустим Redis в Kubernetes"
       }, 
       {
         "course_id": "pipeline-jenkins",
@@ -37,11 +42,6 @@
         "course_id": "r-shiny",
         "title": "R Shiny Application",
         "description": "Запустим R based Shiny приложения в Kubernetes."
-      },
-      {
-        "course_id": "rabbitmq",
-        "title": "RabbitMQ on Kubernetes",
-        "description": "Запустим RabbitMQ в Kubernetes."
       }
     ]
   }
