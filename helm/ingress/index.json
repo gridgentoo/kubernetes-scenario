@@ -13,29 +13,24 @@
       },
       {
         "title": "Start SonarQube",
-        "text": "step2-sonarqube.md",
+        "text": "step2.md",
         "code": "clear.sh"
       },
       {
         "title": "SonarQube Dashboard",
-        "text": "step3-dashboard.md",
+        "text": "step3.md",
         "code": "clear.sh"
       },
       {
         "title": "Analyze Project with SonarQube",
-        "text": "step4-analyze.md",
-        "code": "clear.sh"
-      },
-      {
-        "title": "SonarQube Community",
-        "text": "step5-options.md",
+        "text": "step4.md",
         "code": "clear.sh"
       }
     ],
     "intro": {
       "text": "intro.md",
       "code": "env-init.sh",
-      "credits": "[Yunusov Temur](https://gridgentoo.github.io/)"
+      "credits": "[Temur Yunusov](https://gridgentoo.github.io/)"
     },
     "finish": {
       "text": "finish.md"

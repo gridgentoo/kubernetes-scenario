@@ -1,7 +1,7 @@
-Aside from SonarQube there are other ways to analyze a project. Use Gradle to run a series of tasks related to performing static code analysis.
+Помимо **SonarQube** есть и другие способы анализа проекта. Используйте **Gradle** для запуска ряда задач, связанных с выполнением статического анализа кода.
 
-**Note: This step is a draft. The Analysis Plugins are currently being upgraded and may not function.**
+** Примечание. Этот шаг является черновиком. Плагины для анализа Analysis Plugins в настоящее время обновляются и могут не работать. **
 
 `./gradlew check`{{execute}}
 
-These will invoke a series of Gradle plugins associated with static code analysis. They will take a few moments to generate reports in the build/reports directory.
+Это вызовет серию плагинов **Gradle**, связанных со статическим анализом кода. Для **generate reports** в каталоге **build/reports** потребуется несколько минут.

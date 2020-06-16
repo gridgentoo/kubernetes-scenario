@@ -9,14 +9,9 @@
         "description": "Запустим RabbitMQ в Kubernetes."
       },
       {
-        "course_id": "redis",
-        "title": "Redis on Kubernetes.",
-        "description": "Запустим Redis в Kubernetes"
-      }, 
-      {
-        "course_id": "pipeline-jenkins",
-        "title": "CI/CD pipeline with Jenkins and Kubernetes",
-        "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
+        "course_id": "ingress",
+        "title": "Ingress on kubernetes",
+        "description": "В этой лабораторной работе мы научимся запускать Ingress в Kubernetes."
       },
       {
         "course_id": "sonarqube",
@@ -26,6 +21,16 @@
       {
         "course_id": "jenkins",
         "title": "CI/CD pipeline with Jenkins and Kubernetes.",
+        "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
+      },
+      {
+        "course_id": "redis",
+        "title": "Redis on Kubernetes.",
+        "description": "Запустим Redis в Kubernetes"
+      }, 
+      {
+        "course_id": "pipeline-jenkins",
+        "title": "CI/CD pipeline with Jenkins and Kubernetes",
         "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
       },
       {

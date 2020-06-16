@@ -2,7 +2,7 @@
 
 `kubectl create namespace rabbit`{{execute}}
 
-CСмотрим какая версия сейчас актуальна:
+Смотрим какая версия сейчас актуальна:
 
 `helm search hub rabbitmq`{{execute}}
 

@@ -1,23 +1,25 @@
 ## Example Project ##
 
-Clone an example Java project.
+Клонируем пример проекта **Java**.
 
 `git clone https://github.com/javajon/code-analysis`{{execute}}
 
-This project includes a microservice directory that contains a small Spring Boot application built with Gradle. Go into the application source root directory.
+Этот проект включает в себя каталог микросервисов, который содержит небольшое приложение **Spring Boot**, созданное с помощью **Gradle**.  
+Перейдите в корневой каталог источника приложения.
 
 `cd code-analysis/microservice`{{execute}}
 
 ## Analysis ##
 
-Analyze this microservices project using SonarQube as the rule engine and dashboard where the results are published.
+Проанализируйте этот проект микросервисов, используя **SonarQube** в качестве механизма **rule engine** и панели мониторинга, где публикуются результаты.
 
-Get your SonarQube engine location.
+Получите местоположение **SonarQube engine**.
 
 `SONAR_SERVICE=https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
-Run the analysis.
+Запустите анализ.
 
 `./gradlew -Dsonar.host.url=$SONAR_SERVICE sonarqube`{{execute}}
 
-The analysis will take about 1-2 minutes. Once complete, navigate to the SonarQube portal and observe the analyzed project. The portal can be reached from the tab labeled _SonarQube Portal_ above this command-line or this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
+Анализ в **SonarQube** займет около 1-2 минут. По завершении перейдите на портал **SonarQube** и просмотрите анализируемый проект. Доступ к порталу можно получить на вкладке с пометкой **SonarQube Portal** над этой **command-line** или по этой ссылке:  https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
+

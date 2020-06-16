@@ -2,11 +2,14 @@
 
 Most developers who know about static code analysis know about SonarQube. While each language typically has specific linting and code analysis tools, SonarQube offers unifying tools for many languages and teams. Additionally, SonarQube with its database offers the additional dimension of time to trend your metrics over time.
 
-This tutorial shows how you can easily use Kubernetes as a place to host a highly available server for you and your team.
+Большинство разработчиков, которые знают о статическом анализе кода, знают о **SonarQube**. В то время как каждый язык, как правило, имеет специальные инструменты для написания кода и анализа кода, **SonarQube** предлагает унифицированные инструменты для многих языков и групп. Кроме того, **SonarQube** со своей **database offers** предлагает дополнительное измерение времени для изменения ваших **metrics** с течением времени.
+
+
+В этом руководстве показано, как вы можете легко использовать **Kubernetes** в качестве места для размещения высокодоступного сервера для вас и вашей команды.
 
 ## Lessons Learned ##
 
-With these steps you have learned how to:
+С помощью этих шагов вы узнали, как:
 
 - &#x2714; install SonarQube onto Kubernetes
 - &#x2714; use Helm to install SonarQube
@@ -31,8 +34,8 @@ With these steps you have learned how to:
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
+<img align="left" src="./assets/yunusov.png" width="100" style="border-radius: 12px">
+Для более глубокого понимания этих тем и многого другого присоединяйтесь к <br>[Yunusov Temur](https://gridgentoo.github.io)<br> на различных конференциях, симпозиумах, семинарах и встречах.
 <br><br>
 <b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
 </p>

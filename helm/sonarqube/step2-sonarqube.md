@@ -1,6 +1,14 @@
 ## Persistent Volume ##
 
-SonarQube will be making two PersistentVolumeClaims, one for SonarQube and one for the Postgres database. A PersistentVolume will be needed for each. Since this is all temporary in Katacoda, a [hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) is created for both.
+`ls`{{execute}}
+
+`nano pv-postgres.yaml`{{execute}}
+
+`nano pv-sonarqube.yaml`{{execute}}
+
+**SonarQube** создаст два **PersistentVolumeClaims**, один для **SonarQube** и один для базы данных **Postgres**. Для каждого потребуется **PersistentVolume**.
+
+[hostPath based PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) созданы для обоих **Persistent Volume**.
 
 `mkdir -p /mnt/data/postgres && kubectl create -f pv-postgres.yaml`{{execute}}
 
@@ -8,16 +16,26 @@ SonarQube will be making two PersistentVolumeClaims, one for SonarQube and one f
 
 ## Install ##
 
-Create a namespace for the installation target.
+Создайте пространство имен для цели установки.
 
 `kubectl create namespace sonarqube`{{execute}}
 
-Using Helm, install the SonarQube Helm chart with a few custom values.
+Смотрим какая версия сейчас актуальна:
 
-`helm install sonar stable/sonarqube --namespace sonarqube --values sonarqube-values.yaml`{{execute}}
+`helm search repo sonarqube`{{execute}}
 
-This chart bootstraps a SonarQube instance along with a PostgreSQL database. SonarQube also loads several plugins defined in the Helm chart configuration. To get a complete status of the deployment availability run this inspection.
+`helm repo update`{{execute}}
+
+Этот **chart** устарел и перемещен на https://github.com/oteemo/charts.
+
+`helm repo add oteemocharts https://oteemo.github.io/charts`{{execute}}
+
+Используя **Helm**, установите диаграмму **SonarQube Helm** с несколькими **custom values**.
+
+`helm install sonar stable/sonarqube --version 6.4.1 --namespace sonarqube -f sonarqube-values.yaml`{{execute}}
+
+Этот *chart bootstraps** загружает экземпляр **SonarQube** вместе с базой данных **PostgreSQL**. **SonarQube** также загружает несколько плагинов, определенных в конфигурации **Helm chart**. Чтобы получить полный статус доступности деплоймента, выполните эту проверку.
 
 `watch kubectl get deployments,pods,services --namespace sonarqube`{{execute}}
 
-Once complete, the Pods will move to the _running_ state. The `deployment.extensions/sonar-sonarqube` deployment may take 2-3 minutes before it reports `Available'. The behavior of the plugins can affect startup time. All the Deployments will eventually move to the _Available (1)_ state. Use this ```clear```{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+После завершения **Pod** перейдет в состояние **running state**. Развертывание **deployment.extensions/sonar-sonarqube** может занять 2-3 минуты, прежде чем оно сообщит **Available**. Поведение плагинов может повлиять на время запуска. Все развертывания будут в конечном итоге перейдите в состояние **Available (1) state**. Используйте это ```clear```{{execute interrupt}}, чтобы выйти из режима **watch** или нажмите <kbd>Ctrl</kbd>+<kbd>C</kbd>.
