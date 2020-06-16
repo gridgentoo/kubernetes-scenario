@@ -26,8 +26,10 @@ CСмотрим какая версия сейчас актуальна:
 
 Сделаем **upgrade** до 5 реплик
 
-`helm upgrade my-rabbit stable/rabbitmq-ha --version 1.46.1 --namespace rabbit -f rabbit-values.yaml`{{execute}}
+`helm upgrade my-rabbit stable/rabbitmq-ha --version 1.46.2 --namespace rabbit -f rabbit-values.yaml`{{execute}}
 
+Для запуска 5 реплик **RabbitMQ** требуется несколько минут. Чтобы получить полный статус обеспечения этой последовательности **provisioning this sequence**, выполните эту проверку.
+`watch kubectl get deployments,pods,services --namespace rabbit`{{execute}}
 
 # Погрузимся глубже в исследовнание манифестов stable/rabbitmq-ha
 
