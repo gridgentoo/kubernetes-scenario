@@ -1,0 +1,22 @@
+# Customize of rabbitmq-ha chart found here: 
+# https://github.com/helm/charts/tree/master/stable/rabbitmq-ha
+
+# Requested Rabbit MQ "nodes" (StatefulSet Pods), not to be confused with Kubernetes "nodes".
+replicaCount: 3
+
+# Exposed dashboard as NodePort for demonstration purposes.
+service:
+  type: NodePort 
+  managerNodePort: 31000
+
+# Admin credentials, use these for sign in to RabbitMQ dashboard
+rabbitmqUsername: guest
+rabbitmqPassword: guest
+
+# No monitoring at the moment, but may add soon
+prometheus:
+  operator:
+    enabled: false
+
+# A blank probe disables the default probe. Keeps false failing for some reason. 
+readinessProbe:

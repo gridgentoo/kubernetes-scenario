@@ -29,6 +29,11 @@
         "description": "Mcrouter основной компонент инфраструктуры кеша в Facebook и Instagram, где mcrouter обрабатывает почти 5 миллиардов запросов в секунду"
       },
       {
+        "course_id": "apache-ignite",
+        "title": "In-Memory Cluster, Apache Ignite on Kubernetes",
+        "description": "In-Memory Cluster, Apache Ignite - это распределенная база данных, предназначенная для хранения и вычисления больших объемов данных в кластере узлов."
+      },
+      {
         "course_id": "redis",
         "title": "Redis on Kubernetes.",
         "description": "Запустим Redis в Kubernetes"
