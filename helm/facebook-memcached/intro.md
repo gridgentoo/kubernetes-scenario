@@ -10,4 +10,10 @@ https://engineering.fb.com/web/introducing-mcrouter-a-memcached-protocol-router-
 
 https://github.com/facebook/mcrouter
 
+**Deploying Memcached on Google Kubernetes Engine**
+https://cloud.google.com/solutions/deploying-memcached-on-kubernetes-engine
+
+**Create your Memcached Cluster with McRouter**
+https://medium.com/@felipedutratine/create-your-memcached-cluster-with-mcrouter-7bbf015a5898
+
 

@@ -25,8 +25,8 @@
       },
       {
         "course_id": "facebook-memcached",
-        "title": "Mcrouter on Kubernetes.",
-        "description": "Mcrouter основной компонент инфраструктуры кеша в Facebook и Instagram, где mcrouter обрабатывает почти 5 миллиардов запросов в секунду."
+        "title": "Memcached Cluster with McRouter on Kubernetes",
+        "description": "Mcrouter основной компонент инфраструктуры кеша в Facebook и Instagram, где mcrouter обрабатывает почти 5 миллиардов запросов в секунду"
       },
       {
         "course_id": "redis",
