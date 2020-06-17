@@ -1,6 +1,6 @@
 # Mcrouter on Kubernetes #
 
-<img align="right" src="./assets/Mcrouter.jpg.png">
+<img align="right" src="./assets/Mcrouter.png">
 
 # Introducing mcrouter: A memcached protocol router for scaling memcached deployments #
 https://engineering.fb.com/web/introducing-mcrouter-a-memcached-protocol-router-for-scaling-memcached-deployments/

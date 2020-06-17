@@ -1,7 +1,7 @@
 {
-  "pathwayTitle": "RabbitMQ",
-  "title": "RabbitMQ",
-  "description": "Discovering how RabbitMQ runs on Kubernetes.",
+  "pathwayTitle": "McRouter on Kubernetes",
+  "title": "McRouter on Kubernetes",
+  "description": "McRouter runs on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
   "details": {
@@ -12,12 +12,12 @@
         "code": "clear.sh"
       },
       {
-        "title": "Deploy RabbitMQ",
+        "title": "Deploy McRouter on Kubernetes",
         "text": "step2.md",
         "code": "clear.sh"
       },
       {
-        "title": "RabbitMQ Portal",
+        "title": "McRouter on Kubernetes",
         "text": "step3.md",
         "code": "clear.sh"
       }
@@ -43,8 +43,7 @@
     "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
     "icon": "fa-kubernetes",
     "dashboards": [
-      {"name": "Kubernetes Dashboard", "port": 30000}, 
-      {"name": "RabbitMQ Portal", "port": 31000}
+      {"name": "Kubernetes Dashboard", "port": 30000}
     ]
   },
   "backend": {

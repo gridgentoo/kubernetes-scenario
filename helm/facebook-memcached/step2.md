@@ -32,7 +32,7 @@
 
 Сделаем **upgrade** до 2 реплик
 
-`helm upgrade my-mcrouter stable/mcrouter --version 1.0.2 --namespace mcrouter -f values.yaml`{{execute}}
+
 
 
 Для запуска 2 реплик **RabbitMQ** требуется несколько минут. Чтобы получить полный статус обеспечения этой последовательности **provisioning this sequence**, выполните эту проверку.

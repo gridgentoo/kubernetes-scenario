@@ -1,21 +1,15 @@
-# Mcrouter on Kubernetes #
+# In-Memory Cluster, Apache Ignite on Kubernetes #
 
-<img align="right" src="./assets/Mcrouter.jpg.png">
+<img align="right" src="./assets/1200px-Apache_Ignite_logo.svg.png">
 
-# Introducing mcrouter: A memcached protocol router for scaling memcached deployments #
-https://engineering.fb.com/web/introducing-mcrouter-a-memcached-protocol-router-for-scaling-memcached-deployments/
+Apache Ignite - это распределенная база данных с открытым исходным кодом (без непрерывного обновления), платформа для кэширования и обработки, предназначенная для хранения и вычисления больших объемов данных в кластере узлов.
 
+База данных Apache Ignite использует RAM в качестве уровня хранения и обработки по умолчанию, таким образом, принадлежа к классу вычислительных платформ в памяти. [4] 
 
-**Mcrouter** является маршрутизатором протокола memcached для масштабирования развертываний **memcached** (http://memcached.org/). Это основной компонент инфраструктуры кеша в **Facebook** и **Instagram**, где **mcrouter** обрабатывает почти 5 миллиардов запросов в секунду.
+База данных Apache Ignite использует ОЗУ в качестве уровня хранения и обработки по умолчанию, поэтому он относится к классу вычислительных платформ в памяти. Уровень диска является необязательным, но после его включения будет храниться полный набор данных, тогда как уровень памяти будет кэшировать полный или частичный набор данных в зависимости от его емкости.
 
-https://github.com/facebook/mcrouter
+Независимо от используемого API данные в Ignite хранятся в виде пар ключ-значение. Компонент базы данных масштабируется горизонтально, распределяя пары ключ-значение по всему кластеру таким образом, что каждому узлу принадлежит часть общего набора данных. Данные автоматически перебалансируются всякий раз, когда узел добавляется или удаляется из кластера.
 
-**Deploying Memcached on Google Kubernetes Engine**
-
-https://cloud.google.com/solutions/deploying-memcached-on-kubernetes-engine
-
-**Create your Memcached Cluster with McRouter**
-
-https://medium.com/@felipedutratine/create-your-memcached-cluster-with-mcrouter-7bbf015a5898
+В дополнение к распределенной основе Apache Ignite поддерживает множество API, включая API-интерфейсы с ключевыми значениями, совместимые с JCache, ANSI-99 SQL с объединениями, транзакции ACID, а также вычисления MapReduce, такие как вычисления. 
 
 

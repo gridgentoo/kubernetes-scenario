@@ -1,7 +1,7 @@
 {
-  "pathwayTitle": "RabbitMQ",
-  "title": "RabbitMQ",
-  "description": "Discovering how RabbitMQ runs on Kubernetes.",
+  "pathwayTitle": "Apache Ignite on Kubernetes",
+  "title": "Apache Ignite on Kubernetes",
+  "description": "In-Memory Cluster, Apache Ignite on Kubernetes.",
   "difficulty":	"Introduction",
   "time":	"10 minutes",
   "details": {
@@ -12,12 +12,12 @@
         "code": "clear.sh"
       },
       {
-        "title": "Deploy RabbitMQ",
+        "title": "Deploy Apache Ignite on Kubernetes",
         "text": "step2.md",
         "code": "clear.sh"
       },
       {
-        "title": "RabbitMQ Portal",
+        "title": "Apache Ignite on Kubernetes",
         "text": "step3.md",
         "code": "clear.sh"
       }
