@@ -24,6 +24,11 @@
         "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
       },
       {
+        "course_id": "facebook-memcached",
+        "title": "Mcrouter on Kubernetes.",
+        "description": "Mcrouter основной компонент инфраструктуры кеша в Facebook и Instagram, где mcrouter обрабатывает почти 5 миллиардов запросов в секунду."
+      },
+      {
         "course_id": "redis",
         "title": "Redis on Kubernetes.",
         "description": "Запустим Redis в Kubernetes"
