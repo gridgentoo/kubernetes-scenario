@@ -34,6 +34,11 @@
         "description": "In-Memory Cluster, Apache Ignite - это распределенная база данных, предназначенная для хранения и вычисления больших объемов данных в кластере узлов."
       },
       {
+        "course_id": "apache-airflow",
+        "title": "Airflow Cluster on Kubernetes",
+        "description": "Apache Airflow - workflow менеджер, для разработки, планирования и мониторинга batch-процессов."
+      },
+      {
         "course_id": "redis",
         "title": "Redis on Kubernetes.",
         "description": "Запустим Redis в Kubernetes"

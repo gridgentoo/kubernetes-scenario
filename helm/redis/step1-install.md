@@ -1,29 +1,29 @@
-Helm is a cluster administration tool that manages _charts_ on Kubernetes.
+Helm - это инструмент администрирования кластера, который управляет **charts** в **Kubernetes**.
 
-Helm relies on a packaging format called _charts_. Charts define a composition of related Kubernetes resources and values that make up a deployment solution. Charts are source code that can be packaged, versioned, and maintained in version control. Inside the chart are Kubernetes YAML files along with a templating language to allow contextual values to be injected into the YAMLs.
+**Helm** использует формат упаковки **packaging** который называется **charts**. **Charts** определяют состав связанных ресурсов **Kubernetes resources** и **Kubernetes values**, которые составляют решение для развертывания. **Charts** - это **source code**, который можно упаковывать, создавать версии и поддерживать в системе контроля версий. Внутри **chart** находятся файлы **Kubernetes YAML** вместе с языком шаблонов **templating language**, позволяющим вставлять контекстные **values** в **YAMLs**.
 
-Helm also helps you manage the complexities of dependency management. Charts can include dependencies to other charts. Charts compliment your [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code) processes. Use Helm effectively with a mature container versioning pipeline.
+Helm также помогает вам управлять сложностями управления зависимостями **dependency**. **Charts** могут включать зависимости от других **charts**. **Charts** дополняют ваши процессы [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code). Эффективно используйте **Helm** со зрелым конвейером управления версиями **container versioning pipeline**.
 
-The Helm CLI tool deploys charts to Kubernetes. A server side component can accept the chart and submit the YAML declarations to Kubernetes. The chart is a deployable unit that can be inspected, listed, updated and removed.
+Инструмент **Helm CLI** развертывает **charts** в **Kubernetes**. Серверный компонент **server side component**  может принять **chart** и отправить декларации **YAML** в **Kubernetes**. **Chart**  является развертываемой единицей, которую можно проверять, перечислять, обновлять **updated**  и удалять **removed**
 
-This scenario covers version 3.x of Helm. If you are using version 2.x, it's highly advisable to move to the recent version.
+Этот сценарий охватывает версию **3.x of Helm**. Если вы используете версию **2.x**, настоятельно рекомендуется перейти на последнюю версию.
 
-Interact with Helm start with a command-line tool (CLI). Helm can be installed from https://github.com/kubernetes/helm/releases
+Взаимодействие с **Helm** запускается с помощью инструмента командной строки (**CLI**). **Helm** можно установить по адресу https://github.com/kubernetes/helm/releases.
 
 `curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash `{{execute}}
 
-At this point Helm should be healthy.
+В этот момент **Helm**  должен быть **healthy**
 
 `helm version --short`{{execute}}
 
-Helm's default list of public repositories is initially empty. More on this later, but for now the Google chart repo can be added.
+По умолчанию список **public repositories** репозиториев **Helm** **initially empty**. Подробнее об этом позже, но сейчас можно добавить репозиторий **Google**.
 
 `helm repo add stable https://kubernetes-charts.storage.googleapis.com/`{{execute}}
 
-The current local state of Helm is kept in your environment in the _home_ location.
+Текущее местное состояние **Helm** хранится в вашей среде в **home location**.
 
 `helm env`{{execute}}
 
-The Helm command defaults to discovering the host already set in ~/.kube/config. There is a way to change or override the host, but that's beyond the scope of this scenario.
+По умолчанию команда **Helm** обнаруживает **host**, уже заданный в **~/.kube/config**. Существует способ изменить или переопределить хост, но это выходит за рамки этого сценария.
 
-The next step gets right to it by installing a pre-made chart.
+Следующий шаг становится правильным, установив **pre-made chart**.

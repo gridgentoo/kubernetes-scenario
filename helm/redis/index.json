@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "Kubernetes",
     "title": "Helm Package Manager",
-    "description": "Learn how to use Helm, the package manager for Kubernetes.",
+    "description": "Узнайте, как использовать Helm, менеджер пакетов для Kubernetes.",
     "difficulty": "Intermediate",
     "time":	"25 minutes",
     "details": {
