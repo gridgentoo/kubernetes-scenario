@@ -30,7 +30,7 @@
       },
       {
         "course_id": "apache-ignite",
-        "title": "In-Memory Cluster, Apache Ignite on Kubernetes",
+        "title": "Apache Ignite (In-Memory Cluster) on Kubernetes",
         "description": "In-Memory Cluster, Apache Ignite - это распределенная база данных, предназначенная для хранения и вычисления больших объемов данных в кластере узлов."
       },
       {
