@@ -1,6 +1,9 @@
-**Rabbit MQ portal** можно увидеть в браузере. Откройте свой браузер на **RabbitMQ Portal**  во вкладке над областью командной строки или по этой ссылке: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/.
+**McRouter on Kubernetes** 
 
-Войдите с:
+https://github.com/facebook/mcrouter
 
-- user name: _guest_
-- password: _guest_
+**Анализ исходного кода Source**
+
+`git clone git@github.com:facebook/mcrouter.git`{{execute}}
+
+
