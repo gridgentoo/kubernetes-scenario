@@ -1,8 +1,25 @@
 # Airflow Cluster on Kubernetes #
 
-<img align="right" src="./assets/AirflowLogo.png">
+![Katacoda Logo](./assets/logo-text-with-head.png)
 
-**Apache Airflow** — это workflow менеджер, для разработки, планирования и мониторинга batch-процессов.. **Airflow** был разработан в 2014 году в компании **Airbnb**, автор **Maxime Beauchemin**. Позже инструмент был передан под опеку в организацию **Apache**, а в январе 2019 получил статус **Top-Level** проекта. 
+![Airflow logo](./assets/AirflowLogo.png)
+
+![Airbnb logo](./assets/Airbnb-Logo.png)
+
+**Apache Airflow** — это **workflow** менеджер, для разработки, планирования и мониторинга batch-процессов.. **Airflow** был разработан в **2014** году в компании **Airbnb**, автор **Maxime Beauchemin**. Позже инструмент был передан под опеку в организацию **Apache**, а в январе **2019** получил статус **Top-Level** проекта. 
+
+**Maxime Beauchemin - Advanced Data Engineering Patterns with Apache Airflow**
+
+![bloomber Logo](./assets/bloomberg-logo-white-1.png)
+
+
+<iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/Fvu2oFyFCT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Maxime Beauchemin - Advanced Data Engineering Patterns with Apache Airflow**
+
+<iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/VrsVbuo4ENE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Airflow on Kubernetes: Dynamic Workflows Simplified - Daniel Imberman, Bloomberg & Barni Seetharaman**
 
 Основные сущности рабочего процесса на **Apache Airflow**:
 
