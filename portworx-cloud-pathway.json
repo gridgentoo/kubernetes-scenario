@@ -4,6 +4,16 @@
   "description": "Откройте для себя Portworx.",
   "courses": [
     {
+      "course_id": "deploy-px-k8s",
+      "title": "Install Portworx on Kubernetes",
+      "description": "Установите Portworx в Kubernetes."
+    },
+    {
+      "course_id": "px-helm-mongo",
+      "title": "Mongodb Cluster on Kubernetes",
+      "description": "Разверните Mongodb на Portworx volumes с помощью Helm в Kubernetes."
+    },
+    {
       "course_id": "px-mysql",
       "title": "HA MySQL на Kubernetes с Portworx",
       "description": "Деплой базы данных MySQL в Kubernetes с использованием Portworx, сценарий отработки отказа HA, динамическое расширение тома и создание снимков для восстановления."
@@ -22,11 +32,6 @@
       "course_id": "px-cassandra",
       "title": "Cassandra Stateful Set on Portworx.",
       "description": "Cassandra с сохранением состояния в Kubernetes с использованием Portworx, сценарий отработки отказа HA, динамическое расширение тома и создание снимков для восстановления."
-    },
-    {
-      "course_id": "px-helm-mongo",
-      "title": "Разверните Mongo на Portworx volumes с помощью Helm.",
-      "description": "Разверните Mongo на Portworx volumes с помощью Helm."
     },
     {
       "course_id": "px-k8s-postgres-all-in-one",
