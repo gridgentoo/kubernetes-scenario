@@ -1,12 +1,16 @@
 Добавьте репозиторий **Airflow Helm Chart**:
 
+Поиск репозитария **Airflow**
+
 `helm search repo airflow`{{execute}}  
 
 `helm show values stable/airflow`{{execute}}
 
-Отправим манифест **values.yaml`** с пмощью пайпа **pipe** в файл **values.yaml**.
+Отправим манифест **values.yaml** с помощью пайпа **pipe** в файл **values.yaml**.
 
 `helm show values stable/airflow > values.yaml`{{execute}}
+
+Откроем в редакторе файл **values.yaml**.
 
 `nano values.yaml`{{execute}}
 
@@ -19,8 +23,6 @@
 Чтобы установить **Strimzi Helm Chart** с названием релиза **my-airflow**:
 
 `helm install my-airflow stable/airflow --version 7.1.5 --namespace airflow -f values.yaml`{{execute}}
-
-`watch kubectl get deployments,pods,services --namespace airflow`{{execute}}
 
 Кликните **Click** на команду **watch** ниже, и подождите, когда **Kubernetes nodes** будут готовы.
 
