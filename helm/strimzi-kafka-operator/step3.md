@@ -1,5 +1,8 @@
 
+![Enterprise architect Logo | Systems Engineering | Sparx Systems](./assets/enterprise-architect.png)
+
 **Реверс инжениринг структуры классов Apache Kafka в Enterprise Architect** 
+
 https://drive.google.com/drive/folders/1-sFd8T4nF-moiKsHOeqEVVpNC6uEZ1SE
 
 ![Uber Logo](./assets/uber-logo.jpg)
