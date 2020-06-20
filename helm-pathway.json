@@ -4,6 +4,26 @@
     "description": "Откройте для себя Helm.",
     "courses": [
       {
+        "course_id": "facebook-memcached",
+        "title": "Memcached Cluster with McRouter on Kubernetes",
+        "description": "Mcrouter основной компонент инфраструктуры кеша в Facebook и Instagram, где mcrouter обрабатывает почти 5 миллиардов запросов в секунду"
+      },
+      {
+        "course_id": "apache-ignite",
+        "title": "Apache Ignite (In-Memory Cluster) on Kubernetes",
+        "description": "In-Memory Cluster, Apache Ignite - это распределенная база данных, предназначенная для хранения и вычисления больших объемов данных в кластере узлов."
+      },
+      {
+        "course_id": "apache-airflow",
+        "title": "Airflow Cluster on Kubernetes",
+        "description": "Apache Airflow - workflow менеджер, для разработки, планирования и мониторинга batch-процессов."
+      },
+      {
+        "course_id": "strimzi-kafka-operator",
+        "title": "Strimzi - Kafka Cluster on Kubernetes",
+        "description": "Strimzi - Распределенная потоковая передача с Apache Kafka в Kubernetes."
+      },
+      {
         "course_id": "rabbitmq",
         "title": "RabbitMQ on Kubernetes",
         "description": "Запустим RabbitMQ в Kubernetes."
@@ -22,21 +42,6 @@
         "course_id": "jenkins",
         "title": "CI/CD pipeline with Jenkins and Kubernetes.",
         "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
-      },
-      {
-        "course_id": "facebook-memcached",
-        "title": "Memcached Cluster with McRouter on Kubernetes",
-        "description": "Mcrouter основной компонент инфраструктуры кеша в Facebook и Instagram, где mcrouter обрабатывает почти 5 миллиардов запросов в секунду"
-      },
-      {
-        "course_id": "apache-ignite",
-        "title": "Apache Ignite (In-Memory Cluster) on Kubernetes",
-        "description": "In-Memory Cluster, Apache Ignite - это распределенная база данных, предназначенная для хранения и вычисления больших объемов данных в кластере узлов."
-      },
-      {
-        "course_id": "apache-airflow",
-        "title": "Airflow Cluster on Kubernetes",
-        "description": "Apache Airflow - workflow менеджер, для разработки, планирования и мониторинга batch-процессов."
       },
       {
         "course_id": "redis",
