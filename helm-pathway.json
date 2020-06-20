@@ -24,6 +24,11 @@
         "description": "Strimzi - Распределенная потоковая передача с Apache Kafka в Kubernetes."
       },
       {
+        "course_id": "px-helm-mongo",
+        "title": "Mongo Cluster on Kubernetes",
+        "description": "Разверните Mongo на Portworx volumes с помощью Helm в Kubernetes."
+      },
+      {
         "course_id": "rabbitmq",
         "title": "RabbitMQ on Kubernetes",
         "description": "Запустим RabbitMQ в Kubernetes."
