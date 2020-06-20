@@ -2,7 +2,6 @@
 
 `helm repo add strimzi https://strimzi.io/charts/`{{execute}} 
 
-
 ##################################################
 
 `helm search repo strimzi/strimzi-kafka-operator`{{execute}} 
@@ -11,9 +10,15 @@
 
 `helm show values strimzi/strimzi-kafka-operator`{{execute}}
 
+Отправим манифест **values.yaml`** с пмощью пайпа **pipe** в файл **values.yaml**.
+
 `helm show values strimzi/strimzi-kafka-operator > values.yaml`{{execute}}
 
+`ls`{{execute}}
+
 `nano values.yaml`{{execute}}
+
+Нажмите **CTRL-X to exit** для выхода из режима **редактирования**.
 
 ##################################################
 
@@ -21,17 +26,26 @@
 
 `kubectl create namespace kafka`{{execute}}  
 
-Чтобы установить **Strimzi Helm Chart** с названием релиза my-release:
+Чтобы установить **Strimzi Helm Chart** с названием релиза **my-strimzi-kafka-operator**:
 
 `helm install my-strimzi-kafka-operator strimzi/strimzi-kafka-operator --version 0.18.0 --namespace kafka -f values.yaml`{{execute}}
+
+Кликните **Click** на команду **watch** ниже, и подождите, когда **Kubernetes nodes** будут готовы.
 
 `watch kubectl get deployments,pods,services --namespace kafka`{{execute}}
 
 ##################################################
 
-# Погрузимся глубже в исследовнание манифестов stable/rabbitmq-ha
+Когда все **nodes**  показывают статус **Running**, нажмите
+```clear```{{execute interrupt}} 
 
-Скачаем пакет stable/rabbitmq-ha
+или **CTRL-C to exit** для выхода из режима **watch**.
+
+##################################################
+
+# Погрузимся глубже в исследовнание манифестов strimzi-kafka-operator
+
+Скачаем несколько пакетов **strimzi-kafka-operator**, различных версий:
 
 `helm pull strimzi/strimzi-kafka-operator --version 0.16.0`{{execute}}
 
