@@ -4,23 +4,23 @@
 
 В этом руководстве вы узнаете, как развернуть **MongoDB** в **Kubernetes**, используя **Helm** и **Portworx**:
 
-### Step: Deploy Helm to our Kubernetes cluster
+### Шаг: разверните **Helm** в нашем **Kubernetes cluster** 
 
-In this step we will show you how to deploy Helm to your Kubernetes cluster. [Helm](https://helm.sh/) helps you manage Kubernetes applications — Helm Charts helps you define, install, and upgrade even the most complex Kubernetes application. Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste madness.
+На этом этапе мы покажем вам, как развернуть **Helm** в вашем кластере **Kubernetes**. [Helm](https://helm.sh/) **helps** вам управлять приложениями Kubernetes - **Helm Charts** помогают определять, устанавливать и обновлять даже самые сложные приложения **Kubernetes**. **Charts** легко создавать, **version**, **share** и **publish**, поэтому начните использовать **Helm** и остановите безумие копирования и вставки.
 
-### Step: Deploy MongoDB using Helm with the Portworx Storage Class
+### Шаг: разверните **MongoDB** с помощью **Helm** с классом **Portworx Storage**
 
-Once Helm is deployed we will use it to deploy the [MongoDB chart](https://github.com/kubernetes/charts/tree/master/stable/mongodb). In order to provide for a highly available MongoDB instance, we will configure the chart to use a Portworx volume that we will create to ensure 3 replicas of the data. Portworx will perform synchronous replication of the volume so that the MongoDB data is well protected. Once MongoDB is deployed we will use the MongoDB client to create some data.
+**Helm** мы будем использовать для развертывания [MongoDB chart](https://github.com/kubernetes/charts/tree/master/stable/mongodb). Чтобы обеспечить высокодоступный экземпляр **MongoDB**, мы настроим **chart** на использование **Portworx volume**, который мы создадим, чтобы обеспечить **3 replicas** данных. **Portworx** выполнит синхронную репликацию тома **volume**, чтобы данные **MongoDB** были надежно защищены. После развертывания **MongoDB** мы будем использовать **MongoDB client** для создания некоторых **data**.
 
-This diagram illustrates the configuration:
+Эта диаграмма иллюстрирует конфигурацию:
 
 <img src="https://raw.githubusercontent.com/portworx/katacoda-scenarios/master/px-helm-mongo/images/MongoDB_using_PX_Volume.png" alt="MongoDB using PX Volume" style="width: 600px;"/>
 
-### Step: Perform a failover test
+### Шаг: Выполните тест аварийного переключения **failover test**
 
-In this step we will simulate a node failure to show how Kubernetes can reschedule your MongoDB pod to run on another node in your cluster. Portworx is able to ensure that the rescheduled pod connects to it data from anywhere in the cluster but goes a step further by ensuring that the pod will be scheduled on a node which has a local copy of the data so that you get the best level of performance. This advanced orchestration of stateful workloads is handled by the [STorage ORchestrator for Kubernetes (STORK)](https://github.com/libopenstorage/stork/).
+На этом этапе мы смоделируем сбой узла **node failure**, чтобы показать, как **Kubernetes** может перепланировать ваш **MongoDB pod** для запуска на другом **node** в вашем кластере. **Portworx** может гарантировать, что **rescheduled pod** подключает к нему данные из любой точки кластера, но делает шаг вперед, гарантируя, что **MongoDB pod** будет запланирован на узле, который имеет локальную копию данных **local copy of the data**, так что вы получите лучший уровень производительность **best level of performance**. Эта расширенная оркестровка **advanced orchestration** рабочих нагрузок с отслеживанием состояния обрабатывается **stateful workloads** [STorage ORchestrator for Kubernetes (STORK)](https://github.com/libopenstorage/stork/).
 
-This diagram illustrates the failover scenario:
+Эта диаграмма иллюстрирует сценарий отработки отказа **failover scenario**:
 
 <img src="https://raw.githubusercontent.com/portworx/katacoda-scenarios/master/px-helm-mongo/images/mongo_failover.png" alt="MongoDB failover test" style="width: 600px;"/>
 
