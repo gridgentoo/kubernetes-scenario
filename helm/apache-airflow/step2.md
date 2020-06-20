@@ -1,22 +1,45 @@
+Добавьте репозиторий **Airflow Helm Chart**:
+
 `helm search repo airflow`{{execute}}  
 
 `helm show values stable/airflow`{{execute}}
+
+Отправим манифест **values.yaml`** с пмощью пайпа **pipe** в файл **values.yaml**.
 
 `helm show values stable/airflow > values.yaml`{{execute}}
 
 `nano values.yaml`{{execute}}
 
+Нажмите **CTRL-X to exit** для выхода из режима **редактирования**.
+
 Создайте пространство имен **airflow **для цели установки.  
 
 `kubectl create namespace airflow`{{execute}}   
+
+Чтобы установить **Strimzi Helm Chart** с названием релиза **my-airflow**:
 
 `helm install my-airflow stable/airflow --version 7.1.5 --namespace airflow -f values.yaml`{{execute}}
 
 `watch kubectl get deployments,pods,services --namespace airflow`{{execute}}
 
-# Погрузимся глубже в исследовнание манифестов stable/rabbitmq-ha
+Кликните **Click** на команду **watch** ниже, и подождите, когда **Kubernetes nodes** будут готовы.
 
-Скачаем пакет stable/rabbitmq-ha
+`watch kubectl get deployments,pods,services --namespace airflow`{{execute}}
+
+##################################################
+
+Когда все **nodes**  показывают статус **Running**, нажмите
+```clear```{{execute interrupt}} 
+
+или **CTRL-C to exit** для выхода из режима **watch**.
+
+##################################################
+
+# Погрузимся глубже в исследовнание манифестов Airflow
+
+Скачаем несколько пакетов **Airflow**, различных версий:
+
+`helm pull stable/airflow --version 7.1.4`{{execute}}
 
 `helm pull stable/airflow --version 7.1.5`{{execute}}
 
