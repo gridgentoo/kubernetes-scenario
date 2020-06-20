@@ -1,8 +1,8 @@
 [Portworx](https://portworx.com/) - это [cloud native storage](https://portworx.com/cloud-native-storage/) компания, от которой зависят предприятия, чтобы снизить стоимость и сложность быстрого развертывания контейнеризированных приложений в **multiple clouds**  и локальных средах. С Portworx вы можете управлять любой базой данных или сервисом с отслеживанием состояния **stateful service** в любой инфраструктуре, используя любой планировщик контейнеров **container scheduler**. Вы получаете единый уровень управления данными для всех ваших служб с отслеживанием состояния **stateful services**, независимо от того, где они работают
 
-A popular [Kubernetes storage](https://portworx.com/use-case/kubernetes-storage/) and [persistent storage for Docker](https://portworx.com/use-case/docker-persistent-storage/) solution, Portworx is a clustered block storage solution and provides a Cloud-Native layer from which containerized stateful applications programmatically consume block, file and object storage services directly through the scheduler.
+Популярные [Kubernetes storage](https://portworx.com/use-case/kubernetes-storage/) и [persistent storage for Docker](https://portworx.com/use-case/docker-persistent-storage/) решение **Portworx** представляет собой решение для кластерного хранения блоков  **clustered block storage** и обеспечивает уровень **Cloud-Native layer**, из которого **containerized stateful applications** программно используют сервисы хранения блоков **storage services**, файлов и объектов непосредственно через планировщик **scheduler**.
 
-In this tutorial, you will learn how to deploy MongoDB to Kubernetes using Helm and Portworx:
+В этом руководстве вы узнаете, как развернуть **MongoDB** в **Kubernetes**, используя **Helm** и **Portworx**:
 
 ### Step: Deploy Helm to our Kubernetes cluster
 
@@ -41,9 +41,9 @@ This diagram illustrates the snapshot of your volume:
 
 <img src="https://raw.githubusercontent.com/portworx/katacoda-scenarios/master/px-helm-mongo/images/mongo_snapshot.png" alt="Expanding volumes" style="width: 600px;"/>
 
-### Other things you should know
+### Другие вещи, которые вы должны знать
 
-To learn more about how why running Mongo on Portworx is a great idea take a look at the following links:
+Чтобы узнать больше о том, как заупстить **Mongo on Portworx**- отличная идея, это посмотреть по следующим ссылкам:
 * [Kubernetes MongoDB](https://portworx.com/ha-mongodb-kubernetes/) tutorial
 * [HA MongoDB on GKE](https://portworx.com/run-ha-mongodb-gke/)
 * [HA MongoDB on EKS](https://portworx.com/run-ha-mongodb-amazon-eks/)
@@ -53,6 +53,6 @@ To learn more about how why running Mongo on Portworx is a great idea take a loo
 * [Customer Stories](https://portworx.com/customers/)
 
 
-This scenario assumes you have already covered the following scenarios:
-* [How to install Portworx on Kubernetes](https://www.katacoda.com/portworx/scenarios/deploy-px-k8s)
-* [How to create Portworx volumes on Kubernetes](https://www.katacoda.com/portworx/scenarios/px-k8s-vol-basic)
+В этом сценарии предполагается, что вы уже рассмотрели следующие сценарии:
+* [How to install Portworx on Kubernetes](https://www.katacoda.com/kuber-ru/courses/portworx-cloud/deploy-px-k8s)
+* [How to create Portworx volumes on Kubernetes](https://www.katacoda.com/kuber-ru/courses/portworx-cloud/px-k8s-vol-basic)

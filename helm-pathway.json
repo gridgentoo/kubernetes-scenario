@@ -10,7 +10,7 @@
       },
       {
         "course_id": "apache-ignite",
-        "title": "Apache Ignite (In-Memory Cluster) on Kubernetes",
+        "title": "Apache Ignite Cluster (In-Memory) on Kubernetes",
         "description": "In-Memory Cluster, Apache Ignite - это распределенная база данных, предназначенная для хранения и вычисления больших объемов данных в кластере узлов."
       },
       {
@@ -25,12 +25,12 @@
       },
       {
         "course_id": "px-helm-mongo",
-        "title": "Mongo Cluster on Kubernetes",
-        "description": "Разверните Mongo на Portworx volumes с помощью Helm в Kubernetes."
+        "title": "Mongodb Cluster on Kubernetes",
+        "description": "Разверните Mongodb на Portworx volumes с помощью Helm в Kubernetes."
       },
       {
         "course_id": "rabbitmq",
-        "title": "RabbitMQ on Kubernetes",
+        "title": "RabbitMQ Cluster on Kubernetes",
         "description": "Запустим RabbitMQ в Kubernetes."
       },
       {
@@ -40,17 +40,17 @@
       },
       {
         "course_id": "sonarqube",
-        "title": "SonarQube on Kubernetes.",
+        "title": "SonarQube Cluster on Kubernetes.",
         "description": "Анализ кода с помощью SonarQube в Kubernetes."
       },
       {
         "course_id": "jenkins",
-        "title": "CI/CD pipeline with Jenkins and Kubernetes.",
+        "title": "Jenkins Cluster and CI/CD pipeline on Kubernetes.",
         "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
       },
       {
         "course_id": "redis",
-        "title": "Redis on Kubernetes.",
+        "title": "Redis Cluster on Kubernetes.",
         "description": "Запустим Redis в Kubernetes"
       }, 
       {
