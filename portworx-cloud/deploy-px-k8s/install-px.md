@@ -4,7 +4,7 @@
 
 `kubectl version --short`{{execute}}
 
-`VER=`kubectl version --short | awk -Fv '/Server Version: /{print $3}``{{execute}}
+VER=`kubectl version --short | awk -Fv '/Server Version: /{print $3}`
 
 `curl -L -s -o px-spec.yaml "https://install.portworx.com/2.3?mc=false&kbver=${VER}&b=true&s=%2Fdev%2Fvdb&c=px-demo&stork=true&st=k8s" `{{execute T1}}
 
