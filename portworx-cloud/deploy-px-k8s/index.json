@@ -1,21 +1,21 @@
 {
     "pathwayTitle": "Kubernetes",
     "icon": "fa-kubernetes",
-    "title": "Install Portworx on Kubernetes",
-    "description": "Install Portworx on Kubernetes",
+    "title": "Установите Portworx в Kubernetes",
+    "description": "Установите Portworx в Kubernetes",
     "difficulty": "Intermediate",
     "details": {
         "steps": [
             {
-                "title" : "Wait for Kubernetes nodes to be ready",
+                "title" : "Wait - дождитесь готовности узлов Kubernetes",
                 "text": "wait-k8s.md"
             },
             {
-                "title" : "Prepare hosts with storage",
+                "title" : "Подготовьте hosts с storage",
                 "text": "storage.md"
             },
             {
-                "title" : "Install Portworx",
+                "title" : "Установить Portworx",
                 "text": "install-px.md"
             }
         ],
