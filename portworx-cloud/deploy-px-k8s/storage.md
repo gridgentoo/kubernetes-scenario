@@ -1,7 +1,10 @@
-Portworx (PX) requires at least some nodes in the cluster to have dedicated storage for Portworx to use.  PX will then carve out virtual volumes from these storage pools.  In this example, we use a 20GB block device that exists on each node.
+**Portworx (PX)** требует, чтобы по крайней мере некоторые **nodes** в кластере имели выделенное хранилище для использования **Portworx**. 
 
-### Step: List block devices on all nodes
+Затем **PX** выделит виртуальные тома **virtual volumes** из этих пулов хранения **storage pools**. В этом примере мы используем блочное устройство **block device** объемом 20 ГБ, которое существует на каждом **node**.
 
-Click `ssh root@node01 lsblk`{{execute T2}} to list the available devices on the node1.
+###  Шаг: список блочных устройств на всех **nodes**
 
-Note the storage device `vdb`, which will be used by PX as one of it's raw block disks. All the nodes in this setup have the `vdb` device.
+Кликните `ssh root@node01 lsblk`{{execute T2}} чтобы просмотреть список доступных устройств **devices** на **node1**.
+Кликните `ssh root@node02 lsblk`{{execute T2}}, чтобы просмотреть список доступных устройств **devices** на **node2**.
+
+> Note: Обратите внимание на запоминающее устройство `vdb`, которое будет использоваться **PX** в качестве одного из **raw block disks**. Все узлы в этой настройке имеют устройство `vdb`.
