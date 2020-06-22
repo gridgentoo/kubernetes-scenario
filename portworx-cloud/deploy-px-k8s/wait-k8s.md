@@ -1,13 +1,10 @@
-Before installing Portworx, let's ensure Kubernetes is setup.
+Перед установкой **Portworx**, убедитесь, что **Kubernetes** настроен.
 
-### Step: Wait for Kubernetes to be ready
+### Шаг: дождитесь готовности **Kubernetes**
 
-Click the below section which waits for all Kubernetes nodes to be ready.
-```
-./k8s-ready.sh
-```{{execute T1}}
+Кликните на раздел ниже, ждите **waits** когда, когда все **Kubernetes nodes** будут готовы.
+```./k8s-ready.sh```{{execute T1}}
 
+### Шаг: получим список узлов **Kubernetes**
 
-### Step: List Kubernetes nodes
-
-Once all Kubernetes Nodes at "Ready" click ```clear```{{execute interrupt}} then proceed to the next step !
+Как только все **Kubernetes Nodes** в  перейдут в статус **Ready** кликните ```clear```{{execute interrupt}}, а затем перейдите к следующему шагу!
