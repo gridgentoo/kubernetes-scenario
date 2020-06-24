@@ -1,9 +1,9 @@
-To complete this step, run a small custom container.
+Чтобы выполнить этот шаг, запустите небольшой пользовательский контейнер..
 
-This container just displays the time every second.
+Этот контейнер просто отображает время каждую секунду..
 `docker run jpetazzo/clock`{{execute}}
 
-- This container will run forever.
-- To stop it, press ^C.
-- Docker has automatically downloaded the image jpetazzo/clock.
-- This image is a user image, created by jpetazzo.
+- Этот контейнер будет работать вечно.
+- Чтобы остановить это, нажмите ^C.
+- Докер автоматически загрузил образ **image** **jpetazzo/clock**.
+- Это **image** является пользовательским **image**, созданным **jpetazzo**. 
