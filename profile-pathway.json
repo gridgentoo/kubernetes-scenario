@@ -36,24 +36,9 @@
         "id": "portworx-cloud"
       }, 
       {
-        "title": "Основы Kubernetes",
-        "description": "Изучите основные building blocks Kubernetes с практическими объяснениями.",
-        "id": "kubernetes-fundamentals"
-      },
-      {
-        "title": "Основы OpenShift",
-        "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
-        "id": "openshift-fundamentals"
-      },
-      {
         "title": "Helm пакетный менеджер для Kubernetes",
         "description": "Откройте для себя пакетный менеджер Helm.",
         "id": "helm"
-      },
-      {
-        "title": "Docker начало работы.",
-        "description": "Узнайте все о docker, runtimes и docker swarm",
-        "id": "docker"
       },
       {
         "title": "OpenShift Приложения",
@@ -114,6 +99,21 @@
         "title": "Ansible Operator and the Operator SDK",
         "description": "Изучите, как использовании Ansible для управления жизненным циклом приложений в Kubernetes.",
         "id": "ansibleop"
+      },
+      {
+        "title": "Docker начало работы.",
+        "description": "Узнайте все о docker, runtimes и docker swarm",
+        "id": "docker"
+      },
+      {
+        "title": "Основы Kubernetes",
+        "description": "Изучите основные building blocks Kubernetes с практическими объяснениями.",
+        "id": "kubernetes-fundamentals"
+      },
+      {
+        "title": "Основы OpenShift",
+        "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
+        "id": "openshift-fundamentals"
       }
     ],
     "scenarios": []
