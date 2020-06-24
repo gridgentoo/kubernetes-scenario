@@ -1,12 +1,13 @@
-Just like with the standard UNIX command tail -f, we can follow the logs of our
-container:
+
+Как и в случае стандартной команды **UNIX command tail -f**, мы можем следить за логами наших контейнеров:
 
 `docker logs --tail 1 --follow mycontainer`{{execute}}
 
 ## Output
-> Sat Aug  3 11:43:28 UTC 2019
-> Sat Aug  3 11:43:29 UTC 2019
+> Wed Jun 24 16:25:06 UTC 2020
+> Wed Jun 24 16:25:07 UTC 2020
 
-- This will display the last line in the log file.
-- Then, it will continue to display the logs in real time.
-- Use ^C to exit.
+- This will display the last line in the log file. Это покажет последнюю строку **line** в **log file**.
+- Затем он будет продолжать отображать логи в режиме реального времени.
+
+> Чтобы прервать вывод логов в консоли  нажмите ```clear```{{execute interrupt}} или нажмите **CTRL-C to exit** для выхода из режима.
