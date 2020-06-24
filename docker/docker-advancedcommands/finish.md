@@ -1,1 +1,1 @@
-You've completed your Docker Commands Lab Exercise!
+Вы завершили лабораторное задание Docker Commands!

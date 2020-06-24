@@ -1,3 +1,4 @@
-Welcome to your Docker Lab Exercise!
 
-In this Lab we will get introduced to Advanced Docker Commands
+Добро пожаловать на наше занятие **Docker Lab**!
+
+В этой лабораторной работе мы познакомимся с расширенными командами **Advanced Docker Commands**
