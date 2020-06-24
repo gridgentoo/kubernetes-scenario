@@ -1,7 +1,7 @@
-Containers can be started in the background, with the -d flag:
+Контейнеры могут быть запущены в фоновом режиме, с флагом -d:
 
 `docker run -d  --name=mycontainer jpetazzo/clock`{{execute}}
 
-- We don't see the output of the container.
-- But don't worry: Docker collects that output and logs it!
-- Docker gives us the ID of the container.
+- Мы не видим **output**  контейнера.
+- Но не волнуйтесь: Docker собирает этот **output** и записывает его в логи!
+- Докер дает нам идентификатор контейнера **ID**.

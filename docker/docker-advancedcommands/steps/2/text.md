@@ -1,4 +1,12 @@
-Run an instance of an **jpetazzo/clock** image in background. Also, pass ` --name=mycontainer `{{copy}} to give container custom name
+Запустите экземпляр **image**  **jpetazzo/clock** в фоновом режиме. 
+
+Кроме того, скоприуйте:
+
+` --name=mycontainer `{{copy}} 
+
+чтобы присвоить контейнеру произвольное имя
 
 ### Tip:
-If you are not sure, execute the `docker run --help`{{execute}} command to identify the right option to run a docker container in the **detached** mode.
+Если вы не уверены, выполните команду `docker run --help`{{execute}} чтобы определить правильный вариант запуска контейнера **Docker** в режиме **detached** **mode**.
+
+
