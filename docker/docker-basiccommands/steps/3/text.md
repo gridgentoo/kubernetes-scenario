@@ -1,4 +1,4 @@
-Давайте запустим более exciting container:
+Давайте запустим более **exciting container**:
 
 `docker run -it ubuntu`{{execute}}
 
