@@ -1,0 +1,90 @@
+{
+  "title": "Module 1 - Docker Basics",
+  "description": "In this lab, we will examine the Docker CLI and execute our first container.",
+  "difficulty": "beginner",
+  "time": "10-15 minutes",
+  "details": {
+    "assets": {
+      "master": [
+        {
+          "file": "answers/*",
+          "target": ".answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Run Basic Docker Commands",
+        "text": "step1.md"
+      },
+      {
+        "title": "Docker Image Basics",
+        "text": "step2.md"
+      },
+      {
+        "title": "Run Your First Container",
+        "text": "step3.md"
+      },
+      {
+        "title": "Run Interactive Commands",
+        "text": "step4.md"
+      },
+      {
+        "title": "Run a Container Detached",
+        "text": "step5.md"
+      },
+      {
+        "title": "View Container Logs",
+        "text": "step6.md"
+      },
+      {
+        "title": "Start, Stop, Remove Container",
+        "text": "step7.md"
+      },
+      {
+        "title": "Clean Up Images",
+        "text": "step8.md"
+      },
+      {
+        "title": "Volumes",
+        "text": "step9.md"
+      },
+      {
+        "title": "More Container Examples",
+        "text": "step10.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "Developer(s): [William Hearn](https://sylus.ca) and [Zachary Seguin](https://zacharyseguin.ca)",
+      "courseData": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "dashboards": [
+      {
+        "name": "Nginx",
+        "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com"
+      },
+      {
+        "name": "Portainer",
+        "href": "https://[[HOST_SUBDOMAIN]]-9000-[[KATACODA_HOST]].environments.katacoda.com"
+      }
+    ],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mDigital Academy training.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

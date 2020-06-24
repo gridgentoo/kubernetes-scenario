@@ -1,0 +1,1 @@
+docker ps | grep mycontainer > /dev/null && echo "done"

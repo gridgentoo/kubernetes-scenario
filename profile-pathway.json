@@ -51,6 +51,11 @@
         "id": "helm"
       },
       {
+        "title": "Docker начало работы.",
+        "description": "Узнайте все о docker, runtimes и docker swarm",
+        "id": "docker"
+      },
+      {
         "title": "OpenShift Приложения",
         "description": "Сборка приложений на OpenShift с практическими объяснениями.",
         "id": "openshift-middleware"

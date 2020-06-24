@@ -1,0 +1,45 @@
+{
+  "title": "Docker Basic Commands",
+  "description": "Get started with the basic docker commands",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Docker Version",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Run first container",
+      "text": "steps/2/text.md",
+      "verify": "steps/2/verify.sh",
+      "answer": "steps/2/answer.md"
+    },    
+	{
+      "title": "Run Ubuntu docker container",
+      "text": "steps/3/text.md",
+      "verify": "steps/3/verify.sh"
+    },
+	{
+      "title": "Install a package in our container",
+      "text": "steps/4/text.md"
+    },
+	{
+      "title": "Container vs Host",
+      "text": "steps/5/text.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}

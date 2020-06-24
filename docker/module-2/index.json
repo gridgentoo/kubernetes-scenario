@@ -1,0 +1,58 @@
+{
+  "title": "Module 2 - Creating Images",
+  "description": "In this lab, we will learn to create our own images with Docker.",
+  "difficulty": "beginner",
+  "time": "10-15 minutes",
+  "details": {
+    "assets": {
+      "master": [
+        {
+          "file": "answers/*",
+          "target": ".answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Your first Dockerfile",
+        "text": "step1.md"
+      },
+      {
+        "title": "More about building images",
+        "text": "step2.md"
+      },
+      {
+        "title": "Multi-stage Dockerfile",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "Developer(s): [William Hearn](https://sylus.ca) and [Zachary Seguin](https://zacharyseguin.ca)",
+      "courseData": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "editor-terminal",
+    "dashboards": [
+      {
+        "name": "Nginx",
+        "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com"
+      }
+    ],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mDigital Academy training.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
