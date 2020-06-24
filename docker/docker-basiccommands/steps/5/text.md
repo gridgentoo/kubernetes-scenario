@@ -1,9 +1,12 @@
-We ran an ubuntu container on an Linux host. They have different, independent packages. Installing something on the container doesn't expose it to the host.
+Мы запустили Ubuntu-контейнер на хосте Linux. 
 
-# Task
+# Задача
 
-Run `exit`{{execute}} to exit the container.
+Запустите `exit`{{execute}}, чтобы выйти из контейнера.
 
-Now try to run `figlet hello`{{execute}} on the host machine. Does that work?
+Теперь попробуйте запустить `figlet hello`{{execute}} на хост-компьютере. Это работает?
 
-**Note:** The above command will not work except if, by coincidence, you are running on a machine where figlet was installed before.)
+
+
+
+
