@@ -1,6 +1,6 @@
 {
-  "title": "Docker Basic Commands",
-  "description": "Get started with the basic docker commands",
+  "title": "Основные команды Docker",
+  "description": "Начните с основных команд докера",
   "difficulty": "beginner",
   "time": "15 minutes",
   "details": {
@@ -9,18 +9,18 @@
       "text": "steps/1/text.md"
     },
     {
-      "title": "Run first container",
+      "title": "Запустить первый контейнер",
       "text": "steps/2/text.md",
       "verify": "steps/2/verify.sh",
       "answer": "steps/2/answer.md"
     },    
 	{
-      "title": "Run Ubuntu docker container",
+      "title": "Запустите Ubuntu Docker-контейнер",
       "text": "steps/3/text.md",
       "verify": "steps/3/verify.sh"
     },
 	{
-      "title": "Install a package in our container",
+      "title": "Установите пакет в нашем контейнере",
       "text": "steps/4/text.md"
     },
 	{
@@ -37,7 +37,7 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+    "uimessage1": "\u001b[32mBrought to you by [Yunusov Temur](https://gridgentoo.github.io/)"
   },
   "backend": {
     "imageid": "docker"

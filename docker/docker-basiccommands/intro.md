@@ -1,3 +1,3 @@
-Welcome to your first Docker Lab Exercise!
+Добро пожаловать на первое занятие лабораторным Docker 
 
-In this Lab we will get introduced to Basic Docker Commands
+В этой лабораторной работе мы познакомимся с основными командами Docker
