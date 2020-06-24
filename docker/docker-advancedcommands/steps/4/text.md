@@ -1,11 +1,14 @@
-In this step, we will run multiple containers of the same image.
+На этом этапе мы запустим несколько контейнеров одного image.
 
-# Task 
-Let's start two more containers.
+# Задача
+Давайте запустим еще два контейнера.
+
 `docker run -d jpetazzo/clock`{{execute}}
+
 > Container_ID
 
 `docker run -d jpetazzo/clock`{{execute}}
+
 > Container_ID
 
-Check that `docker ps`{{execute}} correctly reports all containers.
+Убедитесь, что `docker ps`{{execute}} правильно сообщает обо всех контейнерах.
