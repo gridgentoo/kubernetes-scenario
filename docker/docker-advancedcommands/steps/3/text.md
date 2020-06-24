@@ -1,15 +1,16 @@
-How can we check that our container is still running?..
+Как мы можем проверить, что наш контейнер все еще работает? ..
 
-With docker ps, just like the UNIX ps command, lists running processes.
+С помощью **docker ps**, так же как и команда **UNIX ps**, выдает список запущенных процессов.
+
 `docker ps`{{execute}}
 
-Docker tells us:
-- The (truncated) ID of our container.
-- The image used to start the container.
-- That our container has been running (Up) for a couple of minutes.
+**Docker** говорит нам:
+- (усеченный) идентификатор **ID** нашего контейнера  
+- **image** используется для запуска контейнера.
+- что наш контейнер **running (Up)** в течение скольких минут. 
 
 
-## Useful Commands
-- Use the -l ("Last") to list last container that was started `docker ps -l`{{execute}}
-- Use the -q ("Quiet", "Quick") to list only the IDs of our containers `docker ps -q`{{execute}}
-- We can combine -l and -q to see only the ID of the last container started: `docker ps -lq`{{execute}}
+## Полезные команды
+- Используйте -l **("Last")**, чтобы просмотреть последний запущенный контейнер `docker ps -l`{{execute}}
+- Используйте -q **("Quiet", "Quick")**, чтобы перечислить только идентификаторы наших контейнеров `docker ps -q`{{execute}}
+- Мы можем объединить -l и -q, чтобы увидеть только идентификатор последнего запущенного контейнера: `docker ps -lq`{{execute}}
