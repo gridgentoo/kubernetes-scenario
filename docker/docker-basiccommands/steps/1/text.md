@@ -1,4 +1,5 @@
-To complete this step, you need to execute the following command:
+На этом шаге вам необходимо выполнить следующую команду:
+
 `docker version`{{execute}}
 
-Look at the response to find out the operating system and running container on the docker host. In the next step, we'll run docker image.
+Посмотрите на ответ **response**, чтобы узнать операционную систему и работающий контейнер на **docker host**. На следующем шаге мы запустим **docker image**.
