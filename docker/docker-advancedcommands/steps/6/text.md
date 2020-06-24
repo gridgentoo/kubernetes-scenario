@@ -1,4 +1,7 @@
-To avoid being spammed with eleventy pages of output, we can use the --tail option:
+Чтобы избежать спама с одиннадцати страницами вывода **output**, мы можем использовать параметр **--tail**:
+
 `docker logs --tail 3 mycontainer`{{execute}}
 
-**Note:** The parameter is the number of lines that we want to see.
+> **Note:** Параметр - это количество строк **lines**, которые мы хотим видеть.
+
+
