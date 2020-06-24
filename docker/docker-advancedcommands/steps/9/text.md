@@ -1,2 +1,3 @@
-We can also see stopped containers, with the -a (--all) option.
+Мы также можем видеть остановленные контейнеры с опцией **-a (--all)**.
+
 `docker ps -a`{{execute}}

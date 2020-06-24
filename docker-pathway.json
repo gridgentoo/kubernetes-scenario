@@ -1,7 +1,7 @@
 {
-    "title": "Helm пакетный менеджер для Kubernetes",
+    "title": "Docker - лабораторные",
     "icon": "fa-kubernetes",
-    "description": "Откройте для себя Helm.",
+    "description": "Откройте для себя Docker.",
     "courses": [
       {
         "course_id": "docker-basiccommands",

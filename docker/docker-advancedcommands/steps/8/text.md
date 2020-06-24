@@ -1,21 +1,26 @@
-There are two ways we can terminate our detached container.
-- Killing it using the docker kill command (stops immediately).
-- Stopping it using the docker stop command (10 seconds delay).
+
+Мы можем завершить наш отдельный контейнер двумя способами.
+- Убить его командой **docker kill** (немедленно останавливается).
+- Остановка с помощью команды **docker stop** (задержка 10 секунд).
 
 ## Stop
-Let's stop one of the containers:
+
+Давайте остановим один из контейнеров:
+
 `docker stop mycontainer`{{execute}}
 
 ## Kill
-Let's be less patient with the other containers:
+
+Давайте будем менее терпеливы с другими контейнерами:
+
 `docker kill $(docker ps -q)`{{execute}}
 
-> Above command will print IDs of terminated container(s)
+> Выше команда будет печатать идентификаторы **IDs** завершенных контейнеров **terminated container(s)**
 >
 > 13e1e0042b1c
 >
 > 78e1e0042b1d
 
-The stop and kill commands can take multiple container IDs.
+Команды **stop** и **kill** могут принимать несколько идентификаторов контейнеров **IDs**.
 
-**Note:** Let's check that our containers don't show up anymore by running: `docker ps`{{execute}}
+> **Note:** Давайте проверим, что наши контейнеры больше не отображаются, запустив: `docker ps`{{execute}}

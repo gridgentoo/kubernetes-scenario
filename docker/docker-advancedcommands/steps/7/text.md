@@ -4,10 +4,12 @@
 `docker logs --tail 1 --follow mycontainer`{{execute}}
 
 ## Output
+
 > Wed Jun 24 16:25:06 UTC 2020
+
 > Wed Jun 24 16:25:07 UTC 2020
 
-- This will display the last line in the log file. Это покажет последнюю строку **line** в **log file**.
+- Это покажет последнюю строку **line** в **log file**.
 - Затем он будет продолжать отображать логи в режиме реального времени.
 
 > Чтобы прервать вывод логов в консоли  нажмите ```clear```{{execute interrupt}} или нажмите **CTRL-C to exit** для выхода из режима.
