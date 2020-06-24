@@ -17,3 +17,5 @@
 
 `htop`{{execute}}
 
+> Чтобы прервать **htop**  ```clear```{{execute interrupt}} или нажмите **CTRL-C to exit** для выхода из режима **htop** .
+

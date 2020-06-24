@@ -1,6 +1,6 @@
 {
   "title": "Docker Advanced Commands",
-  "description": "Get started with the advanced docker commands",
+  "description": "Начните с расширенных команд докера - advanced docker commands",
   "difficulty": "Intermediate",
   "time": "15 minutes",
   "details": {
@@ -10,23 +10,23 @@
       "verify": "steps/1/verify.sh"
     },
     {
-      "title": "Run a container in the background",
+      "title": "Запустить контейнер в фоновом режиме",
       "text": "steps/2/text.md",
       "verify": "steps/2/verify.sh",
       "answer": "steps/2/answer.md"
     },    
 	{
-      "title": "List running containers",
+      "title": "Список запущенных контейнеров",
       "text": "steps/3/text.md",
       "verify": "steps/3/verify.sh"
     },
 	{
-      "title": "Running multiple containers",
+      "title": "Запуск нескольких контейнеров",
       "text": "steps/4/text.md",
       "verify": "steps/4/verify.sh"
     },
 	{
-      "title": "View the logs of a container",
+      "title": "Просмотр логов ** контейнера",
       "text": "steps/5/text.md"
     },
 	{
@@ -38,11 +38,11 @@
       "text": "steps/7/text.md"
     },
     {
-      "title": "Stop docker container",
+      "title": "Остановка докер контейнеров",
       "text": "steps/8/text.md"
     },
     {
-      "title": "List stopped containers",
+      "title": "Список остановленных контейнеров",
       "text": "steps/9/text.md"
     }],
     "intro": {
