@@ -1,6 +1,6 @@
 {
     "title": "Container Basics",
-    "icon": "fa-kubernetes",
+    "icon": "fa-docker",
     "description": "Откройте для себя Docker.",
     "courses": [
       {
