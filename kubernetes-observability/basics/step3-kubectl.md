@@ -70,17 +70,31 @@
 
 and come back out with the `exit` command.
 
+и выйдете из **$POD** командой **exit**.
+
+`exit`{{execute}}
+
 Существует множество полезных команд **Linux** для предоставления вам информации о контейнерах **Linux**. Здесь только несколько.
 
 `kubectl exec $POD -- uptime`{{execute}}
 
+нажмите ```clear```{{execute interrupt}} 
+
 `kubectl exec $POD -- ps`{{execute}}
+
+нажмите ```clear```{{execute interrupt}} 
 
 `kubectl exec $POD -- stat -f /`{{execute}}
 
+нажмите ```clear```{{execute interrupt}} 
+
 `kubectl exec $POD --container random-logger -- lsof`{{execute}}
 
+нажмите ```clear```{{execute interrupt}} 
+
 `kubectl exec $POD --container random-logger -- iostat`{{execute}}
+
+нажмите ```clear```{{execute interrupt}} 
 
 Когда **Pod** имеет более одного контейнера, может быть указано конкретное имя контейнера.
 

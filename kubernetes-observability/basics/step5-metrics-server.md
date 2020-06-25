@@ -1,29 +1,31 @@
-The de facto light monitoring application for Kubernetes is [metrics-server](https://github.com/kubernetes-incubator/metrics-server). Metrics Server is a metrics aggregator. It discovers all nodes on the cluster and queries each node’s kubelet for CPU and memory usage. There is no long term metrics storage, it holds just the latest metrics. Typically, the server may be installed with a Helm chart.
+Де-факто легким приложением для мониторинга в **Kubernetes** является [metrics-server](https://github.com/kubernetes-incubator/metrics-server). **Metrics Server** - это агрегатор метрик. Он обнаруживает все узлы в кластере и запрашивает у каждого узла **kubelet** использование процессора **CPU** и памяти. Не существует долгосрочного хранилища метрик **long term metrics storage**, оно содержит только самые последние метрики. Как правило, сервер может быть установлен с диаграммой Хелма.
+
+Установим **Metrics Server**  с помощью **Helm chart**
 
 `helm install metrics-server stable/metrics-server \
 --namespace kube-system \
 --set args[0]="--kubelet-preferred-address-types=InternalIP" \
 --set args[1]="--kubelet-insecure-tls"`{{execute}}
 
-This will install the server in the kube-system namespace along with the last two parameters that allow it to work well in this ephemeral Katacoda cluster.
+Это установит сервер **Metrics Server** в пространство имен **kube-system** вместе с двумя последними параметрами, которые позволят ему хорошо работать в этом эфемерном кластере **Katacoda**.
 
-In a few minutes you should be able to list metrics using the following command:
+Через несколько минут вы сможете составить список **metrics** с помощью следующей команды:
 
 `kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"`{{execute}}
 
-If the metrics are not ready, this message will appear
+Если метрики не готовы, появится это сообщение
 
 > `Error from server (ServiceUnavailable): the server is currently unable to handle the request`
 
-Once the metrics are ready, a JSON dump of the metrics will appear.
+Как только метрики будут готовы, появится **JSON dump** метрик.
 
 `kubectl top node`{{execute}}
 
-If the metrics are not ready you may get this message.
+Если метрики не готовы, вы можете получить это сообщение.
 
 > `Error from server (ServiceUnavaliable): the server is currently unable to handle the request (get nodes.metrics.k8s.io)`
 
-However, once the metrics are available the normal message should look like this:
+Однако, как только метрики станут доступны, обычное сообщение должно выглядеть так:
 
 ```
 NAME     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%

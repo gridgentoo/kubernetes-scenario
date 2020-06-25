@@ -1,23 +1,32 @@
-Every Node in a Kubernetes cluster has a Kubelet process. Within each Kubelet process is a cAdvisor. The cAdvisor continuously gathers metrics about the state of the Kubernetes resources on each Node. This metrics information is vital to monitor to understand the state of the cluster. This wealth of information is available through the _Resource Metrics API_. Let's inspect the metrics.
+Каждый **Node** в кластере **Kubernetes** имеет процесс **Kubelet**. В каждом процессе **Kubelet** есть **cAdvisor**. **CAdvisor** непрерывно собирает метрики **metrics** о состоянии ресурсов **Kubernetes** на каждом **Node**. Эта метрическая информация **metrics**, крайне важна для мониторинга, чтобы понять состояние **state** кластера. Это богатство информации доступно через **Resource Metrics API**. 
 
-Each node exposes statistics continuously updated by cAdvisor. For your cluster, get a list of the node names.
+Давайте проверим метрики **metrics**.
+
+Каждый **node** предоставляет статистику, постоянно обновляемую **cAdvisor**. Для вашего кластера получите список node names.
 
 `kubectl get nodes`{{execute}}
 
 For this small Kubernetes cluster on Katacoda the two names are named _master_ and _node01_.
+Для этого небольшого кластера **Kubernetes** на **Katacoda** есть два имени называются **master** и **node01**.
 
 `export NODE=master`{{execute}}
 
-Open a proxy to the Kubernetes API port.
+Откройте прокси для **Kubernetes API port**.
 
 `kubectl proxy &`{{execute}}
 
-Access the worker node statistics with this command to the Metrics API.
+Получите доступ к статистике **worker node** с помощью этой команды в **Metrics API**.
 
 `curl localhost:8001/api/v1/nodes/$NODE/proxy/stats/`{{execute}}
 
+нажмите ```clear```{{execute interrupt}} 
+
 `curl localhost:8001/api/v1/nodes/$(kubectl get nodes -o=jsonpath="{.items[0].metadata.name}")/proxy/metrics`{{execute}}
 
-The Kubernetes API aggregates cluster-wide metrics at `/metrics`.
+нажмите ```clear```{{execute interrupt}} 
+
+**API Kubernetes** объединяет метрики всего кластера в `/ metrics`.
 
 `curl localhost:8001/metrics`{{execute}}
+
+нажмите ```clear```{{execute interrupt}} 
