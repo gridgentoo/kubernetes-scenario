@@ -1,6 +1,6 @@
 {
-  "title": "III. Dockerfile: Automatic Build",
-  "description": "Build Docker images with Dockerfile",
+  "title": "Модуль 3 - Dockerfile: Automatic Build",
+  "description": "Создание образов Docker с помощью Dockerfile",
   "details": {
     "steps": [
       {
