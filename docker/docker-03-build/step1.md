@@ -6,7 +6,7 @@
 
 Давайте посмотрим на наш первый **Dockerfile**:
 
-`cat ~/johnsimage/Dockerfile`{{execute}}
+`cat ~/timurimage/Dockerfile`{{execute}}
 
     FROM alpine:latest
 
@@ -23,7 +23,7 @@
 
 * Наконец, **CMD** указывает команду по умолчанию, запускаемую при создании контейнера. Его можно переопределить, добавив в конец команду **docker run**, которую вы уже видели в предыдущих сценариях.
 
-Запустите `docker build -t johnsimage:auto ~/johnsimage/`{{execute}} чтобы создать **image** с именем **johnsimage:auto**. Путь в конце командной строк **command line** is the **build context**. По умолчанию **Docker** будет искать файл с именем **Dockerfile** по этому пути.
+Запустите `docker build -t timurimage:auto ~/timurimage/`{{execute}} чтобы создать **image** с именем **timurimage:auto**. Путь в конце командной строк **command line** is the **build context**. По умолчанию **Docker** будет искать файл с именем **Dockerfile** по этому пути.
 
 Как видно из выходных данных, Docker запускает временный контейнер (`---> Running in <container-id>`) для каждой инструкции в  `Dockerfile`, выполняет инструкцию и фиксирует ее как **temporary image** (`---> <image-id>` below each `Running in`).
 
@@ -31,13 +31,13 @@
 
 Теперь попробуйте запустить контейнер из этого **image**:
 
-`docker run --rm johnsimage:auto`{{execute}}
+`docker run --rm timurimage:auto`{{execute}}
 
-`docker run --rm johnsimage:auto whoami`{{execute}}
+`docker run --rm timurimage:auto whoami`{{execute}}
 
-`docker run --rm -u nobody johnsimage:auto whoami`{{execute}}
+`docker run --rm -u nobody timurimage:auto whoami`{{execute}}
 
-`docker run --rm johnsimage:auto echo "Hej hej."`{{execute}}
+`docker run --rm timurimage:auto echo "Hej hej."`{{execute}}
 
 [Read more about Dockerfile](https://docs.docker.com/engine/reference/builder/)
 
