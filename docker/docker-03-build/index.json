@@ -1,0 +1,44 @@
+{
+  "title": "III. Dockerfile: Automatic Build",
+  "description": "Build Docker images with Dockerfile",
+  "details": {
+    "steps": [
+      {
+        "title": "1. Dockerfile",
+        "text": "step1.md"
+      },
+      {
+        "title": "2. Layers and image size",
+        "text": "step2.md"
+      },
+      {
+        "title": "3. Build context",
+        "text": "step3.md"
+      },
+      {
+        "title": "4. Docker cloud",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": "*",
+          "target": "~/johnsimage"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
