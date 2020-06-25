@@ -1,10 +1,8 @@
-![Digital Academy Logo](/sylus/courses/container-basics/module-1/assets/digital-academy-logo.png)
+Добро пожаловать в серию «Основы контейнеров». Это Модуль 2 - Создание вашего собственного контейнера.
 
-Welcome to the Digital Academy "Container Basics" series. This is Module 2 - Creating your own container.
+В этой лабораторной работе мы научимся создавать собственные контейнеры с помощью Docker.
 
-In this lab, we will learn to create our own containers with Docker.
-
-For more information, see the Docker [documentation][docs].
+Для получения дополнительной информации см. Докер [documentation][docs].
 
 <!-- Links Referenced -->
 
