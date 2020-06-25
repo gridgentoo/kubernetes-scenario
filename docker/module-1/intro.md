@@ -1,10 +1,7 @@
-![Digital Academy Logo](/sylus/courses/container-basics/module-1/assets/digital-academy-logo.png)
+Добро пожаловать в серию «Основы контейнеров». Это Модуль 1 - Введение в контейнеры и докер.
 
-Welcome to the Digital Academy "Container Basics" series. This is Module 1 - Intro to Containers and Docker.
-
-In this lab, we will examine the Docker CLI and execute our first container.
-
-For more information, see the Docker [documentation][docs].
+В этой лабораторной работе мы изучим интерфейс командной строки Docker CLI. 
+Для получения дополнительной информации см. Докер [documentation][docs].
 
 <!-- Links Referenced -->
 

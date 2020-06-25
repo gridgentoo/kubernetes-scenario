@@ -1,8 +1,8 @@
 {
-  "title": "Module 1 - Docker Basics",
-  "description": "In this lab, we will examine the Docker CLI and execute our first container.",
+  "title": "Модуль 1 - Основы докера",
+  "description": "В этой лабораторной работе мы изучим интерфейс командной строки Docker CLI.",
   "difficulty": "beginner",
-  "time": "10-15 minutes",
+  "time": "10 minutes",
   "details": {
     "assets": {
       "master": [
@@ -61,7 +61,7 @@
     "intro": {
       "text": "intro.md",
       "code": "env-init.sh",
-      "credits": "Developer(s): [William Hearn](https://sylus.ca) and [Zachary Seguin](https://zacharyseguin.ca)",
+      "credits": "Developer(s): [Yunusov Temur](https://gridgentoo.github.io)",
       "courseData": "setup.sh"
     },
     "finish": {
