@@ -1,8 +1,8 @@
-`ADD` and `COPY` instructions are used to add files to the image.
+Инструкции **ADD** и **COPY** используются для добавления файлов к **image.**
 
-Take a look at our "`Dockerfile.2`":
+Взгляните на наш **Dockerfile.2**:
 
-`cat ~/johnsimage/Dockerfile.2`{{execute}}
+`cat ~/timurimage/Dockerfile.2`{{execute}}
 
     FROM alpine:latest
 
@@ -13,28 +13,29 @@ Take a look at our "`Dockerfile.2`":
     ADD *.txt ./
     CMD cat *.txt
 
-* The `WORKDIR` instruction sets the working directory to `/home/johndoe/` for instructions that follow it.
+* Инструкция **WORKDIR** устанавливает рабочию директорию в **/home/timur/** для последующих инструкций.
 
-* Then the `ADD` instruction copies all `.txt` files in the *build context* to `/home/johndoe/` in the image.
+* Затем инструкция **ADD** копирует все файлы **.txt** в **build context** в **/home/timur/** **image**.
 
-Run `docker build` with the `--file` argument to rebuild using this file:
+Запустите **docker build** с аргументом **--file**, чтобы пересобрать, используя этот файл:
 
-`docker build -t johnsimage:auto --file ~/johnsimage/Dockerfile.2 ~/johnsimage/`{{execute}}
+`docker build -t timurimage:auto --file ~/timurimage/Dockerfile.2 ~/timurimage/`{{execute}}
 
-Now start a container again and see if it works:
+Теперь запустите контейнер снова и посмотрите, работает ли он:
 
-`docker run --rm johnsimage:auto`{{execute}}
+`docker run --rm timurimage:auto`{{execute}}
 
-> Notice how Docker overwrites an image with the same tag.
+> Обратите внимание, как **Docker** перезаписывает **image** с тем же тегом.  
 
 ## .dockerginore
 
 Automatic builds are done by the Docker daemon which sometimes run on a remote host. So before the build starts, Docker has to transfer everything in the context directory (specified in `docker build` command) to the daemon.
+**Automatic builds** выполняется демоном **Docker**, который иногда запускается на **remote host**. Поэтому перед началом сборки **Docker** должен передать демону все содержимое в **context directory** (specified in **docker build** command) .
 
-To avoid unnecessary data transfer, it is recommended to employ `.dockerignore`.
+Чтобы избежать ненужной передачи данных **data transfer**, рекомендуется использовать **.dockerignore**.
 
-`echo "lackask.txt" > ~/johnsimage/.dockerignore`{{execute}}
+`echo "lackask.txt" > ~/timurimage/.dockerignore`{{execute}}
 
-`docker build -t johnsimage:auto --file ~/johnsimage/Dockerfile.2 ~/johnsimage/`{{execute}}
+`docker build -t timurimage:auto --file ~/timurimage/Dockerfile.2 ~/timurimage/`{{execute}}
 
-`docker run --rm johnsimage:auto`{{execute}}
+`docker run --rm timurimage:auto`{{execute}}
