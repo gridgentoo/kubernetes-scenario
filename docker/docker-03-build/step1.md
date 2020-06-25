@@ -1,9 +1,10 @@
-(From Docker documentation)
+(Из документации Docker)
 
-> A `Dockerfile` is a text document that contains all the commands a user could call on the command line to assemble an image.
-> Using `docker build` users can create an automated build that executes several command-line instructions in succession.
+> A `Dockerfile` - это текстовый документ, который содержит **all the commands** , которые **user** может вызвать в командной строке для сборки **image**.
 
-Let's take a look at our first `Dockerfile`:
+> Используя `docker build`, **users** могут создать автоматическую сборку, которая последовательно выполняет несколько команд **command-line instructions**.
+
+Давайте посмотрим на наш первый **Dockerfile**:
 
 `cat ~/johnsimage/Dockerfile`{{execute}}
 
