@@ -1,22 +1,22 @@
-We have four instructions in our `Dockerfile`. Does that mean we have four layers in our image?
+У нас есть четыре инструкции в нашем **Dockerfile**. Значит ли это, что в нашем **image** четыре слоя?
 
-Run `docker inspect` on the image we just built to find out:
+Запустите **docker inspect** на **image**, которое мы только что создали, чтобы узнать:
 
-`docker inspect --format='{{range .RootFS.Layers}} {{println . -}} {{end}}' johnsimage:auto`{{execute}}
+`docker inspect --format='{{range .RootFS.Layers}} {{println . -}} {{end}}' timurimage:auto`{{execute}}
 
-We have only two layers. Why?
+У нас всего два слоя **two layers**. Зачем?
 
-Apparently the first layer is the base image itself. Let's prove that:
+По-видимому, первый слой - это само базовое **image**. Давайте докажем, что:
 
 `docker inspect --format='{{range .RootFS.Layers}} {{. -}} {{end}}' alpine:latest`{{execute}}
 
-The output should match one of the two layers in our `johnsimage:auto`. That's correct. So what is the other layer?
+**output** должен соответствовать одному из двух слоев **two layers** в нашем **timurimage:auto**. Это правильно. Так, каков другой **layer**?
 
-A layer ID is a hash of the contents stored in the file system. Only when an instructions changes something in the file system (in our case the `RUN`) does a new layer get created. The `USER` and `CMD` only changed the metadata of the image, so they didn't produce any extra layers.
+Идентификатор слоя **layer ID**  - это хэш **hash** содержимого, хранящегося в файловой системе. Только когда инструкция что-то меняет в файловой системе (в нашем случае **RUN**), создается новый слой **layer**. **USER** и **CMD** только изменяли метаданные **image**, поэтому они не создавали никаких дополнительных слоев **layers**.
 
-In general, the less layers an image has, the smaller the size will be. Remember the actual data stored in a layer is a diff against its parent. So even if the effect of your `RUN` instruction is to delete a bunch of files, the size of the image increases because there's an extra set of diff to be stored.
+В общем, чем меньше слоев в **image**, тем меньше будет размер **image**. Помните, что фактические данные **actual data stored**, хранящиеся в слое **layer**, отличаются от его родителя. Таким образом, даже если ваша инструкция **RUN** приводит к удалению группы файлов, размер **image ** увеличивается, поскольку для сохранения требуется дополнительный набор **diff**.
 
-One good practice writing a `Dockerfile` is to join multiple `RUN` instructions into one, like:
+Хорошей практикой написания **Dockerfile** является объединение нескольких инструкций **RUN** в одну, например:
 
     RUN apt-get update \
      && apt-get install -y \
@@ -25,4 +25,4 @@ One good practice writing a `Dockerfile` is to join multiple `RUN` instructions 
         build-essential \
      && rm -rf /var/lib/apt/lists/*
 
-[Read more about Dockerfile best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+[Узнайте больше о **Dockerfile best practices**](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
