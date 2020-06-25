@@ -1,25 +1,25 @@
-To create your own Docker image you will need to create a Dockerfile.
+Чтобы создать свой собственный **Docker image**, вам нужно создать **Dockerfile**.
 
-A Dockerfile defines the layers that will be assembled to create the final image.
+**Dockerfile** определяет слои, которые будут собраны для создания окончательного **image.**
 
-Let's take a look at a simple Dockerfile.
+Давайте посмотрим на простой Dockerfile.
 
 `cat resources/simple/Dockerfile`{{execute}}
 
-Our Dockerfile consists of two instructions:
+Наш **Dockerfile** состоит из двух инструкций:
 
 1. `FROM nginx:1.15`
 
-   This instructions tells Docker that we want to extend the official Nginx image.
+    Эта инструкция сообщает **Docker**, что мы хотим расширить официальный **Nginx image**.
 2. `COPY index.html /usr/share/nginx/html/index.html`
 
-    This instructions tells Docker to copy a file into the image.
+    Эта инструкция говорит **Docker** скопировать файл в **image**.
 
-Now let's build the image and call it `simple`:
+Теперь давайте создадим **image** и назовем его `simple`:
 
 `docker build -t simple resources/simple`{{execute}}
 
-And let's now run a container based on our image:
+А теперь давайте запустим контейнер на основе нашего **image**:
 
 `docker run --name simple -d -p 80:80 simple`{{execute}}
 

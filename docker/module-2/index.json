@@ -1,6 +1,6 @@
 {
-  "title": "Module 2 - Creating Images",
-  "description": "In this lab, we will learn to create our own images with Docker.",
+  "title": "Модуль 2 - Создание Images",
+  "description": "В этой лабораторной работе мы научимся создавать собственные images с помощью Docker.",
   "difficulty": "beginner",
   "time": "10-15 minutes",
   "details": {
@@ -33,7 +33,7 @@
     "intro": {
       "text": "intro.md",
       "code": "env-init.sh",
-      "credits": "Developer(s): [William Hearn](https://sylus.ca) and [Zachary Seguin](https://zacharyseguin.ca)",
+      "credits": "Developer(s): [Yunusov Temur](https://gridgentoo.github.io)",
       "courseData": "setup.sh"
     },
     "finish": {
