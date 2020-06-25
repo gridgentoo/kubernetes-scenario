@@ -7,7 +7,7 @@ kubectl get componentstatus && \
 kubectl get nodes && \
 kubectl cluster-info`{{execute}}
 
-Также доступен менеджер пакетов [Helm](https://helm.sh/), используемый для установки приложений в **Kubernetes**.
+Также доступен менеджер пакетов [**Helm**](https://helm.sh/), используемый для установки приложений в **Kubernetes**.
 
 `helm version --short`{{execute}}
 

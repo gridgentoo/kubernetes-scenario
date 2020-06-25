@@ -1,15 +1,16 @@
-Before exploring observability topics, start a small application to provide something to observe.
 
-Run 3 instances of the _random-logger_ container to start generating continuously random logging events.
+Прежде чем исследовать темы наблюдаемости **observability**, запустите небольшое приложение, чтобы предоставить что-то для наблюдения **observe**.
+
+Запустите 3 экземпляра контейнера **random-logger**, чтобы начать генерировать непрерывно случайные **logging events**.
 
 `kubectl create deployment random-logger --image=chentex/random-logger`{{execute}}
 
-Scale to 3 instances.
+## **Scale** Масштабруемся до 3 **instances**.
 
 `kubectl scale deployment/random-logger --replicas=3`{{execute}}
 
-The 3 pods will start shortly.
+**3 pods** подымутся в ближайшее время.
 
 `kubectl get pods`{{execute}}
 
-> Thank you to _Vicente Zepeda_ for providing this beautifully simple container. The [source code is here](https://github.com/chentex/random-logger).
+> Спасибо **Vicente Zepeda** за предоставление этого красивого простого контейнера. [Исходный код здесь](https://github.com/chentex/random-logger).

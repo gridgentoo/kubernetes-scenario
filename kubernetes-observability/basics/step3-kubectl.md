@@ -1,26 +1,30 @@
-The running state of an application can be observed through a variety of `kubectl describe` commands across various resources.
+Состояние работоспособности приложения можно наблюдать **observed** с помощью различных команд **kubectl describe** для различных ресурсов **resources**.
 
-Inspect the whole cluster
+**Inspect** весь кластер
 
 `kubectl cluster-info`{{execute}}
 
-or more verbose (and really too much)
+или более многословный вывод 
 
 `kubectl cluster-info dump --all-namespaces`{{execute}}
 
-Inspect this Kubernetes cluster only _Worker_ node.
+нажмите ```clear```{{execute interrupt}} 
+
+**Inspect** этот кластер **Kubernetes** только **Worker node**.
 
 `kubectl describe node node01`{{execute}}
 
-Inspect the last _deployment_.
+**Inspect** - проверьте последний **deployment**. 
 
 `kubectl describe deployment random-logger`{{execute}}
 
-Specifically, the replica state.
+нажмите ```clear```{{execute interrupt}} 
+
+В частности, состояние реплики **replica state**.
 
 `kubectl describe deployments | grep "Replicas:"`{{execute}}
 
-Inspect the 3 _pods_.
+**Inspect** - проверем еще **3 pods**.
 
 `kubectl get pods`{{execute}}
 
@@ -28,37 +32,45 @@ Inspect the 3 _pods_.
 
 ## Events ##
 
-Kubernetes also maintains a list of events.
+Кубернетес также ведет список **events**.
 
 `kubectl get events`{{execute}}
 
-Scaling is a type of event. Scale down the Pod from 3 down to 2.
+нажмите ```clear```{{execute interrupt}} 
+
+**Scaling** (Масштабирование) - это тип события. Уменьшите количество **Pod** с 3 до 2.
 
 `kubectl scale deployment/random-logger --replicas=2`{{execute}}
 
-Notice the last event will reflect the scaling request.
+`kubectl get pods`{{execute}}
+
+нажмите ```clear```{{execute interrupt}} 
+
+или **CTRL-C to exit** для выхода из режима 
+
+> Note: Обратите внимание, что последнее событие будет отражать запрос на масштабирование **scaling request**.
 
 `kubectl get events --sort-by=.metadata.creationTimestamp`{{execute}}
 
-These events are not to be confused with [security audit logs](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/) which are also recorded.
+Эти события не следует путать с [журналами аудита безопасности](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/), которые также записываются.
 
 ## Inspecting Containers ##
 
-You can also typically get into a running container and inspect it as well. Get the name of the first Pod.
+Вы также можете попасть внутрь работающего контейнера и осмотреть **inspect** его. Получить имя первого **Pod**.
 
 `POD=$(kubectl get pod  -o jsonpath="{.items[0].metadata.name}")`{{execute}}
 
-Inspect the script contents inside the container file system.
+**Inspect** проверьте содержимое скрипта внутри файловой системы контейнера.
 
 `kubectl exec $POD -- cat entrypoint.sh`{{execute}}
 
-Or, shell into the container.
+Или, **shell** внутрь контейнера.
 
 `kubectl exec -it $POD -- /bin/sh`{{execute}}
 
 and come back out with the `exit` command.
 
-There is a wealth of helpful Linux commands to give you information about the Linux containers. Here are just a few.
+Существует множество полезных команд **Linux** для предоставления вам информации о контейнерах **Linux**. Здесь только несколько.
 
 `kubectl exec $POD -- uptime`{{execute}}
 
@@ -70,6 +82,6 @@ There is a wealth of helpful Linux commands to give you information about the Li
 
 `kubectl exec $POD --container random-logger -- iostat`{{execute}}
 
-When the Pod has more than one container, the specific container name may be referenced.
+Когда **Pod** имеет более одного контейнера, может быть указано конкретное имя контейнера.
 
 `kubectl exec $POD --container random-logger -- ls -a -l`{{execute}}

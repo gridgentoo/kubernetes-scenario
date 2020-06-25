@@ -1,5 +1,5 @@
 ![Katacoda Logo](./assets/logo-text-with-head.png)
-![cAdvisor](./assets/cAdvisor.png.png)
+![cAdvisor](./assets/cAdvisor.png)
 ![ui-dashboard kubernetes](./assets/ui-dashboard.png)
 
 
