@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN adduser -D johndoe
-USER johndoe
+RUN adduser -D timur
+USER timur
 
-CMD echo "Hello from John's image!"
+CMD echo "Hello from Timur's image!"

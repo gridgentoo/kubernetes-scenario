@@ -10,26 +10,26 @@
 
     FROM alpine:latest
 
-    RUN adduser -D johndoe
-    USER johndoe
+    RUN adduser -D timur
+    USER timur
 
-    CMD echo "Hello from John's image!"`
+    CMD echo "Hello from Timur's image!"`
 
-* A `Dockerfile` always starts with a `FROM` instruction, which specifies the *base image* to use. In this example we stick to `alpine:latest`.
+**Dockerfile** всегда начинается с инструкции **FROM**, которая указывает **base image** для использования. В этом примере мы придерживаемся **alpine:latest**.
 
-* The instruction `RUN` tells Docker to execute a command, for instance, to create a user `johndoe`.
+* Инструкция **RUN** говорит Докеру, выполнить команду, например, для создания пользователя **timur**.
 
-* `USER` tells Docker the user to run as when a container is created from this image.
+* **USER** сообщает Докеру, что пользователь должен запускаться, как при создании контейнера из этого **image**.
 
-* Finally, `CMD` specifies the default command to run when a container is created. It can be overridden by appending to the end of the `docker run` command, which you have already seen in previous scenarios.
+* Наконец, **CMD** указывает команду по умолчанию, запускаемую при создании контейнера. Его можно переопределить, добавив в конец команду **docker run**, которую вы уже видели в предыдущих сценариях.
 
-Run `docker build -t johnsimage:auto ~/johnsimage/`{{execute}} to build an image called `johnsimage:auto`. The path at the end of the command line is the *build context*. Docker will by default look for a file named "`Dockerfile`" in that path.
+Запустите `docker build -t johnsimage:auto ~/johnsimage/`{{execute}} чтобы создать **image** с именем **johnsimage:auto**. Путь в конце командной строк **command line** is the **build context**. По умолчанию **Docker** будет искать файл с именем **Dockerfile** по этому пути.
 
-As you can see from the output, Docker starts a temporary container (`---> Running in <container-id>`) for each instruction in the `Dockerfile`, execute the instruction, and commit it as a temporary image (`---> <image-id>` below each `Running in`).
+Как видно из выходных данных, Docker запускает временный контейнер (`---> Running in <container-id>`) для каждой инструкции в  `Dockerfile`, выполняет инструкцию и фиксирует ее как **temporary image** (`---> <image-id>` below each `Running in`).
 
-These temporary images are visible via `docker images -a`{{execute}}
+Эти временные **images **видны через `docker images -a`{{execute}}
 
-Now try start a container from this image:
+Теперь попробуйте запустить контейнер из этого **image**:
 
 `docker run --rm johnsimage:auto`{{execute}}
 
