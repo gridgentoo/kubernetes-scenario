@@ -33,12 +33,17 @@ master   125m         6%     1049Mi          55%
 node01   84m          2%     922Mi           23%
 ```
 
-Metrics information is also reflected in the dashboard. Launch the [Kubernetes dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/) and in pages for each resource the same Top information appears in the UI. The [Horizontal Pod Autoscalar](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) also utilizes these vital metrics to make decisions to scale up and down Pod instances.
+Информация о метриках **Metrics** также отражается в приборной панели **dashboard**. Запустите  [Kubernetes dashboard](https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/), и на страницах для каждого ресурса в пользовательском интерфейсе появится та же самая верхняя **UI**. [Horizontal Pod Autoscalar](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) также использует эти важные показатели для принятия решений о масштабировании и уменьшении экземпляров **Pod instances**.
 
-In the past, there was no _Resource Metrics API_ and a service called _Heapster_, now deprecated, used to gather all the cAdvisor metrics and bit more manually. Around the 1.6 to 1.8 Kubernetes releases the _Resource Metrics API_ was added. In concert, Heapster was removed and _Metrics Server_ is now the de facto service that aggregates metrics from the Metrics API.
+В прошлом не было **Resource Metrics API** и службы под названием **Heapster**, которая в настоящее время устарела, использовалась для сбора всех метрик **cAdvisor** и немного больше вручную **manually**. Примерно с **1.6 to 1.8 Kubernetes** релизы был добавлен **Resource Metrics API**. В результате **Heapster** был удален, и **Metrics Server** теперь является де-факто сервисом, который объединяет метрики из **Metrics API**.
 
-Metrics-server is a lighter version of Heapster. It gathers the latest metrics for reference and does not store historical data. For the accumulation of trending metrics, the de facto Prometheus time-series database can optionally be added to a cluster.
+**Metrics-server** является более легкой версией **Heapster**.
+ **Metrics-server** собирает последние метрики для справки и не хранит исторические данные **store historical data**. 
+ Для накопления **trending metrics** можно добавить в кластер **de facto Prometheus time-series database**.
 
-The [exposed Resource Metrics API is documented here](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/resource-metrics-api.md).
+API метрик ресурсов описано здесь [exposed Resource Metrics API is documented here](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/resource-metrics-api.md).
 
-Another metric gathering server is [_kube-state-metrics_](https://github.com/kubernetes/kube-state-metrics#kube-state-metrics-vs-metrics-server). It is used to provide metrics information for [Prometheus](https://prometheus.io/). Once you need more metrics that are gathered over time, then typically Prometheus is added to the cluster.
+Другим сервером сбора метрик является [_kube-state-metrics_](https://github.com/kubernetes/kube-state-metrics#kube-state-metrics-vs-metrics-server).
+Он используется для предоставления метрической информации для [Prometheus](https://prometheus.io/). 
+
+Если вам нужно больше метрик, которые собираются со временем, то обычно **Prometheus** добавляется в кластер.
