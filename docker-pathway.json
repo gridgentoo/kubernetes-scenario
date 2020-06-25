@@ -12,6 +12,11 @@
         "course_id": "docker-advancedcommands",
         "title": "Расширенные команды Docker Advanced",
         "description": "Начните с расширенных команд докера."
+      },
+      {
+        "course_id": "docker-advancedcommands",
+        "title": "Основы контейнеров: Модуль 1 - Основы докера",
+        "description": "В этой лабораторной работе мы изучим интерфейс командной строки Docker CLI."
       }
     ]
   }
