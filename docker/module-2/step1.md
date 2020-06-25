@@ -23,8 +23,9 @@
 
 `docker run --name simple -d -p 80:80 simple`{{execute}}
 
-Visit https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/ to see the website. You should see "Hello, World!".
+Посетите https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/ чтобы увидеть веб-сайт. Вы должны увидеть **"Hello, World!"**.
 
-You can now cleanup with `docker stop simple && docker rm simple`{{execute}}.
+Теперь вы можете выполнить очистку с помощью `docker stop simple && docker rm simple`{{execute}}.
 
-> **Want to try something?** Change the contents of `resources/simple/index.html` and rebuild the image. Run a container based on the new image and see that the contents have now changed.
+> **Хотите что-нибудь попробовать?** Измените содержимое `resources/simple/index.html` и пересоберите **rebuild the image**. Запустите контейнер на основе нового **image** и убедитесь, что его содержимое изменилось.
+
