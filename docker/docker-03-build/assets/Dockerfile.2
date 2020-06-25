@@ -1,8 +1,8 @@
 FROM alpine:latest
 
-RUN adduser -D johndoe
-USER johndoe
-WORKDIR /home/johndoe/
+RUN adduser -D timur
+USER timur
+WORKDIR /home/timur/
 
-ADD *.txt /home/johndoe/
+ADD *.txt /home/timur/
 CMD cat *.txt

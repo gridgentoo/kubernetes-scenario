@@ -4,6 +4,8 @@
 
 > Используя `docker build`, **users** могут создать автоматическую сборку, которая последовательно выполняет несколько команд **command-line instructions**.
 
+`docker images -a`{{execute}}
+
 Давайте посмотрим на наш первый **Dockerfile**:
 
 `cat ~/timurimage/Dockerfile`{{execute}}
@@ -23,9 +25,15 @@
 
 * Наконец, **CMD** указывает команду по умолчанию, запускаемую при создании контейнера. Его можно переопределить, добавив в конец команду **docker run**, которую вы уже видели в предыдущих сценариях.
 
-Запустите `docker build -t timurimage:auto ~/timurimage/`{{execute}} чтобы создать **image** с именем **timurimage:auto**. Путь в конце командной строк **command line** is the **build context**. По умолчанию **Docker** будет искать файл с именем **Dockerfile** по этому пути.
+Запустите 
 
-Как видно из выходных данных, Docker запускает временный контейнер (`---> Running in <container-id>`) для каждой инструкции в  `Dockerfile`, выполняет инструкцию и фиксирует ее как **temporary image** (`---> <image-id>` below each `Running in`).
+`docker build -t timurimage:auto ~/timurimage/`{{execute}} 
+
+чтобы создать **image** с именем **timurimage:auto**. 
+Путь в конце командной строк **command line** is the **build context**. По умолчанию **Docker** будет искать файл с именем **Dockerfile** по этому пути.
+
+Как видно из выходных данных, Docker запускает временный контейнер (`---> Running in <container-id>`) для каждой инструкции в  `Dockerfile`,  
+выполняет инструкцию и фиксирует ее как **temporary image** (`---> <image-id>` below each `Running in`).
 
 Эти временные **images **видны через `docker images -a`{{execute}}
 

@@ -6,9 +6,9 @@
 
     FROM alpine:latest
 
-    RUN adduser -D johndoe
-    USER johndoe
-    WORKDIR /home/johndoe/
+    RUN adduser -D timur
+    USER timur
+    WORKDIR /home/timur/
 
     ADD *.txt ./
     CMD cat *.txt
@@ -29,7 +29,6 @@
 
 ## .dockerginore
 
-Automatic builds are done by the Docker daemon which sometimes run on a remote host. So before the build starts, Docker has to transfer everything in the context directory (specified in `docker build` command) to the daemon.
 **Automatic builds** выполняется демоном **Docker**, который иногда запускается на **remote host**. Поэтому перед началом сборки **Docker** должен передать демону все содержимое в **context directory** (specified in **docker build** command) .
 
 Чтобы избежать ненужной передачи данных **data transfer**, рекомендуется использовать **.dockerignore**.
