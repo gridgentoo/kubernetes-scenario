@@ -1,11 +1,24 @@
-<img align="right" src="./assets/ui-dashboard.png" width="600">
+![Katacoda Logo](./assets/logo-text-with-head.png)
+![cAdvisor](./assets/cAdvisor.png.png)
+![ui-dashboard kubernetes](./assets/ui-dashboard.png)
 
-# Basic Kubernetes Observability #
 
-This scenario explores the basic techniques for observing the state of Kubernetes using metrics.
+# Основы Kubernetes Observability #
 
-In the following steps you will learn how to:
+Этот сценарий исследует основные методы для наблюдения за состоянием Kubernetes с помощью метрик.
 
-- access metrics information produced by each cAdvisor in each Kubelet,
-- inspect resources using the _Resource Metrics API_,
-- viewing metrics reported by Metrics Server.
+В следующих шагах вы узнаете, как:
+
+- получить доступ к информации о показателях, созданной каждым **cAdvisor** в каждом **Kubelet**,
+- проверять ресурсы, используя **Resource Metrics API**,
+- просмотр метрик, сообщаемых **Metrics Server**.
+
+**Monitoring Docker containers using cAdvisor and Prometheus**
+
+https://medium.com/@bhargavshah2011/monitoring-docker-containers-using-cadvisor-and-prometheus-5350ae038f45
+
+**Анонс веб-интерфейса Kubernetes Web View (и краткий обзор других web UI для Kubernetes)** 
+
+https://habr.com/ru/company/flant/blog/468041/
+
+

@@ -1,17 +1,18 @@
-The scenario introduced some fundamental techniques to inspecting a cluster. Not covered here was logging, tracing, or monitoring with Prometheus. Those topics are covered in other scenarios.
+Сценарий представил некоторые фундаментальные техники для проверки кластера. Здесь не освещалось ведение логов, отслеживание или мониторинг с помощью **Prometheus**. Эти темы рассматриваются в других сценариях.
 
 ## Lessons Learned ##
 
-With these steps you have learned how to:
+С помощью этих шагов вы узнали, как:
 
-- &#x2714; access metrics information produced by each cAdvisor in each Kubelet,
-- &#x2714; inspect resources using the _Resource Metrics API_,
-- &#x2714; viewing metrics reported by Metrics Server.
+- &#x2714; получить доступ к информации о **metrics** , созданной каждым **cAdvisor** в каждом **Kubelet**,
+- &#x2714; инспектировать ресурсы с помощью ***Resource Metrics API***,
+- &#x2714; просмотр метрик **metrics**, о которых сообщает **Metrics Server**
 
 ------
+
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
+<img align="left" src="./assets/yunusov.png" width="100" style="border-radius: 12px">
+Для более глубокого понимания этих тем и многого другого присоединяйтесь к <br>[Yunusov Temur](https://gridgentoo.github.io/)<br> на различных конференциях, симпозиумах, семинарах и встречах.
 <br><br>
-<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
+<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & DevOps Specialist</b>
 </p>

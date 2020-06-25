@@ -1,6 +1,6 @@
 {
 	"title": "Basic Kubernetes Observability",
-	"description": "Inspection of a Kubernetes cluster.",
+	"description": "Инспектирование кластера Кубернетес.",
 	"time":	"15 minutes",
 	"details": {
 	  "steps": [
@@ -32,7 +32,7 @@
 	  "intro": {
 		"text": "intro.md",
 		"code": "env-init.sh",
-		"credits": "[Jonathan Johnson](http://www.dijure.com)"
+		"credits": "[Yunusov Temur](https://gridgentoo.github.io)"
 	  },
 	  "finish": {
 		"text": "finish.md"
