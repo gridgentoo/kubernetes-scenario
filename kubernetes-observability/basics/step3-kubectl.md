@@ -24,7 +24,7 @@
 
 `kubectl describe deployments | grep "Replicas:"`{{execute}}
 
-`kkubectl describe deployments | grep "Labels:"`{{execute}}
+`kubectl describe deployments | grep "Labels:"`{{execute}}
 
 `kubectl describe deployments | grep "StrategyType:"`{{execute}}
 
