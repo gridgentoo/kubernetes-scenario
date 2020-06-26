@@ -56,9 +56,13 @@
 
 ## Inspecting Containers ##
 
-Вы также можете попасть внутрь работающего контейнера и осмотреть **inspect** его. Получить имя первого **Pod**.
+Вы также можете попасть внутрь работающего контейнера и осмотреть **inspect** его. Давайте получим в переменную имя первого **Pod**.
 
 `POD=$(kubectl get pod  -o jsonpath="{.items[0].metadata.name}")`{{execute}}
+
+Напечатаем в терминале имя **POD**
+
+`echo $POD`{{execute}}
 
 **Inspect** проверьте содержимое скрипта внутри файловой системы контейнера.
 
@@ -68,9 +72,7 @@
 
 `kubectl exec -it $POD -- /bin/sh`{{execute}}
 
-and come back out with the `exit` command.
+выйдете из контенера **$POD** командой **exit**.
 
-и выйдете из **$POD** командой **exit**.
 
-`exit`{{execute}}
 
