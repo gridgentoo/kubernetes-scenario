@@ -24,6 +24,12 @@
 
 `kubectl describe deployments | grep "Replicas:"`{{execute}}
 
+`kkubectl describe deployments | grep "Labels:"`{{execute}}
+
+`kubectl describe deployments | grep "StrategyType:"`{{execute}}
+
+нажмите ```clear```{{execute interrupt}} 
+
 **Inspect** - проверем еще **3 pods**.
 
 `kubectl get pods`{{execute}}
@@ -48,7 +54,7 @@
 
 или **CTRL-C to exit** для выхода из режима 
 
-> Note: Обратите внимание, что последнее событие будет отражать запрос на масштабирование **scaling request**.
+> Note: Обратите внимание, что последнее событие будет отражать запрос на масштабирование **scaling request**. > **ScalingReplicaSet** 
 
 `kubectl get events --sort-by=.metadata.creationTimestamp`{{execute}}
 
