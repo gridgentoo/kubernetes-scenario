@@ -20,13 +20,18 @@
 		  "code": "clear.sh"
 		},
 		{
+			"title": "lsof (от англ. LiSt of Open Files)",
+			"text": "step4-lsof.md",
+			"code": "clear.sh"
+		  },
+		{
 			"title": "cAdvisor",
-			"text": "step4-cadvisor.md",
+			"text": "step5-cadvisor.md",
 			"code": "clear.sh"
 		},
 		{
 		  "title": "Metrics Server",
-		  "text": "step5-metrics-server.md"
+		  "text": "step6-metrics-server.md"
 		}
 	  ],
 	  "intro": {

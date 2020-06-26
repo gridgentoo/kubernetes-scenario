@@ -1,15 +1,20 @@
 
 ## Существует множество полезных команд **Linux** для предоставления вам информации о контейнерах **Linux**. Здесь только несколько.
 
-`kubectl exec $POD -- uptime`{{execute}}
+
+#######################################################
+lsof (от англ. LiSt of Open Files) — утилита, служащая для вывода информации о том, какие файлы используются теми или иными процессами.
 
 нажмите ```clear```{{execute interrupt}} 
 
-`kubectl exec $POD -- ps`{{execute}}
+`kubectl exec $POD --container random-logger -- lsof`{{execute}}
 
-нажмите ```clear```{{execute interrupt}} 
+Информация предоставляется в виде колонок, в которых отображается информация:
 
-`kubectl exec $POD -- stat -f /`{{execute}}
+COMMAND   — имя процесса;
+PID — его Process ID;
+USER — имя пользователя, запустившего процесс;
+FD — номер файлового дескриптора, либо обозначение типа:
 
 #######################################################
 
@@ -33,13 +38,22 @@
 
 нажмите ```clear```{{execute interrupt}} 
 
-`kubectl exec $POD --container random-logger -- lsof`{{execute}}
-
-нажмите ```clear```{{execute interrupt}} 
-
 `kubectl exec $POD --container random-logger -- iostat`{{execute}}
 
 нажмите ```clear```{{execute interrupt}} 
+
+`kubectl exec $POD -- uptime`{{execute}}
+
+нажмите ```clear```{{execute interrupt}} 
+
+`kubectl exec $POD -- ps`{{execute}}
+
+нажмите ```clear```{{execute interrupt}} 
+
+`kubectl exec $POD -- stat -f /`{{execute}}
+
+#######################################################
+
 
 Когда **Pod** имеет более одного контейнера, может быть указано конкретное имя контейнера.
 
