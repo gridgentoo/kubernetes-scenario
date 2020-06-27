@@ -1,28 +1,22 @@
-  `nano registry-whitelist-constraint-template.yaml`{{execute}} 
-
-1. Инсталлируйте шаблон ограничений - **constraint template** белого списка **container registry**:
+ 1. Инсталлируйте шаблон ограничений - **constraint template** белого списка **container registry**:
 
    `kubectl apply -f registry-whitelist-constraint-template.yaml`{{execute}}
+   `nano registry-whitelist-constraint-template.yaml`{{execute}} 
 
-`nano registry-whitelist-constraint.yamll`{{execute}} 
-
-1. Инсталлируйте шаблон ограничений - **constraint template**  - **whitelist** - **container registry** в **quay.io**, чтобы контейнеры были извлечены из реестра доверенных контейнеров **container registry** = **quay.io**:
+2. Инсталлируйте шаблон ограничений - **constraint template**  - **whitelist** - **container registry** в **quay.io**, чтобы контейнеры были извлечены из реестра доверенных контейнеров **container registry** = **quay.io**:
 
    `kubectl apply -f registry-whitelist-constraint.yaml`{{execute}}
+   `nano registry-whitelist-constraint.yaml`{{execute}} 
 
-
-`nano registry-whitelist-deny.yaml`{{execute}} 
-
-1. Создать **pod** и показать **show deny**:  
+3. Создать **pod** и показать **show deny**:  
 
    `kubectl apply -f registry-whitelist-deny.yaml`{{execute}}
+   `nano registry-whitelist-deny.yaml`{{execute}} 
 
-
-`nano registry-whitelist-allow.yaml`{{execute}} 
-
-1. Создать **pod** и показать **show success**: 
+4. Создать **pod** и показать **show success**: 
 
    `kubectl apply -f registry-whitelist-allow.yaml`{{execute}}
+   `nano registry-whitelist-allow.yaml`{{execute}} 
 
 ## CHALLENGE
 

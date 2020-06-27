@@ -14,8 +14,13 @@
    `kubectl get requiredlabels.constraints.gatekeeper.sh`{{execute}}
 1. Чтобы продемонстрировать политику, запрещающую ресурсы **denying resources**, которые не объявляют метку **owner label**, создайте **pod** и покажите возвращаемое сообщение об ошибке:
    `kubectl apply -f required-labels-deny.yaml`{{execute}}
+   
 1. В качестве альтернативы, создайте **pod**, в котором **does** указывает метку **owner label** для прохождения валидации
+
    `kubectl apply -f required-labels-allow.yaml`{{execute}}
+
+   `nano required-labels-allow.yaml`{{execute}}
+
 1. Удалите задепломеный **pod**, прежде чем приступить к *challenge*:
    `kubectl delete pod busybox-valid`{{execute}}
 

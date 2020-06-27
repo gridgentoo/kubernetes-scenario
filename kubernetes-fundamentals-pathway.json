@@ -51,7 +51,7 @@
       {
         "course_id": "ruby-sinatra",
         "title": "Sinatra, Open Policy Agent (OPA) & Gatekeeper",
-        "description": "REST API (Ruby Sinatra app) в Kubernetes cluster. Политики Kubernetes с использованием Open Policy Agent"
+        "description": "REST API (Ruby Sinatra app) в кластере Kubernetes. Политики Kubernetes с использованием Open Policy Agent"
       },
       {
         "course_id": "cheatsheet",
