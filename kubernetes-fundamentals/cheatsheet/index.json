@@ -15,8 +15,8 @@
 		  "code": "clear.sh"
 		},
 		{
-		  "title": "Resource Inspection",
-		  "text": "step3-kubectl.md",
+		  "title": "Apply создать ресурсы",
+		  "text": "step3-apply.md",
 		  "code": "clear.sh"
 		},
 		{
