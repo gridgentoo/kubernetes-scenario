@@ -47,6 +47,11 @@
         "course_id": "playground-1.17",
         "title": "Kubernetes 1.17 Playground",
         "description": "Место для экспериментов с Kubernetes 1.17"
+      },
+      {
+        "course_id": "cheatsheet",
+        "title": "Шпаргалка по kubectl",
+        "description": "Место для экспериментов с Kubernetes"
       }
     ]
   }
