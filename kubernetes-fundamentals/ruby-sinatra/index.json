@@ -1,5 +1,5 @@
 {
-  "title": "OPA Gatekeeper",
+  "title": "Open Policy Agent (OPA) & Gatekeeper",
   "description": "Применения политики Kubernetes с использованием Open Policy Agent Gatekeeper. .",
   "difficulty": "intermediate",
   "time": "30 minutes",
