@@ -1,6 +1,6 @@
 {
-	"title": "Basic Kubernetes Observability",
-	"description": "Инспектирование кластера Кубернетес.",
+	"title": "Шпаргалка по kubectl",
+	"description": "Шпаргалка по kubectl, кластера Кубернетес.",
 	"time":	"15 minutes",
 	"details": {
 	  "steps": [
@@ -10,7 +10,7 @@
 		  "code": "clear.sh"
 		},
 		{
-		  "title": "Sample Application",
+		  "title": "Контекст и конфигурация kubectl",
 		  "text": "step2-app.md",
 		  "code": "clear.sh"
 		},

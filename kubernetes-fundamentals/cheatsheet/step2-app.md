@@ -1,10 +1,4 @@
 
-Прежде чем исследовать темы наблюдаемости **observability**, запустите небольшое приложение, чтобы предоставить что-то для наблюдения **observe**.
-
-Запустите 3 экземпляра контейнера **random-logger**, чтобы начать генерировать непрерывно случайные **logging events**.
-
-`kubectl create deployment random-logger --image=chentex/random-logger`{{execute}}
-
 ## Автодополнение ввода для Kubectl
 
 
@@ -19,6 +13,8 @@ complete -F __start_kubectl k
 
 `k config view`{{execute}}
 
+нажмите ```clear```{{execute interrupt}} 
+
 ## Контекст и конфигурация kubectl
 
 Установка того, с каким Kubernetes-кластером взаимодействует `kubectl` и изменяет конфигурационную информацию. Подробную информацию о конфигурационном файле смотрите на странице [Authenticating Across Clusters with kubeconfig](/docs/tasks/access-application-cluster/configure-access-multiple-clusters/).
@@ -30,7 +26,7 @@ complete -F __start_kubectl k
 
 нажмите ```clear```{{execute interrupt}} 
 
-сохранить пространство имен для всех последующих команд kubectl в этом контексте.
+сохранить пространство имен для всех последующих команд kubectl в этом контексте **namespace=ggckad-s2**. 
 
 `kubectl config set-context --current --namespace=ggckad-s2`{{execute}}
 
@@ -40,6 +36,10 @@ complete -F __start_kubectl k
 
 `kubectl config set-context gce --user=cluster-admin --namespace=foo \
   && kubectl config use-context gce`{{execute}}
+
+нажмите ```clear```{{execute interrupt}} 
+
+`kubectl config view`{{execute}}
 
 `kubectl config view | grep "namespace:"`{{execute}}
 
@@ -51,18 +51,16 @@ complete -F __start_kubectl k
 
 `kubectl config current-context`{{execute}}
 
-добавить новую конфигурацию для кластера в kubeconf с базовой аутентификацией
+## добавить новую конфигурацию для кластера в kubeconf с базовой аутентификацией
 
 `kubectl config set-credentials kubeuser/foo.kubernetes.com --username=kubeuser --password=kubepassword`{{execute}}
 
+нажмите ```clear```{{execute interrupt}} 
+
+`kubectl config view`{{execute}}
+
+`kubectl config view | grep "name:"`{{execute}}
+
 `kubectl config view | grep "user:"`{{execute}}
 
-## **Scale** Масштабруемся до 3 **instances**.
 
-`kubectl scale deployment/random-logger --replicas=3`{{execute}}
-
-**3 pods** подымутся в ближайшее время.
-
-`kubectl get pods`{{execute}}
-
-> Спасибо **Vicente Zepeda** за предоставление этого красивого простого контейнера. [Исходный код здесь](https://github.com/chentex/random-logger).
