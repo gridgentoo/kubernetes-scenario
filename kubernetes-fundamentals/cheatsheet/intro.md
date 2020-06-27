@@ -1,24 +1,11 @@
 ![Katacoda Logo](./assets/logo-text-with-head.png)
-![cAdvisor](./assets/cAdvisor.png)
-![ui-dashboard kubernetes](./assets/ui-dashboard.png)
 
+# Шпаргалка по kubectl #
 
-# Основы Kubernetes Observability #
+**Kubectl** — это инструмент командной строки для управления кластерами **Kubernetes**. **kubectl** ищет файл config в директории **$HOME/.kube**. Вы можете указать другие файлы **kubeconfig**, установив переменную окружения **KUBECONFIG** или флаг **--kubeconfig**.
 
-Этот сценарий исследует основные методы для наблюдения за состоянием Kubernetes с помощью метрик.
+[Обзор kubectl](https://kubernetes.io/ru/docs/reference/kubectl/overview/) 
 
-В следующих шагах вы узнаете, как:
+Шаблон **JSONPath** состоит из выражений **JSONPath**, заключенных в фигурные скобки {}. **Kubectl** использует **JSONPath**-выражения для фильтрации по определенным полям в **JSON**-объекте и форматирования вывода. 
 
-- получить доступ к информации о показателях, созданной каждым **cAdvisor** в каждом **Kubelet**,
-- проверять ресурсы, используя **Resource Metrics API**,
-- просмотр метрик, сообщаемых **Metrics Server**.
-
-**Monitoring Docker containers using cAdvisor and Prometheus**
-
-https://medium.com/@bhargavshah2011/monitoring-docker-containers-using-cadvisor-and-prometheus-5350ae038f45
-
-**Анонс веб-интерфейса Kubernetes Web View (и краткий обзор других web UI для Kubernetes)** 
-
-https://habr.com/ru/company/flant/blog/468041/
-
-
+[Поддержка JSONPath](https://kubernetes.io/ru/docs/reference/kubectl/jsonpath/)
