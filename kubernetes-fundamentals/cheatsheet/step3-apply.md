@@ -1,4 +1,40 @@
-Состояние работоспособности приложения можно наблюдать **observed** с помощью различных команд **kubectl describe** для различных ресурсов **resources**.
+## Apply
+
+**apply** управляет приложениями с помощью файлов, которые определяют ресурсы **Kubernetes**. Выполните команду **kubectl apply** для создания и обновления ресурсов. 
+Это рекомендуемый способ управления приложениями **Kubernetes** в промышленном окружении. Смотрите [Kubectl Book](https://kubectl.docs.kubernetes.io).
+
+## Создание объектов
+
+Манифесты **Kubernetes** могут быть определены в **YAML** или **JSON**. Можно использовать расширение файла `.yaml`, `.yml` и `.json`
+
+создать ресурсы
+
+`kubectl apply -f ./my-manifest.yaml`{{execute}}
+
+создать ресурсы из нескольких файлов
+
+`kubectl apply -f ./my1.yaml -f ./my2.yaml`{{execute}}
+
+создать ресурсы из всех файлов манифеста в директории
+
+`kubectl apply -f ./dir`{{execute}}
+
+создать ресурсы из URL-адреса
+
+`kubectl apply -f https://git.io/vPieo`{{execute}}
+
+запустить один экземпляр nginx
+
+`kubectl create deployment nginx --image=nginx`{{execute}}
+
+посмотреть документацию по манифестам подов
+
+`kubectl explain pods`{{execute}}
+                           
+
+
+
+### Состояние работоспособности приложения можно наблюдать **observed** с помощью различных команд **kubectl describe** для различных ресурсов **resources**.
 
 **Inspect** весь кластер
 

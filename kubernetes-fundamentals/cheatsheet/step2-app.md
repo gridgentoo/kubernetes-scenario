@@ -62,4 +62,7 @@ complete -F __start_kubectl k
 
 `kubectl config view | grep "user:"`{{execute}}
 
+`kubectl config view | grep "namespace:"`{{execute}}
+
+
 
