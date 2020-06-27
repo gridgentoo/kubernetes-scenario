@@ -49,6 +49,11 @@
         "description": "Место для экспериментов с Kubernetes 1.17"
       },
       {
+        "course_id": "ruby-sinatra",
+        "title": "OPA Gatekeeper",
+        "description": "Примеры применения политики Kubernetes с использованием Open Policy Agent"
+      },
+      {
         "course_id": "cheatsheet",
         "title": "Шпаргалка по kubectl",
         "description": "Место для экспериментов с Kubernetes"
