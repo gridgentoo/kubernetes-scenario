@@ -1,5 +1,14 @@
-Kubernetes is starting up, it may take a few moments. Once the cluster is ready,
-run some commands with `kubectl`:
+# Install kubectx/kubens.
+
+git clone https://github.com/ahmetb/kubectx /opt/kubectx
+
+kubectx помогает переключаться между кластерами вперед и назад:
+
+![opa](./assets/kubens-demo.gif) 
+
+**Kubernetes** запускается, это может занять несколько минут. Как только кластер готов,
+выполните несколько команд с помощью **kubectl**:
+
 
 - `kubectl cluster-info`{{execute}}
 - `kubectl version`{{execute}}
@@ -7,4 +16,4 @@ run some commands with `kubectl`:
 - `kubectl get namespaces`{{execute}}
 - `kubectl get pods --all-namespaces`{{execute}}
 
-Press continue once ready to move on.
+Нажмите продолжить, когда будете готовы двигаться дальше.

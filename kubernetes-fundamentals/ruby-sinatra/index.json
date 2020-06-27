@@ -1,6 +1,6 @@
 {
   "title": "OPA Gatekeeper",
-  "description": "Examples of Kubernetes policy enforcement using Open Policy Agent Gatekeeper. Created for DevOps Days KC 2019.",
+  "description": "Применения политики Kubernetes с использованием Open Policy Agent Gatekeeper. .",
   "difficulty": "intermediate",
   "time": "30 minutes",
   "details": {
@@ -37,7 +37,7 @@
     "files": [],
     "intro": {
       "text": "intro.md",
-      "credits": "Created by Austin Heiman, Clay Thomas, Cullen McDermott",
+      "credits": "[Yunusov Temur](https://gridgentoo.github.io)",
       "code": "cluster-startup.sh"
     },
     "finish": {
