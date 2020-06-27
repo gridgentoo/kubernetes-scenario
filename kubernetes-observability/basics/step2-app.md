@@ -5,6 +5,16 @@
 
 `kubectl create deployment random-logger --image=chentex/random-logger`{{execute}}
 
+показать объединённые настройки **kubeconfig**
+
+`kubectl config view`{{execute}}
+
+нажмите ```clear```{{execute interrupt}} 
+
+Вы также можете использовать короткий псевдоним для **kubectl**, напиример
+
+`k config view`{{execute}}
+
 ## **Scale** Масштабруемся до 3 **instances**.
 
 `kubectl scale deployment/random-logger --replicas=3`{{execute}}
