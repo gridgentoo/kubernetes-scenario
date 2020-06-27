@@ -1,22 +1,24 @@
-Our first example will showcase how we can create a validating admissions webhook using Gatekeeper. This example will demonstrate how you can require specific attributes on a Kubernetes object before being accepted into the cluster.
+Наш первый пример покажет, как мы можем создать валидный **webhook** при помощи **Gatekeeper**. Этот пример продемонстрирует, как вам могут потребоваться определенные атрибуты для объекта **Kubernetes**, прежде чем они будут приняты в кластер.
 
-Gatekeeper defines two types of Kubernetes custom resources for creating policies. `ConstraintTemplate`s are templates of an OPA policy and define the parameters needed to consume the template. Once submitted, a `ConstraintTemplate` creates a Kubernetes custom resource based on the included configuration which is called a `Constraint`. A `Constraint` contains the required parameters and what types of Kubernetes events will trigger policy evaluation. Once a `Constraint` is submitted to the cluster, it creates a unique `ValidatingAdmissionWebhook` object based on the configuration.
+**Gatekeeper** определяет два типа пользовательских ресурсов Kubernetes для создания политик. **ConstraintTemplates** является шаблоном политики **OPA** и определяет параметры, необходимые для использования шаблона **template**. После отправки **ConstraintTemplate** создает кастомный ресурс **Kubernetes** на основе включенной конфигурации, которая называется **Constraint**. **Constraint** содержит обязательные параметры и типы событий **Kubernetes**, которые инициируют **trigger policy**. 
 
-1. To get started, first submit the `ConstraintTemplate` that requires an `owner` label on every resource within a specific namespace:
+Как только **Constraint** отправляется в кластер, он создает уникальный объект **ValidatingAdmissionWebhook** на основе конфигурации.
+
+1. Чтобы начать, сначала отправьте **ConstraintTemplate**, для которого требуется метка **owner** на каждом ресурсе в определенном пространстве имен:
    `kubectl apply -f required-labels-template.yaml`{{execute}}
-   Verify you have created a new `ConstraintTemplate`:
+   Убедитесь, что вы создали новый **ConstraintTemplate**:
    `kubectl get constrainttemplates.templates.gatekeeper.sh`{{execute}}
-1. Install the required labels constraint for all objects in the `default` namespace:
+1. Установите обязательное ограничение **labels constraint** для всех объектов в пространстве имен **default**:
    `kubectl apply -f required-labels-constraint.yaml`{{execute}}
-   Verify you have created a new `requiredlabels` constraint:
+   Убедитесь, что вы создали новое ограничение **requiredlabels**:
    `kubectl get requiredlabels.constraints.gatekeeper.sh`{{execute}}
-1. To demonstrate the policy denying resources that do not declare an `owner` label, create a pod and show the deny error message returned:
+1. Чтобы продемонстрировать политику, запрещающую ресурсы **denying resources**, которые не объявляют метку **owner label**, создайте **pod** и покажите возвращаемое сообщение об ошибке:
    `kubectl apply -f required-labels-deny.yaml`{{execute}}
-1. Alternatively, create a pod that _does_ specify an `owner` label to pass the validation:
+1. В качестве альтернативы, создайте **pod**, в котором **does** указывает метку **owner label** для прохождения валидации
    `kubectl apply -f required-labels-allow.yaml`{{execute}}
-1. Delete the deployed pod before proceeding to the challenge:
+1. Удалите задепломеный **pod**, прежде чем приступить к *challenge*:
    `kubectl delete pod busybox-valid`{{execute}}
 
 ## CHALLENGE
 
-Update the `required-labels-constraint.yaml` to require another label `team`. Then re-submit the new constraint along with a new pod that also specifies the `team` label before continuing.
+Обновите **required-tags-constraint.yaml**, чтобы потребовать другой ярлык **team**. Затем повторно передайте новое **ограничение == constraint** вместе с новым **pod**, в котором также указывается метка **team label**, прежде чем продолжить.
