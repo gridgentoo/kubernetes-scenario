@@ -1,10 +1,30 @@
-1. Install the container registry whitelist constraint template:
+  `nano registry-whitelist-constraint-template.yaml`{{execute}} 
+
+1. Инсталлируйте шаблон ограничений - **constraint template** белого списка **container registry**:
+
    `kubectl apply -f registry-whitelist-constraint-template.yaml`{{execute}}
-1. Install the quay.io container registry whitelist constraint to require containers to be pulled from the quay.io trusted container registry:
+
+`nano registry-whitelist-constraint.yamll`{{execute}} 
+
+1. Инсталлируйте шаблон ограничений - **constraint template**  - **whitelist** - **container registry** в **quay.io**, чтобы контейнеры были извлечены из реестра доверенных контейнеров **container registry** = **quay.io**:
+
    `kubectl apply -f registry-whitelist-constraint.yaml`{{execute}}
-1. Create a pod and show deny: `kubectl apply -f registry-whitelist-deny.yaml`{{execute}}
-1. Create a pod and show success: `kubectl apply -f registry-whitelist-allow.yaml`{{execute}}
+
+
+`nano registry-whitelist-deny.yaml`{{execute}} 
+
+1. Создать **pod** и показать **show deny**:  
+
+   `kubectl apply -f registry-whitelist-deny.yaml`{{execute}}
+
+
+`nano registry-whitelist-allow.yaml`{{execute}} 
+
+1. Создать **pod** и показать **show success**: 
+
+   `kubectl apply -f registry-whitelist-allow.yaml`{{execute}}
 
 ## CHALLENGE
 
-Update the constraint to permit another container registry source, gcr.io. Then try running a pod with the Docker image `gcr.io/kuar-demo/kuard-amd64:blue`
+Обновите **ограничение = constraint,** чтобы разрешить другой источник container registry, **gcr.io**.
+Затем попробуйте запустить **pod** с **Docker image** `gcr.io/kuar-demo/kuard-amd64:blue`
