@@ -50,7 +50,7 @@
       },
       {
         "course_id": "ruby-sinatra",
-        "title": "OPA Gatekeeper",
+        "title": "Open Policy Agent (OPA) & Gatekeeper",
         "description": "Примеры применения политики Kubernetes с использованием Open Policy Agent"
       },
       {
