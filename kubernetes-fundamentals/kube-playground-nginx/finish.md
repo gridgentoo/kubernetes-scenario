@@ -1,3 +1,3 @@
 ## Finished
 
-Recap what was done here.
+Напомним, что было сделано здесь.
