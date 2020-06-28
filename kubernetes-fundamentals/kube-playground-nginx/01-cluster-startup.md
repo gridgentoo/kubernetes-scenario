@@ -1,5 +1,5 @@
-Kubernetes is starting up, it may take a few moments. Once the cluster is ready,
-run some commands with `kubectl`:
+**Kubernetes** запускается, это может занять несколько минут.
+Как только кластер будет готов, выполните несколько команд с помощью **kubectl**:
 
 - `kubectl cluster-info`{{execute}}
 - `kubectl version --short`{{execute}}
