@@ -4,11 +4,6 @@
     "description": "Изучите основные building blocks Kubernetes с практическими планами развертывания.",
     "courses": [
       {
-        "course_id": "minikube",
-        "title": "Minikube",
-        "description": "Введение в Minikube как простой кластер Kubernetes."
-      },
-      {
         "course_id": "first-app",
         "title": "First App",
         "description": "Запустите ваше первое приложение на Kubernetes."
@@ -57,6 +52,11 @@
         "course_id": "cheatsheet",
         "title": "Шпаргалка по kubectl",
         "description": "Место для экспериментов с Kubernetes"
+      },
+      {
+        "course_id": "minikube",
+        "title": "Minikube",
+        "description": "Введение в Minikube как простой кластер Kubernetes."
       }
     ]
   }
