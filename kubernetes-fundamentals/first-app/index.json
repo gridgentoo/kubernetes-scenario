@@ -1,12 +1,12 @@
 {
   "title": "First App",
-  "description": "Run your first application on Kubernetes.",
+  "description": "Запустите ваше первое приложение на Kubernetes.",
   "difficulty":	"Beginner",
   "time":	"20 minutes",
   "details": {
     "steps": [
       {
-        "title": "Your Kubernetes Cluster",
+        "title": "Ваш Kubernetes Cluster",
         "text": "step1-k8s.md",
         "code": "clear.sh"
       },
@@ -38,7 +38,7 @@
     "intro": {
       "text": "intro.md",
       "code": "env-init.sh",
-      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+      "credits": "[Yunusov Temur](https://gridgentoo.github.io)"
     },
     "finish": {
       "text": "finish.md"

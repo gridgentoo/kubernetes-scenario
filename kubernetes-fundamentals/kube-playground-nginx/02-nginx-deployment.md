@@ -1,8 +1,9 @@
-   `kubectl create namespace nginx`{{execute}
+   `kubectl create namespace nginx`{{execute}}
 
 1. Запустите развертывание **nginx deployment**:
 
    `kubectl apply -f nginx-deployment.yaml --namespace nginx`{{execute}}
+
    `watch kubectl get deployments,pods,services --namespace nginx`{{execute}}
  
 2. **Forward** - перенаправьте порт 8080 **node** на порт 80 **pod**:
