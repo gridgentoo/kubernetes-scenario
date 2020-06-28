@@ -1,5 +1,6 @@
 ## Hello Kubernetes
 
-Do what you want with this single node Kubernetes cluster.
+Эксперементы с **single node Kubernetes cluster**, делайте что хотите с этим кластером Kubernetes.
 
-The Kubernetes cluster will be only one node (`master`) that runs the Kubernetes daemons and schedules all pods to itself. Your shell will be running on the same node as well (`master`).
+Кластер Kubernetes будет только **only one node** (`master`), который запускает демоны **Kubernetes** и планирует все **pods** для себя. Ваш **shell** также будет работать на том же **node**
+
