@@ -49,6 +49,11 @@
         "description": "Место для экспериментов с Kubernetes 1.17"
       },
       {
+        "course_id": "kube-playground-nginx",
+        "title": "Kubernetes Playground - Nginx",
+        "description": "Single node Kubernetes cluster playground"
+      },
+      {
         "course_id": "ruby-sinatra",
         "title": "Sinatra, Open Policy Agent (OPA) & Gatekeeper",
         "description": "REST API (Ruby Sinatra app) в кластере Kubernetes. Политики Kubernetes с использованием Open Policy Agent"
