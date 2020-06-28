@@ -4,6 +4,21 @@
     "description": "Изучите основные building blocks Kubernetes с практическими планами развертывания.",
     "courses": [
       {
+        "course_id": "cheatsheet",
+        "title": "Шпаргалка по kubectl",
+        "description": "Место для экспериментов с Kubernetes"
+      },
+      {
+        "course_id": "kube-playground-nginx",
+        "title": "Kubernetes Playground - Nginx",
+        "description": "Single node Kubernetes cluster playground"
+      },
+      {
+        "course_id": "ruby-sinatra",
+        "title": "Sinatra, Open Policy Agent (OPA) & Gatekeeper",
+        "description": "REST API (Ruby Sinatra app) в кластере Kubernetes. Политики Kubernetes с использованием Open Policy Agent"
+      },
+      {
         "course_id": "first-app",
         "title": "First App",
         "description": "Запустите ваше первое приложение на Kubernetes."
@@ -37,21 +52,6 @@
         "course_id": "podpreset",
         "title": "Pod Presets",
         "description": "Разделение проблем путем инъекции Pod Preset fields into matching Pods."
-      },
-      {
-        "course_id": "kube-playground-nginx",
-        "title": "Kubernetes Playground - Nginx",
-        "description": "Single node Kubernetes cluster playground"
-      },
-      {
-        "course_id": "ruby-sinatra",
-        "title": "Sinatra, Open Policy Agent (OPA) & Gatekeeper",
-        "description": "REST API (Ruby Sinatra app) в кластере Kubernetes. Политики Kubernetes с использованием Open Policy Agent"
-      },
-      {
-        "course_id": "cheatsheet",
-        "title": "Шпаргалка по kubectl",
-        "description": "Место для экспериментов с Kubernetes"
       },
       {
         "course_id": "minikube",
