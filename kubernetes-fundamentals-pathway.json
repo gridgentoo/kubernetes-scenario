@@ -10,8 +10,8 @@
       },
       {
         "course_id": "kube-playground-nginx",
-        "title": "Nginx : (kubectl apply -f nginx-deployment.yaml)",
-        "description": "Single node Kubernetes cluster playground"
+        "title": "Nginx on Kubernetes, nginx-deployment.yaml",
+        "description": "kubectl apply -f nginx-deployment.yaml"
       },
       {
         "course_id": "ruby-sinatra",
