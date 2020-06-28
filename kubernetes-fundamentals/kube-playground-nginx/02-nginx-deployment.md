@@ -1,5 +1,9 @@
-1. Launch an nginx deployment:
+1. Запустите развертывание **nginx deployment**:
+
    `kubectl apply -f nginx-deployment.yaml`{{execute}}
-1. Forward port 8080 of the node to port 80 of the pod:
+
+1. **Forward** - перенаправьте порт 8080 **node** на порт 80 **pod**:
+
    `kubectl port-forward --address 0.0.0.0 deployment/nginx 8080:80`{{execute}}
-1. Access port 8080 of the node in your browser: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+
+1. Откройте порт 8080 узла в вашем браузере: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/

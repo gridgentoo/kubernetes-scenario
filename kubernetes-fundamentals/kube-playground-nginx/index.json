@@ -1,5 +1,5 @@
 {
-  "title": "Kubernetes Playground",
+  "title": "Kubernetes Playground - Nginx",
   "description": "Single node Kubernetes cluster playground",
   "difficulty": "beginner",
   "time": "2 minutes",
@@ -22,7 +22,7 @@
     "files": ["deployment.yaml"],
     "intro": {
       "text": "intro.md",
-      "credits": "Created by Austin Heiman",
+      "credits": "[Yunusov Temur](https://gridgentoo.github.io)",
       "code": "cluster-startup.sh"
     },
     "finish": {
