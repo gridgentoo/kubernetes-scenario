@@ -10,7 +10,7 @@
       },
       {
         "course_id": "kube-playground-nginx",
-        "title": "Kubernetes Playground - Nginx",
+        "title": "Nginx : (kubectl apply -f nginx-deployment.yaml)",
         "description": "Single node Kubernetes cluster playground"
       },
       {
