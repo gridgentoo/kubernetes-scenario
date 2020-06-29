@@ -1,0 +1,63 @@
+{
+  "title": "Module 2: Kubernetes Architecture",
+  "description": "In this lab, we will introduce you to the Kubernetes Architecture.",
+  "icon": "fa-kubernetes",
+  "difficulty": "beginner",
+  "time": "10-15 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": ".answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+          "title": "System Components",
+          "text": "step1.md"
+      },
+      {
+          "title": "Kubeconfig",
+          "text": "step2.md"
+      },
+      {
+          "title": "Logs in Kubernetes",
+          "text": "step3.md"
+      },
+      {
+          "title": "API",
+          "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "Developer(s): [William Hearn](https://sylus.ca) and [Zachary Seguin](https://zacharyseguin.ca)",
+      "courseData": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "dashboards": [
+      {
+        "name": "Dashboard",
+        "href": "https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com"
+      }
+    ],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mDigital Academy training.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

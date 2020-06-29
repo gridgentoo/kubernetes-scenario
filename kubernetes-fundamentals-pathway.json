@@ -13,6 +13,11 @@
         "description": "Запустите ваше первое приложение на Kubernetes."
       },
       {
+        "course_id": "architecture",
+        "title": "Kubernetes Architecture",
+        "description": "В этой лаборатории мы познакомим вас с архитектурой Kubernetes."
+      },
+      {
         "course_id": "kube-api",
         "title": "Kubernetes API",
         "description": "Откройте для себя API, с помощью которого вы можете контролировать все объекты Kubernetes."

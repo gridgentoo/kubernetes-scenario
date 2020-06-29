@@ -1,0 +1,1 @@
+Now that we've finished learning about the Kubernetes architecture and system, let's get started with our first object type, Pods
