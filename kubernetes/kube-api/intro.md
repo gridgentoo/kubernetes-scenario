@@ -1,13 +1,14 @@
 # Kubernetes API #
+![Katacoda Logo](./assets/logo-text-with-head.png)  
 
-![Kubernetes](/javajon/courses/kubernetes-fundamentals/kube-api/assets/kubernetes.png "Kubernetes")
+![Kubernetes](./assets/kubernetes.png "Kubernetes")
 
-This scenario takes you through the basics of accessing and exploring the Kubernetes API. The API is used to create, read, update, and delete ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) and Kubernetes object or resource.
+Этот сценарий познакомит вас с основами доступа и изучения **Kubernetes API**. API используется для создания, чтения, обновления и удаления ([CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) и объекта или ресурса **Kubernetes**.
 
-In this scenario you will learn how to:
+В этом сценарии вы изучите:
 
-- Access the API via `kubectl`
-- Introspect objects in the cluster via the API
-- Access the cluster API locally through a Proxy
+- Доступ к **API** через **kubectl**
+- Интроспекция и анализ объектов в кластере через **API**
+- Доступ к **API** кластера локально через **Proxy**
 - Discover api-resources and api-versions
 - Discover the Explain and Describe commands

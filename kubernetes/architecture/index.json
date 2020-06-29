@@ -1,6 +1,6 @@
 {
-  "title": "Module 2: Kubernetes Architecture",
-  "description": "In this lab, we will introduce you to the Kubernetes Architecture.",
+  "title": "Kubernetes Architecture",
+  "description": "В этой лаборатории мы познакомим вас с архитектурой Kubernetes.",
   "icon": "fa-kubernetes",
   "difficulty": "beginner",
   "time": "10-15 minutes",
@@ -38,7 +38,7 @@
     "intro": {
       "text": "intro.md",
       "code": "env-init.sh",
-      "credits": "Developer(s): [William Hearn](https://sylus.ca) and [Zachary Seguin](https://zacharyseguin.ca)",
+      "credits": "[Yunusov Temur](https://gridgentoo.github.io)",
       "courseData": "setup.sh"
     },
     "finish": {

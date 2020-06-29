@@ -24,6 +24,11 @@
         "description": "Откройте для себя API, с помощью которого вы можете контролировать все объекты Kubernetes."
       },
       {
+        "course_id": "cheatsheet",
+        "title": "Шпаргалка по kubectl",
+        "description": "Шпаргалка по kubectl"
+      },
+      {
         "course_id": "ruby-sinatra",
         "title": "Sinatra, Open Policy Agent (OPA) & Gatekeeper",
         "description": "REST API (Ruby Sinatra app) в кластере Kubernetes. Политики Kubernetes с использованием Open Policy Agent"

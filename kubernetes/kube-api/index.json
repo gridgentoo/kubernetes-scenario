@@ -1,6 +1,6 @@
 {
   "title": "Kubernetes API",
-  "description": "Discover the API through which you can control all Kubernetes objects.",
+  "description": "Откройте для себя API, с помощью которого вы можете контролировать все объекты Kubernetes.",
   "difficulty":	"Beginner",
   "time":	"15 minutes",
   "details": {
@@ -39,7 +39,7 @@
     "intro": {
       "text": "intro.md",
       "code": "env-init.sh",
-      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+      "credits": "[Yunusov Temur](https://gridgentoo.github.io)"
     },
     "finish": {
       "text": "finish.md"
