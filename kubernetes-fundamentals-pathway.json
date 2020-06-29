@@ -2,11 +2,10 @@
     "title": "Kubernetes Fundamentals",
     "icon": "fa-kubernetes",
     "description": "Изучите основные building blocks Kubernetes с практическими планами развертывания.",
-    "courses": [
       {
-        "course_id": "cheatsheet",
-        "title": "Шпаргалка по kubectl",
-        "description": "Место для экспериментов с Kubernetes"
+        "course_id": "first-app",
+        "title": "First App",
+        "description": "Запустите ваше первое приложение на Kubernetes."
       },
       {
         "course_id": "kube-playground-nginx",
@@ -14,14 +13,14 @@
         "description": "kubectl apply -f nginx-deployment.yaml"
       },
       {
+        "course_id": "cheatsheet",
+        "title": "Шпаргалка по kubectl",
+        "description": "Место для экспериментов с Kubernetes"
+      },
+      {
         "course_id": "ruby-sinatra",
         "title": "Sinatra, Open Policy Agent (OPA) & Gatekeeper",
         "description": "REST API (Ruby Sinatra app) в кластере Kubernetes. Политики Kubernetes с использованием Open Policy Agent"
-      },
-      {
-        "course_id": "first-app",
-        "title": "First App",
-        "description": "Запустите ваше первое приложение на Kubernetes."
       },
       {
         "course_id": "kube-api",
