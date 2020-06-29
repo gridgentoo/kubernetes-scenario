@@ -1,32 +1,32 @@
 {
-    "title": "Container Basics",
-    "icon": "fa-docker",
-    "description": "Откройте для себя Docker.",
+    "title": "Kubernetes Fundamentals",
+    "icon": "fa-kubernetes",
+    "description": "Изучите основные строительные блоки Kubernetes, с практическими планами развертывания.",
     "courses": [
       {
-        "course_id": "docker-basiccommands",
-        "title": "Основные команды Docker",
-        "description": "Начните с основных команд докера"
+        "course_id": "kube-playground-nginx",
+        "title": "Nginx on Kubernetes, nginx-deployment.yaml",
+        "description": "kubectl apply -f nginx-deployment.yaml"
       },
       {
-        "course_id": "docker-advancedcommands",
-        "title": "Расширенные команды Docker Advanced",
-        "description": "Начните с расширенных команд докера."
+        "course_id": "first-app",
+        "title": "First App",
+        "description": "Запустите ваше первое приложение на Kubernetes."
       },
       {
-        "course_id": "module-1",
-        "title": "Основы контейнеров: Модуль 1 - Основы докера",
-        "description": "В этой лабе мы изучим интерфейс командной строки Docker CLI."
+        "course_id": "architecture",
+        "title": "Kubernetes Architecture",
+        "description": "В этой лаборатории мы познакомим вас с архитектурой Kubernetes."
       },
       {
-        "course_id": "module-2",
-        "title": "Основы контейнера: Модуль 2 - Создание пользовательских custom images",
-        "description": "В этой лабе мы научимся создавать собственные контейнеры с помощью Docker."
+        "course_id": "kube-api",
+        "title": "Kubernetes API",
+        "description": "Откройте для себя API, с помощью которого вы можете контролировать все объекты Kubernetes."
       },
       {
-        "course_id": "docker-03-build",
-        "title": "Основы контейнеров: Модуль 3 - Dockerfile: Automatic Build",
-        "description": "В этой лабе мы изучим cоздание Docker images с помощью Dockerfile."
+        "course_id": "ruby-sinatra",
+        "title": "Sinatra, Open Policy Agent (OPA) & Gatekeeper",
+        "description": "REST API (Ruby Sinatra app) в кластере Kubernetes. Политики Kubernetes с использованием Open Policy Agent"
       }
     ]
   }
