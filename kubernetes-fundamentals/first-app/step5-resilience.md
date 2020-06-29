@@ -1,6 +1,6 @@
-Applications designed to embrace failure are the most healthy and resistant to interrupting users' experiences. Kubernetes embraces failure and so should your applications. One failure to expect is your containers _will_ fail. Kubernetes expects containers to crash and will restart Pods when that happens. When your application is load balancing and spreading fault tolerance across multiple Pods, whole groups of users should rarely be effected by container failures.
+Приложения, разработанные для устранения ошибок **embrace failure**, являются наиболее полезными и устойчивыми к прерыванию работы пользователей. **Kubernetes embraces failure** и ваши приложения. Одна ошибка **failure**, которую можно ожидать - ваши контейнеры **will** fail. **Kubernetes** ожидает, что контейнеры потерпят крах **crash**, и перезапустит **Pod**, когда это произойдет. Когда ваше приложение балансирует нагрузку **load balancing** и распределяет отказоустойчивость **fault tolerance** между несколькими подами, целые группы пользователей должны редко подвергаться сбоям контейнера **container failures**.
 
-You can witness Kubernetes resilience feature by purposefully killing your Pods. Scale the Pods back up.
+Вы можете стать свидетелем гибкости **Kubernetes resilience**, целенаправленно убивая свои Поды. Масштабируйте Поды назад.
 
 `kubectl scale deployment hello --replicas=3`{{execute}}
 
