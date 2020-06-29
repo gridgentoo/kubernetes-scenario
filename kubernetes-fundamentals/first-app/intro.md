@@ -1,6 +1,7 @@
 # Первое приложение Kubernetes #
+![Katacoda Logo](./assets/logo-text-with-head.png)  
 
-![Kubernetes](/javajon/courses/kubernetes-fundamentals/minikube/assets/kubernetes.png "Kubernetes")
+![Katacoda Logo](./assets/kubernetes.png)
 
 Этот сценарий ознакомит вас с основами развертывания приложения в **Kubernetes**.
 В следующих шагах вы узнаете:
