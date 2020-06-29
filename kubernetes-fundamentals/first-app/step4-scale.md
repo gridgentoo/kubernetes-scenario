@@ -1,41 +1,44 @@
-Pods are often replicated for handling parallel requests. The Service will take care of _round robin_ load balancing across the available Pods.
+**Pods** часто реплицируются для обработки параллельных запросов. 
+**Service** позаботится о балансировке нагрузки **round robin**, **load balancing** между доступными **Pods**.
 
-We will scale the hello Pod up and down. First, in another terminal start a continuous loop that puts some load the service.
+Мы будем масштабировать **hello Pod** вверх и вниз. 
+Сначала в другом терминале **terminal** запускают непрерывный цикл, который создаёт некоторую нагрузку на **service**.
 
 `while true; do curl -s https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/ -w 'Time: %{time_total}' | grep -E 'Hostname|Time' | xargs; done`{{execute T2}}
 
-With all the curl requests in the loop, the single Pod instance is producing all the responses. However with distributed systems with a deep pool of resources it's very common to add more processes that can service multiple requests. Ask Kubernetes to scaling up the _echoservice_ across more Pods.
+Со всеми запросами **curl** в цикле **single Pod instance** производит все **responses**. 
+Однако в распределенных системах **distributed systems** с глубоким пулом ресурсов **deep pool of resources**, очень часто добавляют больше процессов, которые могут обслуживать несколько запросов **service multiple requests**. Запросити, чтобы **Kubernetes** увеличил _echoservice_ через большее количество Подов.
 
 `kubectl scale deployment hello --replicas=3`{{execute T1}}
 
-Kubernetes spins up new and duplicated Pods and the same service begins to balance the requests across the pods.
+Kubernetes раскручивает новые и **duplicated Pods**, и одна и та же служба **service** начинает балансировать запросы между **pods**.
 
 `kubectl get pods -l run=hello`{{execute T1}}
 
-The single service for these 3 pods now has the IPs of the three pods and load balances between them.
+**single service** для этих **3 pods** теперь имеет **IP-адреса** трех подов и балансировку нагрузки между ними.
 
 `kubectl describe service hello | grep "Endpoints"`{{execute}}
 
-Look at the other terminal and in a few moments the output will indicate the load balancer is rotating the requests across the three nodes.
+Посмотрите на другой терминал **terminal**, и через несколько секунд выходные данные укажут, что балансировщик нагрузки распределяет запросы  **load balancer is rotating the requests** между тремя **nodes**.
 
-Scale the Pods to zero and see what happens with the same _top_ command and the requests in the other terminal.
+Масштабируйте **Pods** до нуля и посмотрите, что происходит с той же командой **top** и запросами в другом терминале.
 
 `kubectl scale deployment hello --replicas=0`{{execute T1}}
 
-The list will show the pods Terminating, then in a moment the list will be blank.
+В списке будут показаны **pods Terminating**, а затем список будет пустым.
 
 `kubectl get pods`{{execute T1}}
 
-Notice while the pod count is at zero the service running in Terminal 2 is reporting no responses. Soon the above command will report _No resources found_.
+Обратите внимание, что, когда число подов равно нулю, служба **service**, работающая в **Terminal 2**, не сообщает об ответах **responses**. Вскоре вышеприведенная команда сообщит **No resources found** (Не найдены ресурсы).
 
-Scale the Pods back to 1 and see how the requests are restored.
+**Scale** масштабируйте Поды обратно до 1 и посмотрите, как будут восстановлены запросы **requests**.
 
 `kubectl scale deployment hello --replicas=1`{{execute T1}}
 
-A new pod should show in a moment.
+Новый Под должен появиться через мгновение.
 
 `kubectl get deployments,pods`{{execute T1}}
 
-A few moments later the metrics will be available for the new pod.
+Через несколько секунд метрики **metrics** будут доступны для нового Пода.
 
 `kubectl get pods -l run=hello`{{execute T1}}
