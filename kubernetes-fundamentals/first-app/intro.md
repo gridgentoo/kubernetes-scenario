@@ -12,6 +12,8 @@
 - Kubernetes поддерживает (устойчивость - **resilience**) задекларированного состояния **state**, даже при сбоях **failures** 
 - **rollout** - выкатить новую версию приложения
 
+![Katacoda Logo](./assets/Kubernetes2.png)
+
 ## Компоненты Kubernetes
 
 При развёртывании Kubernetes вы имеете дело с кластером.
@@ -26,7 +28,7 @@
 
 ![Katacoda Logo](./assets/components-of-kubernetes.png)
 
-![Компоненты Kubernetes](https://kubernetes.io/ru/docs/concepts/overview/components/)
+[Компоненты Kubernetes](https://kubernetes.io/ru/docs/concepts/overview/components/)
 
 ## Плоскость управления компонентами
 
