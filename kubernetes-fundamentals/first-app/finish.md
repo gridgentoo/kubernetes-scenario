@@ -1,12 +1,12 @@
-# Conclusion #
+# Заключение #
 
-Once an application is in a container, it's fairly simple to ask Kubernetes to serve up the container in multiple Pods fronted with a load balancing Service. Thereafter, Kubernetes dutifully respects your declared request by ensuring the application remains running on the cluster.
+Как только приложение находится в контейнере, довольно просто попросить **Kubernetes** обслуживать контейнер в нескольких **Pods**, запущенных с помощью службы балансировки нагрузки **load balancing Service**. После этого **Kubernetes** покорно соблюдает ваш **declared request**, обеспечивая работу приложения в кластере.
 
-There are many other types of resources that can be added to Kubernetes besides just Pods, Services and Deployments, however these are the most common resources. Later, explore the Helm scenarios to see how whole _charts_ of more complex deployments can be installed.
+Есть много других типов ресурсов, которые могут быть добавлены в **Kubernetes**, кроме просто **Pod**, **Services** и **Deployments**, однако это наиболее распространенные ресурсы. Позже рассмотрим сценарии **Helm**, чтобы увидеть, как можно установить целые **charts** более сложных развертываний **deployments**.
 
-## Lessons Learned ##
+## В этом уроке вы изучили ##
 
-With these steps you have learned:
+С помощью этих шагов вы узнали:
 
 - &#x2714; how to **Deploy** an application,
 - &#x2714; how to **Scale** an application,
@@ -16,8 +16,8 @@ With these steps you have learned:
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
+<img align="left" src="./assets/yunusov.png" width="100" style="border-radius: 12px">
+Для более глубокого понимания этих тем и многого другого присоединяйтесь к <br>[Yunusov Temur](https://gridgentoo.github.io/)<br> на различных конференциях, симпозиумах, семинарах и встречах.
 <br><br>
-<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
+<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & DevOps Specialist</b>
 </p>
