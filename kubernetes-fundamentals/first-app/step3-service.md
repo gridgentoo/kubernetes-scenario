@@ -1,23 +1,23 @@
-The _echoserver_ container is running in a Pod. Each Pod in Kubernetes is assigned an internal and virtual IP address at 10.xx.xx.xx. However, from outside of the cluster these IPs are not addressable, and never should be. Even within the cluster other applications normally should not attempt to address these Pods IPs. Instead each replicated Pod is fronted by a single service.
+Контейнер **echoserver** работает в модуле **Pod**. Каждому **Pod** в **Kubernetes** назначен внутренний и виртуальный **IP**-адрес в **10.xx.xx.xx**. Даже внутри кластера другие приложения обычно не должны пытаться обращаться к этим IP-адресам **Pods**. Вместо этого каждому реплицированному **Pod** предоставляется **single service**.
 
-This service can be referenced by its label, and therefore access with the help of an internal Domain Name System (DNS) that will resolve the URL to the service based on the label. The Service will add a layer of indirection where it will know how to connect to the Pod. All the other applications in the cluster will connect to the service through DNS lookups and the services will connect to the specific Pods.
+На **service** можно ссылаться по ее метке **label**, и, следовательно, доступ осуществляется с помощью  **Domain Name System (DNS)** , которая разрешает - **resolve** URL-адрес **service** на основе метки **label**. **Service** добавит слой **layer of indirection**, где он будет знать, как подключиться к **Pod**. Все остальные приложения в кластере будут подключаться к службе через поиск **DNS lookups**, а **services** будут подключаться к конкретным **Pods**.
 
-Expose the Pod by fronting it with a Service labeled _hello_.
+**Expose the Pod**, обратив его к **Service** с пометкой **label** >> **hello**.
 
 `kubectl expose deployment hello --type=NodePort`{{execute}}
 
 `kubectl get service hello`{{execute}}
 
-The NodePort is assign a port value at some free port above 30000. For this Katacoda example we need it to be at a definitive value, here we choose 31001. Use the _patch_ command to change the _hello_ service NodePort from its random value to the chosen, fixed value.
+**NodePort** назначает значение порта на некотором свободном порте выше **30000**. Для этого примера **Katacoda** нам нужно, чтобы оно имело определенное значение, здесь мы выбираем **31001**. Используйте команду **patch**, чтобы изменить **service NodePort**  _hello_ от его случайного значения до выбранного.
 
 `kubectl patch service hello --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31001}]'`{{execute}}
 
-The service NodePort is now adjusted.
+Сервис **NodePort** теперь настроен.
 
 `kubectl get service hello`{{execute}}
 
 `kubectl describe service hello`{{execute}}
 
-Because of Katacoda's virtualization you cannot address this service from your browser, but you can use Katacoda's domain as the URL to the same service. Notice the same port number placed in the subdomain of the URL.
+Из-за виртуализации **Katacoda** вы не можете обратиться к этой службе **service** через браузер, но вы можете использовать домен **Katacoda** в качестве URL-адреса той же службы **service**. Обратите внимание на тот же номер порта, размещенный в поддомене **URL**.
 
 `curl -s https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
