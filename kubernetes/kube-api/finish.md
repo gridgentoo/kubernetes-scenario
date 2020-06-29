@@ -1,6 +1,6 @@
-# Conclusion #
+# Заключение #
 
-The Kubernetes API server is the gateway into Kubernetes and is accessed via HTTP. All administrative interactions with Kubernetes is through this API. External command-line tools, language libraries, and internal controllers and operators all use this same API for all CRUD operations toward Kubernetes.
+Сервер **Kubernetes API** является шлюзом в **Kubernetes** и доступен через **HTTP**. Все административные взаимодействия с **Kubernetes** осуществляются через этот **API**. Внешние инструменты командной строки, языковые библиотеки, а также внутренние контроллеры **internal controllers**  и **operators** используют один и тот же **API** для всех операций **CRUD operations** в отношении **Kubernetes**.
 
 ## Lessons Learned ##
 
@@ -24,8 +24,8 @@ To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspired this scen
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="./assets/jonathan-johnson.jpg" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Jonathan Johnson](http://www.dijure.com)<br> at various conferences, symposiums, workshops, and meetups.
+<img align="left" src="./assets/yunusov.png" width="100" style="border-radius: 12px">
+Для более глубокого понимания этих тем и многого другого присоединяйтесь к <br>[Yunusov Temur](https://gridgentoo.github.io/)<br> на различных конференциях, симпозиумах, семинарах и встречах.
 <br><br>
-<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
+<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & DevOps Specialist</b>
 </p>
