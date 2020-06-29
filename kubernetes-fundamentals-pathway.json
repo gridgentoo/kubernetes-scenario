@@ -3,14 +3,14 @@
     "icon": "fa-kubernetes",
     "description": "Изучите основные строительные блоки Kubernetes, с практическими планами развертывания.",
       {
-        "course_id": "first-app",
-        "title": "First App",
-        "description": "Запустите ваше первое приложение на Kubernetes."
-      },
-      {
         "course_id": "kube-playground-nginx",
         "title": "Nginx on Kubernetes, nginx-deployment.yaml",
         "description": "kubectl apply -f nginx-deployment.yaml"
+      },
+      {
+        "course_id": "first-app",
+        "title": "First App",
+        "description": "Запустите ваше первое приложение на Kubernetes."
       },
       {
         "course_id": "kube-api",
