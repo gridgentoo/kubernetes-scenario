@@ -1,22 +1,22 @@
-If you inspect the Pod you will see the running container is version 1.9.
+Если вы проинспектируете **Pod**, то увидите, что запущенный контейнер версии 1.9.
 
 `kubectl describe pod hello | grep "Image:"`{{execute}}
 
-A newer version of the container is 1.10 as listed [here](https://console.cloud.google.com/gcr/images/google-containers/GLOBAL/echoserver?gcrImageListsize=30).
+Более новая версия контейнера 1.10 в списке [here](https://console.cloud.google.com/gcr/images/google-containers/GLOBAL/echoserver?gcrImageListsize=30).
 
-An important aspect of Kubernetes is your users may benefit from the ideas of [continuous deployment](https://martinfowler.com/bliki/ContinuousDelivery.html). A fundamental way to approach this is with Kubernetes rollouts.
+Важным аспектом **Kubernetes** является то, что ваши пользователи могут извлечь выгоду из идей [continuous deployment](https://martinfowler.com/bliki/ContinuousDelivery.html). Фундаментальный подход к этому - это **Kubernetes rollouts**.
 
-Here are two approaches.
+Вот два подхода.
 
-1\. A precise surgical way is with the _set image_ command. This will modify the image version for the container in each Pod.
+1. Точный **surgical way**  с помощью команды **set image**. Это изменит версию **image** для контейнера в каждом Поде.
 
 `kubectl set image deployment/hello hello=k8s.gcr.io/echoserver:1.10 --all`{{execute}}
 
-Now, the Pod inspection will report the updated container.
+Теперь осмотр **Pod** сообщит об обновленном контейнере.
 
 `kubectl describe pod hello | grep "Image:"`{{execute}}
 
-2\. Another way is to modify the YAML then apply the change with the _update_ command.
+2. Another way is to modify the YAML then apply the change with the _update_ command.
 
 Restore the Pod's container 3
 image the version back to the original version
