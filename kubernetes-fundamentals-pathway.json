@@ -1,7 +1,7 @@
 {
     "title": "Kubernetes Fundamentals",
     "icon": "fa-kubernetes",
-    "description": "Изучите основные building blocks Kubernetes с практическими планами развертывания.",
+    "description": "Изучите основные строительные блоки Kubernetes, с практическими планами развертывания.",
       {
         "course_id": "first-app",
         "title": "First App",
