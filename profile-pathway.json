@@ -108,7 +108,7 @@
       {
         "title": "Основы Kubernetes",
         "description": "Изучите основные строительные блоки Kubernetes с практическими объяснениями.",
-        "id": "kuber" 
+        "id": "kubernetes" 
       },
       {
         "title": "Основы OpenShift",

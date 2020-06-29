@@ -1,0 +1,32 @@
+{
+    "title": "Container Basics",
+    "icon": "fa-docker",
+    "description": "Откройте для себя Docker.",
+    "courses": [
+      {
+        "course_id": "docker-basiccommands",
+        "title": "Основные команды Docker",
+        "description": "Начните с основных команд докера"
+      },
+      {
+        "course_id": "docker-advancedcommands",
+        "title": "Расширенные команды Docker Advanced",
+        "description": "Начните с расширенных команд докера."
+      },
+      {
+        "course_id": "module-1",
+        "title": "Основы контейнеров: Модуль 1 - Основы докера",
+        "description": "В этой лабе мы изучим интерфейс командной строки Docker CLI."
+      },
+      {
+        "course_id": "module-2",
+        "title": "Основы контейнера: Модуль 2 - Создание пользовательских custom images",
+        "description": "В этой лабе мы научимся создавать собственные контейнеры с помощью Docker."
+      },
+      {
+        "course_id": "docker-03-build",
+        "title": "Основы контейнеров: Модуль 3 - Dockerfile: Automatic Build",
+        "description": "В этой лабе мы изучим cоздание Docker images с помощью Dockerfile."
+      }
+    ]
+  }
