@@ -15,7 +15,7 @@
       {
         "course_id": "cheatsheet",
         "title": "Шпаргалка по kubectl",
-        "description": "Место для экспериментов с Kubernetes"
+        "description": "Шпаргалка по kubectl"
       },
       {
         "course_id": "ruby-sinatra",
