@@ -1,19 +1,22 @@
-Like any software system, Kubernetes produces many logs.
+Как и любая software system, **Kubernetes** создает много логов.
 
-On each node, we can view the status of `kubelet` (remember? this is the daemon responsible for Pod lifecycle management) by running:
+На каждом ноде мы можем просмотреть **status** кублета **kubelet** (помните? Это демон, отвечающий за управление жизненным циклом пода, **Pod lifecycle management**), выполнив:
 
 `journalctl -lu kubelet`{{execute}}
 
-You can use the arrow keys to navigate, and press `q`{{execute}} to exit.
+Нажмите `q`{{execute}} для выхода.
 
-> Have some extra time? Access the kubelet logs on host01 and host02 through SSH.
+> Have some extra time? Получите доступ к логам **kubelet** на **host01** и **host02** через SSH.
 
 However, we can't do this for the rest of the Kubernetes components. Why? They are running as pods and not on the system directly.
+Однако мы не можем сделать это для остальных компонентов **Kubernetes**. Почему? Так как они работают как **pods**, а не в системе напрямую.
 
-To view logs, we can use `kubectl logs <pod name>`.
+Для просмотра логов мы можем использовать `kubectl logs <pod name>`. 
 
 `kubectl -n kube-system logs kube-apiserver-controlplane`{{execute}}
 
-> Want to watch the logs in realtime? Add `-f` to the command for a continous stream. Press `ctrl+c` to stop.
+> Хотите смотреть логи в реальном времени? Добавьте **-f** к команде для непрерывного потока **continous stream**.
 
-Try this with other pods.
+> Нажмите `ctrl + c`, чтобы остановить.
+
+Попробуйте это с другими **pods**.
