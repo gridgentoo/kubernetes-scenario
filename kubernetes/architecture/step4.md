@@ -37,11 +37,14 @@ Kubernetes обычно поддерживает **alpha** и **beta** в доп
 
 `curl http://localhost:8080/apis/apps/v1/deployments`{{execute}}
 
+> Нажмите `clear`, чтобы очистить. `clear`{{execute}}
+
 **Deployment** - это абстракция высокого уровня, которая управляет контейнерным приложением. 
 Теперь у нас есть список всех **v1 Deployments**. Давайте принспектируем **coredns**:
 
 `curl http://localhost:8080/apis/apps/v1/namespaces/kube-system/deployments/coredns`{{execute}}
 
+> Нажмите `clear`, чтобы очистить. `clear`{{execute}}
 
 **Kubernetes API** чрезвычайно мощный и гибкий **flexible**.
 

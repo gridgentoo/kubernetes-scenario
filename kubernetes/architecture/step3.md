@@ -6,10 +6,9 @@
 
 Нажмите `q`{{execute}} для выхода.
 
-> Have some extra time? Получите доступ к логам **kubelet** на **host01** и **host02** через SSH.
+> Получите доступ к логам **kubelet** на **host01** и **host02** через SSH.
 
-However, we can't do this for the rest of the Kubernetes components. Why? They are running as pods and not on the system directly.
-Однако мы не можем сделать это для остальных компонентов **Kubernetes**. Почему? Так как они работают как **pods**, а не в системе напрямую.
+Однако мы не можем сделать это для остальных компонентов **Kubernetes**. Почему? Потому-что они работают как **pods**, а не в системе напрямую.
 
 Для просмотра логов мы можем использовать `kubectl logs <pod name>`. 
 
@@ -19,6 +18,6 @@ However, we can't do this for the rest of the Kubernetes components. Why? They a
 
 > Хотите смотреть логи в реальном времени? Добавьте **-f** к команде для непрерывного потока **continous stream**.
 
-> Нажмите `ctrl + c`, чтобы остановить.
+> Нажмите `ctrl + c`, чтобы остановить.  `ctrl + c`{{execute}}
 
 Попробуйте это с другими **pods**.
