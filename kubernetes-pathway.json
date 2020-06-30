@@ -4,6 +4,16 @@
     "description": "Изучите основные строительные блоки Kubernetes, с практическими планами развертывания.",
     "courses": [
       {
+        "course_id": "architecture",
+        "title": "Kubernetes Architecture",
+        "description": " В этой лаборатории мы познакомим вас как kubectl оборачивает REST API в инструмент командной строки. ~/.kube/config."
+      },
+      {
+        "course_id": "kube-api",
+        "title": "Kubernetes API",
+        "description": "Откройте для себя API, с помощью которого вы можете контролировать все объекты Kubernetes."
+      },
+      {
         "course_id": "kube-playground-nginx",
         "title": "Nginx on Kubernetes, nginx-deployment.yaml",
         "description": "kubectl apply -f nginx-deployment.yaml"
@@ -12,16 +22,6 @@
         "course_id": "first-app",
         "title": "First App",
         "description": "Запустите ваше первое приложение на Kubernetes. kubectl create -f echoserver.yaml"
-      },
-      {
-        "course_id": "architecture",
-        "title": "Kubernetes Architecture",
-        "description": "В этой лаборатории мы познакомим вас с архитектурой Kubernetes."
-      },
-      {
-        "course_id": "kube-api",
-        "title": "Kubernetes API",
-        "description": "Откройте для себя API, с помощью которого вы можете контролировать все объекты Kubernetes."
       },
       {
         "course_id": "cheatsheet",
