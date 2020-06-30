@@ -1,45 +1,48 @@
-At its core, Kubernetes operates via an API. The `kubectl` binary wraps the REST API in a command line tool, however, you can directly access the REST API if you want.
+По своей сути **Kubernetes** работает через **API**. Двоичный файл **kubectl** оборачивает **REST API** в инструмент командной строки, однако вы можете напрямую обращаться к **REST API**, если хотите.
 
-First, you need to open a new shell, and run kube-proxy:
+Сначала вам нужно открыть **new shell**, и запустить **kube-proxy**:
 
 `kubectl proxy --port=8080 &`{{execute}}
 
-Now, we can go back to our first shell and execute requests directly against the API:
+Теперь мы можем вернуться к нашей первой **shell** и выполнить запросы непосредственно к **API**:
 
 `curl http://localhost:8080/`{{execute}}
 
-This will give us a listing of all API endpoints that we can access
+Это даст нам список всех конечных точек **API endpoints**, к которым мы можем получить доступ **access**
 
-Let's get the version:
+Давайте получим версию:
 
 `curl http://localhost:8080/version`{{execute}}
 
-We can also check the health of the API Server:
+Мы также можем проверить работоспособность **health**, **API**-сервера:
 
 `curl http://localhost:8080/healthz`{{execute}}
 
-The same goes for etcd:
+То же самое касается etcd::
 
 `curl http://localhost:8080/healthz/etcd`{{execute}}
 
-Let's next see the different application APIs that are supported:
+Теперь давайте посмотрим, какие API-интерфейсы приложений поддерживаются:
 
 `curl http://localhost:8080/apis/apps`{{execute}}
 
-These are the different API versions that are supported on this Kubernetes cluster. Kubernetes typically supports `alpha` and `beta`, in addition to their production ready components. We can see that here.
+Это разные версии **API**, которые поддерживаются в этом кластере **Kubernetes**. 
+Kubernetes обычно поддерживает **alpha** и **beta** в дополнение к **production ready components** компонентам. Мы можем видеть это здесь.
 
-Let's look at all `v1` (production-ready) app objects in our cluster:
+Давайте посмотрим на все `v1` (**production-ready**), **app objects** в нашем кластере:
 
 `curl http://localhost:8080/apis/apps/v1`{{execute}}
 
-This shows us every `apps/v1` object, and their configuration. Let's pick a specific type:
+Здесь показаны все объекты **apps/v1 **и их конфигурация. Давайте выберем определенный тип:
 
 `curl http://localhost:8080/apis/apps/v1/deployments`{{execute}}
 
-A Deployment is a high-level abstraction that manages a containerized application. Now we have the listing of all `v1` Deployments. Let's inspect the `coredns` one:
+**Deployment** - это абстракция высокого уровня, которая управляет контейнерным приложением. 
+Теперь у нас есть список всех **v1 Deployments**. Давайте принспектируем **coredns**:
 
 `curl http://localhost:8080/apis/apps/v1/namespaces/kube-system/deployments/coredns`{{execute}}
 
-The Kubernetes API is extremely powerful and flexible.
 
-However, you'll save the "fun" of manually generating HTTP requests, and we'll use the `kubectl` tool from now on.
+**Kubernetes API** чрезвычайно мощный и гибкий **flexible**.
+
+Однако вы сохраните **fun** от генерации **HTTP requests** вручную, и теперь мы будем использовать инструмент **kubectl**.

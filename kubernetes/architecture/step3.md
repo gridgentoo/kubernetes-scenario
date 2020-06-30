@@ -13,6 +13,8 @@ However, we can't do this for the rest of the Kubernetes components. Why? They a
 
 Для просмотра логов мы можем использовать `kubectl logs <pod name>`. 
 
+`kubectl -n kube-system logs kube-apiserver-master`{{execute}}
+
 `kubectl -n kube-system logs kube-apiserver-controlplane`{{execute}}
 
 > Хотите смотреть логи в реальном времени? Добавьте **-f** к команде для непрерывного потока **continous stream**.
