@@ -8,11 +8,11 @@
 
 С помощью этих шагов вы узнали:
 
-- &#x2714; how to **Deploy** an application,
-- &#x2714; how to **Scale** an application,
-- &#x2714; how to load balance an application with a **Service** for multiple **Pods** of an application,
-- &#x2714; how **Resilience** maintains the declared state even with failures,
-- &#x2714; how to **Roll out** new versions of an application.
+- &#x2714; как **Deploy** приложение,  как **Deploy** приложение
+- &#x2714; как **Scale** приложение, 
+- &#x2714; как сбалансировать загрузку приложения **load balance** с помощью **Service** для нескольких **Pods** приложения, 
+- &#x2714; как поддерживать декларируемую **Resilience** - **Устойчивость** состояний **state**  даже при сбоях **failures**,
+- &#x2714; как **Roll out** - **выкатывать** новые версии приложения.
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
