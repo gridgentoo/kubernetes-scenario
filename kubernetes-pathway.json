@@ -14,6 +14,11 @@
         "description": "Откройте для себя API, с помощью которого вы можете контролировать все объекты Kubernetes."
       },
       {
+        "course_id": "pods",
+        "title": "Введение в Pods",
+        "description": " В этой лабораторной работе мы рассмотрим, как запускать контейнеры в Pods."
+      },
+      {
         "course_id": "kube-playground-nginx",
         "title": "Nginx on Kubernetes, nginx-deployment.yaml",
         "description": "kubectl apply -f nginx-deployment.yaml"

@@ -6,28 +6,28 @@
 **Pods** - это **группы контейнеров с общими пространствами имен и общими томами - shared volumes**.
 
 * **Pods** для контейнеров всегда расположены на одном **host**
-* Pod containers share a single IP and portspace and communicate via localhost
-* Pod containers have access to shared volumes for storage
-* Pods are designed to be ephemeral (like cattle, not pets)
+* **Pod containers** совместно используют один **IP** и **portspace** и взаимодействуют через localhost
+* **Pod containers** имеют доступ к общим томам для хранения **shared volumes**
+* **Pods** разработаны, чтобы быть **ephemeral (like cattle, not pets)**
 
-In this lab we will explore the following:
+В этой лабораторной работе мы рассмотрим следующее:
 
-## Creating Pods with the command line
+## Создание Pods с помощью командной строки
 
-Using the command line is an easy way explore pod concepts.
-These labs will let you inspsect pod configurations, running containers and networking.
+Использование командной строки - это простой способ изучить концепции **pod concepts**.
+Эти лабораторные занятия позволят вам изучить **pod configurations**, запустить контейнеры и сети.
 
-## Creating Pods with manifest files
+## Создание Pods с файлами манифеста - manifest files
 
-For production systems, using the command line can be error prone.
-In this exercise, we explore file based pod specification and creation.
+Для **production systems** использование командной строки может быть подвержено ошибкам.
+В этом упражнении мы рассмотрим **specification** и создание **Pods** на основе файла.
 
-## Inspecting Pods
+## Инспекция Pods
 
-Understanding how a pod works will help you debug issues when they arrive.
-In this lab we will explore the Pod lifecycle, networking, and configuration.
+Понимание того, как работает **pod**, поможет вам отладить проблемы, когда они появятся.
+В этой лабораторной работе мы рассмотрим жизненный цикл пода **Pod lifecycl**e, сетевое взаимодействие и конфигурацию.
 
-For more information, see the Kubernetes [documentation][docs].
+Для получения дополнительной информации см. Kubernetes [documentation][docs].
 
 <!-- Links Referenced -->
 
