@@ -1,0 +1,70 @@
+{
+  "title": "Введение в  Pods",
+  "description": "В этой лабораторной работе мы рассмотрим, как запускать контейнеры в Pods.",
+  "difficulty": "beginner",
+  "time": "20-30 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": ".answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Pods в командной строке",
+        "text": "step1.md"
+      },
+      {
+        "title": "PodSpec Files",
+        "text": "step2.md"
+      },
+      {
+        "title": "Interacting with Pods",
+        "text": "step3.md"
+      },
+      {
+        "title": "Configuring NGINX",
+        "text": "step4.md"
+      },
+      {
+        "title": "Multi-container Pods",
+        "text": "step5.md"
+      },
+      {
+        "title": "Sharing Volumes",
+        "text": "step6.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Yunusov Temur](https://gridgentoo.github.io)",
+      "courseData": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "editor-terminal",
+    "dashboards": [
+      {
+        "name": "Dashboard",
+        "href": "https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com"
+      }
+    ],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1m training.\u001b[0m"
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vue
+  labels:
+    app: vue
+spec:
+  containers:
+  - name: vue
+    image: sylus/vue-hello-world
+    ports:
+    - containerPort: 80
