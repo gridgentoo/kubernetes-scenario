@@ -14,21 +14,21 @@
 
 Этот секция определяет кластер **Kubernetes**. Указывает **URL**-адрес для доступа к серверу **API** и сертификат **SSL** для валидации.
 
-> Often in Kubernetes YAML configuration, you will find values are Base64 encoded. This allows arbitrary data to be represented in plain text.
+> Часто в конфигурации **YAML Kubernetes** вы найдете значения в кодировке **Base64**. Это позволяет произвольным данным быть представленными в виде простого текста.
 
 ### `users`
 
-This sections defines authentication credentials to use with the cluster.
+В этих секции определяются учетные данные **credentials** для аутентификации, используемые с кластером.
 
-In the kubeconfig of the demo environment, we are authentication using a SSL certificate. Other authentication methods, depending on the cluster, include:
+В **kubeconfig** демонстрационной среды мы выполняем аутентификацию с использованием **SSL certificate**. Другие методы аутентификации, в зависимости от кластера, включают в себя:
 
 - Tokens
-- OAuth (allows authentication agains Active Directory, GitHub, Google, etc.)
+- OAuth (позволяет аутентификацию c помощью Active Directory, GitHub, Google, etc.)
 
 ### `contexts`
 
-The contexts section link clusters definition and user definitions together.
+**Contexts section** объединяет определения кластеров **clusters definition** и определения пользователей **user definitions**.
 
-The `kubectl` command line tool operates on these contexts objects.
+Инструмент командной строки **kubectl** работает с этими объектами контекстов **contexts objects.**
 
-> We only have one user, cluster and context defined in this file. It is possible to define multiple of each in a given `kubeconfig` file.
+> У нас есть только один пользователь, кластер и **context**, определенные в файле **kubeconfig**. Можно определить несколько из каждого в данном файле **kubeconfig**.
