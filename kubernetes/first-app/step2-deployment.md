@@ -27,6 +27,7 @@
 
 Используйте это ```clear```{{execute interrupt}} чтобы выйти из режима наблюдения или нажмите <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-При этом **application** работает, но оно недоступно. **Service** необходим для доступа.
+
+При этом **application** работает, но оно недоступно. **Service** необходим для доступа к Подам.
 
 ![Katacoda Logo](./assets/Service.png)
