@@ -1,1 +1,1 @@
-Now that we've finished learning about the Kubernetes architecture and system, let's get started with our first object type, Pods
+Теперь, когда мы закончили изучение архитектуры и системы **Kubernetes**, давайте начнем с нашего первого типа объектов, **Pod**
