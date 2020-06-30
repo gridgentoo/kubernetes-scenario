@@ -11,7 +11,7 @@
       {
         "course_id": "first-app",
         "title": "First App",
-        "description": "Запустите ваше первое приложение на Kubernetes."
+        "description": "Запустите ваше первое приложение на Kubernetes. kubectl create -f echoserver.yaml"
       },
       {
         "course_id": "architecture",

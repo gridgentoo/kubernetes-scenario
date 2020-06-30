@@ -12,7 +12,7 @@ However, we can't do this for the rest of the Kubernetes components. Why? They a
 
 To view logs, we can use `kubectl logs <pod name>`.
 
-`kubectl -n kube-system logs kube-apiserver-master`{{execute}}
+`kubectl -n kube-system logs kube-apiserver-controlplane`{{execute}}
 
 > Want to watch the logs in realtime? Add `-f` to the command for a continous stream. Press `ctrl+c` to stop.
 
