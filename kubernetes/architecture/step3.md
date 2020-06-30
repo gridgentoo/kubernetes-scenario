@@ -16,7 +16,10 @@
 
 `kubectl -n kube-system logs kube-apiserver-controlplane`{{execute}}
 
-> Хотите смотреть логи в реальном времени? Добавьте **-f** к команде для непрерывного потока **continous stream**.
+> Хотите смотреть логи в реальном времени? 
+> Добавьте **-f** к команде для непрерывного потока **continous stream**.
+
+`kubectl -n kube-system logs kube-apiserver-controlplane -f`{{execute}}
 
 > Нажмите `ctrl + c`, чтобы остановить.  `ctrl + c`{{execute}}
 
