@@ -1,76 +1,95 @@
-Pods are the base primitive that Kubernetes uses to manage containerized applications. We can easily create a Pod on the CLI:
+**Pods**  - это базовый примитив, который **Kubernetes** использует для управления контейнеризованными приложениями. Мы можем легко создать **Pod** на **CLI**:
 
 `kubectl run nginx --image=nginx --port=80 --restart=Never`{{execute}}
 
-We start with `kubectl run`. This instructs Kubernetes to create a Pod resource. The first parameter, `nginx`, provides the name of the Pod. After that, `--image=nginx` instructs Kubernetes to create a Pod that runs a container based off the `nginx` image. `--port=80` instructs Kubernetes to have the underlying container listen on port 80. `--restart=Never` tells Kubernetes to not restart the Pod.
+Начнем с **kubectl run**. Это указывает **Kubernetes** на создание ресурса Под. 
+Первый параметр, **nginx**`, предоставляет имя Пода. 
+После этого **--image=nginx** указывает **Kubernetes** создать Под, который запускает контейнер на основе изображения **nginx image**. 
+Параметр **--port = 80** указывает **Kubernetes**, чтобы базовый контейнер прослушивал порт 80. 
+Параметр **--restart = Never** указывает **Kubernetes** не перезапускать Под.
 
-## List running Pods
+## Список запущенных Pods
 
-Now that we have a Pod, we can see it in action by using the *get* verb:
+Теперь, когда у нас есть **Pod**, мы можем увидеть его в действии, используя глагол **get**:
 
 `kubectl get pods`{{execute}}
 
-> *NOTE*: **po** is short for *pods*, so this works too: `kubectl get po`
+> *NOTE*: **po** это сокращение от **pods,** так что это тоже работает: `kubectl get po`
 
-We can see that we have a single Pod with a status of running:
+`k get po`{{execute}}
+
+Мы можем видеть, что у нас есть один **Pod** со статусом **status of running**:
 
 ```
 NAME      READY     STATUS    RESTARTS   AGE
 nginx     1/1       Running   0          10s
 ```
 
-> *NOTE*: `kubectl get` is a common Kubernetes command that we will use throughout the training.
+> *NOTE*: **kubectl** - это распространенная команда **Kubernetes**, которую мы будем использовать на протяжении всего обучения.
 
-## Inspect running Pods
+`watch kubectl get deployments,pods,services`{{execute}}
 
-Often we will need to inspect running Kubernetes objects. To do this we use the *describe* verb.
+`watch kubectl get pods,services`{{execute}}
 
-`kubectl describe` gives us more information about any Kubernetes object.
+Используйте это ```clear```{{execute interrupt}} чтобы выйти из режима наблюдения или нажмите <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-To show detailed information about our running Pod, use:
+## Инспекция running Pods
+
+Часто нам нужно проинспектировать работающие объекты **Kubernetes**. Для этого мы используем глагол **describe**.
+
+**kubectl describe** дает нам больше информации о любом объекте **Kubernetes**.
+
+Чтобы показать подробную информацию о нашем запущенном **Pod**, используйте:
 
 `kubectl describe pods nginx`{{execute}}
 
-We can chain this command to get more fine-grained details:
+Мы можем сделать цепочку из команду, чтобы получить более детализированные детали:
 
 `kubectl describe pod nginx | grep IP | awk '{print $2}'`{{execute}}
 
-That will get the IP address of our nginx Pod. In general, you won't actually create Pods using the CLI. However, understanding how to get information from them is extremely important.
+Это получит IP-адрес нашего **nginx Pod**. В общем, вы не будете создавать **Pod** с помощью **CLI**. 
+Однако понимание того, как получить от них информацию, чрезвычайно важно.
 
-We can see that our Pod has a unique IP address, which we'll use in a second. Right now, our pod has been scheduled on `node01`:
+Мы видим, что наш **Pod** имеет уникальный **IP**-адрес, который мы будем использовать через секунду. Прямо сейчас наш Под, был **scheduled** на **node01**:
 
 `kubectl describe pod nginx | grep Node | awk '{print $2}'`{{execute}}
 
-Let's SSH to this node:
+Давайте сделаем SSH коннект к этой Ноде:
 
 `ssh node01`{{execute}}
 
-We can actually see the container running Docker:
+На самом деле мы можем видеть контейнер с **Docker**:
 
 `docker container ls | grep k8s_nginx`{{execute}}
 
-Let's inspect this container using `docker container inspect`{{execute}}, followed by the name of the container. Don't worry, you can just tab complete the name.
+Давайте проверим этот контейнер с помощью `docker container inspect`{{execute}}, за которым следует имя контейнера. 
 
-We can see that our container is running nicely. However, we can also see it doesn't have an IP address. Kubernetes is abstracting this away, even from Docker.
+Мы уже получили **IP**-адрес Под, поэтому давайте загрузим файлы из **NGINX**, используя **curl**.
 
-We already got the IP address of the Pod before, so let's download the files from NGINX using `curl`.
+Вам нужно выполнить **curl <container IP>**, указав свой конкретный **IP**-адрес для контейнера.
 
-You'll need to execute `curl <container IP>`, with your specific IP address for the container.
+Теперь, когда мы получили доступ к контейнеру, давайте посмотрим на логи с помощью **Docker**, используя **docker container logs k8s_nginx**, убедитесь, что завершите вкладку.
 
-Now that we've accessed the container, let's look at the logs with Docker, using `docker container logs k8s_nginx`, make sure to tab complete that.
+`docker container logs k8s_nginx`{{execute}}
 
-Now `exit` the SSH session, we'll use kubectl to read the logs as well:
+Теперь **exit** из **SSH**-сессии, мы также будем использовать **kubectl** для чтения логов:
 
 `kubectl logs nginx`{{execute}}
 
-The messages are the same, Kubernetes is just abstracting away Docker.
+Сообщения одинаковы, **Kubernetes** просто абстрагируется от **Docker**.
 
-## Delete a Pod
+## Удалите Pod
 
-For now, let's clean up the environment by deleting our Pod.
+А пока давайте очистим окружающую среду **environment**, удалив наш Под.
 
-`kubectl delete` is the command we’ll use to delete resources.
+**kubectl delete**  это команда, которую мы будем использовать для удаления ресурсов.
 
 `kubectl delete pod nginx`{{execute}}
 
-**WARNING**: Be careful, once our Pod is deleted, it is gone forever.
+**WARNING**: Будьте осторожны, как только наш **Pod** удален, он исчезнет навсегда.
+
+`watch kubectl get deployments,pods,services`{{execute}}
+
+`watch kubectl get pods,services`{{execute}}
+
+Используйте это ```clear```{{execute interrupt}} чтобы выйти из режима наблюдения или нажмите <kbd>Ctrl</kbd>+<kbd>C</kbd>.
