@@ -8,6 +8,8 @@
 
 `kubectl get pods --selector=run=hello`{{execute}}
 
+`watch kubectl get pods,services`{{execute}}
+
 Удалить один из подов.
 
 `kubectl delete --now pod $(kubectl get pods --selector=run=hello | sed '2!d' | cut -d' ' -f1)&`{{execute}}

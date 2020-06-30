@@ -25,4 +25,8 @@
 
 `watch kubectl get pods,services`{{execute}}
 
-При этом **application** работает, но оно недоступно. Service необходим для доступа.
+Используйте это ```clear```{{execute interrupt}} чтобы выйти из режима наблюдения или нажмите <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+
+При этом **application** работает, но оно недоступно. **Service** необходим для доступа.
+
+![Katacoda Logo](./assets/Service.png)
