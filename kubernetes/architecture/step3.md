@@ -14,12 +14,18 @@
 
 `kubectl -n kube-system logs kube-apiserver-master`{{execute}}
 
+или (смотрите вывод `watch kubectl get pods,services`{{execute}}  )  
+
 `kubectl -n kube-system logs kube-apiserver-controlplane`{{execute}}
 
 > Хотите смотреть логи в реальном времени? 
 > Добавьте **-f** к команде для непрерывного потока **continous stream**.
 
 `kubectl -n kube-system logs kube-apiserver-controlplane -f`{{execute}}
+
+или (смотрите вывод `watch kubectl get pods,services`{{execute}}  )  
+
+`kubectl -n kube-system logs kube-apiserver-master -f`{{execute}}
 
 > Нажмите `ctrl + c`, чтобы остановить.  `ctrl + c`{{execute}}
 
