@@ -8,7 +8,7 @@
 
 Вот два подхода.
 
-1. Точный **surgical way**  с помощью команды **set image**. Это изменит версию **image** для контейнера в каждом Поде.
+> Точный **surgical way**  с помощью команды **set image**. Это изменит версию **image** для контейнера в каждом Поде.
 
 `kubectl set image deployment/hello hello=k8s.gcr.io/echoserver:1.10 --all`{{execute}}
 
@@ -16,21 +16,21 @@
 
 `kubectl describe pod hello | grep "Image:"`{{execute}}
 
-2. Another way is to modify the YAML then apply the change with the _update_ command.
+> Другой способ - изменить **YAML**, а затем применить изменение с помощью команды **update**.
 
-Restore the Pod's container 3
-image the version back to the original version
+Восстановите **Pod's container 3**  
+**image the version** обратно в исходную версию
 
 `kubectl replace -f echoserver.yaml`{{execute}}
 
-Verify the version has been restored.
+Убедитесь, что версия была восстановлена **restored**.
 
 `kubectl describe pod hello | grep "Image:"`{{execute}}
 
-Then, look up the resource, change the image version with SED, then pipe modified stream to the _replace_ command.
+Затем найдите **resource**, измените **image version** с помощью **SED**, затем передайте измененный **pipe** в команду **kubectl replace**.
 
 `kubectl get deployment hello -o yaml | sed 's/\(echoserver\):.*$/\1:1.10/' | kubectl replace -f -`{{execute}}
 
-Verify the version has been upgraded using the _replace_ command.
+Убедитесь, что версия была обновлена с помощью команды **replace**.
 
 `kubectl describe pod hello | grep "Image:"`{{execute}}
