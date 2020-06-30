@@ -18,7 +18,7 @@
 
 > Другой способ - изменить **YAML**, а затем применить изменение с помощью команды **update**.
 
-Восстановите **Pod's container 3**  
+Восстановите **Pod's container 3**    
 **image the version** обратно в исходную версию
 
 `kubectl replace -f echoserver.yaml`{{execute}}

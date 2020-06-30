@@ -1,21 +1,51 @@
-Kubernetes is a system made up of many individual components. Each component is responsible for one thing, and together they form a functional system.
+Минимальный набор компонентов для кластера **Kubernetes**:
 
-The minimum set of components for a Kubernetes cluster is:
+- **apiserver**: Интерфейс **API** для создания, редактирования, обновления, удаления и просмотра объектов в кластере **Kubernetes**.
+- **controller-manager**: **Runs control loops** которые отслеживают состояние кластера **cluster state** и выполняют необходимые действия **actions**
+- **kube-scheduler**: Responsible for scheduling pods to nodes. Отвечает за **scheduling** подов на ноды.
+- **etcd**: Хранилище ключей-значений **key-value**, в котором Kubernetes хранит состояние кластера **cluster state.**
+- **kubelet**: **agent** - агент который работает на каждой ноде, и отвечает за управление жизненными циклами подов **pod lifecycles**.
+- **CoreDNS**: Предоставляет **DNS resolution** для кластера
 
-- `apiserver`: The API interface to create, edit, update, delete and view objects in the Kubernetes cluster.
-- `controller-manager`: Runs control loops which monitor cluster state and perform the necessary actions to rectify any variations.
-- `kube-scheduler`: Responsible for scheduling pods to nodes.
-- `etcd`: A key-value storage where Kubernetes stores cluster state.
-- `kubelet`: The agent running on each node and is responsible for managing pod lifecycles.
-- `CoreDNS`: Provides DNS resolution to the cluster.
-
-We can view these components by looking at the Pods running in the `kube-system` namespace:
+Мы можем просмотреть эти компоненты, посмотрев **Pod**, работающий в пространстве имен **kube-system**
 
 `kubectl get pods --all-namespaces`{{execute}}
 
-We can see that the `kube-apiserver`, `kube-controller-manager`, `kube-proxy`, `kube-scheduler`, and `etcd-master` are all running in Kubernetes. In addition, we see `coredns` (provides DNS resolution) and `weave-net` (the CNI plugin) running as well.
+Мы видим, что **kube-apiserver**, **kube-controller-manager**, **kube-proxy**, **kube-scheduler** и **etcd-master** работают в Kubernetes. Кроме того, мы видим работающие **coredns** (обеспечивает разрешение **DNS**) и **weave-net **(плагин **CNI**).
 
-> The learning environment uses the `weave-net` container networking interface (CNI). There are many alternatives available,
-> such as Calico, Cilium, and cloud provider specific implementation in Azure and Google.
+> В учебной среде используется контейнерный сетевой интерфейс **weave-net** (**CNI**). Хотя, есть много доступных альтернатив,
+> такие как **Calico**, **Cilium** и облачная провайдерская реализация в **Azure** и **Google**.
 
-The `kube-system` namespace is a special namespace reserved for Kubernetes system components. Normally, the master node does not allow execution of Pods with the exception of those responsible for the operation of the cluster (typically, those running in `kube-system`).
+Пространство имен **kube-system** - это специальное пространство имен, зарезервированное для компонентов системы **Kubernetes**. Обычно главный узел не разрешает выполнение Подов **not allow execution of Pods** , за исключением тех, кто отвечает за работу кластера (как правило, те, которые работают в **kube-system)**.
+
+![Katacoda Logo](./assets/Kubernetes2.png)
+
+## Компоненты Kubernetes
+
+При развёртывании Kubernetes вы имеете дело с кластером.
+
+Кластер **Kubernetes cluster** состоит из набор машин, так называемые узлы, которые запускают контейнеризированные приложения. Кластер имеет как минимум один рабочий узел.
+
+В рабочих узлах размещены поды, являющиеся компонентами приложения. Плоскость управления управляет рабочими узлами и подами в кластере. В промышленных средах плоскость управления обычно запускается на нескольких компьютерах, а кластер, как правило, развёртывается на нескольких узлах, гарантируя отказоустойчивость и высокую надёжность.
+
+На этой странице в общих чертах описывается различные компоненты, необходимые для работы кластера Kubernetes.
+
+Ниже показана диаграмма кластера Kubernetes со всеми связанными компонентами.
+
+![Katacoda Logo](./assets/components-of-kubernetes.png)
+
+[Компоненты Kubernetes](https://kubernetes.io/ru/docs/concepts/overview/components/)
+
+## Плоскость управления компонентами
+
+Компоненты панели управления отвечают за основные операции кластера (например, планирование), а также обрабатывают события кластера (например, запускают новый под , когда поле **replicas** развертывания не соответствует требуемому количеству реплик).
+
+Компоненты панели управления могут быть запущены на любой машине в кластере. Однако для простоты сценарии настройки обычно запускают все компоненты панели управления на одном компьютере и в то же время не позволяют запускать пользовательские контейнеры на этом компьютере. Смотрите страницу Создание высоконадёжных кластеров для примера настройки нескольких ведущих виртуальных машин.
+
+## kube-apiserver
+
+Сервер API — компонент Kubernetes панели управления , который представляет API Kubernetes. API-сервер — это клиентская часть панели управления Kubernetes
+
+Основной реализацией API-сервера Kubernetes является [kube-apiserver](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/). **kube-apiserver** предназначен для горизонтального масштабирования, то есть развёртывание на несколько экземпляров. Вы можете запустить несколько экземпляров **kube-apiserver** и сбалансировать трафик между этими экземплярами.
+etcd
+
