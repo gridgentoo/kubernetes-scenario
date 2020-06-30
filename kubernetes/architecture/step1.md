@@ -18,7 +18,7 @@
 
 Пространство имен **kube-system** - это специальное пространство имен, зарезервированное для компонентов системы **Kubernetes**. Обычно главный узел не разрешает выполнение Подов **not allow execution of Pods** , за исключением тех, кто отвечает за работу кластера (как правило, те, которые работают в **kube-system)**.
 
-![Katacoda Logo](./assets/Kubernetes2.png)
+![Kubernetes2](./assets/Kubernetes2.png)
 
 ## Компоненты Kubernetes
 
@@ -32,7 +32,7 @@
 
 Ниже показана диаграмма кластера Kubernetes со всеми связанными компонентами.
 
-![Katacoda Logo](./assets/components-of-kubernetes.png)
+![components-of-kubernetes](./assets/components-of-kubernetes.png)
 
 [Компоненты Kubernetes](https://kubernetes.io/ru/docs/concepts/overview/components/)
 

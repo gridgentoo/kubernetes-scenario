@@ -1,16 +1,18 @@
-When you first install Kubernetes, you will need a `kubeconfig` file to access the cluster.  This file indicates how to connect to the API server, and which credential to use when authenticating.
+При первой установке **Kubernetes** вам понадобится файл **kubeconfig** для доступа к кластеру. Этот файл указывает, как подключиться к серверу **API** и какие учетные данные **credential** использовать при аутентификации.
 
-It is typically stored in `~/.kube/config`, but can also be defined as a command line argument or the `KUBECONFIG` environment variable.
+![Kubernetes2](./assets/kubeconfig.jpg)
 
-Let's view our `kubeconfig` file:
+Обычно он хранится в **~/.kube/config**, но также может быть определен как аргумент командной строки или переменная окружения **KUBECONFIG**.
+
+Давайте посмотрим наш файл **kubeconfig**:
 
 `cat ~/.kube/config`{{execute}}
 
-## Structure of Kubeconfig
+## Структура Kubeconfig
 
 ### `clusters`
 
-This section defines the Kubernetes cluster. It indicates the URL to access the API server and the SSL certificate for validation.
+Этот секция определяет кластер **Kubernetes**. Указывает **URL**-адрес для доступа к серверу **API** и сертификат **SSL** для валидации.
 
 > Often in Kubernetes YAML configuration, you will find values are Base64 encoded. This allows arbitrary data to be represented in plain text.
 
