@@ -1,24 +1,30 @@
-Let's go back to the original command you ran.
+Давайте вернемся к исходной команде, которую вы выполнили.
 
 `kubectl get --raw /`{{execute}}
 
-Notice there are duplicate paths that vary only by the version. Kubernetes supports multiple versions of APIs. The resources behind these API paths are not versioned. Only the APIs, not the resources, are versioned quite intentionally.
+Обратите внимание, что есть **duplicate paths**, которые зависят только от версии. **Kubernetes** поддерживает несколько версий **API**. 
+**resources** за этими путями API не имеют версий. Только **API**-интерфейсы, а не **resources**, созданы специально для версий.
 
-There is another way to get a consolidated list of versions.
+Есть еще один способ получить сводный список версий.
 
 `kubectl api-versions`{{execute}}
 
 These are all the versions behind the API root path `/apis/`. In the version list most of the lines are composed of two parts separated with a slash (/). The left token is the API Group and the right side is the version in that group. Such as
 
-`batch/v1` and `batch/v1beta`
+Это все версии корневого пути API root path `/apis/`.
 
-If you look back at the api-resource you will notice two resources appeared in that `batch` API Group.
+В списке версий большинство строк состоит из двух частей, разделенных косой чертой (/). 
+Левый токен **left token** - это группа API, а правая сторона - версия в этой группе **version in that group** . Такие как
+
+**batch/v1** and **batch/v1beta**
+
+Если вы **look back** на **api-resource**, то заметите, что в этой группе **batch API Group** появилось два ресурса.
 
 `kubectl api-resources | grep jobs`{{execute}}
 
-Notice CronJobs and Jobs appear in this list. This means you can use the api-resource of `batch/v1` or `batch/v1beta` if those are both listed as versions for batch.
+Обратите внимание, что **CronJobs** и **Jobs** появляются в этом списке. Это означает, что вы можете использовать api-ресурс **batch/v1** или **batch/v1beta**, если оба они указаны в качестве версий для **batch**.
 
-This means that when you define a Job then you can declare either of these for a Job definition.
+Это означает, что когда вы определяете задание, вы можете **declare** любой из них для определения **Job definition**.
 
 ```
 apiVersion: batch/v1
@@ -30,11 +36,12 @@ apiVersion: batch/v1beta
 kind: Job
 ```
 
-At the end of the version list there is a simple line of `v1`. This is the version for all the other core resources that are not part of a API group, like a Pod.
+В конце списка версий есть простая строка **v1**. Это версия для всех других основных ресурсов, которые не являются частью группы **API**, например **Pod**.
 
 ```
 apiVersion: v1
 kind: Pod
 ```
 
-As new versions are Kubernetes are rolled out these old versions like beta and alpha will be deprecated and eventually be removed. When upgrading to new versions of Kubernetes, a review of your resource versions should be understood to assess the update impact.
+По мере появления новых версий **Kubernetes** эти старые версии, такие как бета и альфа, будут устаревшими **deprecated** и в конечном итоге будут удалены. 
+При обновлении до новых версий **Kubernetes** следует понимать обзор версий вашего ресурса, чтобы оценить влияние обновления **update impact**.
