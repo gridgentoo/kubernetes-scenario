@@ -9,9 +9,7 @@
 
 `kubectl api-versions`{{execute}}
 
-These are all the versions behind the API root path `/apis/`. In the version list most of the lines are composed of two parts separated with a slash (/). The left token is the API Group and the right side is the version in that group. Such as
-
-Это все версии корневого пути API root path `/apis/`.
+Это все версии корневого пути API root path **/apis/**.
 
 В списке версий большинство строк состоит из двух частей, разделенных косой чертой (/). 
 Левый токен **left token** - это группа API, а правая сторона - версия в этой группе **version in that group** . Такие как
