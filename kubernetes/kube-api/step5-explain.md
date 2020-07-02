@@ -1,21 +1,25 @@
-The `Explain` command is a great way to understand the defined structure of a resource or kind. This is accomplish through `kubectl explain <kind>`.
+Команда **Explain** - отличный способ понять определенную структуру **resource** или **kind**. Это достигается с помощью **kubectl explain <kind>.**
 
 `kubectl explain ns`{{execute}}
 
-Almost all resources at this high-level report roughly the same apiVersion, kind, metadata, spec, status information. To get the full structure of this kind then use the `--recursive` flag.
+Почти все ресурсы этого высокоуровневого **high-level report** примерно одинаковы: **apiVersion**, **kind**, **metadata**, **spec**, **status information**. Чтобы получить полную структуру такого рода, используйте флаг **--recursive**.
 
 `kubectl explain ns --recursive`{{execute}}
 
-Notice the status field `phase`. Let's display that as an output.
+Обратите внимание на поле состояния **phase**. Давайте отобразим это как **output**
 
 `kubectl get ns -o custom-columns=NAME:.metadata.name,PHASE:.status.phase`{{execute}}
 
-`Explain` is useful to help understand the structure of types deployed in Kubernetes. It comes into even more use when the resource are custom and provided by other Operators outside the Kubernetes documentation.
+**Explain** полезен для понимания структуры типов **types**, развернутых в Kubernetes. Он становится еще более полезным, когда ресурс настраивается и предоставляется другими операторами за пределами документации **Kubernetes**.
 
 ## Describe
 
-Don't confuse the `Explain` command with the `Describe` command. While `Explain` reports on the type of the resource, the `Describe` reports the details of the instance of a resource. It's easy to confuse the two, so try the `Describe` command on the `kube-system` namespace to see the difference.
+Не путайте команду **Explain** с командой **Describe**. 
+В то время как **Explain** сообщает о типе ресурса, **Describe** сообщает подробности экземпляра ресурса **instance of a resource**. 
+
+Их легко перепутать, поэтому попробуйте команду **Describe** в пространстве имен **kube-system**, чтобы увидеть разницу.
 
 `kubectl describe namespace kube-system`{{execute}}
 
-Notice this is requesting the details of the specific instance of a namespace called kube-system. This is different than the `Explain` command that is reporting the aspects of the resource type.
+Обратите внимание, что запрашивается информация о **specific instance** пространства имен, называемого **kube-system**. 
+Это отличается от команды **Explain**, которая сообщает об аспектах типа ресурса.
