@@ -1,10 +1,13 @@
-Issuing commands directly from the command line is great for quick inspection, but for production systems, repeatability is very important. To ensure repeatability, Kubernetes object specification files are used. We generally call these PodSpec or Manifest files.
 
-Like all Kubernetes objects, Pods can be described with either YAML or JSON syntax. Kubernetes provides easier to use YAML to describe objects, but uses the JSON format internally for all objects.
+Выдача команд непосредственно из командной строки отлично подходит для быстрой проверки **inspection**, но для **production systems** повторяемость очень важна. 
+Для обеспечения повторяемости используются файлы спецификации объектов **Kubernetes**. Мы обычно называем эти файлы **PodSpec** или **Manifest**.
 
-> **Remember, YAML is extremely sensitive to spacing**
+Как и все объекты **Kubernetes**, Поды могут быть описаны с использованием синтаксиса **YAML** или **JSON**. 
+**Kubernetes** предоставляет более простое использование **YAML** для описания объектов, но использует формат **JSON** для всех объектов.
 
-Here is an example of a simple NGINX pod in both formats:
+> **Помните, YAML чрезвычайно чувствителен к spacing**
+
+Вот пример простого модуля NGINX в обоих форматах:
 
 #### JSON
 
@@ -45,7 +48,7 @@ spec:
     - containerPort: 80
 ```
 
-Viewing the PodSpec as YAML is generally easier to read/understand. In this case, we can see a few things that our PodSpec is configuring:
+Просмотр **PodSpec** как **YAML**, как правило, легче **read/understand**. В этом случае мы можем увидеть несколько вещей, которые конфигуриет наш PodSpec:
 
 - *apiVersion*: the API version of the object, `v1` means production ready. There is also `alpha` and `beta`.
 - *kind*: defines the type of object
