@@ -4,17 +4,18 @@
 
 ## Lessons Learned ##
 
-With these steps you have learned:
+С помощью этих шагов вы узнали:
 
-- &#x2714; how to access the API via `kubectl`,
-- &#x2714; how to introspect objects in the cluster via the API,
-- &#x2714; how to access the cluster API locally through a Proxy,
-- &#x2714; how to reference api-resources and api-versions
-- &#x2714; how to `Explain` and `Describe` resources.
+- &#x2714; как получить доступ к API через **kubectl**,
+- &#x2714; как исследовать **introspect** объекты в кластере через **API**,
+- &#x2714; как получить доступ к **API** кластера локально через **Proxy**,
+- &#x2714; как ссылаться на **api-resources** и **api-versions**
+- &#x2714; как **Explain** и **Describe** ресурсы.
 
-## Special Thank You
+## Особая благодарность
+Кену Сипе, который вдохновил этот сценарий из своих лабораторий, найденных здесь.
 
-To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** as he inspired this scenario from [his labs found here](https://github.com/kensipe/k8s-ext-workshop).
+To **[Ken Sipe](https://www.linkedin.com/in/kensipe/)** который вдохновил этот сценарий из своих лабораторий,[his labs found here](https://github.com/kensipe/k8s-ext-workshop).
 
 ## References ##
 
