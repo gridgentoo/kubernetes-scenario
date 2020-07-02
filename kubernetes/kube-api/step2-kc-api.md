@@ -1,21 +1,25 @@
-Try the following to reveal all the API resources. gdgfggadgf
+Попробуйте следующее, чтобы выявить все ресурсы API.
 
 `kubectl get --raw /`{{execute}}
 
-In this list is namespaces, so request the namespaces.
+В этом списке есть пространства имен, поэтому запросите **namespaces**.
 
 `kubectl get --raw /api/v1/namespaces`{{execute}}
 
-Once of the namespaces is called `default`, so request details on the default namespace.
+Один из пространств имен называется **default**, поэтому запросите информацию о **default namespace**.
 
 `kubectl get --raw /api/v1/namespaces/default`{{execute}}
 
-There is a common Linux tool called `jq`. jq is like sed for JSON data. Using `jq` can make the JSON output from `kubectl` much easier to read with syntax highlighting.
+Существует распространенный инструмент Linux под названием **jq**. **jq** похож на **sed** для данных JSON. 
+
+Использование **jq** может значительно облегчить чтение вывода **JSON** из **kubectl** с подсветкой синтаксиса.
 
 `kubectl get --raw /api/v1/namespaces/default | jq .`{{execute}}
 
-There is also a Python json.tool.
+Существует также **Python json.tool**.
 
 `kubectl get -v=9 --raw /api/v1/namespaces/default | python -m json.tool`{{execute}}
 
-Notice in the last command we added a [verbosity request](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-output-verbosity-and-debugging) `-v=9`. With it set to level 9 (highest) we get a bit more insight into how the `kubectl` command is obtaining the returned information.
+Обратите внимание, что в последней команде мы добавили  [verbosity request](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-output-verbosity-and-debugging) `-v=9`. 
+
+Установив уровень 9 (самый высокий), мы получим немного больше информации о том, как команда **kubectl** получает возвращаемую информацию.
