@@ -1,17 +1,17 @@
-Let's get a list of api-resources.
+Давайте получим список **API**-ресурсов.
 
 `kubectl api-resources`{{execute}}
 
-Resources can be either scoped to the cluster or associated with a Namespace. Most resources are associated with Namespaces, however, there are some cluster scope resources that do not make sense to be associated with a Namespace. List the cluster scoped resources.
+Ресурсы могут быть либо ограничены кластером, либо связаны с пространством имен. Большинство ресурсов связаны с пространствами имен, однако, есть некоторые ресурсы области кластера, которые не имеют смысла связываться с пространством имен. Список ресурсов области действия кластера.
 
 `kubectl api-resources --namespaced=false`{{execute}}
 
-As you can see resources like `PersistentVolumes` are scoped at the cluster level and not associated with namespaces.
+Как видите, ресурсы типа **PersistentVolumes** ограничены на уровне кластера и не связаны с пространствами имен.
 
-In the list above, see if you can find the abbreviated name (`SHORTNAME`) for `PodSecurityPolicy`. You can use these short names when using the `kubectl` tool.
+В приведенном выше списке посмотрите, можете ли вы найти сокращенное имя (**SHORTNAME**) для **PodSecurityPolicy**. Вы можете использовать эти короткие имена при использовании инструмента **kubectl**.
 
 `kubectl get ns`{{execute}}
 
-Most of the api-resources are grouped. For instance, the two job types are grouped in the batch group
+Большинство **api**-ресурсов сгруппированы. Например, два типа заданий сгруппированы в **batch group**
 
 `kubectl api-resources --api-group=batch`{{execute}}
