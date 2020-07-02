@@ -1,4 +1,4 @@
-Try the following to reveal all the API resources.
+Try the following to reveal all the API resources. gdgfggadgf
 
 `kubectl get --raw /`{{execute}}
 
