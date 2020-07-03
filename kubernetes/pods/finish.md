@@ -1,9 +1,9 @@
-In this lesson, we learned about Kubernetes Pods:
+В этом уроке мы узнали о Kubernetes Pods:
 
-* Pods are the simplest compute unit in Kubernetes.
-* Pods can be created, and deleted from the command line.
-* Using Pod manifest files is best for repeatability in production environments.
+* **Pods** - самая простая вычислительная единица в **Kubernetes**.
+* **Pods** могут быть созданы и удалены из **command line**.
+* Использование файлов манифеста **Pod manifest**  лучше всего подходит для повторяемости в **production environments**..
 
-Pods are **fundamental** to Kubernetes, but we won't often work with Pods directly.
+Поды **fundamental** для **Kubernetes**, но мы не будем часто напрямую работать с Подами.
 
-In the following lessons, we will learn about higher-order Kubernetes objects that abstract the concept of a *Pod*.
+В следующих уроках мы узнаем об объектах высшего порядка **Kubernetes**, которые абстрагируют понятие **Pod** .
