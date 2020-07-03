@@ -1,56 +1,59 @@
-Before we work with Deployments, we'll go over the basics of ReplicaSets. A ReplicaSet will ensure that the desired number of replicas of each Pod are up and running. Any time a Pod goes down, the ReplicaSet will deploy a new one to maintain high availability.
+Прежде чем мы начнем работать с **Deployments**, мы пройдемся по основам **ReplicaSets**. Набор **ReplicaSet** гарантирует, что нужное количество реплик каждого **Pod** запущено и работает. Каждый раз, когда **Pod** выходит из строя **down**, **ReplicaSet** будет развертывать новый, чтобы деплоить высокую доступность **high availability**.
 
-Now inspect the file `cat ./resources/vue-rs.yaml`{{execute}}.
+Теперь проинспектируйте файл `cat ./resources/resources/vue-rs.yaml`{{execute}}.
 
-It should look familiar to the `Pod` resource. We do have a few additions. These additions are what configure our ReplicaSet.
+Это должно выглядеть знакомо для ресурса **Pod**. У нас есть несколько дополнений. Эти дополнения позволяют настроить наш **ReplicaSet**.
 
-The biggest additions are `replicas: 3` and `selector`. The first component configures the total number of replicas of the Pod should be active at all times. The `selector` matches a set of constraints to identify Pods to represent. In this case, the ReplicaSet will track Pods with the label `app=vue`.
+Самыми большими дополнениями являются **replicas: 3** и **selector**. Первый компонент настраивает общее количество реплик **Pod**, которые должны быть активны всегда. **selector** соответствует набору ограничений для идентификации **Pods** для представления. В этом случае **ReplicaSet** будет отслеживать блоки с меткой **app=vue**.
 
-We can deploy this ReplicaSet the same way we did Pods:
+Мы можем развернуть этот **ReplicaSet** так же, как мы сделали **Pods**:
 
-`kubectl create -f ./resources/vue-rs.yaml`{{execute}}
+`kubectl create -f ./resources/resources/vue-rs.yaml`{{execute}}
 
-Now watch Kubernets create 3 `vue` Pods based on the specification in the `vue-rs.yaml` file.
+Теперь посмотрим, как **Kubernetes** создает  **3 vue Pods**  на основе спецификации в файле **vue-rs.yaml**.
 
 `kubectl get po --watch`{{execute}}
 
-Wait for the pods to be created. You can press `CTRL-C` to stop watching.
+Подождите, пока будут созданы Поды. Вы можете нажать `CTRL-C`, чтобы остановить просмотр.
 
-Inspect the `ReplicaSet`.
+Проинспектируйте `ReplicaSet`.
 
-NOTE: `rs` is shorthand for `ReplicaSet`
+> ПРИМЕЧАНИЕ: `rs` сокращение от `ReplicaSet`
 
 `kubectl describe rs vue-rs`{{execute interrupt}}
 
-Now modify the `ReplicaSet` to instantiate 5 pods by changing the `replicas: 3` value.
+Теперь измените `ReplicaSet`, чтобы создать 5 подов путем изменения значения `replicas: 3`.
 
 `kubectl edit rs vue-rs`{{execute}}
 
-With `edit`, you can live edit the configuration of the resource in Kubernetes. However, it will not edit the underlying Manifest file representing the object.
+С помощью **edit** вы можете в режиме реального времени **live edit** редактировать конфигурацию ресурса в **Kubernetes**. 
+Однако он не будет редактировать основной файл манифеста **Manifest**, представляющий объект.
 
 # Scaling
 
-In the last step you scaled up the `vue-rs` ReplicaSet to 5 pods by editing the spec file. Those changes were automatically applied.
+На последнем шаге мы увеличиваете Реплику `vue-rs` до 5 подов, редактируя файл спецификации **spec file**. Эти изменения были применены автоматически.
 
 # Manual Scaling
 
-To manually scale a ReplicaSet up or down, use the **`scale`** command. Scale the `vue` pods *down* to 2 with the command:
+Чтобы вручную масштабировать **ReplicaSet** вверх или вниз, используйте команду **`scale`**. Уменьшите число **vue** подов, до 2 с помощью команды:
 
 `kubectl scale rs vue-rs --replicas=2`{{execute}}
 
-You can verify that 3 of the 5 `vue` instances have been terminated:
+Вы можете проверить, что 3 из 5 экземпляров **vue** были завершены **terminated**:
 
 `kubectl get pods`{{execute}}
 
-or watch them until they finish
+или наблюдать их, пока они не закончатся
 
 `kubectl get po --watch`{{execute}}
 
-Of course, the ideal way to do this is to update our Manifest to reflect these changes.
+Конечно, идеальный способ сделать это - обновить наш манифест **Manifest**, чтобы отразить эти изменения.
 
 # AutoScaling
 
-Kubernetes provides native autoscaling of your Pods. However, `kube-scheduler` might not be able to schedule additional Pods if your cluster is under high load. In addition, if you have a limited set of compute resources, autoscaling Pods can have severe consequences, unless your worker nodes can automatically scale as well (e.g. AWS autoscaling groups).
+**Kubernetes** обеспечивает автоматическое масштабирование ваших подов. Однако, **kube-scheduler** может быть не в состоянии запланировать дополнительные Поды, если ваш кластер находится под высокой нагрузкой. 
+
+Кроме того, если у вас ограниченный набор вычислительных ресурсов **limited set**, автоматическое масштабирование подов **autoscaling Pods** может иметь серьезные последствия, если только ваши **worker nodes** не могут автоматически масштабироваться как (например, группы автоматического масштабирования **AWS**).
 
 ```yaml
 apiVersion: autoscaling/v1
@@ -66,24 +69,31 @@ spec:
   targetCPUUtilizationPercentage: 50
 ```
 
-To see all the `autoscale` options:
+Чтобы увидеть все параметры **autoscale**:
 
 `kubectl autoscale --help`{{execute interrupt}}
 
-It is also possible to automatically generate a config file, which we've seen before. The command to output a YAML config looks like this:
+Также возможно автоматически генерировать файл конфигурации **config file**, который мы видели ранее. 
+Команда для вывода **output a YAML config** выглядит следующим образом:
 
 `kubectl autoscale rs vue-rs --max=10 --min=3 --cpu-percent=50 --dry-run=true -o=yaml`{{execute}}
 
 Note `--dry-run=true`, this means that Kubernetes will not apply the desired state changes to our cluster. However, we provided it with `-o=yaml`, which means output the configuration as YAML. This lets us easily generate a Manifest.
 
-*Tip `--dry-run` with `-o=yaml` is an excellent way to generate configurations!*
+> Обратите внимание на **--dry-run=true**, это означает, что **Kubernetes** не будет применять требуемые изменения состояния к нашему кластеру. 
+> Однако мы предоставили ему **-o=yaml**, что означает вывод конфигурации в виде **YAML**. Это позволяет нам легко генерировать манифест **Manifest**.
 
-We've provided this content in `./resources/hpa-vue.yaml`.
 
-Now actually apply the configuration: `kubectl create -f ./resources/hpa-vue.yaml`{{execute}}
+* Совет:  **-dry-run** с **-o=yaml** - отличный способ создания конфигураций! *
 
-At this point, we have a ReplicaSet managing the vue Pods, with Horizontal Pod Autoscaling configured. Let's clean up our environment:
+Мы предоставили этот контент в `nano ./resources/resources/hpa-vue.yaml`{{execute}}
 
-`kubectl delete -f ./resources/hpa-vue.yaml`{{execute}}
+Теперь фактически примените конфигурацию:: `kubectl create -f ./resources/resources/hpa-vue.yaml`{{execute}}
 
-`kubectl delete -f ./resources/vue-rs.yaml`{{execute}}
+
+На данный момент у нас есть **ReplicaSet**, управляющий **vue Pod**, с настроенным горизонтальным автоматическим масштабированием **Horizontal Pod Autoscaling**. 
+Давайте очистим нашу окружающую среду **environment**:
+
+`kubectl delete -f ./resources/resources/hpa-vue.yaml`{{execute}}
+
+`kubectl delete -f ./resources/resources/vue-rs.yaml`{{execute}}
