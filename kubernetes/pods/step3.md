@@ -1,23 +1,23 @@
-We've already seen how to get basic information from a Pod, using `kubectl get` and `kubectl describe`. Now, let's start running commands inside Pods to improve our debugging capabilities.
+Мы уже видели, как получить основную информацию из **Pod**, используя **kubectl get** и **kubectl describe**.
+Теперь давайте начнем запускать команды внутри **Pods**, чтобы улучшить наши возможности отладки **debugging**.
 
 ## Execute Commands
 
-We can use Kubectl exec to execute a command inside the Pod. The format is:
+Мы можем использовать **Kubectl exec** для выполнения команды внутри **Pod**. Формат такой:
 
 `kubectl exec [OPTIONS] pod-name -- [COMMAND]`
 
-For example, to list the enviroment variable in the running Vue.js pod:
+Например, чтобы получить список переменных среды **enviroment variable** в запущенном поде **Vue.js**:
 
 `kubectl exec vue -- env`{{execute}}
 
-or to run a shell inside a pod:
+или запустить **shell** внутри пода:
 
 `kubectl exec -it vue -- /bin/sh`{{execute}}
 
-Now that we have a shell inside our Vue.js Pod, what's going on? The Vue.js Pod only has a single container, so we have a shell in that container. Why don't we explore around a little bit. We can look at environment variables, processes, the filesystem, etc.
+Теперь, когда у нас есть **shell** внутри нашего **Vue.js Pod**, что происходит? **Pod Vue.js** имеет только **single container**, поэтому у нас есть **shell** в этом контейнере. Почему бы нам не изучить его немного? Мы можем посмотреть на **environment variables**, **processes**, **filesystem**, etc.
 
-When you really need to debug a problem, this is how you will do it.
+Когда вам действительно нужно отладить проблему, вот как вы это сделаете.
 
-Use `exit` to exit the shell running in the pod.
+Используйте **exit** для выхода из **shell**, запущенного в поде.
 
-*NOTE*: -t and -i, they specify interactive and allocate a TTY

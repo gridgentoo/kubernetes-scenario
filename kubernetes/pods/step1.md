@@ -47,6 +47,8 @@ nginx     1/1       Running   0          10s
 
 `kubectl describe pod nginx | grep IP | awk '{print $2}'`{{execute}}
 
+`kubectl describe pod nginx | grep Port | awk '{print $2}'`{{execute}}
+
 Это получит IP-адрес нашего **nginx Pod**. В общем, вы не будете создавать **Pod** с помощью **CLI**. 
 Однако понимание того, как получить от них информацию, чрезвычайно важно.
 
@@ -62,7 +64,13 @@ nginx     1/1       Running   0          10s
 
 `docker container ls | grep k8s_nginx`{{execute}}
 
+`docker ps -a | grep k8s_nginx`{{execute}}
+
+docker container inspect k8s_nginx
+
 Давайте проверим этот контейнер с помощью `docker container inspect`{{execute}}, за которым следует имя контейнера. 
+
+Например `docker container inspect k8s_nginx_nginx_default_7c84d1eb-bcef-11ea-ab2e-0242ac110018_0`{{execute}}
 
 Мы уже получили **IP**-адрес Под, поэтому давайте загрузим файлы из **NGINX**, используя **curl**.
 

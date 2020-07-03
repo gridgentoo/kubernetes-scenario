@@ -1,59 +1,61 @@
 # Multi-Container Pods (Sidecar Pattern)
 
-So far, we have been working with a Pod managing a single container. However, some container patterns (sidecar, adapter and ambassador) require more than one running container inside a single Pod.
+До сих пор мы работали с **Pod**, управляющим одним контейнером **single container**. Однако для некоторых шаблонов контейнеров **container patterns** (**sidecar**, **adapter** и **ambassador**) требуется более одного работающего контейнера в одном Поде.
 
-NOTE: the **sidecar** container pattern is a very common practice for logging utilities, sync services, watchers, and monitoring agents.
+ПРИМЕЧАНИЕ: Паттерны контейнера **sidecar** является очень распространенной практикой для **logging utilities**, **sync services**, **watchers**, и **monitoring agents**.
 
-## Launch a Multi-Container Pod
+## Запустить Multi-Container Pod
 
-Generally you will want to launch pods into your K8S cluster from a file, since infrastructure as code promotes transparency and reproducibily.
+Обычно мы запускаем поде в кластере **K8S** из файла, поскольку **infrastructure as code** обеспечивает прозрачность **transparency** и воспроизводимость **reproducibily**.
 
-Examine the `./resources/multi-container.yaml` file in the resource browser.
+Изучите файл `nano ./resources/resources.multi-container.yaml`{{execute}} в браузере ресурсов.
 
-This file specifies a simple Alpine Linux container and an NGiNX container. Start a pod by deploying a new NGiNX container using the **create** command.
+Этот файл определяет простой контейнер **Alpine Linux** и контейнер **NGiNX.** Запустите под, развернув новый контейнер **NGiNX** с помощью команды **create**
 
-`kubectl create -f ./resources/multi-container.yaml`{{execute}}
+`kubectl create -f ./resources/resources/multi-container.yaml`{{execute}}
 
-Verify that the new `pod-with-sidecar` pod is running:
+Убедитесь, что новый под **pod-with-sidecar** запущен:
 
 `kubectl get pods`{{execute}}
 
-It may take a few seconds for the pod `STATUS` to change from **ContainerCreating** to **Running**.
+Может потребоваться несколько секунд, чтобы под **STATUS** изменился с **ContainerCreating** на **Running**..
 
-You should see output similar to this:
+Вы должны увидеть **output**, похожий на этот:
 
 ```
 NAME               READY     STATUS    RESTARTS   AGE
 pod-with-sidecar   2/2       Running   0          15s
 ```
 
-Now, let's get a little more information:
+Теперь давайте получим, немного больше информации:
 
 `kubectl describe pod pod-with-sidecar`{{execute}}
 
 ## Label the Pod
 
-One or more labels can be applied to a pod. Labels are used to help group different Kubernetes objects together. Apply a label to the sidecar pod:
+Одна или несколько **labels** могут быть применины для пода.
+**Labels** используются, чтобы помочь группировать различные объекты **Kubernetes** вместе. Применить **label** на **sidecar pod**:
 
 `kubectl label pods pod-with-sidecar mycoollabel=awesome`{{execute}}
 
-To show labels on a pod, use the following command:
+Чтобы показать **labels** на поде, используйте следующую команду:
 
 `kubectl get pods --show-labels`{{execute}}
 
-## List all containers running in a pod
+## Список всех контейнеров, работающие в Поде
 
-To show the container names associated with the pod labelled "mycoollabel=awesome":
+Чтобы отобразить имена контейнеров, ассоциированных с подом, помеченным лейблом "mycoollabel=awesome":
 
 `kubectl get pods -l mycoollabel=awesome -o jsonpath={.items[*].spec.containers[*].name}`{{execute}}
 
-You should see the following container names:
+Вы должны увидеть следующие имена контейнеров:
 
 * app-container
 * sidecar-container
 
-## Delete the Pod
+## Удалить Под
 
-Now that we're done, let's delete our pod:
+Теперь, когда мы закончили, давайте удалим наш Под: 
 
 `kubectl delete -f ./resources/multi-container.yaml`{{execute}}
+

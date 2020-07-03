@@ -1,12 +1,17 @@
-Now that we've covered PodSpec files and how to work with Pods on a basic level, it's time to do this from scratch.
 
-Form groups of 2-3 people, and you will put together a PodSpec file to help us configure an application. Here's what you need to do:
+Теперь, когда мы рассмотрели файлы **PodSpec** и как работать с **Pods** на базовом уровне, пришло время сделать это с нуля **from scratch**.
+
+Сформируйте группы из 2-3 человек, и вы соберете файл **PodSpec**, чтобы помочь нам настроить приложение. Вот что вам нужно сделать:
 
 1. Create a PodSpec file: `touch ./resources/nginx-self.yaml`{{execute}}
 2. Fill in the required configuration information to run your Pod (open the file in the editor)
 3. Run the Pod and make sure it works properly
 
-Here is what you'll need to put in your Pod (in addition to other requirements, like *apiVersion*):
+1. Создайте **PodSpec**-файл: `touch ./resources/resources/nginx-self.yaml`{{execute}}
+2. Заполните необходимую информацию о конфигурации для запуска вашего **Pod** (откройте файл в редакторе) `nano ./resources/resources/nginx-self.yaml`{{execute}}
+3. Запустите **Pod** и убедитесь, что он работает правильно
+
+Вот что вам нужно добавить в ваш **Pod** (в дополнение к другим требованиям, таким как **apiVersion**):
 1. **Name of Pod**: `nginx`
 2. **Labels**: `app=nginx`
 3. **Image**: `nginx:alpine`
@@ -14,12 +19,13 @@ Here is what you'll need to put in your Pod (in addition to other requirements, 
 5. **Environment variables**: `user=admin`, `password=root`, `host=katacoda`
 6. **Resource limits**: 1 CPU core, 256 MB of RAM
 
-Once you've created the PodSpec file, save it, and create the Pod: `kubectl apply -f ./resources/nginx-self.yaml`{{execute}}
+После того, как вы создали файл **PodSpec**, сохраните его и создайте **Pod**: `kubectl apply -f ./resources/resources/nginx-self.yaml`{{execute}}
 
-Next, to prove it is working correctly, open up a shell and view the environment variables, and curl the welcome page from your host (http://localhost).
+Затем, чтобы доказать, что он работает правильно, откройте **shell**, просмотрите **environment variables** и c помощью **curl** получите страницу приветствия с вашего хоста (http://localhost).
 
-> *HINT: you might need to install additional software.* `apk --update --no-cache add curl`
+> *СОВЕТ: вам может понадобиться инсталировать дополнительное программное обеспечение. * `apk --update --no-cache add curl`
 
-Exit from the shell and get the logs to make sure everything is working properly.
+Выйдите из **shell** и получите логи, чтобы убедиться, что все работает правильно.
 
-> Bonus question: why shouldn't we be scared that we could easily install new software inside the container as root?
+> Дополнительный вопрос: почему мы не должны бояться, что можем легко установить новое программное обеспечение внутри контейнера от имени пользователя root?
+
