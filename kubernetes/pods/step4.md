@@ -3,10 +3,6 @@
 
 Сформируйте группы из 2-3 человек, и вы соберете файл **PodSpec**, чтобы помочь нам настроить приложение. Вот что вам нужно сделать:
 
-1. Create a PodSpec file: `touch ./resources/nginx-self.yaml`{{execute}}
-2. Fill in the required configuration information to run your Pod (open the file in the editor)
-3. Run the Pod and make sure it works properly
-
 1. Создайте **PodSpec**-файл: `touch ./resources/resources/nginx-self.yaml`{{execute}}
 2. Заполните необходимую информацию о конфигурации для запуска вашего **Pod** (откройте файл в редакторе) `nano ./resources/resources/nginx-self.yaml`{{execute}}
 3. Запустите **Pod** и убедитесь, что он работает правильно
@@ -23,7 +19,7 @@
 
 Затем, чтобы доказать, что он работает правильно, откройте **shell**, просмотрите **environment variables** и c помощью **curl** получите страницу приветствия с вашего хоста (http://localhost).
 
-> *СОВЕТ: вам может понадобиться инсталировать дополнительное программное обеспечение. * `apk --update --no-cache add curl`
+> *СОВЕТ: вам может понадобиться инсталировать дополнительное программное обеспечение. **apk --update --no-cache add curl**
 
 Выйдите из **shell** и получите логи, чтобы убедиться, что все работает правильно.
 
