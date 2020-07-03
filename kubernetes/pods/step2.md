@@ -50,52 +50,57 @@ spec:
 
 Просмотр **PodSpec** как **YAML**, как правило, легче **read/understand**. В этом случае мы можем увидеть несколько вещей, которые конфигуриет наш PodSpec:
 
-- *apiVersion*: the API version of the object, `v1` means production ready. There is also `alpha` and `beta`.
-- *kind*: defines the type of object
-- *metadata*: provides metadata to the object
-- *spec*: the specification defining the containers in the Pod
+- **apiVersion**: the API version of the object, `v1` means production ready. There is also `alpha` and `beta`.
+- **kind**: определяет тип объекта **type of object**
+- **metadata**: предоставляет метаданные для **object**
+- **spec**: спецификация, определяющая контейнеры в Pod
 
-## See a Pod specification
 
-To see the file specification for a running pod, use the following command(s):
+## Посмотреть спецификацию Pod 
 
-**NOTE**: If there are no running pods, start one from the command line:
+Чтобы просмотреть спецификацию файла для работающего модуля **pod**, используйте следующие **command(s):**
+
+**NOTE**: Если запущенных **pods** нет, запустите их из **command line**: 
 
 `kubectl run nginx --image=nginx --port=80 --restart=Never`{{execute}}
 
-To see YAML output:
+Чтобы увидеть **YAML output**:
 
 `kubectl get pod nginx --output=yaml`{{execute}} or `kubectl get pods/nginx -o yaml`{{execute}}
 
-To see JSON output:
+Чтобы увидеть *JSON output*:
 
 `kubectl get pod nginx --output=json`{{execute}} or `kubectl get pods/nginx -o json`{{execute}}
 
-The output reflects the exact arguments that were used to launch the Pod as well as some additional information. This output can be used to create a specification file.
+**Output reflects** отражает точные аргументы, которые использовались для запуска **Pod**, а также некоторую дополнительную информацию. Этот вывод можно использовать для создания файла спецификации.
 
-If you started a new Pod, delete the pod with `kubectl delete pod nginx`{{execute}}.
+Если вы стартовали новый Pod, удалите под с помощью:
 
-## Create a Pod specification file
+`kubectl delete pod nginx`{{execute}}.
 
-Open `resources/vue-complete.yaml` in the editor. It defines a pod called `vue`, with one container.
+## Создайте файл спецификации Pod 
 
-Now that we've got our PodSpec, let's create a Pod from it:
+Откройте **resources/resources/vue-complete.yaml** в редакторе. Он определяет под с именем **vue**, с одним контейнером.
+`nano ./resources/resources/vue-complete.yaml`{{execute}}
 
-`kubectl apply -f ./resources/vue-complete.yaml`{{execute}}
+Теперь, когда у нас есть **PodSpec**, давайте создадим **Pod** из него:
 
-Verify that the new Vue.js pod is running:
+`kubectl apply -f ./resources/resources/vue-complete.yaml`{{execute}}
+
+**Verify** убедитесь, что новый модуль **Vue.js** запущен:
 
 `kubectl get pods`{{execute}}
 
-We can also inspect the Pod:
+Мы также можем осмотреть **Pod**:
 
 `kubectl describe pod vue`{{execute}}
 
-## Configure Pods
+## Сконфигурируем Pods
 
-Of course, this isn't all we can do with a PodSpec file, there is a lot that we can configure.
+Конечно, это не все, что мы можем сделать с файлом **PodSpec**, мы можем многое настроить.
 
-With `resources/vue-complete.yaml` open in your editor, let's add a default command. Add the `command` entry under `image`:
+Открыв в вашем редакторе **resources/resources/vue-complete.yaml**, добавим команду по умолчанию. 
+Добавьте запись **command** под **image**:
 
 `command: ['sh', '-c', 'echo $(env) && sleep 3600']`
 
@@ -117,9 +122,12 @@ spec:
     - containerPort: 80
 ```
 
-We can run `kubectl apply -f resources/vue-complete.yaml`{{execute}} to update this pod. Because certain fields can't be changed after the pod is created, you'll have to remove the pod first (`kubectl delete -f resources/vue-complete.yaml`). This won't be a problem after we learn about deployments.
+Мы можем запустить `kubectl apply -f ./resources/resources/vue-complete.yaml`{{execute}}, чтобы обновить этот Под. 
+
+Поскольку некоторые поля не могут быть изменены после создания модуля, вам необходимо сначала удалить модуль (`kubectl delete -f ./resources/resources/vue-complete.yaml`). Это не будет проблемой после того, как мы узнаем о **deployments**.
 
 Next, we'll configure environment variables. In Kubernetes, you do this with `env`, specifically:
+Далее мы настроим переменные среды **environment variable**. В **Kubernetes** вы делаете это с **env**, specifically:
 
 ```yaml
 env:
@@ -127,7 +135,7 @@ env:
   value: admin
 ```
 
-Let's set two environment variables in our PodSpec:
+Давайте установим две переменные окружения **environment variable** в нашем **PodSpec**:
 
 ```yaml
 apiVersion: v1
@@ -150,9 +158,9 @@ spec:
       value: password
 ```
 
-Now if we were to update the Pod, it would output the environment variables, including our two new ones.
+Теперь, если бы мы обновили **Pod**, он бы вывел переменные окружения, включая **including** наши две новые.
 
-Next, we'll configure a local volume mount. In Kubernetes, you define a volume in the Pod specification, but outside of the `containers` list. Inside the containers list, you define a `volumeMount` which requests storage from a volume.
+Далее мы настроим локальное монтирование тома **local volume mount**. В **Kubernetes** вы определяете **volume** в спецификации **Pod**, но вне списка **containers list**. Внутри списка контейнеров вы определяете **volumeMount**, который запрашивает хранилище у тома **volume**.
 
 ```yaml
 apiVersion: v1
@@ -182,9 +190,9 @@ spec:
     emptyDir: {}
 ```
 
-Now when we run this Pod, we will have a volume inside the Pod mounted to /data inside the vue container.
+Теперь, когда мы запустим этот **Pod**, у нас будет том **volume** внутри **Pod**, примонтированный к **/data**  внутри контейнера **vue**.
 
-Pods can also have a defined resource limit. We do this with `resources`:
+**Pods** также могут иметь определенный лимит ресурсов. Мы делаем это с помощью **resources**:
 
 ```yaml
 apiVersion: v1
@@ -218,4 +226,5 @@ spec:
     emptyDir: {}
 ```
 
-This will limit our pod to using only 50% of a single CPU core, and no more than 128 Megabytes of RAM. If it tries to use more, Kubernetes will terminate the pod.
+Это наложит **limit** на использование нашим Подом, только 50% одного ядра процессора **CPU core** и не более **128 Megabytes** оперативной памяти. 
+Если он попытается использовать больше, Kubernetes прекратит работу **terminate** Пода.
