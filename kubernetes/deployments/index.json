@@ -1,8 +1,8 @@
 {
-  "title": "Module 4: Kubernetes Deployments",
+  "title": "Введение в Deployments",
   "description": "В этой лабораторной работе мы рассмотрим, как использовать базовые Deployments.",
   "difficulty": "Intermediate",
-  "time": "45-60 minutes",
+  "time": "30-40 minutes",
   "details": {
     "assets": {
       "host01": [
