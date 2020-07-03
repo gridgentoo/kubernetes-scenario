@@ -16,7 +16,12 @@
       {
         "course_id": "pods",
         "title": "Введение в Pods",
-        "description": " В этой лабораторной работе мы рассмотрим, как запускать контейнеры в Pods."
+        "description": "В этой лабораторной работе мы рассмотрим, как запускать контейнеры в Pods."
+      },
+      {
+        "course_id": "deployments",
+        "title": "Введение в Deployments",
+        "description": "В этой лабораторной работе мы расскажем о концепции ReplicaSets и Deployments."
       },
       {
         "course_id": "kube-playground-nginx",

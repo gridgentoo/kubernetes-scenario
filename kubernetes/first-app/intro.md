@@ -1,47 +1,11 @@
-# Первое приложение Kubernetes #
-![Katacoda Logo](./assets/logo-text-with-head.png)  
+![Digital Academy Logo](/sylus/courses/kubernetes-fundamentals-1/module-4/assets/digital-academy-logo.png)
 
-![Katacoda Logo](./assets/kubernetes.png)
+Welcome to the Digital Academy's "Kubernetes Fundamentals 1" series. This is Module 4 - Introduction to Deployments
 
-Этот сценарий ознакомит вас с основами развертывания приложения в **Kubernetes**.
-В следующих шагах вы узнаете:
+In this lab, we will explain the concept of ReplicaSets, Deployments, and have us create multiple Deployments using different strategies.
 
-- развернуть **deploy** и запустить приложение **echoserver**
-- масштабировать **scale** приложение
-- **Services** балансировки нагрузки между несколькими **Pods** приложения
-- Kubernetes поддерживает (устойчивость - **resilience**) задекларированного состояния **state**, даже при сбоях **failures** 
-- **rollout** - выкатить новую версию приложения
+For more information, see the Kubernetes [documentation][docs].
 
-![Katacoda Logo](./assets/Kubernetes2.png)
+<!-- Links Referenced -->
 
-## Компоненты Kubernetes
-
-При развёртывании Kubernetes вы имеете дело с кластером.
-
-Кластер **Kubernetes cluster** состоит из набор машин, так называемые узлы, которые запускают контейнеризированные приложения. Кластер имеет как минимум один рабочий узел.
-
-В рабочих узлах размещены поды, являющиеся компонентами приложения. Плоскость управления управляет рабочими узлами и подами в кластере. В промышленных средах плоскость управления обычно запускается на нескольких компьютерах, а кластер, как правило, развёртывается на нескольких узлах, гарантируя отказоустойчивость и высокую надёжность.
-
-На этой странице в общих чертах описывается различные компоненты, необходимые для работы кластера Kubernetes.
-
-Ниже показана диаграмма кластера Kubernetes со всеми связанными компонентами.
-
-![Katacoda Logo](./assets/components-of-kubernetes.png)
-
-[Компоненты Kubernetes](https://kubernetes.io/ru/docs/concepts/overview/components/)
-
-## Плоскость управления компонентами
-
-Компоненты панели управления отвечают за основные операции кластера (например, планирование), а также обрабатывают события кластера (например, запускают новый под , когда поле **replicas** развертывания не соответствует требуемому количеству реплик).
-
-Компоненты панели управления могут быть запущены на любой машине в кластере. Однако для простоты сценарии настройки обычно запускают все компоненты панели управления на одном компьютере и в то же время не позволяют запускать пользовательские контейнеры на этом компьютере. Смотрите страницу Создание высоконадёжных кластеров для примера настройки нескольких ведущих виртуальных машин.
-
-## kube-apiserver
-
-Сервер API — компонент Kubernetes панели управления , который представляет API Kubernetes. API-сервер — это клиентская часть панели управления Kubernetes
-
-Основной реализацией API-сервера Kubernetes является [kube-apiserver](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/). **kube-apiserver** предназначен для горизонтального масштабирования, то есть развёртывание на несколько экземпляров. Вы можете запустить несколько экземпляров **kube-apiserver** и сбалансировать трафик между этими экземплярами.
-etcd
-
-
-
+[docs]:           https://kubernetes.io/docs/concepts/workloads/controllers/deployment/

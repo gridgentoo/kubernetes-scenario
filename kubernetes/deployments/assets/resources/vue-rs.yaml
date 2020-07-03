@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: vue-rs
+  labels:
+    app: vue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vue
+  template:
+    metadata:
+      labels:
+        app: vue
+    spec:
+      containers:
+      - name: vue
+        image: sylus/vue-hello-world
+        ports:
+        - containerPort: 80
