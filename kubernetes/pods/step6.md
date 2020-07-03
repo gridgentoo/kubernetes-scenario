@@ -1,35 +1,39 @@
 # Shared Volumes
 
-In Kubernetes, you can use a shared Kubernetes Volume as a simple and efficient way to share data between containers in a Pod. For most cases, it is sufficient to use a directory on the host that is shared with all containers within a Pod. This means there will be a directory on the host mounted into containers in a single Pod. If the Pod goes down, all data in that shared volume will be lost.
+В **Kubernetes** вы можете использовать общий том **shared Kubernetes Volume** в качестве простого и эффективного способа обмена данными между контейнерами в **Pod**. 
+В большинстве случаев достаточно использовать директорию на хосте, который является общим для всех контейнеров в **Pod**. Это означает, что на хосте будет директория, смонтированная в контейнерах **mounted into containers** в **single Pod**. Если **Pod** выйдет из строя, все данные в этом **shared volume** будут потеряны.
 
-Kubernetes Volumes enable data to survive container restarts, but these volumes have the same lifetime as the Pod. That means that the volume (and the data it holds) exists exactly as long as that Pod exists. If that Pod is deleted for any reason, even if an identical replacement is created, the shared Volume is also destroyed and created anew.
+**Kubernetes Volumes** позволяют данным пережить перезапуск контейнера, но эти тома имеют то же время жизни **lifetime**, что и **Pod**. 
+Это означает, что **volume**  (и данные, которые он содержит) существует ровно столько, сколько существует этот **Pod**. 
+Если этот **Pod** удаляется по какой-либо причине, даже если создается идентичная замена, общий том  **shared Volume**, также уничтожается и создается заново.
 
-A standard use case for a multi-container Pod with a shared Volume is when one container writes logs or other files to the shared directory, and the other container reads from the shared directory.
+Стандартный вариант использования для **multi-container Pod** с общим томом **shared Volume** - это когда один контейнер записывает логи или другие файлы в общий каталог, а другой контейнер читает из общей директории **shared directory**.
 
-Examine the file `./resources/pod-volume.yaml` in the file explorer.
+Изучите файл `nano ./resources/resources/pod-volume.yaml`{{execute}} в проводнике.
 
-The 1st container runs Nginx server. The container mounts the shared volume to the directory `/usr/share/nginx/html`.
+Первый контейнер запускает сервер **Nginx**. Контейнер монтирует общий том **shared volume** в директорию **/usr/share/nginx/html**.
 
-The 2nd container uses a Debian image and mounts the shared volume to the container directory `/html`.
+Второй контейнер использует **Debian image** и монтирует общий том **shared volume** в директорию контейнера **/html**.
 
-Every second, the 2nd container adds the current date and time into the `index.html` file, which is located in the shared volume. When the user makes an HTTP request to the Pod, the Nginx server reads this file and transfers it back to the user in response to the request.
+Каждую секунду второй контейнер добавляет текущую дату и время в файл **index.html**, который находится в общем томе **shared volume**. 
+Когда пользователь делает **HTTP**-запрос к **Pod**, сервер **Nginx** читает этот файл и передает его обратно пользователю в ответ на запрос.
 
-`kubectl create -f ./resources/pod-volume.yaml`{{execute}}
+`kubectl create -f ./resources/resources/pod-volume.yaml`{{execute}}
 
-Lets see our Pods:
+Давайте посмотрим наши Pods:
 
 `kubectl get pods`{{execute}}
 
-And let's describe the Pod:
+И давайте **describe the Pod**:
 
 `kubectl describe pod shared-volume`{{execute}}
 
-We can check that both containers can `see` the same file:
+Мы можем проверить, что оба контейнера могут **see** один и тот же файл:
 
 `kubectl exec shared-volume -c nginx -- /bin/cat /usr/share/nginx/html/index.html`{{execute}}
 
 `kubectl exec shared-volume -c debian -- /bin/cat /html/index.html`{{execute}}
 
-Delete the pod resources when you are done:
+Удалите **pod resources**, когда закончите:
 
 `kubectl delete -f ./resources/pod-volume.yaml`{{execute}}
