@@ -20,8 +20,8 @@
       },
       {
         "course_id": "deployments",
-        "title": "Введение в Deployments",
-        "description": "В этой лабораторной работе мы расскажем о концепции ReplicaSets и Deployments."
+        "title": "ReplicaSets и Deployments",
+        "description": "ReplicaSets и Deployments. Редактируем ресурсы JSON(kubectl edit rs vue-rs -o json)"
       },
       {
         "course_id": "kube-playground-nginx",
