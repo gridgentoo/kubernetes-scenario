@@ -1,4 +1,5 @@
-Kubernetes Deployments can be created on the command line with [`kubectl run`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run). It enables you to configure both the Pods and ReplicaSets.
+**Kubernetes Deployments** можно создать в командной строке с помощью [`**kubectl run**`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run).
+Это позволяет вам настроить как **Pods**, так и **ReplicaSets**.
 
 ```yaml
 kubectl run NAME --image=image
@@ -11,44 +12,46 @@ kubectl run NAME --image=image
   -- [COMMAND] [args...]
 ```
 
-To create a simple Kubernetes deployment from the command-line:
+Чтобы создать простое **Kubernetes deployment** из командной строки:
 
 `kubectl run vue --image=sylus/vue-hello-world --port 80`{{execute}}
 
-Congrats, you have just created your first Deployment. The `run` command created a Deployment which automatically performed a few things for you:
+Поздравляю, вы только что создали свое первое **Deployment**. Команда **run** создала **Deployment**, которая автоматически выполнила несколько вещей для вас:
 
-* Created a ReplicaSet which created a pod
-* The scheduler searched for a suitable node to run the pod and scheduled the pod to run on that Node
-* Configured the cluster to restart / reschedule the pod when needed
+* Создал **ReplicaSet**, который создал Под
+* **scheduler** искал подходящий ноду для запуска Пода и запланировал запуск Пода на этой Нода.
+* Сконфигурировал кластер для ***restart / reschedule*** Пода при необходимости
 
-Basically, it created all of the objects we defined, which include Pods and ReplicaSets. It scheduled the Pods on a node capable of accepting workloads.
+По сути, он создал все **objects**, которые мы определили, включая **Pod** и **ReplicaSets**. Он запланировал Подв на ноде, способном принимать рабочие нагрузки **workloads**.
 
-To verify that the command created a Deployment:
+Чтобы убедиться, что команда создала **Deployment**:
 
 `kubectl get deployments`{{execute}}
 
-To see the Pods created by the Deployment:
+Чтобы увидеть Поды, созданные при **Deployment**:
 
 `kubectl get pods`{{execute}}
 
-To see the ReplicaSet created by the Deployment:
+Чтобы увидеть набор **ReplicaSet**, созданный при **Deployment**:
 
 `kubectl get replicasets`{{execute}}
 
-We can also get more information about our Deployment:
+Мы также можем получить больше информации о нашем **Deployment**:
 
 `kubectl describe deployment vue`{{execute}}
 
 #### The magic of Deployments
 
-If a pod that was created by a Deployment should ever crash, the Deployment will automatically restart it. To see this in action, kill the Pod directly:
+Если Под, созданный при **Deployment**, когда-либо потерпит крах, он автоматически перезапустит его. Чтобы увидеть это в действии, убейте Pod напрямую:
 
 `kubectl delete pod $(kubectl get pods --no-headers=true  | awk '{print $1;}')`{{execute}}
 
-The pod should be deleted successfully. Now wait a moment or two and check the pod again:
+Под должен быть успешно удален. Теперь подождите минуту или две и снова проверьте Под:
 
 `kubectl get pods`{{execute}}
 
-Notice the the pod is running again. This is because the Deployment will restart a pod when it fails. What actually restarts those Pods?
+Обратите внимание, что Под снова работает. Это связано с тем, что **Deployment** перезапустит Под в случае сбоя. Что на самом деле перезапускает эти Поды?
 
-Let's quickly clean up and delete our Deployment: `kubectl delete deployment vue`{{execute}}
+Давайте быстро очистим и удалим наш **Deployment**:  
+
+`kubectl delete deployment vue`{{execute}}
