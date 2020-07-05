@@ -112,10 +112,6 @@ Events:
   Normal  SuccessfulCreate  94s   replicaset-controller  Created pod: frontend-9v28p
 ```
 
-
-
-
-
 ## AutoScaling
 
 **`ReplicaSet`** можно легко масштабировать (вверх или вниз), просто меняя значение поля **`.spec.replicas`**.
