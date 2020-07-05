@@ -2,13 +2,6 @@
 
 В этой лабораторной работе мы расскажем о концепции **ReplicaSets**, **Deployments** и предложим нам создать несколько **Deployments**, используя разные стратегии.
 
-![sequence diagram](./assets/diagram.png)
-
-Kubernetes docs имеют краткую диаграмму последовательности [**sequence diagram**](https://www.oreilly.com/content/kubernetes-recipes-maintenance-and-troubleshooting/) 
-
-Это живой документ. Если вы найдёте, что улучшить или переписать, изменения приветствуются! (Речь, конечно, об оригинальной [англоязычной статье в GitHub](https://github.com/jamiehannaford/what-happens-when-k8s))
-
-
 # Управляющие циклы
 
 

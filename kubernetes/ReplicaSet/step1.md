@@ -120,6 +120,8 @@ Events:
 
 Поды (**Pods**) могут быть удалены из набора **`ReplicaSet`** путем изменения их меток - этот вариант может пригодиться при отладке, восстановлении данных и т. д. Поды, которые удаляются таким образом, будут автоматически заменены (при условии, что количество реплик в наборе **`ReplicaSet`** также не изменяется).
 
+
+
 ## AutoScaling
 
 **`ReplicaSet`** можно легко масштабировать (вверх или вниз), просто меняя значение поля **`.spec.replicas`**.
@@ -149,135 +151,6 @@ spec:
 Теперь посмотрим, как **Kubernetes** создает  **Pods**  на основе спецификации в файле **`hpa-rs.yaml`**.
 
 `kubectl get po --watch`{{execute}}
-
-## name: vue-rs
-
-Теперь давайте, проинспектируйте файл `cat ./resources/resources/vue-rs.yaml`{{execute}}.
-
-Посмотрим обьект **`kind: ReplicaSet`**
-
-```yaml
-apiVersion: apps/v1
-kind: ReplicaSet
-metadata:
-  name: vue-rs
-  labels:
-    app: vue
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: vue
-  template:
-    metadata:
-      labels:
-        app: vue
-    spec:
-      containers:
-      - name: vue
-        image: sylus/vue-hello-world
-        ports:
-        - containerPort: 80
-```
-
-Это должно выглядеть знакомо для ресурса **Pod**. У нас есть несколько дополнений. Эти дополнения позволяют настроить наш **`ReplicaSet`**.
-
-Самыми большими дополнениями являются **replicas: 3** и **selector**. Первый компонент настраивает общее количество реплик **Pod**, которые должны быть активны всегда. **selector** соответствует набору ограничений для идентификации **Pods** для представления. В этом случае **`ReplicaSet`** будет отслеживать блоки с меткой **app=vue**.
-
-Мы можем развернуть этот **`ReplicaSet`** так же, как мы сделали **Pods**:
-
-`kubectl create -f ./resources/resources/vue-rs.yaml`{{execute}}
-
-Теперь посмотрим, как **Kubernetes** создает  **3 vue Pods**  на основе спецификации в файле **vue-rs.yaml**.
-
-`kubectl get po --watch`{{execute}}
-
-Подождите, пока будут созданы Поды. Вы можете нажать `CTRL-C`, чтобы остановить просмотр.
-
-Проинспектируйте **`ReplicaSet`**.
-
-> ПРИМЕЧАНИЕ: `rs` сокращение от **`ReplicaSet`**
-
-`kubectl describe rs vue-rs`{{execute interrupt}}
-
-Теперь измените **`ReplicaSet`**, чтобы создать 5 подов путем изменения значения `replicas: 3`.
-Примечание: **kubectl edit** использует vi
-Чтобы войти в режим редактирования нажмите **i** 
-Чтобы выйти и сохранить изменения из режима редактирования нажмите **Shift+Z** два раза
-
-`kubectl edit rs vue-rs`{{execute}}
-
-С помощью **edit** вы можете в режиме реального времени **live edit** редактировать конфигурацию ресурса в **Kubernetes**. 
-Однако он не будет редактировать основной файл манифеста **Manifest**, представляющий объект.
-
-Команда **kubectl edit** позволяет вам напрямую редактировать любой ресурс API, который вы можете получить с помощью инструментов командной строки. Он откроет редактор, определенный вашими переменными среды **KUBE_EDITOR**, или откроется на «vi» для Linux
-
-Файлы для редактирования будут выводиться в версии API по умолчанию или в версии, указанной в **–output-version**. Формат по умолчанию - YAML - если вы хотите отредактировать в JSON, укажите **-o json**.
-
-`kubectl edit rs vue-rs -o json`{{execute}}
-
-Справка по [kubectl edit](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit/)
-
-# Scaling
-
-На последнем шаге мы увеличиваете Реплику `vue-rs` до 5 подов, редактируя файл спецификации **spec file**. Эти изменения были применены автоматически.
-
-# Manual Scaling
-
-Чтобы вручную масштабировать **ReplicaSet** вверх или вниз, используйте команду **`scale`**. Уменьшите число **vue** подов, до 2 с помощью команды:
-
-`kubectl scale rs vue-rs --replicas=2`{{execute}}
-
-Вы можете проверить, что 3 из 5 экземпляров **vue** были завершены **terminated**:
-
-`kubectl get pods`{{execute}}
-
-или наблюдать их, пока они не закончатся
-
-`kubectl get po --watch`{{execute}}
-
-Конечно, идеальный способ сделать это - обновить наш манифест **Manifest**, чтобы отразить эти изменения.
-
-## AutoScaling
-
-**Kubernetes** обеспечивает автоматическое масштабирование ваших подов. Однако, **kube-scheduler** может быть не в состоянии запланировать дополнительные Поды, если ваш кластер находится под высокой нагрузкой. 
-
-Кроме того, если у вас ограниченный набор вычислительных ресурсов **limited set**, автоматическое масштабирование подов **autoscaling Pods** может иметь серьезные последствия, если только ваши **worker nodes** не могут автоматически масштабироваться как (например, группы автоматического масштабирования **AWS**).
-
-```yaml
-apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: frontend-scaler
-spec:
-  scaleTargetRef:
-    kind: ReplicaSet
-    name: vue-rs
-  minReplicas: 3
-  maxReplicas: 10
-  targetCPUUtilizationPercentage: 50
-```
-
-Чтобы увидеть все параметры **autoscale**:
-
-`kubectl autoscale --help`{{execute interrupt}}
-
-Также возможно автоматически генерировать файл конфигурации **config file**, который мы видели ранее. 
-Команда для вывода **output a YAML config** выглядит следующим образом:
-
-`kubectl autoscale rs vue-rs --max=10 --min=3 --cpu-percent=50 --dry-run=true -o=yaml`{{execute}}
-
-
-> Обратите внимание на **--dry-run=true**, это означает, что **Kubernetes** не будет применять требуемые изменения состояния к нашему кластеру. 
-> Однако мы предоставили ему **-o=yaml**, что означает вывод конфигурации в виде **YAML**. Это позволяет нам легко генерировать манифест **Manifest**.
-
-
-* Совет:  **-dry-run** с **-o=yaml** - отличный способ создания конфигураций! *
-
-Мы предоставили этот контент в `nano ./resources/resources/hpa-vue.yaml`{{execute}}
-
-Теперь фактически примените конфигурацию:: `kubectl create -f ./resources/resources/hpa-vue.yaml`{{execute}}
-
 
 На данный момент у нас есть **`ReplicaSet`**, управляющий **vue Pod**, с настроенным горизонтальным автоматическим масштабированием **Horizontal Pod Autoscaling**. 
 Давайте очистим нашу окружающую среду **environment**:
