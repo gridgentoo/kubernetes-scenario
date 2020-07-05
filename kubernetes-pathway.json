@@ -14,14 +14,14 @@
         "description": "Откройте для себя API, с помощью которого вы можете контролировать все объекты Kubernetes."
       },
       {
-        "course_id": "pods",
-        "title": "Введение в Pods",
-        "description": "В этой лабораторной работе мы рассмотрим, как запускать контейнеры в Pods."
-      },
-      {
         "course_id": "ReplicaSet",
         "title": "Введение в ReplicaSet",
         "description": "В этой лабораторной работе мы рассмотрим, как запускать контейнеры в ReplicaSet."
+      },
+      {
+        "course_id": "pods",
+        "title": "Введение в Pods",
+        "description": "В этой лабораторной работе мы рассмотрим, как запускать контейнеры в Pods."
       },
       {
         "course_id": "deployments",

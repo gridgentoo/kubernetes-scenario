@@ -20,7 +20,8 @@
       {
         "title": "ReplicaSets",
         "text": "step1.md"
-      }      
+      }
+      
     ],
     "intro": {
       "text": "intro.md",
@@ -34,8 +35,15 @@
   },
   "environment": {
     "showdashboard": true,
-    "uisettings": "yaml",
-    "uimessage1": "\u001b[36;1m training.\u001b[0m"
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ],
+    "terminals": [
+      {"name": "Terminal 2", "target": "host01"}
+    ]    
     },
   "backend": {
     "imageid": "kubernetes-cluster-running"
