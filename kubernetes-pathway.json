@@ -19,6 +19,11 @@
         "description": "В этой лабораторной работе мы рассмотрим, как запускать контейнеры в Pods."
       },
       {
+        "course_id": "ReplicaSet",
+        "title": "Введение в ReplicaSet",
+        "description": "В этой лабораторной работе мы рассмотрим, как запускать контейнеры в ReplicaSet."
+      },
+      {
         "course_id": "deployments",
         "title": "ReplicaSets и Deployments",
         "description": "ReplicaSets и Deployments. Редактируем ресурсы JSON(kubectl edit rs vue-rs -o json)"

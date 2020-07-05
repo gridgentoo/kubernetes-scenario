@@ -1,0 +1,78 @@
+{
+  "title": "Введение в Deployments",
+  "description": "В этой лабораторной работе мы рассмотрим, как использовать базовые Deployments.",
+  "difficulty": "Intermediate",
+  "time": "30-40 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": ".answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "ReplicaSets",
+        "text": "step1.md"
+      },
+      {
+        "title": "Deployments on the CLI",
+        "text": "step2.md"
+      },
+      {
+        "title": "Deployment Manifests",
+        "text": "step3.md"
+      },
+      {
+        "title": "Interacting with Deployments",
+        "text": "step4.md"
+      },
+      {
+        "title": "Configuring Vue.js Hello World",
+        "text": "step5.md"
+      },
+      {
+        "title": "Configuring Nginx",
+        "text": "step6.md"
+      },
+      {
+        "title": "Rolling Updates and Rollbacks",
+        "text": "step7.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Yunusov Temur](https://gridgentoo.github.io)",
+      "courseData": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "editor-terminal",
+    "dashboards": [
+      {
+        "name": "Dashboard",
+        "href": "https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com"
+      },
+      {
+        "name": "Vue.js",
+        "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com"
+      }
+    ],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1m training.\u001b[0m"
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}
