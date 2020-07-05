@@ -3,6 +3,31 @@
 
 Теперь проинспектируйте файл `cat ./resources/resources/vue-rs.yaml`{{execute}}.
 
+Посмотрим обьект **`kind: ReplicaSet`**
+
+```yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: vue-rs
+  labels:
+    app: vue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vue
+  template:
+    metadata:
+      labels:
+        app: vue
+    spec:
+      containers:
+      - name: vue
+        image: sylus/vue-hello-world
+        ports:
+        - containerPort: 80
+```
 
 Это должно выглядеть знакомо для ресурса **Pod**. У нас есть несколько дополнений. Эти дополнения позволяют настроить наш **ReplicaSet**.
 
