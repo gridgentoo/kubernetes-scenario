@@ -1,3 +1,3 @@
-Now with the understanding of Deployments in hand we now have the requisite knowledge of how to configure and deploy applications in Kubernetes.
+Теперь, имея представление о развертываниях, мы теперь обладаем необходимыми знаниями о том, как **`ReplicaSet`** в **Kubernetes**.
 
-However, there are still more effective strategies that we can leverage.
+Однако есть еще более эффективные стратегии, которые мы можем использовать.
