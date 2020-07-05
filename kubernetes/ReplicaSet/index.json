@@ -1,6 +1,6 @@
 {
   "title": "Введение в ReplicaSet",
-  "description": "В этой лабораторной работе мы рассмотрим, как использовать базовые ReplicaSet.",
+  "description": "В этой лабораторной работе мы рассмотрим, как использовать ReplicaSet.",
   "difficulty": "Intermediate",
   "time": "10 minutes",
   "details": {
