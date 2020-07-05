@@ -1,0 +1,51 @@
+{
+  "title": "Введение в ReplicaSet",
+  "description": "В этой лабораторной работе мы рассмотрим, как использовать ReplicaSet.",
+  "difficulty": "Intermediate",
+  "time": "10 minutes",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "answers/*",
+          "target": ".answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "ReplicaSets",
+        "text": "step1.md"
+      }
+      
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Yunusov Temur](https://gridgentoo.github.io)",
+      "courseData": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ],
+    "terminals": [
+      {"name": "Terminal 2", "target": "host01"}
+    ]    
+    },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

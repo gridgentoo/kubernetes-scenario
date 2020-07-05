@@ -16,7 +16,12 @@
       {
         "course_id": "ReplicaSet",
         "title": "Введение в ReplicaSet",
-        "description": "В этой лабораторной работе мы рассмотрим, как запускать контейнеры в ReplicaSet."
+        "description": "В этой лабораторной работе мы рассмотрим, как использовать ReplicaSet."
+      },
+      {
+        "course_id": "Deployment-1",
+        "title": "Введение в Deployment",
+        "description": "В этой лабораторной работе мы рассмотрим, как использовать Deployment."
       },
       {
         "course_id": "pods",
