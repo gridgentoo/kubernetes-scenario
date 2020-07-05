@@ -20,31 +20,7 @@
       {
         "title": "ReplicaSets",
         "text": "step1.md"
-      },
-      {
-        "title": "Deployments on the CLI",
-        "text": "step2.md"
-      },
-      {
-        "title": "Deployment Manifests",
-        "text": "step3.md"
-      },
-      {
-        "title": "Interacting with Deployments",
-        "text": "step4.md"
-      },
-      {
-        "title": "Configuring Vue.js Hello World",
-        "text": "step5.md"
-      },
-      {
-        "title": "Configuring Nginx",
-        "text": "step6.md"
-      },
-      {
-        "title": "Rolling Updates and Rollbacks",
-        "text": "step7.md"
-      }
+      }      
     ],
     "intro": {
       "text": "intro.md",
