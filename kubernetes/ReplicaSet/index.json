@@ -1,8 +1,8 @@
 {
-  "title": "Введение в Deployments",
-  "description": "В этой лабораторной работе мы рассмотрим, как использовать базовые Deployments.",
+  "title": "Введение в ReplicaSet",
+  "description": "В этой лабораторной работе мы рассмотрим, как использовать базовые ReplicaSet.",
   "difficulty": "Intermediate",
-  "time": "30-40 minutes",
+  "time": "10 minutes",
   "details": {
     "assets": {
       "host01": [
@@ -35,16 +35,6 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "editor-terminal",
-    "dashboards": [
-      {
-        "name": "Dashboard",
-        "href": "https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com"
-      },
-      {
-        "name": "Vue.js",
-        "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com"
-      }
-    ],
     "uisettings": "yaml",
     "uimessage1": "\u001b[36;1m training.\u001b[0m"
     },
