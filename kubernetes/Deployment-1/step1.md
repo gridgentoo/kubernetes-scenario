@@ -61,15 +61,21 @@ spec:
 
 `kubectl create -f ./resources/resources/nginx-deployment.yaml --record`{{execute}}
 
+Примечание. Параметр **`--record**` нам весьма пригодится для хранения истории изменений развертывания.
+
 Теперь посмотрим, как **Kubernetes** создает  **`Pods`**  на основе спецификации в файле **`nginx-deployment.yaml`**.
 
 `kubectl get po --watch`{{execute}}
 
-Примечание. Параметр **`--record**` нам весьма пригодится для хранения истории изменений развертывания.
-
-Если сразу же запустить команду **`kubectl get deployments`**, то скорее всего результат будет следующим:
+Если сразу же запустить команду **`kubectl get deployments`**, 
 
 `kubectl get deployments`{{execute}}
+
+то вывод **`kubectl get deployments`** всего результат будет следующим:
+```
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   0/3     3            0           12s
+```
 
 Когда вы с помощью данной команды хотите получить состояние развертываний **`Deployments`** в кластере, вам доступны следующие поля:
 
@@ -80,9 +86,25 @@ spec:
   * AVAILABLE - отображает количество экземпляров пода, которые доступны пользователям;
   * AGE - отображает время с момента запуска развертывания.
 
-Чтобы увидеть текущий статус (прогресс) развертывания, можно использовать команду **`kubectl rollout status deployment/nginx-deployment`** 
+Чтобы увидеть текущий статус (прогресс) развертывания, можно использовать команду **`kubectl rollout status`** 
 
 `kubectl rollout status deployment/nginx-deployment`{{execute}}
 
 Вывод будет примерно таким:
 
+```
+Waiting for rollout to finish: 2 out of 3 new replicas have been updated...
+deployment "nginx-deployment" successfully rolled out
+```
+
+Через несколько секунд (нужно ведь подождать, пока скачается docker-образ) еще раз проверяем состояние развертываний в кластере с помощью **`kubectl get deployments`**:
+
+`kubectl get deployments`{{execute}}
+
+```
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   3/3     3            3           3m54s
+```
+Как видим, данное развертывание создало три экземпляра пода (как мы и писали в желаемом состоянии) - “под капотом” был также создан набор реплик **`ReplicaSet`** - убедиться в этом можно с помощью команды **`kubectl get rs`**:
+
+`kubectl get rs`{{execute}}
