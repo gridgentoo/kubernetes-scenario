@@ -34,7 +34,6 @@
   },
   "environment": {
     "showdashboard": true,
-    "uilayout": "editor-terminal",
     "uisettings": "yaml",
     "uimessage1": "\u001b[36;1m training.\u001b[0m"
     },
