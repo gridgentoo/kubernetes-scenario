@@ -111,6 +111,11 @@
         "id": "kubernetes" 
       },
       {
+        "title": "Infrastructure as Code: Terraform for Kubernetes",
+        "description": "мы рассмотрим использование Terraform для настройки ресурсов Kubernetes.",
+        "id": "infrastructure-as-code" 
+      },
+      {
         "title": "Основы OpenShift",
         "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
         "id": "openshift-fundamentals"

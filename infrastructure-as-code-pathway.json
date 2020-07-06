@@ -1,0 +1,12 @@
+{
+  "title": "Infrastructure as Code",
+  "description": "Обзор высокого уровня Infrastructure as Code.",
+  "icon": "fa-code",
+  "courses": [
+    {
+      "course_id": "terraform-kubernetes",
+      "title": "Infrastructure as Code: Terraform for Kubernetes",
+      "description": "В этой лабораторной работе мы рассмотрим использование Terraform для настройки ресурсов Kubernetes."
+    }
+  ]
+}

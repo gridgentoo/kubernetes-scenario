@@ -1,0 +1,53 @@
+{
+  "title": "Terraform для Kubernetes",
+  "description": "Мы экспериментируем с использованием Terraform для настройки ресурсов Kubernetes.",
+  "difficulty": "beginner",
+  "time": "10 minutes",
+  "details": {
+    "assets": {
+      "master": [
+        {
+          "file": "terraform/*",
+          "target": "/root/terraform"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Setup",
+        "text": "setup.md"
+      },
+      {
+        "title": "Updating our infrastructure",
+        "text": "update-infrastructure.md"
+      },
+      {
+        "title": "Creating linked resources",
+        "text": "create-linked-resources.md"
+      },
+      {
+        "title": "Terraform Modules for reuse",
+        "text": "modules.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "[Yunusov Temur](https://gridgentoo.github.io)",
+      "courseData": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "editor-terminal",
+    "dashboards": [ ],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1m training.\u001b[0m Обратите внимание, что установка командной строки Terraform может занять несколько минут."
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}
