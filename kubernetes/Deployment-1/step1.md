@@ -93,7 +93,9 @@ nginx-deployment   0/3     3            0           12s
 Вывод будет примерно таким:
 
 ```
-Waiting for rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "nginx-deployment" rollout to finish: 0 of 3 updated replicas are available...
+Waiting for deployment "nginx-deployment" rollout to finish: 1 of 3 updated replicas are available...
+Waiting for deployment "nginx-deployment" rollout to finish: 2 of 3 updated replicas are available...
 deployment "nginx-deployment" successfully rolled out
 ```
 
@@ -108,3 +110,105 @@ nginx-deployment   3/3     3            3           3m54s
 Как видим, данное развертывание создало три экземпляра пода (как мы и писали в желаемом состоянии) - “под капотом” был также создан набор реплик **`ReplicaSet`** - убедиться в этом можно с помощью команды **`kubectl get rs`**:
 
 `kubectl get rs`{{execute}}
+
+Имя набора реплик формируется автоматически и выглядит как [DEPLOYMENT-NAME]-[POD-TEMPLATE-HASH-VALUE], hash-значение генерируется при создании развертывания. Узнать какие метки были автоматически добавлены каждому поду можно командой:
+
+`kubectl get pods --show-labels`{{execute}}
+
+вывод **`kubectl get pods --show-labels`** может выглядеть так:
+
+```
+NAME                               READY   STATUS    RESTARTS   AGE    LABELS
+nginx-deployment-6dd86d77d-94zql   1/1     Running   0          4m2s   app=nginx,pod-template-hash=6dd86d77d
+nginx-deployment-6dd86d77d-9wkjh   1/1     Running   0          4m2s   app=nginx,pod-template-hash=6dd86d77d
+nginx-deployment-6dd86d77d-tz4sg   1/1     Running   0          4m2s   app=nginx,pod-template-hash=6dd86d77d
+```
+Для обновления развертывания (например, изменения версии docker-образа на 1.9.1) можно воспользоваться такой командой:
+
+`kubectl set image deployment/nginx-deployment nginx=nginx:1.9.1`{{execute}}
+`deployment "nginx-deployment" image updated`{{execute}}
+
+или изменить сам манифест развертывания (меняем значение **`.spec.template.spec.containers[0].image`**):
+
+`kubectl edit deployment/nginx-deployment`{{execute}}
+`deployment "nginx-deployment" edited`{{execute}}
+
+или (предпочтительный вариант) - изменить файл с манифестом развертывания и применить изменения:
+
+`nano nginx-deployment.yaml`{{execute}}
+
+# вносим нужные правки и сохраняем файл
+
+`kubectl apply -f nginx-deployment.yaml`{{execute}}
+
+deployment "nginx-deployment" configured
+
+Как и раньше, наблюдаем за процессом обновления и получаем интересующую нас информацию командами
+
+`kubectl rollout status deployment/nginx-deployment`{{execute}}
+
+`kubectl get deployments`{{execute}}
+
+`kubectl get rs`{{execute}}   (ниже приведен только результат последней команды):
+
+```
+NAME                          DESIRED   CURRENT   READY   AGE
+nginx-deployment-1564180365   3         3         3       6s
+nginx-deployment-2035384211   0         0         0       36s
+```
+
+Как видим, новый (ориентируемся по времени) набор реплик (ReplicaSet) находится в желаемом состоянии, 
+в то время как в старом наборе количество экземпляров пода равно нулю.
+
+Детальное описание развертывания получаем командой:
+
+`kubectl describe deployments`{{execute}}
+
+```
+NAME                          DESIRED   CURRENT   READY   AGE
+nginx-deployment-6dd86d77d    0         0         0       4m46s
+nginx-deployment-784b7cc96d   3         3         3       101s
+master $ kubectl describe deployments
+Name:                   nginx-deployment
+Namespace:              default
+CreationTimestamp:      Mon, 06 Jul 2020 06:48:43 +0000
+Labels:                 app=nginx
+Annotations:            deployment.kubernetes.io/revision: 2
+                        kubernetes.io/change-cause: kubectl create --filename=./resources/resources/nginx-deployment.yaml --record=true
+Selector:               app=nginx
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=nginx
+  Containers:
+   nginx:
+    Image:        nginx:1.9.1
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   nginx-deployment-784b7cc96d (3/3 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  4m58s  deployment-controller  Scaled up replica set nginx-deployment-6dd86d77d to 3
+  Normal  ScalingReplicaSet  113s   deployment-controller  Scaled up replica set nginx-deployment-784b7cc96d to 1
+  Normal  ScalingReplicaSet  87s    deployment-controller  Scaled down replica set nginx-deployment-6dd86d77d to 2
+  Normal  ScalingReplicaSet  87s    deployment-controller  Scaled up replica set nginx-deployment-784b7cc96d to 2
+  Normal  ScalingReplicaSet  82s    deployment-controller  Scaled down replica set nginx-deployment-6dd86d77d to 1
+  Normal  ScalingReplicaSet  82s    deployment-controller  Scaled up replica set nginx-deployment-784b7cc96d to 3
+  Normal  ScalingReplicaSet  80s    deployment-controller  Scaled down replica set nginx-deployment-6dd86d77d to 0
+```
+
+
+
+
