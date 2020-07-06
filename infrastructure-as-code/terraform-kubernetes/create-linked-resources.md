@@ -56,7 +56,7 @@ resource "kubernetes_role_binding" "test_namespace_readers" {
   subject {
     api_group = "rbac.authorization.k8s.io"
     kind = "User"
-    name = "john.doe@example.com"
+    name = "temur.yunusov@example.com"
   }
 }
 </pre>

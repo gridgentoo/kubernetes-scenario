@@ -60,6 +60,13 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 ```
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+The state of your infrastructure has been saved to the path
+below. This state is required to modify and destroy your
+infrastructure, so keep it safe. To inspect the complete state
+use the `terraform show` command.
+
+State path: terraform.tfstate
 ```
 
 Поздравляем! Вы сделали первое изменение инфраструктуры с помощью **Terraform**. 

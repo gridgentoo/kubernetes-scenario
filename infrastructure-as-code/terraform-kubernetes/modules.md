@@ -1,12 +1,14 @@
-Finally, let's finish our introduction by showing the power of Terraform Modules.
+Наконец, давайте закончим наше представление, продемонстрировав мощь **Terraform Modules**.
 
-Modules allow you to reuse an existing infrastructure setup in your project. In this example,
-we will utilize the Kubernetes Namespace module shared on GC Accelerators to configure
-a Kubernetes namespace.
+Модули позволяют вам повторно использовать существующую инфраструктуру в вашем проекте. В этом примере
+мы будем использовать модуль **Kubernetes Namespace** для общего доступа на **GC Accelerators** для конфигурирования
+пространство имен **Kubernetes**.
 
-Open `terraform/namespaces_module.tf` in the editor.
+Откройте **`terraform/namespaces_module.tf`** в редакторе.
 
-Let's set its contents to:
+`nano terraform/namespaces_module.tf`{{execute}}
+
+Давайте установим его содержимое на:
 
 <pre class="file" data-filename="terraform/namespaces_module.tf" data-target="replace">resource "kubernetes_namespace" "test_module" {
   metadata {
@@ -32,7 +34,9 @@ module "namespace_test_module" {
 }
 </pre>
 
-Before we can plan our changes, we need to fetch the module. Run `terraform get`{{execute}} to fetch it.
+
+Прежде чем мы сможем планировать **plan** наши изменения, нам нужно получить модуль **fetch the module**.
+Запустите `terraform get`{{execute}}, чтобы получить его.
 
 Once that completes, we can now run `terraform plan -out plan`{{execute}} to plan our changes. Since the changes
 look reasonable, let's run `terraform apply plan`{{execute}} to apply those changes to the cluster.
