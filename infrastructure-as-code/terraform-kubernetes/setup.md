@@ -1,28 +1,31 @@
-# Configure Terraform project
+# Конфигурирование проекта Terraform 
 
-First, let's make sure that our Terraform command line is working.
+Во-первых, давайте удостоверимся, что наша **Terraform command line** работает.
 
-Let's quickly check the version of the CLI with `terraform version`{{execute}}.
+Давайте быстро проверим версию CLI с помощью: `terraform version`{{execute}}.
 
 ## Initialize
 
-We have provided you with a scaffold of a Terraform project, which at this point only contains the backends that we will utilize.
+Мы предоставили вам **scaffold** проекта **Terraform**, который на данный момент содержит только те бэкэнды, которые мы будем **utilize**.
 
 `cd terraform`{{execute}}
 
-We can now initialize the project by running:
+Теперь мы можем инициализировать **initialize** проект, выполнив:
 
 ``terraform init``{{execute}}
 
-## Let's make sure it works
+## Давайте удостоверимся, что это работает
 
-By default, the Kubernetes provider for Terraform will utilize our current Kubecontext.
+По умолчанию поставщик **Kubernetes** для **Terraform** будет использовать наш текущий **Kubecontext**.
 
-Run the following command to list the namespaces in the Kubernetes cluster:
+Выполните следующую команду, чтобы получить список **namespaces** в кластере **Kubernetes**:
 
 `kubectl get namespaces`{{execute}}
 
-Open `terraform/namespaces.tf` in the editor, and add the following contents:
+
+Откройте `terraform/namespaces.tf` в редакторе и добавьте следующее содержимое:
+
+`nano terraform/namespaces.tf`{{execute}}
 
 <pre class="file" data-filename="terraform/namespaces.tf" data-target="replace">resource "kubernetes_namespace" "test" {
   metadata {
@@ -31,20 +34,22 @@ Open `terraform/namespaces.tf` in the editor, and add the following contents:
 }
 </pre>
 
-Now, let's "plan" the changes. When we run this command, Terraform will compare our desired state (ie. what we wrong in our .tf files) to the actual state in our environment and inform us of what it needs to do to sync them up.
+
+Теперь давайте спланируем "plan" изменения. Когда мы запускаем эту команду, **Terraform** будет сравнивать наше желаемое состояние (то есть, что **wrong** в наших **.tf files**) с фактическим состоянием в нашей среде и сообщать нам, что ему нужно сделать, чтобы синхронизировать их.
 
 `terraform plan -out plan`{{execute}}
 
-> We pass the `-out plan` argument in order to save the plan to file, so we can ensure that when we
-> apply the plan, it only takes the actions we've already reviewed.
+> Мы передаем аргумент `-out plan`, чтобы сохранить **plan** в файл, чтобы мы могли убедиться, что когда
+> **apply the plan** - применить план, он принимает только те действия **actions**, которые мы уже рассмотрели.
 
-The command will output the actions it wants to take in order synchronize your desired state
-with the actual state of the environment.
+Команда выведет действия, которые она хочет выполнить, чтобы синхронизировать желаемое состояние **state**
+с фактическим состоянием окружающей среды.
 
-For this plan, we should see exactly 1 add action.
+Для этого плана мы должны увидеть ровно **1 add action**.
 
-After reviewing the plan, let's apply it to our environment:
+Изучив план **plan**, давайте применим его к нашей среде **environment**:
 
 `terraform apply plan`{{execute}}
 
-Congrats! You've now made your first infrastructure change using Terraform. Re-running the `kubectl get namespaces`{{execute}} command should show the new namespace "test" in our Kubernetes cluster.
+
+Поздравляем! Вы сделали первое изменение инфраструктуры с помощью **Terraform**. Повторное выполнение команды `kubectl get namespaces`{{execute}} должно показать новое пространство имен "test" в нашем кластере **Kubernetes**.
