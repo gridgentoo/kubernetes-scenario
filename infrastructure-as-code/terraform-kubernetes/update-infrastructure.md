@@ -26,9 +26,17 @@
 
 `terraform plan -out plan`{{execute}}
 
+```
+Plan: 0 to add, 1 to change, 0 to destroy.
+```
+
 Мы видим, что **Terraform** хочет обновить наш ресурс и добавить **labels**. Давайте сделаем это:
 
 `terraform apply plan`{{execute}}
+
+```
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+```
 
 И еще раз проверьте ваши тестовые метки **namespaces's labels** :
 

@@ -13,10 +13,6 @@
 
 `cd terraform`{{execute}}
 
-Теперь мы можем инициализировать **initialize** проект, выполнив:
-
-``terraform init``{{execute}}
-
 ## Давайте удостоверимся, что это работает
 
 По умолчанию поставщик **Kubernetes** для **Terraform** будет использовать наш текущий **Kubecontext**.
@@ -28,7 +24,7 @@
 
 Откройте `terraform/namespaces.tf` в редакторе и добавьте следующее содержимое:
 
-`nano terraform/namespaces.tf`{{execute}}
+`nano namespaces.tf`{{execute}}
 
 <pre class="file" data-filename="terraform/namespaces.tf" data-target="replace">resource "kubernetes_namespace" "test" {
   metadata {
@@ -38,9 +34,17 @@
 </pre>
 
 
+Теперь мы можем инициализировать **initialize** проект, выполнив:
+
+`terraform init`{{execute}}
+
 Теперь давайте спланируем "plan" изменения. Когда мы запускаем эту команду, **Terraform** будет сравнивать наше желаемое состояние (то есть, что **wrong** в наших **.tf files**) с фактическим состоянием в нашей среде и сообщать нам, что ему нужно сделать, чтобы синхронизировать их.
 
 `terraform plan -out plan`{{execute}}
+
+```
+Plan: 1 to add, 0 to change, 0 to destroy.
+```
 
 > Мы передаем аргумент `-out plan`, чтобы сохранить **plan** в файл, чтобы мы могли убедиться, что когда
 > **apply the plan** - применить план, он принимает только те действия **actions**, которые мы уже рассмотрели.
@@ -54,6 +58,9 @@
 
 `terraform apply plan`{{execute}}
 
+```
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+```
 
 Поздравляем! Вы сделали первое изменение инфраструктуры с помощью **Terraform**. 
 
