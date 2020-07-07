@@ -126,22 +126,24 @@ nginx-deployment-6dd86d77d-tz4sg   1/1     Running   0          4m2s   app=nginx
 Для обновления развертывания (например, изменения версии docker-образа на 1.9.1) можно воспользоваться такой командой:
 
 `kubectl set image deployment/nginx-deployment nginx=nginx:1.9.1`{{execute}}
-`deployment "nginx-deployment" image updated`{{execute}}
+
+**`deployment "nginx-deployment" image updated`**
 
 или изменить сам манифест развертывания (меняем значение **`.spec.template.spec.containers[0].image`**):
 
 `kubectl edit deployment/nginx-deployment`{{execute}}
-`deployment "nginx-deployment" edited`{{execute}}
 
-или (предпочтительный вариант) - изменить файл с манифестом развертывания и применить изменения:
+**`deployment "nginx-deployment" edited`**
 
-`nano nginx-deployment.yaml`{{execute}}
+или (другой вариант) - изменить файл с манифестом развертывания и применить изменения:
+
+`nano ./resources/resources/nginx-deployment.yaml`{{execute}}
 
 # вносим нужные правки и сохраняем файл
 
-`kubectl apply -f nginx-deployment.yaml`{{execute}}
+`kubectl create -f ./resources/resources/nginx-deployment.yaml`{{execute}}
 
-deployment "nginx-deployment" configured
+**`deployment "nginx-deployment" configured`**
 
 Как и раньше, наблюдаем за процессом обновления и получаем интересующую нас информацию командами
 
