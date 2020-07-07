@@ -7,9 +7,11 @@
 
  `kubectl get namespace test --show-labels`{{execute}}
 
-Откройте `terraform/namespaces.tf` в редакторе и обновите ресурс:
+Откройте `namespaces.tf` в редакторе и обновите ресурс:
 
-<pre class="file" data-filename="terraform/namespaces.tf" data-target="replace">resource "kubernetes_namespace" "test" {
+ `nano namespaces.tf`{{execute}}
+
+<pre class="file" data-filename="namespaces.tf" data-target="replace">resource "kubernetes_namespace" "test" {
   metadata {
     name = "test"
 
@@ -43,6 +45,6 @@ Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
 `kubectl get namespace test --show-labels`{{execute}}
 
 > Если вы хотите проверить, обновлена ли ваша инфраструктура, вы можете запустить `terraform plan -out plan`{{execute}} в любое время.
-> Если изменений нет, вы увидите "No changes. Infrastructure is up-to-date." in the output.
+> Если изменений нет, вы увидите **"No changes. Infrastructure is up-to-date."** in the output.
 
 

@@ -22,11 +22,11 @@
 `kubectl get namespaces`{{execute}}
 
 
-Откройте `terraform/namespaces.tf` в редакторе и добавьте следующее содержимое:
+Откройте `namespaces.tf` в редакторе и добавьте следующее содержимое:
 
 `nano namespaces.tf`{{execute}}
 
-<pre class="file" data-filename="terraform/namespaces.tf" data-target="replace">resource "kubernetes_namespace" "test" {
+<pre class="file" data-filename="namespaces.tf" data-target="replace">resource "kubernetes_namespace" "test" {
   metadata {
     name = "test"
   }
