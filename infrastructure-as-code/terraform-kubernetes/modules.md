@@ -38,16 +38,17 @@ module "namespace_test_module" {
 Прежде чем мы сможем планировать **plan** наши изменения, нам нужно получить модуль **fetch the module**.
 Запустите `terraform get`{{execute}}, чтобы получить его.
 
-Once that completes, we can now run `terraform plan -out plan`{{execute}} to plan our changes. Since the changes
-look reasonable, let's run `terraform apply plan`{{execute}} to apply those changes to the cluster.
+Как только это завершится, мы теперь можем запустить `terraform plan -out plan`{{execute}} для планирования наших изменений. 
 
-We can see the changes applied to our cluster:
+Поскольку изменения выглядит разумно, давайте запустим `terraform apply plan`{{execute}} чтобы применить эти изменения к кластеру.
+
+Чтобы мы увидели изменения, примененные к нашему кластеру:
 
 `kubectl get namespaces`{{execute}}
 
 `kubectl --namespace test-module get serviceaccounts,roles,rolebindings`{{execute}}
 
-And now let's add another namespace:
+А теперь давайте добавим еще одно пространство имен:
 
 <pre class="file" data-filename="terraform/namespaces-module.tf" data-target="replace">resource "kubernetes_namespace" "test_module" {
   metadata {
@@ -96,11 +97,11 @@ module "namespace_test_module2" {
 }
 </pre>
 
-Before we can plan our changes, we once again need to fetch the module.
-Run `terraform get`{{execute}} to fetch it.
+Прежде чем мы сможем планировать наши изменения, нам еще раз нужно получить модуль **fetch the module**.
+Запустите `terraform get`{{execute}} чтобы получить его.
 
-Once that completes, we can now run `terraform plan -out plan`{{execute}} to plan our changes. Since the changes
-look reasonable, let's run `terraform apply plan`{{execute}} to apply those changes to the cluster.
+Как только это завершится, мы теперь можем запустить `terraform plan -out plan`{{execute}} для планирования наших изменений.
+Поскольку изменения выглядит разумно, давайте запустим `terraform apply plan`{{execute}}, чтобы применить эти изменения к кластеру.
 
 We can see the changes applied to our cluster:
 
@@ -108,6 +109,4 @@ We can see the changes applied to our cluster:
 
 `kubectl --namespace test-module2 get serviceaccounts,roles,rolebindings`{{execute}}
 
-
-As you can see, with Terraform Modules adding new resources following a similar
-pattern is easy!
+Как видите, с помощью модулей **Terraform Modules** добавляются Новые ресурсы по аналогичной схеме патренам, легко!
