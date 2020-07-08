@@ -1,10 +1,7 @@
-![Digital Academy Logo](/sylus/courses/kubernetes-fundamentals-1/module-4/assets/digital-academy-logo.png)
 
-Welcome to the Digital Academy's "Kubernetes Fundamentals 1" series. This is Module 4 - Introduction to Deployments
+В этой лабораторной работе мы расскажем о концепции ReplicaSets, Deployments и предложим нам создать несколько Deployments, используя разные стратегии.
 
-In this lab, we will explain the concept of ReplicaSets, Deployments, and have us create multiple Deployments using different strategies.
-
-For more information, see the Kubernetes [documentation][docs].
+Для получения дополнительной информации см. Kubernetes [documentation][docs].
 
 <!-- Links Referenced -->
 

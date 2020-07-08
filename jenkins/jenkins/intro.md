@@ -4,28 +4,28 @@
 
 ## Canary Releases with Jenkins on Kubernetes ##
 
-This demonstration covers these topics:
+Эта демонстрация охватывает следующие темы **topics**:
 
-- A personal Kubernetes cluster
-- Install and configure Jenkins from Helm chart
-- Installing Prometheus from Helm chart
-- Demonstrating Kubernetes plugin for Jenkins
-- Build, deploy and run container from Jenkinsfile
-- Update container with canary deployment
-- Monitoring canary deployments
-- Rollback canary
+- Personal Kubernetes кластер 
+- Установите и настройте Jenkins из **Helm chart**
+- Установка **Prometheus** из **Helm chart**
+- Демонстрация плагина **Kubernetes** для **Jenkins**
+- Построить, развернуть и запустить контейнер из **Jenkinsfile**
+- Обновление контейнера с **canary deployment**
+- Мониторинг развертывания **canary deployments**
+- откат **Rollback canary**
 
-> Canary release is a technique to reduce the risk of introducing a new software version in production by slowly rolling out the change to a small subset of users before rolling it out to the entire infrastructure and making it available to everybod. - [MartinFowler.com](https://martinfowler.com/bliki/CanaryRelease.html)
+> **Canary release** - это техника, позволяющий снизить риск внедрения новой версии программного обеспечения в **production** за счет **slowly rolling** изменений на небольшом подмножестве пользователей, прежде чем распространять его на всю инфраструктуру и делать его доступным для всех. - [MartinFowler.com](https://martinfowler.com/bliki/CanaryRelease.html)
 
-## Instructions Overview ##
+## **Instructions** Обзор инструкций ##
 
-- Start a personal Kubernetes cluster
-- Create a Quay.io robot account and copy the credentials
-- Install Jenkins on the cluster
-- Configure Jenkins to leverage Kubernetes
-- Create a pipeline that builds on and publishes to Kubernetes
-- Roadmap: Add Prometheus-Operator monitoring stack from Helm charts
-- Roadmap: Observe monitoring of a deployed container
-- Roadmap: See how canary deployments work with this workflow
+- Запустить **personal Kubernetes cluster**
+- Создайте учетную запись робота **Quay.io robot account** и скопируйте учетные данные **credentials**
+- Установите **Jenkins** на кластере
+- Сконфигурируйте **Jenkins**, чтобы использовать **Kubernetes**
+- Создайте **pipeline**, который билдится и публикуется в **Kubernetes**.
+- Roadmap: добавление стека мониторинга **Prometheus-Operator** из **Helm charts**
+- Roadmap: наблюдение за **deployed container**
+- Roadmap: посмотрите, как **canary deployments** работают с этим рабочим процессом
 
-> [Jenkins]("https://en.wikipedia.org/wiki/Jenkins_%28software%28") is an open source automation server written in Java. Jenkins helps to automate the non-human part of the software development process, with continuous integration and facilitating technical aspects of continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat. It supports version control tools, including AccuRev, CVS, Subversion, Git, Mercurial, Perforce, ClearCase and RTC, and can execute Apache Ant, Apache Maven and sbt based projects as well as arbitrary shell scripts and Windows batch commands. The creator of Jenkins is Kohsuke Kawaguchi. Released under the MIT License, Jenkins is free software.
+> [Jenkins]("https://en.wikipedia.org/wiki/Jenkins_%28software%28") сервер автоматизации с открытым исходным кодом, написанный на **Java**. **Jenkins** помогает автоматизировать нечеловеческую часть **non-human** процесса разработки программного обеспечения, обеспечивая непрерывную интеграцию **continuous integration** и облегчая технические аспекты непрерывной доставки **continuous delivery**. Это серверная система, которая работает в контейнерах сервлетов, таких как A**pache Tomcat**. Он поддерживает инструменты контроля версий, включая **AccuRev, CVS, Subversion, Git, Mercurial, Perforce, ClearCase** и **RTC**, и может выполнять проекты на основе **Apache Ant, Apache Maven** и **sbt**, а также произвольные **shell scripts** и **Windows batch commands**. Создатель Дженкинс - **Kohsuke Kawaguchi**. Выпущенная по лицензии **MIT**, **Jenkins** является свободным программным обеспечением
