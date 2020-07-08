@@ -34,14 +34,14 @@
         "description": "ReplicaSets и Deployments. Редактируем ресурсы JSON(kubectl edit rs vue-rs -o json)"
       },
       {
+        "course_id": "echoserver",
+        "title": "ReplicaSets, Deployments. echoserver.yaml",
+        "description": " концепции ReplicaSets, Deployments. kubectl create -f echoserver.yaml"
+      },
+      {
         "course_id": "kube-playground-nginx",
         "title": "Nginx on Kubernetes, nginx-deployment.yaml",
         "description": "kubectl apply -f nginx-deployment.yaml"
-      },
-      {
-        "course_id": "first-app",
-        "title": "First App",
-        "description": "Запустите ваше первое приложение на Kubernetes. kubectl create -f echoserver.yaml"
       },
       {
         "course_id": "cheatsheet",
