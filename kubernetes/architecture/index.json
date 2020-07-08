@@ -55,7 +55,7 @@
       }
     ],
     "uisettings": "yaml",
-    "uimessage1": "\u001b[36;1mDigital Academy training.\u001b[0m"
+    "uimessage1": "\u001b[36;1m training.\u001b[0m"
   },
   "backend": {
     "imageid": "kubernetes-cluster-running"

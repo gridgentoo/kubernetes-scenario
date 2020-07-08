@@ -45,7 +45,7 @@
       },
       {
         "course_id": "jenkins",
-        "title": "Jenkins Cluster and CI/CD pipeline on Kubernetes.",
+        "title": "Jenkins кластер и CI/CD pipeline в Kubernetes.",
         "description": "В этой лабораторной работе мы научимся запускать CI/CD pipeline с Jenkins и Kubernetes."
       },
       {
