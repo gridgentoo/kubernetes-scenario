@@ -14,17 +14,17 @@
 
 `nano values.yaml`{{execute}}
 
-Подготовить **Provisioning RabbitMQ** на **Kubernetes** легко, просто установите это [Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
+Подготовить **Provisioning Apache Ignite** на **Kubernetes** легко, просто установите это [Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
 
 `helm install my-ignite stable/ignite --version 1.0.1 --namespace ignite -f values.yaml`{{execute}}
 
-Для запуска контейнеров **RabbitMQ** требуется несколько минут. Чтобы получить полный статус обеспечения этой последовательности **provisioning this sequence**, выполните эту проверку.
+Для запуска контейнеров **Apache Ignite** требуется несколько минут. Чтобы получить полный статус обеспечения этой последовательности **provisioning this sequence**, выполните эту проверку.
 
 `watch kubectl get deployments,pods,services --namespace ignite`{{execute}}
 
 ##########################################################################################
 
-Через несколько секунд **3 Pods** (RabbitMQ _Nodes_) с пометкой `pod/my-ignite-memcached-[0|1|2]` появятся и перейдут в состояние **Running**. После того, как все запущено, перестаньте **watch**. Используйте это ```clear```{{execute interrupt}} , чтобы выйти из режима наблюдения **watch**  или нажмите <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Через несколько секунд **3 Pods** (Apache Ignite _Nodes_) с пометкой `pod/my-ignite-memcached-[0|1|2]` появятся и перейдут в состояние **Running**. После того, как все запущено, перестаньте **watch**. Используйте это ```clear```{{execute interrupt}} , чтобы выйти из режима наблюдения **watch**  или нажмите <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 Редактируем **values.yaml** правим количество реплик например 2
 
@@ -35,7 +35,7 @@
 `helm install my-ignite stable/ignite --version 1.0.1 --namespace ignite -f values.yaml`{{execute}}
 
 
-Для запуска 2 реплик **RabbitMQ** требуется несколько минут. Чтобы получить полный статус обеспечения этой последовательности **provisioning this sequence**, выполните эту проверку.
+Для запуска 2 реплик **Apache Ignite** требуется несколько минут. Чтобы получить полный статус обеспечения этой последовательности **provisioning this sequence**, выполните эту проверку.
 `watch kubectl get deployments,pods,services --namespace ignite`{{execute}}
 
 # Погрузимся глубже в исследовнание манифестов stable/rabbitmq-ha
