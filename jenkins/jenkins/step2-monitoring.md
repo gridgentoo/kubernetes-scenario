@@ -1,14 +1,15 @@
-For a canary deployment monitoring the performance and behavior of newly deployed containers is important to inspect before deciding to either promote the new version, or rolling it back. Containers can be monitored with Prometheus. There is a stable Helm chart that installs a Prometheus operator and some opinionated configurations on top of that. To install and configure the Prometheus stack run these 3 commands:
+Для **canary deployment** важно отслеживать производительность и поведение вновь **deployed containers**, прежде чем принять решение о продвижении новой версии или ее отмене **rolling it back**. Контейнеры можно контролировать с помощью **Prometheus**. Существует **stable Helm chart**, на которой установлен **Prometheus operator** и некоторые продуманные конфигурации. Чтобы установить и настроить **Prometheus stack** выполните следующие 3 команды:
 
 `curl https://raw.githubusercontent.com/javajon/kubernetes-observability/master/configurations/prometheus-stack.sh | bash -s`{{execute}}
 
-The above script includes a wait command, so it will take a few minutes for it to complete.
+Приведенный выше скрипт включает команду ожидания **wait command**, поэтому для ее завершения потребуется несколько минут.
 
-Roadmap: Need to add ServiceMonitor for scraping the hello-world metrics. For now metrics can be largely seen at the node CPU and memory metrics. Consider these two declarations ():
+Roadmap: необходимо добавить **ServiceMonitor** для очистки показателе **hello-world metrics**. На данный момент **metrics** можно в значительной степени увидеть в метриках **node CPU** and **memory metrics**. Рассмотрим эти два **declarations** ():
 
 `kubectl create -n monitoring -f monitoring.yaml`{{execute}}
 
-TODO: missing yaml
+TODO: пропал **missing yaml**
 `kubectl create -n monitoring -f alertmanager-latency-rule.yaml`{{execute}}
 
-Below are instructions that configure Prometheus to watch for performance of the upcoming hello-world deployments. But first, let's get a Jenkins pipeline to build, deploy and install the hello-world application.
+Ниже приведены инструкции, которые **configure Prometheus** для наблюдения **watch** за производительностью будущих deployments. 
+Но сначала давайте возьмем **Jenkins pipeline** для сборки, развертывания и установки приложения.
