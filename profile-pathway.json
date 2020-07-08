@@ -116,6 +116,11 @@
         "id": "infrastructure-as-code" 
       },
       {
+        "title": "Jenkins для CI кода",
+        "description": "мы рассмотрим использование Jenkins для CI.",
+        "id": "jenkins" 
+      },
+      {
         "title": "Основы OpenShift",
         "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
         "id": "openshift-fundamentals"

@@ -1,0 +1,18 @@
+{
+    "title": "Helm пакетный менеджер для Kubernetes",
+    "icon": "fa-kubernetes",
+    "description": "Откройте для себя Helm.",
+    "courses": [
+      {
+        "course_id": "scenario",
+        "title": "Интеграция Jenkins с GIT",
+        "description": "Узнайте, как интегрировать Jenkins с GIT для CI кода"
+      },
+      {
+        "course_id": "apache-ignite",
+        "title": "Apache Ignite Cluster (In-Memory) on Kubernetes",
+        "description": "In-Memory Cluster, Apache Ignite - это распределенная база данных, предназначенная для хранения и вычисления больших объемов данных в кластере узлов."
+      }
+    ]
+  }
+  
