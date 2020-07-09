@@ -1,46 +1,43 @@
-After setting up, now you will be landed on Jenkins Dashboard.
-Make yourself familiar with it.
+После настройки вы окажетесь на инструментальной панели **Jenkins Dashboard**.
+Познакомьтесь с этим.
 
-Now, for our scenario, we have to set JDK & install Git plugin.
+Теперь для нашего сценария мы должны установить **JDK** и установить плагин **Git**.
 
-First, we will install **GIT Plugin** for Jenkins. To do that:
+Сначала мы установим **GIT Plugin** для **Jenkins**. Для этого:
 
- + Click on **Manage Jenkins** from left menu.
+ + Кликните **Manage Jenkins** в левом меню.
 
- + Click on **Manage Plugins** on the next page.
+ + Кликните **Manage Plugins** на следующей странице.
 
- + Select **Available** tab from the Plugin Manager page.
+ + Выберите вкладку **Available** на странице диспетчера плагинов **Plugin Manager**.
 
- + Enter **Git Plugin** in the **Filter box** on the upper right side.
+ + Введите **Git Plugin** в поле **Filter box** в правом верхнем углу.
 
- + Check the box before **Git Plugin** 
+ + Поставьте галочку перед **Git Plugin** 
 
- + Click on **Install without restart**
-
+ + Кликните **Install without restart**
 	
-Jenkins will download & install selected plugin as well as its dependencies.
+**Jenkins** загрузит и установит выбранный **plugin**, а также его зависимости.
 
-Once the download is complete & you see **Success** after each plugin, click on **Manage Plugins**
+Как только загрузка завершится, и вы увидите **Success** после каждого плагина, нажмите **Manage Plugins**
 
-Now, the next thing to do is to set **JDK** which we will need to compile & execute our program. To do that:
+Теперь, следующее, что нужно сделать, это установить **JDK**, который нам понадобится для компиляции и выполнения нашей программы. Для этого:
 
- + Make sure you are on **Manage Jenkins** page.
+ + Убедитесь, что вы находитесь на странице **Manage Jenkins**.
  
- + Click on **Global Tool Configuration**
+ + Кликните **Global Tool Configuration**
  
- + Click on **Add JDK**
+ + Кликните **Add JDK**
  
- + Enter any name for JDK in the **JDK Name** text box.
+ + Введите любое имя для **JDK** в текстовом поле **JDK Name** .
  
- + Uncheck the **Install Automatically** checkbox.
+ + Снимите флажок с checkbox **Install Automatically**.
  
- + Enter the path **/usr/lib/jvm/java-8-openjdk-amd64** in the **JAVA_HOME** text box.
-  (You can get value of JAVA_HOME by logging into your container & entering **echo $JAVA_HOME**)
- 
- + Click on **Apply**
- 
- + Click on **Save**
+ + Введите путь **/usr/lib/jvm/java-8-openjdk-amd64** в текстовом поле **JAVA_HOME** .
+  (Вы можете получить значение **JAVA_HOME** войдя в свой **container** и введя **echo $JAVA_HOME**)
 
-That's it! You are done with the settings.
+ + Кликните **Apply**
+ 
+ + Кликните **Save**
 
 

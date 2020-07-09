@@ -1,18 +1,16 @@
-As the container is created, now it's time to log into it.
+Поскольку **container** создан, пришло время войти в него.
 
-First, we will verify that the container is currently running by executing:
+Сначала мы проверим, что **container** в данный момент запущен, выполнив:
 
-`docker ps 
-`{{execute}}
+`docker ps `{{execute}}
 
-This command lists all the containers that are currently active.
-Copy either the **CONTAINER ID** or **CONTAINER NAME** from the output of above command as we will need it for next command.
+Эта команда выводит список всех контейнеров, которые в данный момент активны.
+Скопируйте либо **CONTAINER ID** или **CONTAINER NAME** из выходных данных **output** вышеприведенной команды, поскольку они понадобятся нам для следующей команды.
 
-Now, it's time to log into it by executing:
+Теперь пришло время войти в **container**, выполнив:
 
-`docker exec -it "CONTAINER ID/NAME" /bin/bash
-`{{execute}}
+`docker exec -it "CONTAINER ID/NAME" /bin/bash`{{execute}}
 
-Replace quoted string with actual value of either **CONTAINER ID/CONTAINER NAME**.
+Замените строку в кавычках фактическим значением **CONTAINER ID/CONTAINER NAME**.
 
-Now, we will be logged into our container as a ROOT user.
+Теперь мы войдем в наш **container** как **ROOT user**.

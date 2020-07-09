@@ -1,16 +1,15 @@
-First, you have to unlock Jenkins. To do that, we need to have automatically generated password.
-As mentioned on the landing page, it is written by default at **/var/jenkins_home/secrets/initialAdminPassword** this location in your container.
 
-To get that password, we will log in to our container(if already logged in then skip to next command).
+Во-первых, вы должны разблокировать **Jenkins**. Для этого нам нужно автоматически сгенерировать пароль.
+Как уже упоминалось на целевой странице, по умолчанию это записывается в **/var/jenkins_home/secrets/initialAdminPassword** в этом месте вашего контейнера.
 
-`docker exec "CONTAINER ID/NAME" /bin/bash
-`{{execute}}
+Чтобы получить этот пароль, мы войдем в наш контейнер (если уже вошли в систему, перейдите к следующей команде).
 
-Next, we will print that password on the screen by:
+`docker exec "CONTAINER ID/NAME" /bin/bash`{{execute}}
 
-`cat /var/jenkins_home/secrets/initialAdminPassword
-`{{execute}}
+Далее мы выведем этот пароль на экран:
 
-Copy the printed password & paste it into the textbox on Jenkins Page & press continue.
+`cat /var/jenkins_home/secrets/initialAdminPassword`{{execute}}
 
-In the next step, we will customize Jenkins with plugins.
+Скопируйте напечатанный **password** и вставьте его в **textbox** на странице **Jenkins** и нажмите **continue**.
+
+На следующем этапе мы настроим **Jenkins** с плагинами.

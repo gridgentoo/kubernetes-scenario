@@ -1,19 +1,19 @@
-Now we have 2 options to Customize Jenkins:
+ Теперь у нас есть 2 варианта настройки **Jenkins**:
 
- + By Installing suggested plugins.
- + By Selecting specific plugins to install.
+  + Установка предлагаемых **plugins**.
+  + Выбор конкретных **plugins** для установки.
 
-You can choose any of the option, but for now we will select second: Select plugins to install.
+Вы можете выбрать любой из вариантов, но сейчас мы выберем второй: Выберите **plugins** для установки.
 
-On the next page, various plugins are listed with their usage. You can check them one by one.
-But for now, we will select none of them.
+На следующей странице перечислены различные **plugins** с их использованием. Вы можете проверить их по одному.
+Но пока мы не выберем ни одного из них.
 
-Click on **None** from upper left tab. This will uncheck all options.
+Кликните на **None** на левой верхней вкладке. Это снимет все опции.
 
-Now click on **Install**
+Теперь нажмите  **Install**
 
-On the next page, enter your details like Username, Password, Full Name & click on **Save & Finish**
+На следующей странице введите свои данные, такие как **Username, Password, Full Name** и нажмите **Save & Finish**
 
-Cheers! This completes our setting up of Jenkins !!
+Ура! Это завершает нашу настройку **Jenkins**!
 
-Click on **Start using Jenkins**
+Кликните **Start using Jenkins**

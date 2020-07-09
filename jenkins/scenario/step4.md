@@ -1,10 +1,10 @@
-As the container is up & running, now it's time to check Jenkins Web UI.
+Поскольку контейнер запущен и работает, пришло время проверить веб-интерфейс **Jenkins Web UI**.
 
-You can access Jenkins by:
+Вы можете получить доступ к **Jenkins**:
 
- + Clicking on **+** icon next to the Terminal tab
- + Clicking on **View HTTP port 80 on Host 1**
++ Кликните на значок **+** рядом с вкладкой **Terminal tab**
++ Кликните на **View HTTP port 80 on Host 1**
 
-A new browser tab will be opened with the Jenkins UI.
+Откроется новая вкладка браузера с пользовательским интерфейсом **Jenkins UI**.
 
-In the next step, we will setup Jenkins.
+На следующем этапе мы настроим **Jenkins**.

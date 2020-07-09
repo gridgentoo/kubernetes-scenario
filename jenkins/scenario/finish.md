@@ -1,6 +1,6 @@
 В этом сценарии объясняется, как интегрировать GIT с Jenkins для непрерывной сборки и интеграции вашего кода.
 
-**Please let me know your suggestions, reviews, comments about this tutorial by either of the following ways**
+
 
 ------
 <p style="text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
