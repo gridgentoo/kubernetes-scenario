@@ -1,0 +1,15 @@
+{
+    "title": "Istio в OpenShift",
+    "icon": "fa-kubernetes",
+    "description": "Интерактивные сценарии обучения предоставляют вам предварительно настроенный pre-configured OpenShift® instance, доступный из вашего браузера.",
+    "courses": [
+      {
+        "course_id": "1-introduction",
+        "title": "Введение в Istio.",
+        "description": "Начало работы с Istio в OpenShift."
+      }
+
+    ]
+  }
+
+  

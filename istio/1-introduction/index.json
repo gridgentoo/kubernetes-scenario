@@ -1,0 +1,37 @@
+{
+  "pathwayTitle": "Service Mesh с Istio",
+  "title": "Introduction",
+  "icon": "fa-openshift",
+  "description": "Понять проблему, которую решает Istio",
+  "difficulty": "Basic",
+  "time": "30 minutes",
+  "files": [],
+  "environment": {
+      "showdashboard": true,
+      "dashboard": "Web Console",
+      "uilayout": "editor-terminal",
+      "uieditorpath": "/root/installation/",
+      "uisettings": "java",
+      "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+  },
+  "backend": {
+    "trainingid": "openshift-3-11", 
+    "imageid": "openshift-3-11", "port": 8443
+  },
+  "details": {
+    "finish": {
+        "text": "finish.md"
+    },
+    "intro": {
+        "text": "intro.md",
+        "credits": "http://developers.redhat.com",
+        "code": "set-env.sh",
+        "courseData": "run-init.sh"
+    },
+    "steps": [
+        { "title": "Что такое Service Mesh и зачем он нам нужен?", "text": "1what-is-service-mesh.md" },
+        { "title": "Istio Details", "text": "2details.md" },
+        { "title": "Istio installation", "text": "3installation.md" }
+    ]
+  }
+}

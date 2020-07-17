@@ -2,8 +2,13 @@
     "courses": [
       {
         "title": "Kafka on OpenShift",
-        "description": "Изучите, как использовании Kafka в Kubernetes.",
+        "description": "Изучите, как использовании Kafka в OpenShift.",
         "id": "kafka-openshift"
+      },
+      {
+        "title": "Istio on OpenShift",
+        "description": "Изучите, как использовании Istio в OpenShift.",
+        "id": "istio"
       },
       {
         "title": "ELK on Kubernetes",
