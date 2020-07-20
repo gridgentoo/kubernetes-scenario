@@ -7,6 +7,11 @@
         "course_id": "1-introduction",
         "title": "Введение в Istio.",
         "description": "Начало работы с Istio в OpenShift."
+      },
+      {
+        "course_id": "2-deploy-microservices",
+        "title": "Deploy microservices.",
+        "description": "Этот сценарий будет развертывать микросервисы.."
       }
 
     ]
