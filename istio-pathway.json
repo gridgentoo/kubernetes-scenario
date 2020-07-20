@@ -1,17 +1,32 @@
 {
     "title": "Istio в OpenShift",
     "icon": "fa-kubernetes",
-    "description": "Интерактивные сценарии обучения предоставляют вам предварительно настроенный pre-configured OpenShift® instance, доступный из вашего браузера.",
+    "description": "Интерактивные сценарии обучения предоставляют вам, в предварительно настроенном pre-configured OpenShift® инстансе, доступном из вашего браузера.",
     "courses": [
       {
         "course_id": "1-introduction",
         "title": "Введение в Istio.",
-        "description": "Начало работы с Istio в OpenShift."
+        "description": "Знакомимся с Service Mesh. В этом сценарии, мы устанавим Istio в кластере OpenShift."
       },
       {
         "course_id": "2-deploy-microservices",
-        "title": "Deploy microservices.",
-        "description": "Этот сценарий будет развертывать микросервисы.."
+        "title": "Развертывание микросервисов в Istio",
+        "description": "В этом сценарии, мы задеплоим микросервисы. Используя Istio, мы развернем три микросервиса с Spring Boot и Vert.x."
+      },
+      {
+        "course_id": "3-monitoring-tracing",
+        "title": "Мониторинг и трассировка в Istio",
+        "description": "Cредства мониторинга Istio из коробки, настраиваемые метрики, а также OpenTracing через Prometheus и Grafana."
+      },
+      {
+        "course_id": "4-simple-routerules",
+        "title": "Простая маршрутизация в Istio.",
+        "description": "Как управлять маршрутизацией control route в Istio с помощью простых правил."
+      },
+      {
+        "course_id": "4-simple-routerules",
+        "title": "Простая маршрутизация в Istio.",
+        "description": "Как управлять маршрутизацией control route в Istio с помощью простых правил."
       }
 
     ]
