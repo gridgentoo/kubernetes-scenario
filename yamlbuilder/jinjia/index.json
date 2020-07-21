@@ -1,0 +1,52 @@
+{
+   "title": "Python environment setup",
+   "description":"",
+   "difficulty":"Beginner",
+   "time":"10 minutes",
+   "details":{
+      "steps":[
+         {
+            "title":"Python environment",
+            "text":"steps/1/text.md"
+         },
+         {
+            "title":"Create and activate a Python virtual environment",
+            "text":"steps/2/text.md"
+         },
+         {
+            "title":"Install Libraries",
+            "text":"steps/3/text.md"
+         },
+         {
+            "title":"Confirm your SciPy environment",
+            "text":"steps/4/text.md"
+         },
+         {
+            "title":"Install Deep Learning Libraries",
+            "text":"steps/5/text.md"
+         },
+         {
+            "title":"Confirm your deep learning environment",
+            "text":"steps/6/text.md"
+         }
+      ],
+      "intro":{
+         "text":"intro.md",
+         "code":"set-env.sh"
+      },
+      "finish":{
+         "text":"finish.md"
+      }
+   },
+   "files": [
+      "python_versions.py",
+      "deep_versions.py"
+    ],
+   "environment":{
+      "uilayout":"editor-terminal",
+      "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+   },
+   "backend":{
+      "imageid":"ubuntu"
+   }
+}

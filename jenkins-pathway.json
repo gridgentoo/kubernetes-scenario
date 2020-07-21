@@ -1,4 +1,5 @@
-{
+ 
+  {
     "title": "Helm пакетный менеджер для Kubernetes",
     "icon": "fa-kubernetes",
     "description": "Откройте для себя Helm.",
@@ -15,4 +16,3 @@
       }
     ]
   }
-  

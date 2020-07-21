@@ -1,9 +1,9 @@
-This scenario demonstrates how to secure HTTP traffic with Envoy Proxy. Securing HTTP traffic is critical to protecting users privacy and data.
+Этот сценарий демонстрирует, как защитить **HTTP traffic** с помощью **Envoy Proxy**. Защита **HTTP**-трафика имеет решающее значение для защиты конфиденциальности пользователей и данных.
 
-In this scenario you will learn how to:
+В этом сценарии вы научитесь:
 
-* Apply SSL certificates for securing HTTP traffic.
+* Применение **SSL certificates** для защиты **HTTP**-трафика.
 
-* Redirecting HTTP traffic to HTTPS.
+* Перенаправление **HTTP**-трафика на **HTTPS**.
 
-At the end of the scenario, you will have an understanding of how to use TLS certificates to secure HTTP traffic with Envoy.
+В конце сценария вы поймете, как использовать сертификаты **TLS** для защиты **HTTP**-трафика с **Envoy**.

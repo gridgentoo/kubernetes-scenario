@@ -1,0 +1,22 @@
+{
+    "title": "jinjia для генерации Yaml",
+    "icon": "fa-kubernetes",
+    "description": "jinjia для генерации Yaml.",
+    "courses": [
+      {
+        "course_id": "jinjia",
+        "title": "jinjia для генерации Yaml",
+        "description": "В этой лабораторной работе мы научимся ....."
+      },
+      {
+        "course_id": "ansible-k8s-modules",
+        "title": "Ansible Kubernetes модули.",
+        "description": "Как, использовать Ansible Kubernetes модули."
+      },
+      {
+        "course_id": "yamlbulder",
+        "title": "YamlBulder.groovy для генерации Yaml.",
+        "description": "В этой лабораторной работе мы научимся ....."
+      }
+    ]
+  }

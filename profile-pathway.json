@@ -131,6 +131,11 @@
         "id": "jenkins" 
       },
       {
+        "title": "YamlBuilder",
+        "description": "мы рассмотрим использование YamlBuilder для CI.",
+        "id": "yamlbuilder" 
+      },
+      {
         "title": "Основы OpenShift",
         "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
         "id": "openshift-fundamentals"
