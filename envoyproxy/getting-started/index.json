@@ -1,0 +1,40 @@
+{
+  "title": "Начало работы с Envoy",
+  "description": "Узнайте, как настроить Envoy Proxy с использованием статической конфигурации",
+  "icon": "fa-envoyproxy",
+  "details": {
+    "steps": [
+      {
+        "title": "Create Proxy Config",
+        "text": "step1.md"
+      },
+      {
+        "title": "Start Proxy",
+        "text": "step2.md"
+      },
+      {
+        "title": "Admin View",
+        "text": "step3.md"
+      },
+      {
+        "title": "Route to Docker Containers",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": ["envoy.yaml"],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/envoy",
+    "hideuieditortree": true
+  },
+  "backend": {
+    "imageid": "envoy-docker"
+  }
+}

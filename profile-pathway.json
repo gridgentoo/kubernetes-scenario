@@ -11,6 +11,11 @@
         "id": "istio"
       },
       {
+        "title": "Envoy Proxy",
+        "description": "Изучите, как использовании Envoy.",
+        "id": "envoy"
+      },
+      {
         "title": "ELK on Kubernetes",
         "description": "Изучите, как использовании ELK в Kubernetes.",
         "id": "elk"
