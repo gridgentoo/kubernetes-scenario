@@ -13,7 +13,7 @@
       {
         "title": "Envoy Proxy",
         "description": "Изучите, как использовании Envoy.",
-        "id": "envoy"
+        "id": "envoyproxy"
       },
       {
         "title": "ELK on Kubernetes",
