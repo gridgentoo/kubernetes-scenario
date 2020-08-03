@@ -1,0 +1,49 @@
+{
+    "title": "Use OpenTracing with Golang and Hot R.O.D. demo",
+    "description": "Quick start guide using OpenTracing, Golang and Jaeger",
+    "difficulty": "beginner",
+    "time": "10-15 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1 - Start Jaeger",
+                "text": "step1.md"
+            },
+            {
+                "title": "Step 2 - Start HotROD",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3 - Generate Events",
+                "text": "step3.md"
+            },
+            {
+                "title": "Step 4 - Visualise Tracing and Data Flow",
+                "text": "step4.md"
+            },
+            {
+                "title": "Step 5 - Jaeger Timeline",
+                "text": "step5.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "credits": "Based on https://medium.com/opentracing/take-opentracing-for-a-hotrod-ride-f6e3141f7941"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboards": [{"name": "Hot R.O.D.", "port": 8080}, {"name": "Jaeger UI", "port": 16686}],
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "port": 8080,
+        "imageid": "docker"
+    }
+}

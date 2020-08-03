@@ -1,4 +1,5 @@
-To locally develop and run Python code, it is recommended to use a Python virtual environment. Run the following commands to create and activate a virtual environment named `.venv`.
+Для локальной разработки и запуска кода **Python** рекомендуется использовать виртуальную среду **Python virtual environment**. 
+Выполните следующие команды, чтобы создать и активировать виртуальную среду с именем `.venv`.
 
 `apt-get update`{{execute T1}}
 

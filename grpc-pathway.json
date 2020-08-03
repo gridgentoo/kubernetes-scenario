@@ -1,0 +1,18 @@
+{
+    "title": "Protobuf, gRPC, Jaeger, Vert.X",
+    "icon": "fa-kubernetes",
+    "description": "Интерактивные сценарии обучения предоставляют вам, в предварительно настроенном kubernetes инстансе, доступном из вашего браузера.",
+    "courses": [
+      {
+        "course_id": "quote-generator",
+        "title": "gRPC, Vert.x Asynchronous APIs, RESTful endpoints, Publishing to Event Bus",
+        "description": "gRPC, Vert.x, Asynchronous APIs, RESTful endpoints, Event Bus"
+      },
+      {
+        "course_id": "golang-hotrod-demo",
+        "title": "gRPC(Hot R.O.D). Трассировки в Jaeger через API OpenTracing.",
+        "description": "Jaeger - это tracing system с открытым исходным кодом, созданная Uber."
+      }
+
+    ]
+  }

@@ -1,1 +1,1 @@
-You've completed your Jupyter Notebook scenario!
+Вы завершили сценарий!

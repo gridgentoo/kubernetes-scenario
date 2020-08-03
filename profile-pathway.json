@@ -136,6 +136,11 @@
         "id": "yamlbuilder" 
       },
       {
+        "title": "Protobuf, gRPC, Jaeger",
+        "description": "protobuf, gRPC, Jaeger, Vert.X",
+        "id": "grpc" 
+      },
+      {
         "title": "Основы OpenShift",
         "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
         "id": "openshift-fundamentals"

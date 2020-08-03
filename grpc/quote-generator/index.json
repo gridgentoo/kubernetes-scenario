@@ -1,7 +1,7 @@
 {
   "pathwayTitle": "Vert.x on RHOAR",
   "icon": "fa-openshift",
-  "title": "MicroTrader Part 2: Portfolio Service",
+  "title": "MicroTrader Part 1: Quote Generator",
   "description": "In this scenario you will build a component for the MicroTrader example application for Vert.x.",
   "difficulty": "beginner",
   "time": "15 minutes",
@@ -11,22 +11,11 @@
       "code": "env-init.sh"
     },
     "steps": [
-      {
-        "title": "Step 1",
-        "text": "01-async-service-interface.md"
-      },
-      {
-        "title": "Step 2",
-        "text": "02-data-objects.md"
-      },
-      {
-        "title": "Step 3",
-        "text": "03-implement-service.md"
-      },
-      {
-        "title": "Step 4",
-        "text": "04-deploy-to-openshift.md"
-      }
+      { "title": "Step 1", "text": "01-examine-the-sample-project.md" },
+      { "title": "Step 2", "text": "02-quote-generator-verticle.md" },
+      { "title": "Step 3", "text": "03-create-quote-rest-endpoint.md" },
+      { "title": "Step 4", "text": "04-create-openshift-project.md" },
+      { "title": "Step 5", "text": "05-deploy-to-openshift.md" }
     ],
     "finish": {
       "text": "99-outro.md"

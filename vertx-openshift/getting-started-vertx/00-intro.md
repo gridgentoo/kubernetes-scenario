@@ -1,6 +1,7 @@
-In this scenario, you will learn more about [Eclipse Vert.x](https://vertx.io), one of the runtimes included in [Red Hat OpenShift Application Runtimes](https://developers.redhat.com/products/rhoar).
+Vert.x код генератор для асинхронного **asynchronous polyglot APIs**
+https://github.com/vert-x3/vertx-codegen
 
-
+В этом сценарии вы узнаете больше о  [Eclipse Vert.x](https://vertx.io), одной из сред выполнения, включенных в [Red Hat OpenShift Application Runtimes](https://developers.redhat.com/products/rhoar).
 
 ## What you will learn
 You will learn how to get started with building a reactive web application that can serve static content as well as server-side business logic using Eclipse Vert.x.

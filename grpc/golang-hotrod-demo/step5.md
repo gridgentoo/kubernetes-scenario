@@ -1,0 +1,1 @@
+The timeline view shows a typical view of a trace as a time sequence of nested spans, where a span represents a unit of work within a single service. The top level span, also called the root span, represents the main HTTP request from Javascript UI to the frontend service, which in turn called customer service, which in turn called a MySQL database.
