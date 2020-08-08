@@ -141,6 +141,11 @@
         "id": "grpc" 
       },
       {
+        "title": "Быстрый запуск Apache Kafka",
+        "description": "Введение в Apache Kafka",
+        "id": "apache-kafka" 
+      },
+      {
         "title": "Основы OpenShift",
         "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
         "id": "openshift-fundamentals"

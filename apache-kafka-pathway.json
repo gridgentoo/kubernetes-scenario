@@ -1,0 +1,16 @@
+{
+  "title": "Быстрый старт с Apache Kafka",
+  "description": "Введение в Apache Kafka",
+  "courses": [
+    {
+      "course_id": "apache-kafka-message-enrichment",
+      "title": "Apache Kafka Message Enrichment",
+      "description": ""
+    },
+    {
+      "course_id": "apache-kafka-streams",
+      "title": "Apache Kafka Streams",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "title": "Apache Kafka Message Enrichment",
+  "description": "Introduction to Apache Kafka",
+  "difficulty": "Advanced",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Clone Repository",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Introduction",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Installation",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Geographic location",
+      "text": "steps/4/text.md"
+    },
+  {
+      "title": "Enriching the messages",
+      "text": "steps/5/text.md"
+    },
+    {
+        "title": "Enriching the messages",
+        "text": "steps/6/text.md"
+    },
+    {
+        "title": "Extracting the currency price",
+        "text": "steps/7/text.md"
+    },
+    {
+        "title": "Extracting the currency price...",
+        "text": "steps/8/text.md"
+    },
+    {
+        "title": "Enriching with currency price",
+        "text": "steps/9/text.md"
+    },
+    {
+        "title": "Enriching with currency price...",
+        "text": "steps/10/text.md"
+    },
+    {
+        "title": "Running the engine",
+        "text": "steps/11/text.md"
+    },
+    {
+        "title": "Running the engine...",
+        "text": "steps/12/text.md"
+    },
+    {
+        "title": "Running the engine...",
+        "text": "steps/13/text.md"
+    },
+    {
+        "title": "Running the engine...",
+        "text": "steps/14/text.md"
+    },
+    {
+        "title": "Running the engine...",
+        "text": "steps/15/text.md"
+    },
+    {
+        "title": "Running the engine...",
+        "text": "steps/16/text.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "vscode",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
