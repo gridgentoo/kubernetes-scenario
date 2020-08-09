@@ -1,16 +1,16 @@
 {
-  "title": "Быстрый старт с Apache Kafka",
-  "description": "Введение в Apache Kafka",
+  "title": "VSCode для и разработки облачных приложений",
+  "description": "Visual Studio Code для облачных приложений",
   "courses": [
     {
-      "course_id": "apache-kafka-message-enrichment",
-      "title": "Apache Kafka Message Enrichment",
-      "description": ""
+      "course_id": "vs-code",
+      "title": "Visual Studio Code для и разработки облачных приложений.",
+      "description": "Jinja — это шаблонизатор для OpenShift и Kubernetes."
     },
     {
-      "course_id": "apache-kafka-streams",
-      "title": "Apache Kafka Streams",
-      "description": ""
-    }
+      "course_id": "apache-kafka-message-enrichment",
+      "title": "VSCode для и разработки облачных приложений Kafka  Apache Kafka Message Enrichment",
+      "description": "Visual Studio Code для и разработки Kafka Message Enrichment."
+    },
   ]
 }
