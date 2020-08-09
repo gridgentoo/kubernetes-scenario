@@ -1,0 +1,5 @@
+ssh root@host01 "pip install ansible==2.5"
+ssh root@host01 "wget https://github.com/openshift/origin/releases/download/v3.9.0/openshift-origin-client-tools-v3.9.0-191fece-linux-64bit.tar.gz"
+ssh root@host01 "tar xvf openshift-origin-client*.tar.gz"
+ssh root@host01 "cp openshift-origin*/oc /usr/bin/"
+ssh root@host01 "rm -rf openshift-origin*"

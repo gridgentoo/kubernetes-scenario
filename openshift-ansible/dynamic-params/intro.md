@@ -1,6 +1,5 @@
-This tutorial will help you advance your understanding of the [openshift-applier](https://github.com/redhat-cop/openshift-applier.git) with dynamic parameters!
+Этот Сценарий поможет вам углубить ваше понимание[openshift-applier](https://github.com/redhat-cop/openshift-applier.git) с динамическими параметрами!
  
-Make sure to do [this](https://katacoda.com/patrickcarney/scenarios/openshift-applier) tutorial first!
+Обязательно сначала изучите этот урок! [this](https://katacoda.com/patrickcarney/scenarios/openshift-applier) 
 
-Please feel to contribute!
 

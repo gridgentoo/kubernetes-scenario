@@ -8,9 +8,14 @@
         "description": "Jinja — это шаблонизатор для OpenShift."
       },
       {
+        "course_id": "openshift-applier",
+        "title": "Ansible openshift-applier для реализации парадигмы Infrastructure-as-Code.",
+        "description": "Как Ansible используется Jinja-шаблонизатор для OpenShift."
+      },
+      {
         "course_id": "dynamic-params",
         "title": "Ansible openshift-applier для реализации парадигмы Infrastructure-as-Code.",
-        "description": "Как в Ansible используется Jinja-шаблонизатор для OpenShift."
+        "description": "Как Ansible используется Jinja-шаблонизатор для OpenShift."
       },
       {
         "course_id": "apache-kafka-message-enrichment",

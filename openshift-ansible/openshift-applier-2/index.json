@@ -1,0 +1,42 @@
+{
+    "icon": "fa-openshift",
+    "title": "Intro to OpenShift-Applier",
+    "description": "",
+    "difficulty": "beginner",
+    "time": "10-15 minutes",
+    "backend": {
+        "trainingid": "openshift-3-9",
+        "imageid": "openshift",
+        "port": 8443
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "hideintro": false,
+        "hidefinish": false
+    },
+    "details": {
+        "steps": [{
+            "title": "Step 1",
+            "text": "step1.md"
+        }, {
+            "title": "Step 2",
+            "text": "step2.md"
+        }, {
+            "title": "Step 3",
+            "text": "step3.md"
+        }],
+        "intro": {
+            "courseData": "env-init.sh",
+            "code": "set-env.sh",
+            "text": "intro.md"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [{"file": ".init.sh", "target": "~/", "chmod": "+x"}]
+        }
+    }
+}

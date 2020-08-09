@@ -1,0 +1,50 @@
+{
+    "icon": "fa-openshift",
+    "title": "The Manual Menace (01)",
+    "description": "",
+    "difficulty": "beginner",
+    "time": "10-15 minutes",
+    "backend": {
+        "imageid": "ubuntu"
+    },
+    "environment": {
+        "uilayout": "editor-terminal",
+        "hideintro": false,
+        "hidefinish": false
+    },
+    "details": {
+        "steps": [{
+            "title": "Part 1 - Create OpenShift Projects",
+            "text": "part1.md"
+        }, {
+            "title": "Part 2 - Nexus",
+            "text": "part2.md"
+        }, {
+            "title": "Part 3 - GitLab",
+            "text": "part3.md"
+        }, {
+            "title": "Part 4 - MongoDB for CI tests",
+            "text": "part4.md"
+        }, {
+            "title": "Part 5 - Jenkins & s2i",
+            "text": "part5.md"
+        }, {
+            "title": "Part 6 - Jenkins Hello World",
+            "text": "part6.md"
+        }, {
+            "title": "Part 7 - Live, Die, Repeat",
+            "text": "part7.md"
+        }],
+        "intro": {
+            "courseData": "env-init.sh",
+            "code": "set-env.sh",
+            "text": "intro.md"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [{"file": ".init.sh", "target": "~/", "chmod": "+x"}]
+        }
+    }
+}
