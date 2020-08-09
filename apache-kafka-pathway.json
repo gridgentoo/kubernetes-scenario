@@ -9,8 +9,8 @@
     },
     {
       "course_id": "apache-kafka-message-enrichment",
-      "title": "VSCode для и разработки облачных приложений Kafka Apache Kafka Message Enrichment",
+      "title": "VSCode для и разработки облачных приложений Apache Kafka",
       "description": "Visual Studio Code для и разработки Kafka Message Enrichment."
-    },
+    }
   ]
 }
