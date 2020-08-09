@@ -1,12 +1,12 @@
-## To get started, let us login to the OpenShift cluster by running the following:
+## Для начала давайте войдем в **OpenShift cluster**, выполнив следующее: 
 
 ``oc login -u developer -p developer``{{execute}}
 
-To begin, let's create a new directory and go into it.
+Для начала давайте создадим новый каталог и войдем в него.
 
 ``mkdir sample-applier; cd sample-applier``{{execute}}
 
-To complete the generic project structure, we want to create the rest of these:
+Чтобы завершить общую структуру проекта, мы хотим создать остальную структуру проекта:
 
 ```
 .
@@ -24,13 +24,13 @@ To complete the generic project structure, we want to create the rest of these:
     └── project
 ```
 
-Let's go ahead and create that structure:
+Давайте продолжим и создадим эту структуру:
 
 ```
 mkdir -p inventory/group_vars params/{ruby,projectrequests} templates/{app,project}
 ```{{execute}}
 
-And now the files:
+А теперь файлы:
 
 ``` 
 touch inventory/group_vars/all.yml inventory/hosts requirements.yml
