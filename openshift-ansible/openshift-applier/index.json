@@ -1,7 +1,7 @@
 {
     "icon": "fa-openshift",
-    "title": "Introduction to OpenShift-Applier",
-    "description": "Using the Ansible openshift-applier role to implement the Infrastructure-as-Code paradigm",
+    "title": "Введение в OpenShift-Applier",
+    "description": "Использование роли Ansible openshift-applier role, для реализации парадигмы Infrastructure-as-Code",
     "difficulty": "Intermediate",
     "time": "20-30 minutes",
     "backend": {
