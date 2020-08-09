@@ -1,0 +1,63 @@
+{
+    "icon": "fa-openshift",
+    "title": "Advanced OpenShift-Applier with Dynamic Parameters",
+    "description": "Using the Ansible openshift-applier role to implement the Infrastructure-as-Code paradigm",
+    "difficulty": "Advanced",
+    "time": "20-30 minutes",
+    "backend": {
+        "trainingid": "openshift-3-9",
+        "imageid": "openshift",
+        "port": 8443
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "hideintro": false,
+        "hidefinish": false
+    },
+    "details": {
+        "steps": [{
+            "title": "Step 1",
+            "text": "step1.md"
+        }, {
+            "title": "Step 2",
+            "text": "step2.md"
+        }, {
+            "title": "Step 3",
+            "text": "step3.md"
+        }, {
+            "title": "Step 4",
+            "text": "step4.md"
+        }, {
+            "title": "Step 5",
+            "text": "step5.md"
+        }, {
+            "title": "Step 6",
+            "text": "step6.md"
+        }, {
+            "title": "Step 7",
+            "text": "step7.md"
+        }, {
+            "title": "Step 8",
+            "text": "step8.md"
+        }, {
+            "title": "Step 9",
+            "text": "step9.md"
+        }, {
+            "title": "Step 10",
+            "text": "step10.md"
+        }],
+        "intro": {
+            "courseData": "env-init.sh",
+            "code": "set-env.sh",
+            "text": "intro.md"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [{"file": ".init.sh", "target": "~/", "chmod": "+x"}]
+        }
+    }
+}

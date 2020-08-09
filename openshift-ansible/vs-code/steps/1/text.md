@@ -33,8 +33,13 @@ Jinja2 - это современный и удобный для разработ
 
 `pip install PyYAML`{{execute T1}}
 
+Список пакетов установленых в виртуальное окружение
 
-# КАК ИСПОЛЬЗОВАТЬ Jinja2 с YAML, На этом этапе мы настроим редактор **VScode** и **clone repository**.
+`pip freeze`{{execute T1}}
+
+
+### КАК ИСПОЛЬЗОВАТЬ Jinja2 с YAML
+### На этом этапе мы настроим редактор **VScode** и **clone repository**.
 
 Клонируйте следующий репозиторий, скопировав и выполнив следующую команду в **vscode terminal**.
 
@@ -56,7 +61,7 @@ Jinja2 - это современный и удобный для разработ
 ![](https://github.com/fenago/katacoda-scenarios/raw/master/apache-kafka/1.JPG)
 
 
-# КАК ИСПОЛЬЗОВАТЬ Jinja2 с YAML
+### КАК ИСПОЛЬЗОВАТЬ Jinja2 с YAML
 
 Рассмотрим пример с medium.com по динамической генерации кода
 Dynamic Code Generator using YAML config and Jinja2 Templates

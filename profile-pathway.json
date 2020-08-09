@@ -142,8 +142,8 @@
       },
       {
         "title": "VSCode для и разработки облачных приложений",
-        "description": "VSCode для и разработки облачных приложений OpenShift",
-        "id": "apache-kafka" 
+        "description": "VSCode, Ansible, Jinja, OpenShift",
+        "id": "openshift-ansible" 
       },
       {
         "title": "Основы OpenShift",
