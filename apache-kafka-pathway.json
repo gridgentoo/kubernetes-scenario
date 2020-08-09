@@ -5,11 +5,11 @@
     {
       "course_id": "vs-code",
       "title": "Visual Studio Code для и разработки облачных приложений.",
-      "description": "Jinja — это шаблонизатор для OpenShift и Kubernetes."
+      "description": "Jinja — это шаблонизатор для OpenShift."
     },
     {
       "course_id": "apache-kafka-message-enrichment",
-      "title": "VSCode для и разработки облачных приложений Kafka  Apache Kafka Message Enrichment",
+      "title": "VSCode для и разработки облачных приложений Kafka Apache Kafka Message Enrichment",
       "description": "Visual Studio Code для и разработки Kafka Message Enrichment."
     },
   ]
