@@ -1,19 +1,14 @@
-## This part should look familiar, BUT THERE'S A DIFFERENCE!
-
-Like last time, these parameters match up with each Template to create a list of OpenShift objects...
-
-But this time we will use them as our defaults!
-
-Let's create a parameter file to set this value:
+## Before we can run this, we need to create a playbook which will call the `openshift-applier`.
 
 ```
-echo 'NAMESPACE_BUILD=ruby-example' > params/ruby/build
-```{{execute}}
+cat <<EOM >apply.yml
+---
+- name: Create Project and Ruby Example 
+  hosts: "seed-hosts"
+  tasks:
+    - include_role:
+        name: openshift-applier/roles/openshift-applier
+EOM
+```{{execute}} 
 
-Notice the parameter values are different than step 3! 
-
-Go ahead and run it again:
-``ansible-playbook -i inventory/ apply.yml``{{execute}}
-
-
-
+Next, we'll pull in the `openshift-applier` role using `ansible-galaxy`!

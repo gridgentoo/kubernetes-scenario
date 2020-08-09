@@ -1,50 +1,37 @@
-## Let's quickly setup everything to run the applier with the new dynamic params!
-
-First the `hosts` file:
+## To combine a template with a parameters file, we use the `oc process` command. 
 
 ```
-cat <<EOM >inventory/hosts
-[seed-hosts]
-localhost ansible_connection=local
-EOM
+oc process --local -f templates/app/ruby.yml --param-file params/ruby/build
 ```{{execute}}
 
+This does not put the output into OpenShift, it only validates that your template and params are correct and shows you the output.
 
-and the playbook just like last time:
+If everything looks good, and you want to put it into OpenShift, your command would look like this: `oc process -f templates/app/ruby.yml --param-file params/ruby/build | oc apply -f -` (THIS IS AN EXAMPLE, DO NOT RUN)
+
+This is a powerful command that will ensure your template and all of it's pieces have been created in OpenShift. And this is precisely what the `openshift-applier` role allows you to do using Ansible!
+
+Now, to execute that same command using the `openshift-applier` we need to create `openshift_cluster_content` to tell it which templates and parameters to use.
 
 ```
-cat <<EOM >apply.yml
+cat <<EOM >inventory/group_vars/all.yml
 ---
-- name: Create Project and Ruby Example 
-  hosts: "seed-hosts"
-  tasks:
-    - include_role:
-        name: openshift-applier/roles/openshift-applier
-EOM
-```{{execute}} 
+ansible_connection: local
 
-
-We'll pull in the `openshift-applier` role using `ansible-galaxy`!
-```
-cat <<EOM >requirements.yml
-- name: openshift-applier
-  scm: git
-  src: https://github.com/redhat-cop/openshift-applier
-  version: v2.0.3
+openshift_cluster_content:
+- object: projects
+  content:
+  - name: dev
+    template: "{{ inventory_dir }}/../templates/project/projectrequest-template.yml"
+    params: "{{ inventory_dir }}/../params/projectrequests/project"
+    action: create
+    ignore_unknown_parameters: false
+    tags:
+      - projectrequests
+      - projectrequests-dev
 EOM
 ```{{execute}}
 
-And now let's run the galaxy command:
-``ansible-galaxy install -r requirements.yml -p roles``{{execute}}
+The `openshift-applier` can also pull templates down from raw GitHub URLs in addition to using local files!
 
-Finally, let's run it!
-``ansible-playbook -i inventory/ apply.yml``{{execute}}
+To learn more about the `openshift_cluster_content` object, go [here](https://github.com/redhat-cop/openshift-applier/blob/v2.0.0/roles/openshift-applier/README.md)!
 
-If that is successful you should be:
-
-```
-PLAY RECAP ***********************************
-localhost                  : ok=18   changed=2
-```
-
-NOTE: if you need a refresher on what we're doing in this step, please refer to [here](https://katacoda.com/patrickcarney/scenarios/openshift-applier)

@@ -1,6 +1,4 @@
-## If you took [this](https://katacoda.com/patrickcarney/scenarios/openshift-applier) tutorial, then the first two steps should look familiar!
-
-To get started, let us login to the OpenShift cluster by running the following:
+## To get started, let us login to the OpenShift cluster by running the following:
 
 ``oc login -u developer -p developer``{{execute}}
 

@@ -1,46 +1,33 @@
-## Because we haven't defined the variable `ruby_vars` yet!
-
-Edit your `inventory/group_vars/all.yml` file and add this above `openshift_cluster_content`:
+## Now that we see our Ruby app up and running, let's go push it up to GitHub so it can be transferred to our other cluster!
 
 ```
-ruby_vars:
-  NAMESPACE_BUILD: ruby-example
-```{{copy}}
+git init
+```{{execute}}
 
-Your `inventory/group_vars/all.yml` should now look like this:
+Name your branch uniquely, and put in your email and name info
+```
+git checkout -b your-branch-name
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
 
 ```
----
-ansible_connection: local
+git add .
+```{{execute}}
 
+Make a commit!
+```
+git commit -m "first commit"
+```
 
-ruby_vars:
-  NAMESPACE_BUILD: ruby-example
-  
-openshift_cluster_content:
-- object: projects
-  content:
-  - name: dev
-    template: "https://raw.githubusercontent.com/redhat-cop/cluster-lifecycle/master/files/projectrequest/template.yml"
-    action: create
-    params_from_vars:
-      NAMESPACE: ruby-example
-      NAMESPACE_DISPLAY_NAME: "Ruby Example"
-    tags:
-      - projectrequests
-      - projectrequests-dev
-- object: ruby-components
-  content:
-  - name: ruby-ex
-    template: "{{ inventory_dir }}/../templates/app/ruby.yml"
-    params: "{{ inventory_dir }}/../params/ruby/build"
-    params_from_vars: "{{ ruby_vars }}"
-    namespace: "ruby-example"
-    tags:
-      - app
-```{{}}
+Add the repo that we'll use to transfer your code
+```
+git remote add origin https://github.com/pcarney8/applier-lab.git
+```{{execute}}
 
-Run it one last time!
-``ansible-playbook -i inventory/ apply.yml``{{execute}}
+Now push your work up to a branch with your name on it
+```
+git push -u origin your-branch-name
+```
 
-Don't forget to check out your app running in the console!
+And now let's watch it come up in the other cluster!

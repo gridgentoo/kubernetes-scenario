@@ -1,8 +1,8 @@
 {
     "icon": "fa-openshift",
-    "title": "Advanced OpenShift-Applier with Dynamic Parameters",
+    "title": "Introduction to OpenShift-Applier",
     "description": "Using the Ansible openshift-applier role to implement the Infrastructure-as-Code paradigm",
-    "difficulty": "Advanced",
+    "difficulty": "Intermediate",
     "time": "20-30 minutes",
     "backend": {
         "trainingid": "openshift-3-9",
