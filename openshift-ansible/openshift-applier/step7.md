@@ -1,4 +1,4 @@
-## Before we can run this, we need to create a playbook which will call the `openshift-applier`.
+## Прежде чем мы сможем запустить это, нам нужно создать **playbook**, который будет вызывать **`openshift-applier`**.
 
 ```
 cat <<EOM >apply.yml
@@ -11,4 +11,8 @@ cat <<EOM >apply.yml
 EOM
 ```{{execute}} 
 
-Next, we'll pull in the `openshift-applier` role using `ansible-galaxy`!
+
+``nano apply.yml``{{execute}}
+
+
+Затем мы подключим **pull in** the **`openshift-applier`** **role** с помощью **`ansible-galaxy`**!

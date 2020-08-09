@@ -1,6 +1,6 @@
-## To finish up the inventory, we need to update the hosts file
+## Чтобы завершить инвентаризацию **inventory**, нам нужно обновить файл **hosts**
 
-Because the `openshift-applier` uses your local `oc` client, it will target `localhost` when we run.
+Поскольку **`openshift-applier`** использует ваш локальный клиент **`oc`** **client**, при запуске он будет нацелен на `localhost` .
 
 ```
 cat <<EOM >inventory/hosts
@@ -9,4 +9,8 @@ localhost ansible_connection=local
 EOM
 ```{{execute}}
 
-In the next step we'll create the playbook!
+
+``nano inventory/hosts``{{execute}}
+
+
+На следующем шаге мы создадим сценарий **playbook**

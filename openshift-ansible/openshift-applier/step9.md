@@ -1,14 +1,14 @@
-Once the Ansible run completes, go over to the `Dashboard` tab in this environment
+После завершения запуска **Ansible** перейдите на вкладку **`Dashboard`** в этой среде.
 
-Login with the credentials: 
+Войдите в систему с учетными данными **credentials**:
 
 ```
 user: developer
 pass: developer
 ```
 
-You should see the `Ruby Example` project. Click on that and you should see the application you just deployed.
+Вы должны увидеть проект **`Ruby Example`** project. Кликните по нему, и вы должны увидеть только что развернутое приложение..
 
-Once the deployment is completed, you can go to the route url seen above the ruby-ex service and see the live application.
+После завершения развертывания вы можете перейти по **route url** указанному над сервисом **ruby-ex**, и увидеть живое приложение **live application**.
 
-Now let's push it across our Air Gap!
+Теперь давайте протолкнем **push it**  его через **Air Gap**!

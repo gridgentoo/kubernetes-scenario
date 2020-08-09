@@ -1,15 +1,15 @@
-## There are parameters that match up with each Template to then create a list of OpenShift objects
 
-Our `ruby-example-template` only has one parameter: `NAMESPACE_BUILD`. 
+## Есть параметры, которые соответствуют каждому **Template,** чтобы затем создать список объектов **OpenShift**
 
-Let's create a parameter file to set this value:
+Наш  **`ruby-example-template`** имеет только один параметр: **`NAMESPACE_BUILD`**. 
+
+Создадим файл параметров для установки этого **value**:
 
 ```
 echo 'NAMESPACE_BUILD=ruby-example' > params/ruby/build
 ```{{execute}}
 
-
-Now we'll create the parameters for the Project template:
+Теперь создадим параметры для **Project template**:
 
 ```
 cat <<EOM >params/projectrequests/project

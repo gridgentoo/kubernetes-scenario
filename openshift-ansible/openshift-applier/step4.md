@@ -1,16 +1,17 @@
-## To combine a template with a parameters file, we use the `oc process` command. 
+## Чтобы объединить **template** с файлом параметров, мы используем команду **`oc process`**.
 
 ```
 oc process --local -f templates/app/ruby.yml --param-file params/ruby/build
 ```{{execute}}
 
-This does not put the output into OpenShift, it only validates that your template and params are correct and shows you the output.
+Это не помещает делать **output** в **OpenShift**, а только проверяет правильность **validates** вашего шаблона **template** и **params** и показывает **output**. 
 
-If everything looks good, and you want to put it into OpenShift, your command would look like this: `oc process -f templates/app/ruby.yml --param-file params/ruby/build | oc apply -f -` (THIS IS AN EXAMPLE, DO NOT RUN)
+Если все выглядит хорошо, и вы хотите поместить это в **OpenShift**, ваша команда будет выглядеть так: `oc process -f templates/app/ruby.yml --param-file params/ruby/build | oc apply -f -` (ЭТО ПРИМЕР, НЕ ЗАПУСКАЙТЕ)
 
-This is a powerful command that will ensure your template and all of it's pieces have been created in OpenShift. And this is precisely what the `openshift-applier` role allows you to do using Ansible!
+Это мощная команда **command**, которая обеспечит создание вашего **template** и всех его частей в OpenShift. 
+Именно это позволяет вам делать **`openshift-applier`** **role** с помощью Ansible!
 
-Now, to execute that same command using the `openshift-applier` we need to create `openshift_cluster_content` to tell it which templates and parameters to use.
+Теперь, чтобы выполнить ту же самую команду с помощью **`openshift-applier`**, нам нужно создать **`openshift_cluster_content`**, чтобы сообщить ему, какие **templates** и параметры использовать.
 
 ```
 cat <<EOM >inventory/group_vars/all.yml
@@ -31,7 +32,11 @@ openshift_cluster_content:
 EOM
 ```{{execute}}
 
-The `openshift-applier` can also pull templates down from raw GitHub URLs in addition to using local files!
 
-To learn more about the `openshift_cluster_content` object, go [here](https://github.com/redhat-cop/openshift-applier/blob/v2.0.0/roles/openshift-applier/README.md)!
+``nano inventory/group_vars/all.yml``{{execute}}
+
+
+**`openshift-applier`** также может извлекать **templates** из **raw GitHub URLs** в дополнение к использованию локальных файлов!
+
+Чтобы узнать больше об объекте **`openshift_cluster_content`**, перейдите [сюдя](https://github.com/redhat-cop/openshift-applier/blob/v2.0.0/roles/openshift-applier/README.md)!
 

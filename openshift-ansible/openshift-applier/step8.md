@@ -1,5 +1,4 @@
-## Now we need the our [openshift-applier](https://github.com/redhat-cop/openshift-applier) role from GitHub, let's create the `requirements.yml` file
-
+## Теперь нам нужна наша роль [openshift-applier](https://github.com/redhat-cop/openshift-applier) **role** из **GitHub**, давайте создадим файл **`requirements.yml`** 
 ```
 cat <<EOM >requirements.yml
 - name: openshift-applier
@@ -9,15 +8,17 @@ cat <<EOM >requirements.yml
 EOM
 ```{{execute}}
 
-First pull down the `openshift-applier` role from the ansible-galaxy requirements into the `roles` directory:
+``nano requirements.yml``{{execute}}
+
+Сначала перетащите роль **pull down** - **`openshift-applier`** **role** из требований **ansible-galaxy** requirements в каталог **`roles`**:
 
 ``ansible-galaxy install -r requirements.yml -p roles``{{execute}}
 
-Finally, let's run it!
+Наконец, запустим, run it!
 
 ``ansible-playbook -i inventory/ apply.yml``{{execute}}
 
-If that is successful you should be:
+Если это удастся **successful**, вы должны увидеть:
 
 ```
 PLAY RECAP ***********************************

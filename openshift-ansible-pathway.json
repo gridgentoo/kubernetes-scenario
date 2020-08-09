@@ -10,7 +10,7 @@
       {
         "course_id": "openshift-applier",
         "title": "Ansible openshift-applier для реализации парадигмы Infrastructure-as-Code.",
-        "description": "Как Ansible используется Jinja-шаблонизатор для OpenShift."
+        "description": "Openshift-applier это роль Ansible role, поможет вам понять парадигму «Инфраструктура как код»."
       },
       {
         "course_id": "dynamic-params",

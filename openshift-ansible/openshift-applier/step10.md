@@ -1,10 +1,10 @@
-## Now that we see our Ruby app up and running, let's go push it up to GitHub so it can be transferred to our other cluster!
+## Теперь, когда мы видим, что наше приложение **Ruby** запущено, давайте отправим его на **GitHub**, чтобы его можно было перенести в другой кластер!
 
 ```
 git init
 ```{{execute}}
 
-Name your branch uniquely, and put in your email and name info
+Назовите свое **branch** уникальным образом и укажите свой адрес электронной почты и имя
 ```
 git checkout -b your-branch-name
 git config --global user.email "you@example.com"
@@ -15,19 +15,19 @@ git config --global user.name "Your Name"
 git add .
 ```{{execute}}
 
-Make a commit!
+Сделайте **commit**!
 ```
 git commit -m "first commit"
 ```
 
-Add the repo that we'll use to transfer your code
+Добавьте **repo**, которое мы будем использовать для передачи вашего кода
 ```
-git remote add origin https://github.com/pcarney8/applier-lab.git
+git remote add origin https://github.com/gridgentoo/applier-lab.git
 ```{{execute}}
 
-Now push your work up to a branch with your name on it
+Теперь **push** свою работуб в ветку с вашим именем на ней.
 ```
 git push -u origin your-branch-name
 ```
 
-And now let's watch it come up in the other cluster!
+А теперь посмотрим, как он появляется в другом кластере!

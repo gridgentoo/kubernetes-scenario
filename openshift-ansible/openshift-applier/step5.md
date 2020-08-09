@@ -1,4 +1,4 @@
-## Now we also need to make sure our ruby template goes into our inventory as well:
+## Теперь нам также нужно убедиться, что наш **ruby template** тоже попал в наш **inventory**:
 
 ```
 echo "- object: ruby-components
@@ -12,12 +12,11 @@ echo "- object: ruby-components
       - app" >> inventory/group_vars/all.yml
 ```{{execute}}
 
-Notice that we added the Project Request first, and the ruby template second.
+Notice >> Обратите внимание, что мы добавили сначала **Project Request**, а затем **ruby template**.
 
-The `openshift-applier` creates [object in the order](https://github.com/redhat-cop/openshift-applier/blob/master/roles/openshift-applier/README.md#ordering-of-objects-in-the-inventory) that they are placed, so we must make sure to create the Project first, and then the objects inside of that project!
+**`openshift-applier` **создает [объект в порядке](https://github.com/redhat-cop/openshift-applier/blob/master/roles/openshift-applier/README.md#ordering-of-objects-in-the-inventory) что они размещены, поэтому мы должны сначала создать проект **Project first**, а затем объекты внутри этого проекта!
 
-Your `inventory/group_vars/all.yml` should now look like this:
-
+Ваш **`inventory/group_vars/all.yml`** теперь должен выглядеть так:
 ```
 ---
 ansible_connection: local
