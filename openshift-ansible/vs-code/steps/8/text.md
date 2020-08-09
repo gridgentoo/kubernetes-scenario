@@ -1,34 +1,52 @@
-Now, let's open a file in **vscode** explorer called OpenExchangeService.java in the src/main/java/monedero/extractorsdirectory with the content:
+### Jinja conditionals
 
+(**Conditionals are expressions**) Условные выражения - это выражения, которые вычисляются при выполнении определенного условия.
+Создадим **conditionals.py**
 ```
-package monedero.extractors;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
-import java.net.URL;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-public final class OpenExchangeService {
-  private static final String API_KEY = "YOUR_API_KEY_VALUE_HERE";  //1
-  private static final ObjectMapper MAPPER = new ObjectMapper();
-  public double getPrice(String currency) {
-    try {
-      final URL url = new URL("https://openexchangerates.org/api/latest.json?app_id=" + API_KEY);  //2
-      final JsonNode root = MAPPER.readTree(url);
-      final JsonNode node = root.path("rates").path(currency);   //3
-      return Double.parseDouble(node.toString());                //4
-    } catch (IOException ex) {
-   Logger.getLogger(OpenExchangeService.class.getName()).log(Level.SEVERE, null, ex);
-    }
-    return 0;
-  }
-}
+#!/usr/bin/env python3
+
+from jinja2 import Environment, FileSystemLoader
+
+persons = [
+    {'name': 'Andrej', 'age': 34}, 
+    {'name': 'Mark', 'age': 17}, 
+    {'name': 'Thomas', 'age': 44}, 
+    {'name': 'Lucy', 'age': 14}, 
+    {'name': 'Robert', 'age': 23}, 
+    {'name': 'Dragomir', 'age': 54}, 
+]
+
+file_loader = FileSystemLoader('templates')
+env = Environment(loader=file_loader)
+env.trim_blocks = True
+env.lstrip_blocks = True
+env.rstrip_blocks = True
+
+template = env.get_template('showminors.txt')
+
+output = template.render(persons=persons)
+print(output)
 ```
 
-Some lines of the OpenExchangeService class can be analyzed as follows:
+В примере печатаются только несовершеннолетние лица; несовершеннолетний - это лицо моложе 18 лет.
+```
+env.trim_blocks = True
+env.lstrip_blocks = True
+env.rstrip_blocks = True
+```
 
-- In line `//1`, the value of the API_KEY is assigned when you registered in the open exchange rates page; the free plan gives you up to 1,000 requests per month.
-- In line //2`, our class invokes the open exchange API URL, using your API_KEY. To check the prices at the moment, you can access the URL (counts as a request with your key): https://openexchangerates.org/api/latest.json?app_id=YOUR_API_KEY.    
-- In line `//3`, the currency string passed as argument is searched in the JSON tree that returns the web page.
-- In line `//4`, the currency price (in US dollars) of the currency passed as an argument is returned as a double value.
+(**White space**) Пробел в выводе можно контролировать с помощью атрибутов среды **environment attributes**
+Создадим **templates/showminors.txt**
+```
+{% for person in persons %}
+    {% if person.age < 18 %}
+        {{- person.name }}
+    {% endif %}    
+{%- endfor %}
+```
+
+В **template** мы выводим только лиц моложе 18 лет, используя выражение **if expression**.
+
+`python conditionals.py`{{execute T1}}
+
  

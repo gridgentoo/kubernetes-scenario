@@ -141,8 +141,8 @@
         "id": "grpc" 
       },
       {
-        "title": "VSCode для и разработки облачных приложений",
-        "description": "VSCode, Ansible, Jinja, OpenShift",
+        "title": "Ansible OpenShift-Applier, с динамическими параметрами.",
+        "description": "Ansible OpenShift-Applier, VSCode, Ansible, Jinja",
         "id": "openshift-ansible" 
       },
       {

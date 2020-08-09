@@ -1,24 +1,70 @@
-At the moment, Monedero has a service that validates the messages that are well formed. The service also enriches the messages with the customer's geographic location.
+### Jinja for expressions
 
-Recall that the Monedero core business is the cryptocurrencies exchange. So now, the business asks us for a service that returns the requested currency price online at a specific time.
+Выражение **for** используется для перебора **data collection** в шаблоне.
 
-To achieve this, we will use the exchange rate of open exchange rates: https://openexchangerates.org/
+Теперь мы больше не используем простой **string template**. Мы используем текстовый файл, который загружается с помощью **FileSystemLoader**.
+Создадим **for_expr.py**
+```
+#!/usr/bin/env python3
 
-To obtain a free API key, you have to register in a free plan [here](https://openexchangerates.org/signup/free); the key is needed to access the free API.
+from jinja2 import Environment, FileSystemLoader
 
-**Note:** api key is already provided in the source code as shown below. If you want to use your own key, you need to perform following steps.
+persons = [
+    {'name': 'Andrej', 'age': 34}, 
+    {'name': 'Mark', 'age': 17}, 
+    {'name': 'Thomas', 'age': 44}, 
+    {'name': 'Lucy', 'age': 14}, 
+    {'name': 'Robert', 'age': 23}, 
+    {'name': 'Dragomir', 'age': 54}
+]
 
-**Signup**
+file_loader = FileSystemLoader('templates')
+env = Environment(loader=file_loader)
 
-![](https://github.com/fenago/katacoda-scenarios/raw/master/apache-kafka/apache-kafka-message-enrichment/steps/7/1.JPG)
-	
-**AppID**
+template = env.get_template('showpersons.txt')
 
-![](https://github.com/fenago/katacoda-scenarios/raw/master/apache-kafka/apache-kafka-message-enrichment/steps/7/2.JPG)
+output = template.render(persons=persons)
+print(output)
+```
+В этом примере **template** является файл **showpersons.txt**. Файл находится в **templates directory**.
 
-Copy the appid as shown in the above image and update the source code as shown below:
+```
+persons = [
+    {'name': 'Andrej', 'age': 34}, 
+    {'name': 'Mark', 'age': 17}, 
+    {'name': 'Thomas', 'age': 44}, 
+    {'name': 'Lucy', 'age': 14}, 
+    {'name': 'Robert', 'age': 23}, 
+    {'name': 'Dragomir', 'age': 54}
+]
+```
 
-![](https://github.com/fenago/katacoda-scenarios/raw/master/apache-kafka/apache-kafka-message-enrichment/steps/7/0.JPG)
+Данные представляют собой список словарей **list of dictionaries**.
 
+```
+file_loader = FileSystemLoader('templates')
+env = Environment(loader=file_loader)
+```
 
+Мы определяем **FileSystemLoader**. Шаблон извлекается из **templates directory**.
+
+```
+template = env.get_template('showpersons.txt')
+```
+
+Получаем **template** с помощью метода **get_template()**.
+
+Создадим **templates/showpersons.txt**
+
+```
+{% for person in persons -%}
+    {{ person.name }} {{ person.age }}
+{% endfor %}
+```
+The dash character next to the % characters is used to control white space.
+
+В файле **template** мы используем выражение **for** для перебора **collection**. Показываем имя **person's name** и возраст человека **age**. 
+Символ тире **dash** рядом с символами **%** используется для управления пробелом.
+
+`python for_expr.py`{{execute T1}}
 

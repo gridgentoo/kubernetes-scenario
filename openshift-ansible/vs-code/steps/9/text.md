@@ -1,14 +1,45 @@
-The customer consults the ETH price event, starts in the client's web browser, and is dispatched to Kafka through some HTTP event collector. The second step is to enrich the message with the currency price from open exchange rates service.
+### Jinja sum filter
 
-In summary, here are the architecture steps for the Monedero processing engine:
+К данным можно применять **Filters** для их изменения. Например, **sum filter** может суммировать данные, **escape filter** экранирует их, а **sort filter** сортирует их.
+Создадим **sum_filter.py**
+```
+#!/usr/bin/env python3
 
-- Read the individual events from a Kafka topic called input-messages
-- Validate the message, sending any defective event to a specific Kafka topic called invalid-messages
-- Enrich the message with the currency price from open exchange rates service
-- Write the enriched messages in a Kafka topic called valid-messages
+from jinja2 import Environment, FileSystemLoader
 
-The final version of the stream processing engine is detailed in Figure 3.2:
+cars = [
+    {'name': 'Audi', 'price': 23000}, 
+    {'name': 'Skoda', 'price': 17300}, 
+    {'name': 'Volvo', 'price': 44300}, 
+    {'name': 'Volkswagen', 'price': 21300}
+]
 
-![](https://github.com/fenago/katacoda-scenarios/raw/master/apache-kafka/apache-kafka-message-enrichment/steps/9/1.png)
+file_loader = FileSystemLoader('templates')
+env = Environment(loader=file_loader)
 
-The processing engine reads the messages from the input-messages topic, validates the messages, routes the defective ones to invalid-messages queue, enriches the messages with geographic location and price, and finally, writes them to valid-messages queue.
+template = env.get_template('sumprices.txt')
+
+output = template.render(cars=cars)
+print(output)
+```
+
+В этом примере мы используем **sum filter** для вычисления суммы всех цен на автомобили **car prices**.
+```
+cars = [
+    {'name': 'Audi', 'price': 23000}, 
+    {'name': 'Skoda', 'price': 17300}, 
+    {'name': 'Volvo', 'price': 44300}, 
+    {'name': 'Volkswagen', 'price': 21300}
+]
+```
+
+У нас есть список **list** автомобильных словарей **car dictionaries**. У каждого словаря **dictionary** есть ключ цены **price key**. Он будет использован для расчета суммы.
+
+Создадим **templates/sumprices.txty**
+```
+The sum of car prices is {{ cars | sum(attribute='price') }}
+```
+
+В файле **template** мы применяем фильтр к объекту коллекции автомобилей **cars collection**. Сумма рассчитывается из атрибута **price attribute**.
+
+`python sum_filter.py`{{execute T1}}
