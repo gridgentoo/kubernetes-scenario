@@ -26,8 +26,10 @@ template = env.get_template('showpersons.txt')
 output = template.render(persons=persons)
 print(output)
 ```
-В этом примере **template** является файл **showpersons.txt**. Файл находится в **templates directory**.
 
+
+
+Данные представляют собой список словарей **list of dictionaries**.
 ```
 persons = [
     {'name': 'Andrej', 'age': 34}, 
@@ -39,23 +41,20 @@ persons = [
 ]
 ```
 
-Данные представляют собой список словарей **list of dictionaries**.
-
+Мы определяем **FileSystemLoader**. Шаблон извлекается из **templates directory**.
 ```
 file_loader = FileSystemLoader('templates')
 env = Environment(loader=file_loader)
 ```
 
-Мы определяем **FileSystemLoader**. Шаблон извлекается из **templates directory**.
+Получаем **template** с помощью метода **get_template()**.
 
 ```
 template = env.get_template('showpersons.txt')
 ```
 
-Получаем **template** с помощью метода **get_template()**.
-
+В этом примере **template** является файл **showpersons.txt**. Файл находится в **templates directory**.
 Создадим **templates/showpersons.txt**
-
 ```
 {% for person in persons -%}
     {{ person.name }} {{ person.age }}
@@ -67,4 +66,46 @@ The dash character next to the % characters is used to control white space.
 Символ тире **dash** рядом с символами **%** используется для управления пробелом.
 
 `python for_expr.py`{{execute T1}}
+
+###############################################################
+
+В этом примере template является файл qm_connections.txt. Файл находится в templates directory.
+```
+qm_connections=[
+       {"hostname": "cloud.yandex.ru", "port": 1490, "channel": "SYNAPSE.SVRCONN", "queueManager": "MDM.ADP1"},
+       {"hostname": "cloud.yandex.ru", "port": 1491, "channel": "SYNAPSE.SVRCONN", "queueManager": "MDM.ADP2"}
+]
+```
+Выражение **for** используется для перебора **data collection** в шаблоне.
+
+Теперь мы больше не используем простой **string template**. Мы используем текстовый файл, который загружается с помощью **FileSystemLoader**.
+Создадим **for_expr.py**
+```
+#!/usr/bin/env python3
+
+from jinja2 import Environment, FileSystemLoader
+
+qm_connections=[
+       {"hostname": "cloud.yandex.ru", "port": 1490, "channel": "SYNAPSE.SVRCONN", "queueManager": "MDM.ADP1"},
+       {"hostname": "cloud.yandex.ru", "port": 1491, "channel": "SYNAPSE.SVRCONN", "queueManager": "MDM.ADP2"}
+]
+
+file_loader = FileSystemLoader('templates')
+env = Environment(loader=file_loader)
+
+template = env.get_template('showpersons.txt')
+
+output = template.render(qm_connections=qm_connections)
+print(output)
+```
+
+В этом примере **template** является файл **showpersons.txt**. Файл находится в **templates directory**.
+Создадим **templates/showpersons.txt**
+
+{% for qm_connections in qm_connections -%}
+    {{ qm_connections.hostname }} {{ qm_connections.port }}
+{% endfor %}
+
+
+
 
