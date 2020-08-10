@@ -86,7 +86,7 @@ qm_connections=[
 from jinja2 import Environment, FileSystemLoader
 
 qm_connections = [
-       {"hostname": "cloud.yandex.ru", "port": 1490, "channel": "ISTIO.CONNF", "queueManager": "MDM.ADP1"},
+       {"hostname": "cloud.google.com", "port": 1490, "channel": "ISTIO.CONNF", "queueManager": "MDM.ADP1"},
        {"hostname": "cloud.yandex.ru", "port": 1491, "channel": "ISTIO.CONNF", "queueManager": "MDM.ADP2"}
 ]
 file_loader = FileSystemLoader('templates')
@@ -100,10 +100,12 @@ print(output)
 
 Напишем в отформатированном виде:
 ```
+#!/usr/bin/env python3
+
 from jinja2 import Environment, FileSystemLoader
 
 qm_connections = [
-       {"hostname": "cloud.yandex.ru", 
+       {"hostname": "cloud.google.com", 
        "port": 1490, 
        "channel": "ISTIO.CONNF", 
        "queueManager": "MDM.ADP1"},
