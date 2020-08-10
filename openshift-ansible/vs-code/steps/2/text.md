@@ -150,7 +150,7 @@ print(output)
     {{ qm_connections.channel }} {{ qm_connections.queueManager }}
 {% endfor %}
 ```
-
+####################################################################################
 ### Суммарный фильтр **Jinja**
 Вы можете применить фильтры к данным, чтобы изменить их. Например, фильтр суммы может суммировать данные, escape-фильтр может исключать их, а фильтр сортировки может их сортировать.
 
@@ -247,3 +247,47 @@ if Singapore:
 ### Jinja tutorial - creating templates in Python with Jinja module
 http://zetcode.com/python/jinja/
 
+###############################################.  
+### Конвертирование JSON в YAML
+###############################################.  
+
+Python-скриптом, который сгенерирует YAML. 
+Этот способ лучше всего подходит для небольших наборов данных. 
+Вы просто пишите JSON-данные в переменную Python, предваряете это директивой import, 
+а в конце файла добавляете три строчки для реализации вывода.
+Cоздадим файл **json2yaml.py**:
+```
+#!/usr/bin/python3	
+import yaml 
+
+d={
+"glossary": {
+  "title": "example glossary",
+  "GlossDiv": {
+	"title": "S",
+	"GlossList": {
+	  "GlossEntry": {
+		"ID": "SGML",
+		"SortAs": "SGML",
+		"GlossTerm": "Standard Generalized Markup Language",
+		"Acronym": "SGML",
+		"Abbrev": "ISO 8879:1986",
+		"GlossDef": {
+		  "para": "A meta-markup language, used to create markup languages such as DocBook.",
+		  "GlossSeeAlso": ["GML", "XML"]
+		  },
+		"GlossSee": "markup"
+		}
+	  }
+	}
+  }
+}
+
+f=open('output.yaml','w')
+f.write(yaml.dump(d))
+f.close
+```
+`python json2yaml.py`{{execute}}
+
+Теперь запускаем это файл на Python-е и на выходе получаем файл output.yaml:
+`cat output.yam`{{execute}}
