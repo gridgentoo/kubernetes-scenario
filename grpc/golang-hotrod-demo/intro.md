@@ -20,13 +20,17 @@
 У нас используется **Jaeger** как имплементация **Opentracing**. Он состоит из нескольких компонент:
 
 <iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/s7IrYt1igSM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 [Uber Open Summit 2018] Jaeger: Distributed Tracing at Uber
 
 <iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/fsHb0qK37bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Serghei Iakovlev, “Маленькая история большой победы: OpenTracing, AWS и Jaeger”
 
 <iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/nHgfJ943z2I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 OpenTracing не только для распределенной трассировки. Константин Черкасов, Lazada
 
-<iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/siZv8TZoMg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/YG67VTunG_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Игорь Чакрыгин «Использование OpenTracing в .NET»

@@ -1,0 +1,43 @@
+{
+  "title": "Despliegue de Kubeflow",
+  "description": "Aprenda como desplegar Kubeflow en un clúster de Kubernetes",
+  "icon": "fa-kubernetes",
+  "difficulty": "intermedio",
+  "time": "20 minutos",
+  "details": {
+    "steps": [
+      { "title": "1. ¿Qué es Kubeflow?", "text": "paso1.md" },
+      { "title": "2. Despliegue de Kubeflow", "text": "paso2.md" },
+      { "title": "3. Ejemplo de aplicación en TensorFlow", "text": "paso3.md" },
+      { "title": "4. Despliegue de un TensorFlow Job (TFJob)", "text": "paso4.md" },
+      { "title": "5. Ver el progreso y resultado del Job", "text": "paso5.md" },
+      { "title": "6. Despliegue de JupyterHub", "text": "paso6.md" },
+      { "title": "7. Acceso al servidor del Modelo", "text": "paso7.md" }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground-init.sh",
+      "courseData": "env-init.sh",
+      "credits": "Christian Axel Schmidt Dick aka Mr. Kubernetes <christianaxel.schmidt@gmail.com>"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "example.yaml", "target": "/root"},
+        {"file": "model-client-job.yaml", "target": "/root"}
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Jupyterhub", "port": 80}, {"name": "Dashboard", "port": 30080}],
+    "uimessage1": "\u001b[32mEsta es tu Consola Interactiva.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeflow",
+    "port": 80
+  }
+}

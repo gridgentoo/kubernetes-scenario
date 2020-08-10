@@ -32,3 +32,11 @@
 ### Первый микросервис **first microservice** - генератор котировок **quote generator**
 
 В этом сценарии вы собираетесь создать первый микросервис **first microservice** - генератор котировок **quote generator**. В каждом последующем сценарии вы создадите микросервис (из **from the set above**), который вместе будет формировать приложение **Micro-Trader** на основе **Vert.x.**
+
+<iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/BpjpPrH_0p0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+vert.x против классической многопоточности в JVM / Владимир Красильщик (Независимый эксперт)
+
+<iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/El5VZ8_ct6Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Антон Ленок — Реактивное программирование на Vert.x
