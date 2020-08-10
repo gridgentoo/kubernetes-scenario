@@ -100,8 +100,12 @@ print(msg2)
 Мы получаем доступ к **dictionary keys** например **{{ lim.cpu }}** или **{{ lim.memory }}** помощью оператора точки **dot operator**.
 
 `pwd`{{execute T1}}
+
 `cd ..`{{execute T1}}
+
 `cd Chapter03/monedero`{{execute T1}}
+
 `pwd`{{execute T1}}
+
 `python3 limit_fluent.py`{{execute T1}}
 
