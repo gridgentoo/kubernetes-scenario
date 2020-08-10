@@ -1,10 +1,11 @@
-На некоторых платформах может быть сложно установить среду машинного обучения **Python**. 
-**Python** сначала нужно установить саму себя, а затем установить много пакетов, и это может сбить с толку.
-В этом Сценарии вы узнаете, как настроить **Python machine learning**.
-среда разработки.
+Google Cloud :: Airflow supports using Jinja Templating.
+https://cloud.google.com/composer/docs/how-to/using/using-kubernetes-pod-operator
 
-После завершения этого урока у вас будет рабочая среда Python, чтобы начать обучение,
-практику **Python machine learning** и разработка программного обеспечения для машинного обучения и глубокого обучения
+Одним из самых больших преимуществ использования Ansible в сочетании с существующими файлами ресурсов Kubernetes является возможность использовать шаблоны Jinja, чтобы вы могли настраивать ресурсы с помощью нескольких переменных в Ansible.
+https://docs.openshift.com/container-platform/4.1/applications/operator_sdk/osdk-ansible.html.
+
+Поместите значения в файл конфигурации и запустите инструмент шаблона, чтобы динамически создать файл конфигурации для основного контейнера приложения. Например, поместите значение POD_IP в конфигурацию и сгенерируйте основной файл конфигурации приложения с помощью Jinja.
+https://docs.openshift.com/container-platform/4.3/nodes/containers/nodes-containers-init.html
 
 #### Python
 В этой среде **environment** вы можете проверить, что Python уже установлен, запустив `python3 --version`{{execute T1}}
