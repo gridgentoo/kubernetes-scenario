@@ -80,7 +80,7 @@ template = env.get_template('showpersons.txt')
 {% endfor %}
 ```
 
-`python for_expr.py`{{execute T1}}
+`python3 for_expr.py`{{execute T1}}
 
 Вывести параметры **(*.env)** в другом виде
 ```
@@ -93,7 +93,7 @@ template = env.get_template('showpersons.txt')
 {% endfor %}
 ```
 
-`python for_expr.py`{{execute T1}}
+`python3 for_expr.py`{{execute T1}}
 
 ###############################################################
 
@@ -166,7 +166,7 @@ f=open('output.yaml','w')
 f.write(yaml.dump(d))
 f.close
 ```
-`python json2yaml.py`{{execute}}
+`python3 json2yaml.py`{{execute}}
 
 Теперь запускаем это файл на Python-е и на выходе получаем файл output.yaml:
 `cat output.yam`{{execute}}
