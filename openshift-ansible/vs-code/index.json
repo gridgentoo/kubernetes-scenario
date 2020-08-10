@@ -1,6 +1,6 @@
 {
-  "title": "Apache Kafka Message Enrichment",
-  "description": "Introduction to Apache Kafka",
+  "title": "Jinja для Openshift",
+  "description": "Jinja для Openshift",
   "difficulty": "Advanced",
   "time": "15 minutes",
   "details": {
@@ -78,7 +78,7 @@
   },
   "environment": {
     "uilayout": "vscode",
-    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+    "uimessage1": "\u001b[32mBrought to you by https://temur_yunusov.com\u001b[m\r\n"
   },
   "backend": {
     "imageid": "ubuntu"
