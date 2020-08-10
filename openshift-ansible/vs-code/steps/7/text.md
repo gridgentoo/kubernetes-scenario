@@ -72,8 +72,8 @@ The dash character next to the % characters is used to control white space.
 В этом примере template является файл qm_connections.txt. Файл находится в templates directory.
 ```
 qm_connections=[
-       {"hostname": "cloud.yandex.ru", "port": 1490, "channel": "SYNAPSE.SVRCONN", "queueManager": "MDM.ADP1"},
-       {"hostname": "cloud.yandex.ru", "port": 1491, "channel": "SYNAPSE.SVRCONN", "queueManager": "MDM.ADP2"}
+       {"hostname": "cloud.yandex.ru", "port": 1490, "channel": "ISTIO.CONNF", "queueManager": "MDM.ADP1"},
+       {"hostname": "cloud.yandex.ru", "port": 1491, "channel": "ISTIO.CONNF", "queueManager": "MDM.ADP2"}
 ]
 ```
 Выражение **for** используется для перебора **data collection** в шаблоне.
@@ -86,8 +86,8 @@ qm_connections=[
 from jinja2 import Environment, FileSystemLoader
 
 qm_connections = [
-       {"hostname": "cloud.yandex.ru", "port": 1490, "channel": "SYNAPSE.SVRCONN", "queueManager": "MDM.ADP1"},
-       {"hostname": "cloud.yandex.ru", "port": 1491, "channel": "SYNAPSE.SVRCONN", "queueManager": "MDM.ADP2"}
+       {"hostname": "cloud.yandex.ru", "port": 1490, "channel": "ISTIO.CONNF", "queueManager": "MDM.ADP1"},
+       {"hostname": "cloud.yandex.ru", "port": 1491, "channel": "ISTIO.CONNF", "queueManager": "MDM.ADP2"}
 ]
 file_loader = FileSystemLoader('templates')
 env = Environment(loader=file_loader)
