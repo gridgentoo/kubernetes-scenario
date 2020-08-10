@@ -85,11 +85,10 @@ qm_connections=[
 
 from jinja2 import Environment, FileSystemLoader
 
-qm_connections=[
+qm_connections = [
        {"hostname": "cloud.yandex.ru", "port": 1490, "channel": "SYNAPSE.SVRCONN", "queueManager": "MDM.ADP1"},
        {"hostname": "cloud.yandex.ru", "port": 1491, "channel": "SYNAPSE.SVRCONN", "queueManager": "MDM.ADP2"}
 ]
-
 file_loader = FileSystemLoader('templates')
 env = Environment(loader=file_loader)
 
