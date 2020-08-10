@@ -101,10 +101,11 @@ print(output)
 
 В этом примере **template** является файл **showpersons.txt**. Файл находится в **templates directory**.
 Создадим **templates/showpersons.txt**
-
+```
 {% for qm_connections in qm_connections -%}
     {{ qm_connections.hostname }} {{ qm_connections.port }}
 {% endfor %}
+```
 
 
 
