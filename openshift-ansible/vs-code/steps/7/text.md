@@ -72,7 +72,7 @@ The dash character next to the % characters is used to control white space.
 В этом примере template является файл qm_connections.txt. Файл находится в templates directory.
 ```
 qm_connections=[
-       {"hostname": "ccloud.google.com", "port": 1490, "channel": "ISTIO.CONNF", "queueManager": "MDM.ADP1"},
+       {"hostname": "cloud.google.com", "port": 1490, "channel": "ISTIO.CONNF", "queueManager": "MDM.ADP1"},
        {"hostname": "cloud.yandex.ru", "port": 1491, "channel": "ISTIO.CONNF", "queueManager": "MDM.ADP2"}
 ]
 ```
