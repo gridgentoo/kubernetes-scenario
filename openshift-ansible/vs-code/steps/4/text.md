@@ -19,14 +19,14 @@ print(msg)
 
 У нас есть **person dictionary**. Мы получаем доступ к **dictionary keys** с помощью оператора точки **dot operator**.
 
+`python dicts.py`{{execute T1}}
+
 ############################################
 
 Создадим **limit_fluent.py**
 
 
 ```
-`python dicts.py`{{execute T1}}
-
 #!/usr/bin/env python3
 
 from jinja2 import Template
@@ -44,3 +44,5 @@ msg2 = tm2.render(lim=lim)
 print(msg1)
 print(msg2)
 ```
+
+`python3 limit_fluent.py`{{execute T1}}
