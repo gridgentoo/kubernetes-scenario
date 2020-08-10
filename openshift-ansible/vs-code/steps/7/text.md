@@ -98,6 +98,29 @@ output = template.render(qm_connections=qm_connections)
 print(output)
 ```
 
+Напишем в отформатированном виде:
+```
+from jinja2 import Environment, FileSystemLoader
+
+qm_connections = [
+       {"hostname": "cloud.yandex.ru", 
+       "port": 1490, 
+       "channel": "ISTIO.CONNF", 
+       "queueManager": "MDM.ADP1"},
+       {"hostname": "cloud.yandex.ru", 
+       "port": 1491, 
+       "channel": "ISTIO.CONNF", 
+       "queueManager": "MDM.ADP2"}
+]
+file_loader = FileSystemLoader('templates')
+env = Environment(loader=file_loader)
+
+template = env.get_template('showpersons.txt')
+
+output = template.render(qm_connections=qm_connections)
+print(output)
+```
+
 В этом примере **template** является файл **showpersons.txt**. Файл находится в **templates directory**.
 Создадим **templates/showpersons.txt**
 ```
