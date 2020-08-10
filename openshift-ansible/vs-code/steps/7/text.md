@@ -111,7 +111,9 @@ print(output)
 Вы можете применить фильтры к данным, чтобы изменить их. Например, фильтр суммы может суммировать данные, escape-фильтр может исключать их, а фильтр сортировки может их сортировать.
 
 **sum_filter.py**
+
 https://geek-docs.com/python/python-tutorial/python-jinja.html
+
 http://zetcode.com/python/jinja/
 
 ```
