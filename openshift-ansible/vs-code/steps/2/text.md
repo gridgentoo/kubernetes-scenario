@@ -1,3 +1,7 @@
+### Google Cloud :: Airflow supports using Jinja Templating.  
+https://cloud.google.com/composer/docs/how-to/using/using-kubernetes-pod-operator
+
+
 ### Jinja tutorial - creating templates in Python with Jinja module
 http://zetcode.com/python/jinja/
 
