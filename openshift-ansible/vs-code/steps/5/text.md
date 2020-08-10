@@ -1,24 +1,50 @@
-### Jinja raw data
+### Jinja conditionals
 
-Мы можем использовать необработанные маркеры конца строки raw, чтобы избежать разделителей Jinja.
-Создадим **raw_data.py**
-
+(**Conditionals are expressions**) Условные выражения - это выражения, которые вычисляются при выполнении определенного условия.
+Создадим **conditionals.py**
 ```
 #!/usr/bin/env python3
 
-from jinja2 import Template
+from jinja2 import Environment, FileSystemLoader
 
-data = '''
-{% raw %}
-His name is {{ name }}
-{% endraw %}
-'''
+persons = [
+    {'name': 'Andrej', 'age': 34}, 
+    {'name': 'Mark', 'age': 17}, 
+    {'name': 'Thomas', 'age': 44}, 
+    {'name': 'Lucy', 'age': 14}, 
+    {'name': 'Robert', 'age': 23}, 
+    {'name': 'Dragomir', 'age': 54}, 
+]
 
-tm = Template(data)
-msg = tm.render(name='Peter')
+file_loader = FileSystemLoader('templates')
+env = Environment(loader=file_loader)
+env.trim_blocks = True
+env.lstrip_blocks = True
+env.rstrip_blocks = True
 
-print(msg)
+template = env.get_template('showminors.txt')
+
+output = template.render(persons=persons)
+print(output)
 ```
-Используя необработанный блок **raw**, **endraw block** мы избегаем синтаксиса **Jinja {{ }}** Он напечатан в буквальном смысле.
 
-`python raw_data.py`{{execute T1}}
+В примере печатаются только несовершеннолетние лица; несовершеннолетний - это лицо моложе 18 лет.
+```
+env.trim_blocks = True
+env.lstrip_blocks = True
+env.rstrip_blocks = True
+```
+
+(**White space**) Пробел в выводе можно контролировать с помощью атрибутов среды **environment attributes**
+Создадим **templates/showminors.txt**
+```
+{% for person in persons %}
+    {% if person.age < 18 %}
+        {{- person.name }}
+    {% endif %}    
+{%- endfor %}
+```
+
+В **template** мы выводим только лиц моложе 18 лет, используя выражение **if expression**.
+
+`python conditionals.py`{{execute T1}}
