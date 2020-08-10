@@ -4,8 +4,14 @@ https://cloud.google.com/composer/docs/how-to/using/using-kubernetes-pod-operato
 Одним из самых больших преимуществ использования Ansible в сочетании с существующими файлами ресурсов Kubernetes является возможность использовать шаблоны Jinja, чтобы вы могли настраивать ресурсы с помощью нескольких переменных в Ansible.
 https://docs.openshift.com/container-platform/4.1/applications/operator_sdk/osdk-ansible.html.
 
-Поместите значения в файл конфигурации и запустите инструмент шаблона, чтобы динамически создать файл конфигурации для основного контейнера приложения. Например, поместите значение POD_IP в конфигурацию и сгенерируйте основной файл конфигурации приложения с помощью Jinja.
+Поместите значения в файл конфигурации и запустите инструмент шаблона, чтобы динамически создать файл конфигурации для основного контейнера приложения. Например, поместите значение POD_IP в конфигурацию и сгенерируйте основной файл конфигурации приложения с помощью Jinja.  
 https://docs.openshift.com/container-platform/4.3/nodes/containers/nodes-containers-init.html
+
+Using Apache Airflow to Create Data Workflows on Google Cloud.  
+https://www.youtube.com/watch?v=0E25VQWjWG0
+
+Running Airflow Inside Google Gloud Platform  
+https://www.youtube.com/watch?v=AInGKrL4diA
 
 #### Python
 В этой среде **environment** вы можете проверить, что Python уже установлен, запустив `python3 --version`{{execute T1}}
