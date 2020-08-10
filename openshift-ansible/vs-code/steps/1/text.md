@@ -1,4 +1,4 @@
-Google Cloud :: Airflow supports using Jinja Templating.
+Google Cloud :: Airflow supports using Jinja Templating.  
 https://cloud.google.com/composer/docs/how-to/using/using-kubernetes-pod-operator
 
 Одним из самых больших преимуществ использования Ansible в сочетании с существующими файлами ресурсов Kubernetes является возможность использовать шаблоны Jinja, чтобы вы могли настраивать ресурсы с помощью нескольких переменных в Ansible.
