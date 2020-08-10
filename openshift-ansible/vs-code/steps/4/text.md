@@ -19,4 +19,26 @@ print(msg)
 
 У нас есть **person dictionary**. Мы получаем доступ к **dictionary keys** с помощью оператора точки **dot operator**.
 
+############################################
+Создадим **limit_fluent.py**
+
+```
 `python dicts.py`{{execute T1}}
+
+#!/usr/bin/env python3
+
+from jinja2 import Template
+
+# берем строку в cls1.env, окружения Spring
+# LIMITS_FLUENT={"cpu": "300m", "memory": "400Mi"}
+lim={"cpu": "300m", "memory": "400Mi"}
+
+tm1 = Template("cpu {{ lim.cpu }}")
+tm2 = Template("memory {{ lim.memory }}")
+
+msg1 = tm1.render(lim=lim)
+msg2 = tm2.render(lim=lim)
+
+print(msg1)
+print(msg2)
+```
