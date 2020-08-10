@@ -105,6 +105,12 @@ print(output)
     {{ qm_connections.hostname }} {{ qm_connections.port }}
 {% endfor %}
 ```
+Вывести больше параметров **(*.env)**
+```
+{% for qm_connections in qm_connections -%}
+    {{ qm_connections.hostname }} {{ qm_connections.port }} {{ qm_connections.channel }} {{ qm_connections.queueManager }}
+{% endfor %}
+```
 
 ### Суммарный фильтр **Jinja**
 Вы можете применить фильтры к данным, чтобы изменить их. Например, фильтр суммы может суммировать данные, escape-фильтр может исключать их, а фильтр сортировки может их сортировать.
