@@ -57,11 +57,9 @@ server {
 
 ```yaml
 server {
-  listen 80;
-  server_name localhost;
 
   root /var/www/project;
-  index index.htm;
+
 }
 ```
 
