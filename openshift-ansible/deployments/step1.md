@@ -59,12 +59,13 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 `kubectl describe deployment nginx-deployment`{{execute}}
 
 #################################################################################
+Редактирование ресурсов 
+Вы можете отредактировать API-ресурс в любом редакторе.
+`kubectl edit deployment nginx-deployment`{{execute}}
 
 Примечание: **kubectl edit** использует vi
 Чтобы войти в режим редактирования нажмите **i** 
 Чтобы выйти и сохранить изменения из режима редактирования нажмите **Shift+Z** два раза
-
-`kubectl edit deployment nginx-deployment`{{execute}}
 
 С помощью **edit** вы можете в режиме реального времени **live edit** редактировать конфигурацию ресурса в **Kubernetes**. 
 Однако он не будет редактировать основной файл манифеста **Manifest**, представляющий объект.
@@ -75,11 +76,27 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 
 `kubectl edit deployment nginx-deployment -o json`{{execute}}
 
+#################################################################################
+
+`kubectl edit deployment nginx-deployment -o yaml > /tmp/nginx.yaml`{{execute}}
+
+`vi /tmp/nginx.yaml`{{execute}}
 
 
+#################################################################################
+
+`kubectl edit deployment nginx-deployment -o json > /tmp/nginx.json`{{execute}}
+
+`vi /tmp/nginx.json`{{execute}}
+
+
+#################################################################################
+Справка по [kubectl edit](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
 
 
 Справка по [kubectl edit](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit/)
+
+#################################################################################
 
 Существует распространенный инструмент Linux под названием **jq**. **jq** похож на **sed** для данных JSON. 
 
