@@ -1,3 +1,51 @@
+
+pip install j2cli[yaml]
+
+#### Python
+В этой среде **environment** вы можете проверить, что Python уже установлен, запустив `python3 --version`{{execute T1}}
+
+Для локальной разработки и запуска кода **Python** рекомендуется использовать виртуальную среду **Python virtual environment**. 
+Выполните следующие команды, чтобы создать и активировать виртуальную среду с именем `.venv`.
+
+`apt-get update`{{execute T1}}
+
+`yes | apt-get install python3-venv`{{execute T1}}
+
+`python3 -m venv .venv`{{execute T1}}
+
+`source .venv/bin/activate`{{execute T1}}
+
+В терминале с активированной виртуальной средой  **virtual environment** выполните следующую команду в начальной папке, чтобы установить зависимости. 
+Некоторые этапы установки могут занять несколько минут.
+
+`pip install --upgrade pip`{{execute T1}}
+
+Jinja2 - это современный и удобный для разработчиков язык шаблонов для Python, созданный по образцу шаблонов Django. 
+
+`pip install Jinja2`{{execute T1}}
+
+Jinja2 Command-Line Tool, reworked
+
+`pip install j2cli[yaml]`{{execute T1}}
+
+https://github.com/kolypto/j2cli
+
+Для работы с YAML в Python используется модуль PyYAML. Он не входит в стандартную библиотеку модулей, поэтому его нужно установить:
+
+`pip install PyYAML`{{execute T1}}
+
+Список пакетов установленых в виртуальное окружение
+
+`pip freeze`{{execute T1}}
+
+
+### КАК ИСПОЛЬЗОВАТЬ Jinja2 с YAML
+### На этом этапе мы настроим редактор **VScode** и **clone repository**.
+
+Клонируйте следующий репозиторий, скопировав и выполнив следующую команду в **vscode terminal**.
+
+############################################################
+
 Теперь, когда мы получили хороший опыт создания наших собственных развертываний **Deployments**, пришло время использовать функции непрерывного обновления **rolling update** и отката **rollback features**.
 
 Во-первых, давайте начнем с полностью настроенного развертывания **Nginx Deployment**, расположенного по адресу **`./resources/nginx.yaml`**
