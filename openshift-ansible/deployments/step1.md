@@ -171,7 +171,7 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 
 #########################################################
 
-Отредактируем nginx.json добавим в него 
+Отредактируем **nginx.json** добавим в него 
 
 ```yaml
                         "resources": {},
@@ -275,6 +275,8 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
     }
 }
 ```
+`j2 -f json nginx.j2 nginx.json > nginx.conf`{{execute T1}}
+
 
 
 
