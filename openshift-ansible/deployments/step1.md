@@ -173,7 +173,7 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 ```yaml
 resources {
 
-  limit {{ quantum_bit.kuber_limit }};
+  limit : {{ quantum_bit.kuber_limit }};
 
 }
 ```
