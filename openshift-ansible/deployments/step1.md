@@ -176,35 +176,30 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 
 `kubectl edit deployment nginx-deployment -o json`{{execute}}
 
+#########################################################
 
-#################################################################################
-
-kubectl get deployment nginx-deployment -o yaml > /tmp/nginx.yaml
-
-#################################################################################
-
-`kubectl get deployment nginx-deployment -o yaml > /tmp/nginx.yaml`{{execute}}
+`kubectl get deployment nginx-deployment -o yaml > nginx.yaml`{{execute}}
 
 `vi /tmp/nginx.yaml`{{execute}}
 
+#########################################################
 
-#################################################################################
-
-`kubectl get deployment nginx-deployment -o json > /tmp/nginx.json`{{execute}}
+`kubectl get deployment nginx-deployment -o json > nginx.json`{{execute}}
 
 `vi /tmp/nginx.json`{{execute}}
 
 `kubectl get deployment nginx-deployment -o json > nginx.json`{{execute}}
 
 `vi nginx.json`{{execute}}
-#################################################################################
+
+#########################################################
 
 Справка по [kubectl edit](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
 
 
 Справка по [kubectl edit](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit/)
 
-#################################################################################
+#########################################################
 
 Существует распространенный инструмент Linux под названием **jq**. **jq** похож на **sed** для данных JSON. 
 
@@ -223,7 +218,7 @@ kubectl get deployment nginx-deployment -o yaml > /tmp/nginx.yaml
 Установив уровень 9 (самый высокий), мы получим немного больше информации о том, как команда **kubectl** получает возвращаемую информацию.
 
 
-###########################################################################################
+#########################################################
 
 We can see that the Deployment scaled up ReplicaSet for the new Pods, and then scaled down the old ReplicaSet. These actions were done one at a time, as specified by our RollingUpdate configuration.
 
@@ -347,8 +342,7 @@ spec:
 
 Установив уровень 9 (самый высокий), мы получим немного больше информации о том, как команда **kubectl** получает возвращаемую информацию.
 
-
-###########################################################
+######################################################
 
 # Scaling
 
