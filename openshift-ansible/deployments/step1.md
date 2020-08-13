@@ -165,6 +165,48 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 
 #########################################################
 
+
+Предположим, вам нужен шаблон файла конфигурации, **kuber.j2**:
+
+`vi kuber.j2`{{execute T1}}
+
+```yaml
+resources {
+
+  limit {{ quantum_bit.kuber_limit }};
+
+}
+```
+И у вас есть файл **JSON** с данными, **kuber.json**:
+
+`vi kuber.json`{{execute T1}}
+
+```yaml
+{
+    "quantum_bit":{
+
+        "kuber_limit": "256"
+    }
+}
+```
+
+Отрендерим его в рабочий файл конфигурации **kuber.yaml** :
+
+`j2 -f json kuber.j2 kuber.json > kuber.yaml`{{execute T1}}
+
+
+`vi kuber.yaml`{{execute T1}}
+
+```yaml
+resources {
+
+  limit 256 ;
+
+}
+```
+
+############################################################
+
 #########################################################
 
 Отредактируем **nginx.json** добавим в него 
