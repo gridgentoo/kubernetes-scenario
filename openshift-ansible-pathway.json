@@ -12,11 +12,6 @@
         "title": "Jinja2 для deployments",
         "description": "Редактируем ресурсы JSON(kubectl edit rs vue-rs -o json)."
       },
-     {
-        "course_id": "vs-code",
-        "title": "Visual Studio Code для и разработки облачных приложений.",
-        "description": "Jinja — это шаблонизатор для OpenShift."
-      },
       {
         "course_id": "openshift-applier",
         "title": "Введение в OpenShift-Applier.",
@@ -31,6 +26,11 @@
         "course_id": "dynamic-jinja",
         "title": "Jinja в Ansible OpenShift-Applier с динамическими параметрами.",
         "description": "Jinja-шаблонизатор в Ansible OpenShift-Applier."
+      },
+      {
+        "course_id": "vs-code",
+        "title": "Visual Studio Code для и разработки облачных приложений.",
+        "description": "Jinja — это шаблонизатор для OpenShift."
       },
       {
         "course_id": "apache-kafka-message-enrichment",
