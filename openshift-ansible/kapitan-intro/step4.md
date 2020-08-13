@@ -1,6 +1,6 @@
 Blog post: https://medium.com/@alessandro.demaria/adb6a488cd77
 
-Let's remove the `features.brine` feature from the `dev-sea` environment.
+Давайте удалим функцию **`features.brine`** из среды **`dev-sea`**.
 
 `sed -i '/features.brine/d' inventory/targets/dev-sea.yml`{{execute}}
 `kapitan compile`{{execute}}
