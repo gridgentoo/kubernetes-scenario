@@ -1,8 +1,8 @@
-Now that we've gotten a good taste of creating our own Deployments, its time to use the rolling update and rollback features.
+Теперь, когда мы получили хороший опыт создания наших собственных развертываний **Deployments**, пришло время использовать функции непрерывного обновления **rolling update** и отката **rollback features**.
 
-First, let's all start off with a fully configured Nginx Deployment, located at `./resources/nginx.yaml`
+Во-первых, давайте начнем с полностью настроенного развертывания **Nginx Deployment**, расположенного по адресу **`./resources/nginx.yaml`**
 
-For our ReplicaSet, we can configure a `strategy` that defines how to safely perform a rolling update.
+Для нашего **ReplicaSet** мы можем настроить **`strategy`** , которая определяет, как безопасно выполнять скользящее обновление **rolling update**.
 
 ```yaml
 strategy:
@@ -54,6 +54,46 @@ Now that the application is deployed, lets update the Manifest to use a differen
 We can see that the Pods are being updated one at a time. If we look at the Deployment events, we can see this as well:
 
 `kubectl describe deployment nginx-deployment`{{execute}}
+
+#################################################################################
+
+Примечание: **kubectl edit** использует vi
+Чтобы войти в режим редактирования нажмите **i** 
+Чтобы выйти и сохранить изменения из режима редактирования нажмите **Shift+Z** два раза
+
+`kubectl edit rs vue-rs`{{execute}}
+
+С помощью **edit** вы можете в режиме реального времени **live edit** редактировать конфигурацию ресурса в **Kubernetes**. 
+Однако он не будет редактировать основной файл манифеста **Manifest**, представляющий объект.
+
+Команда **kubectl edit** позволяет вам напрямую редактировать любой ресурс API, который вы можете получить с помощью инструментов командной строки. Он откроет редактор, определенный вашими переменными среды **KUBE_EDITOR**, или откроется на «vi» для Linux
+
+Файлы для редактирования будут выводиться в версии API по умолчанию или в версии, указанной в **–output-version**. Формат по умолчанию - YAML - если вы хотите отредактировать в JSON, укажите **-o json**.
+
+`kubectl edit rs vue-rs -o json`{{execute}}
+
+Справка по [kubectl edit](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit/)
+
+Существует распространенный инструмент Linux под названием **jq**. **jq** похож на **sed** для данных JSON. 
+
+Использование **jq** может значительно облегчить чтение вывода **JSON** из **kubectl** с подсветкой синтаксиса.
+
+`kubectl get --raw /api/v1/namespaces/default | jq .`{{execute}}
+
+Существует также **Python json.tool**.
+
+`kubectl get -v=9 --raw /api/v1/namespaces/default | python -m json.tool`{{execute}}
+
+`kubectl edit rs vue-rs -o json`{{execute}}
+
+Обратите внимание, что в последней команде мы добавили  [verbosity request](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-output-verbosity-and-debugging) `-v=9`. 
+
+Установив уровень 9 (самый высокий), мы получим немного больше информации о том, как команда **kubectl** получает возвращаемую информацию.
+
+
+###########################################################################################
+
+
 
 We can see that the Deployment scaled up ReplicaSet for the new Pods, and then scaled down the old ReplicaSet. These actions were done one at a time, as specified by our RollingUpdate configuration.
 
