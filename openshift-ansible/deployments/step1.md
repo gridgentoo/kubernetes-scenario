@@ -199,31 +199,6 @@ kubectl get deployment nginx-deployment -o yaml > /tmp/nginx.yaml
 `vi nginx.json`{{execute}}
 #################################################################################
 
-Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
-Этот скрипт импортирует оба модуля — **YAML** и **JSON Python**, а также загружает указанный пользователем файл **JSON**, 
-выполняет конвертирование и пишет данные в файл **output.yaml**.
-
-создадим файл **json2yaml.py**:
-`vi json2yaml.py`{{execute T1}}
-
-```yaml
-#!/usr/bin/python3
-import yaml
-import sys
-import json
-
-OUT=open('output.yaml','w')
-IN=open(sys.argv[1], 'r')
-
-JSON = json.load(IN)
-IN.close()
-yaml.dump(JSON, OUT)
-OUT.close()
-```
-
-`python3 json2yaml.py nginx.json`{{execute T1}}
-
-#################################################################################
 Справка по [kubectl edit](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
 
 
@@ -250,8 +225,6 @@ OUT.close()
 
 ###########################################################################################
 
-
-
 We can see that the Deployment scaled up ReplicaSet for the new Pods, and then scaled down the old ReplicaSet. These actions were done one at a time, as specified by our RollingUpdate configuration.
 
 We can now get our Deployment rollout history:
@@ -261,11 +234,6 @@ We can now get our Deployment rollout history:
 We can jump back a version:
 
 `kubectl rollout undo deployment.v1.apps/nginx-deployment`{{execute}}
-
-
-
-
-
 
 ######################################################
 
