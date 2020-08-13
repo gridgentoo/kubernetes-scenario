@@ -74,6 +74,33 @@ server {
 
 ############################################################
 
+Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
+Этот скрипт импортирует оба модуля — **YAML** и **JSON Python**, а также загружает указанный пользователем файл **JSON**, 
+выполняет конвертирование и пишет данные в файл **output.yaml**.
+
+создадим файл **json2yaml.py**:
+`vi json2yaml.py`{{execute T1}}
+
+```yaml
+#!/usr/bin/python3
+import yaml
+import sys
+import json
+
+OUT=open('output.yaml','w')
+IN=open(sys.argv[1], 'r')
+
+JSON = json.load(IN)
+IN.close()
+yaml.dump(JSON, OUT)
+OUT.close()
+```
+
+`python3 json2yaml.py nginx.json`{{execute T1}}
+
+
+############################################################
+
 Теперь, когда мы получили хороший опыт создания наших собственных развертываний **Deployments**, пришло время использовать функции непрерывного обновления **rolling update** и отката **rollback features**.
 
 Во-первых, давайте начнем с полностью настроенного развертывания **Nginx Deployment**, расположенного по адресу **`./resources/resources/nginx.yaml`**
