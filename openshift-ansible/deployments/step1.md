@@ -9,13 +9,6 @@
 
 `yes | apt-get install python3-venv`{{execute T1}}
 
-`python3 -m venv .venv`{{execute T1}}
-
-`source .venv/bin/activate`{{execute T1}}
-
-В терминале с активированной виртуальной средой  **virtual environment** выполните следующую команду в начальной папке, чтобы установить зависимости. 
-Некоторые этапы установки могут занять несколько минут.
-
 `pip install --upgrade pip`{{execute T1}}
 
 Jinja2 - это современный и удобный для разработчиков язык шаблонов для Python, созданный по образцу шаблонов Django. 
