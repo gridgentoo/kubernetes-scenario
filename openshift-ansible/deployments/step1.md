@@ -1,6 +1,4 @@
 
-pip install j2cli[yaml]
-
 #### Python
 В этой среде **environment** вы можете проверить, что Python уже установлен, запустив `python3 --version`{{execute T1}}
 
