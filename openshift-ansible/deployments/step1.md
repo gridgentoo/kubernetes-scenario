@@ -160,14 +160,14 @@ kubectl get deployment nginx-deployment -o yaml > /tmp/nginx.yaml
 
 #################################################################################
 
-`kubectl edit deployment nginx-deployment -o yaml > /tmp/nginx.yaml`{{execute}}
+`kubectl get deployment nginx-deployment -o yaml > /tmp/nginx.yaml`{{execute}}
 
 `vi /tmp/nginx.yaml`{{execute}}
 
 
 #################################################################################
 
-`kubectl edit deployment nginx-deployment -o json > /tmp/nginx.json`{{execute}}
+`kubectl get deployment nginx-deployment -o json > /tmp/nginx.json`{{execute}}
 
 `vi /tmp/nginx.json`{{execute}}
 
