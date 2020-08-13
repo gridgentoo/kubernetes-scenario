@@ -76,6 +76,9 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 `kubectl edit deployment nginx-deployment -o json`{{execute}}
 
 
+
+
+
 Справка по [kubectl edit](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit/)
 
 Существует распространенный инструмент Linux под названием **jq**. **jq** похож на **sed** для данных JSON. 
