@@ -27,7 +27,7 @@ Jinja2 Command-Line Tool, reworked
 
 `pip freeze`{{execute T1}}
 
-Предположим, вам нужен шаблон файла конфигурации nginx, **nginx.j2**:
+Предположим, вам нужен шаблон файла конфигурации nginx, **kuber.j2**:
 
 `vi kuber.j2`{{execute T1}}
 
@@ -38,7 +38,7 @@ kubernets {
 
 }
 ```
-И у вас есть файл **JSON** с данными, **nginx.json**:
+И у вас есть файл **JSON** с данными, **kuber.json**:
 
 `vi kuber.json`{{execute T1}}
 
@@ -51,9 +51,9 @@ kubernets {
 }
 ```
 
-Отрендерим его в рабочий файл конфигурации **nginx.conf** :
+Отрендерим его в рабочий файл конфигурации **kuber.yaml** :
 
-`j2 -f json kuber.j2 kuber.json > kuber.conf`{{execute T1}}
+`j2 -f json kuber.j2 kuber.json > kuber.yaml`{{execute T1}}
 
 ```yaml
 server {
@@ -63,7 +63,7 @@ server {
 }
 ```
 
-`vi nginx.conf`{{execute T1}}
+`vi kuber.yaml`{{execute T1}}
 
 
 ############################################################
