@@ -1,6 +1,6 @@
 {
     "title": "Ansible OpenShift-Applier с динамическими параметрами",
-    "description": "Ansible OpenShift-Applier, & Visual Studio Code для облачных приложений",
+    "description": "Kapitan & jsonnet, gоддерживает следующие шаблоны Jinja2, jsonnet, kadet, helm для Kubernetes",
     "courses": [
       {
         "course_id": "vs-code",
