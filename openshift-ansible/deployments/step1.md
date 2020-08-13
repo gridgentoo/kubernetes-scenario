@@ -183,13 +183,9 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 
 `kubectl get deployment nginx-deployment -o yaml > nginx.yaml`{{execute}}
 
-`vi /tmp/nginx.yaml`{{execute}}
+`vi nginx.yaml`{{execute}}
 
 #########################################################
-
-`kubectl get deployment nginx-deployment -o json > nginx.json`{{execute}}
-
-`vi /tmp/nginx.json`{{execute}}
 
 `kubectl get deployment nginx-deployment -o json > nginx.json`{{execute}}
 
