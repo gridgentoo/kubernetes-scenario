@@ -141,7 +141,7 @@
         "id": "grpc" 
       },
       {
-        "title": "Ansible OpenShift-Applier, с динамическими параметрами.",
+        "title": "Kapitan & jsonnet для Kubernetes, Ansible OpenShift-Applier.",
         "description": "Ansible OpenShift-Applier, VSCode, Ansible, Jinja",
         "id": "openshift-ansible" 
       },
