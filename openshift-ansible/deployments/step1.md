@@ -33,11 +33,9 @@ Jinja2 Command-Line Tool, reworked
 
 ```yaml
 server {
-  listen 80;
-  server_name {{ nginx.hostname }};
 
   root {{ nginx.webroot }};
-  index index.htm;
+
 }
 ```
 И у вас есть файл **JSON** с данными, **nginx.json**:
@@ -47,7 +45,7 @@ server {
 ```yaml
 {
     "nginx":{
-        "hostname": "localhost",
+
         "webroot": "/var/www/project"
     }
 }
