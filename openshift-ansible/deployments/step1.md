@@ -19,8 +19,6 @@ Jinja2 Command-Line Tool, reworked
 
 `pip install j2cli[yaml]`{{execute T1}}
 
-https://github.com/kolypto/j2cli
-
 Для работы с YAML в Python используется модуль PyYAML. Он не входит в стандартную библиотеку модулей, поэтому его нужно установить:
 
 `pip install PyYAML`{{execute T1}}
@@ -71,7 +69,6 @@ server {
 
 `vi nginx.conf`{{execute T1}}
 
-
 ############################################################
 
 Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
@@ -97,7 +94,6 @@ OUT.close()
 ```
 
 `python3 json2yaml.py nginx.json`{{execute T1}}
-
 
 ############################################################
 
@@ -225,9 +221,7 @@ yaml.dump(JSON, OUT)
 OUT.close()
 ```
 
-`python3 json2yaml.py /tmp/nginx.json`{{execute T1}}
-
-
+`python3 json2yaml.py nginx.json`{{execute T1}}
 
 #################################################################################
 Справка по [kubectl edit](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
