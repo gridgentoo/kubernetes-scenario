@@ -8,6 +8,11 @@
         "description": "Jinja — это шаблонизатор для OpenShift."
       },
       {
+        "course_id": "deployments",
+        "title": "Jinja2 для deployments",
+        "description": "Редактируем ресурсы JSON(kubectl edit rs vue-rs -o json)."
+      },
+      {
         "course_id": "kapitan-intro",
         "title": "Kapitan & jsonnet для управления конфигурациями Kubernetes.",
         "description": "Поддерживает следующие шаблоны Jinja2, jsonnet, kadet, helm для Kubernetes."
