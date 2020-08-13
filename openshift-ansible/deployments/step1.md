@@ -169,6 +169,115 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 
 #########################################################
 
+#########################################################
+
+Отредактируем nginx.json добавим в него 
+
+```yaml
+                        "resources": {},
+                        "limits": "256 М",
+                        "requests": "256"
+ ```
+ 
+#########################################################
+
+```yaml
+{
+    "apiVersion": "extensions/v1beta1",
+    "kind": "Deployment",
+    "metadata": {
+        "annotations": {
+            "deployment.kubernetes.io/revision": "1"
+        },
+        "creationTimestamp": "2020-08-13T14:09:28Z",
+        "generation": 1,
+        "labels": {
+            "app": "nginx"
+        },
+        "name": "nginx-deployment",
+        "namespace": "default",
+        "resourceVersion": "1779",
+        "selfLink": "/apis/extensions/v1beta1/namespaces/default/deployments/nginx-deployment",
+        "uid": "99d39ef1-dd6e-11ea-8b9e-0242ac11005a"
+    },
+    "spec": {
+        "progressDeadlineSeconds": 600,
+        "replicas": 5,
+        "revisionHistoryLimit": 10,
+        "selector": {
+            "matchLabels": {
+                "app": "nginx"
+            }
+        },
+        "strategy": {
+            "rollingUpdate": {
+                "maxSurge": "25%",
+                "maxUnavailable": "25%"
+            },
+            "type": "RollingUpdate"
+        },
+        "template": {
+            "metadata": {
+                "creationTimestamp": null,
+                "labels": {
+                    "app": "nginx"
+                }
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "nginx:1.8.1",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "nginx",
+                        "ports": [
+                            {
+                                "containerPort": 80,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "limits": "256 М",
+                        "requests": "256"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "terminationGracePeriodSeconds": 30
+            }
+        }
+    },
+    "status": {
+        "availableReplicas": 5,
+        "conditions": [
+            {
+                "lastTransitionTime": "2020-08-13T14:09:44Z",
+                "lastUpdateTime": "2020-08-13T14:09:44Z",
+                "message": "Deployment has minimum availability.",
+                "reason": "MinimumReplicasAvailable",
+                "status": "True",
+                "type": "Available"
+            },
+            {
+                "lastTransitionTime": "2020-08-13T14:09:28Z",
+                "lastUpdateTime": "2020-08-13T14:09:44Z",
+                "message": "ReplicaSet \"nginx-deployment-59988f74c7\" has successfully progressed.",
+                "reason": "NewReplicaSetAvailable",
+                "status": "True",
+                "type": "Progressing"
+            }
+        ],
+        "observedGeneration": 1,
+        "readyReplicas": 5,
+        "replicas": 5,
+        "updatedReplicas": 5
+    }
+}
+```
+
+
+
 Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
 Этот скрипт импортирует оба модуля — **YAML** и **JSON Python**, а также загружает указанный пользователем файл **JSON**, 
 выполняет конвертирование и пишет данные в файл **output.yaml**, в нашем случае выводить будем в **nginx.yaml**.
@@ -206,6 +315,12 @@ OUT.close()
 
 #########################################################
 
+
+
+
+
+
+#########################################################
 
 Существует распространенный инструмент Linux под названием **jq**. **jq** похож на **sed** для данных JSON. 
 
