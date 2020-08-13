@@ -31,6 +31,8 @@ https://github.com/kolypto/j2cli
 
 Предположим, вам нужен шаблон файла конфигурации nginx, **nginx.j2**:
 
+`vi nginx.j2`{{execute T1}}
+
 ```yaml
 server {
   listen 80;
@@ -41,6 +43,8 @@ server {
 }
 ```
 И у вас есть файл **JSON** с данными, **nginx.json**:
+
+`vi nginx.json`{{execute T1}}
 
 ```yaml
 {
@@ -66,6 +70,7 @@ server {
 ```
 
 `vi nginx.conf`{{execute T1}}
+
 
 ############################################################
 
