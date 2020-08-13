@@ -45,7 +45,10 @@ spec:
         - containerPort: 80
 ```
 
-Now, let's apply this configuration change: `kubectl apply -f ./resources/nginx.yaml`{{execute}}
+Теперь применим это изменение конфигурации:: 
+
+`kubectl create -f ./resources/resources/nginx.yaml`{{execute}}
+
 
 Now that the application is deployed, lets update the Manifest to use a different image: `nginx:alpine`. Now apply the changes.
 
@@ -61,7 +64,7 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 Чтобы войти в режим редактирования нажмите **i** 
 Чтобы выйти и сохранить изменения из режима редактирования нажмите **Shift+Z** два раза
 
-`kubectl edit rs vue-rs`{{execute}}
+`kubectl edit deployment nginx-deployment`{{execute}}
 
 С помощью **edit** вы можете в режиме реального времени **live edit** редактировать конфигурацию ресурса в **Kubernetes**. 
 Однако он не будет редактировать основной файл манифеста **Manifest**, представляющий объект.
@@ -70,7 +73,8 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 
 Файлы для редактирования будут выводиться в версии API по умолчанию или в версии, указанной в **–output-version**. Формат по умолчанию - YAML - если вы хотите отредактировать в JSON, укажите **-o json**.
 
-`kubectl edit rs vue-rs -o json`{{execute}}
+`kubectl edit deployment nginx-deployment -o json`{{execute}}
+
 
 Справка по [kubectl edit](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit/)
 
