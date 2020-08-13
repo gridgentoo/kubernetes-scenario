@@ -198,6 +198,36 @@ kubectl get deployment nginx-deployment -o yaml > /tmp/nginx.yaml
 
 `vi /tmp/nginx.json`{{execute}}
 
+`kubectl get deployment nginx-deployment -o json > nginx.json`{{execute}}
+
+`vi nginx.json`{{execute}}
+#################################################################################
+
+Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
+Этот скрипт импортирует оба модуля — **YAML** и **JSON Python**, а также загружает указанный пользователем файл **JSON**, 
+выполняет конвертирование и пишет данные в файл **output.yaml**.
+
+создадим файл **json2yaml.py**:
+`vi json2yaml.py`{{execute T1}}
+
+```yaml
+#!/usr/bin/python3
+import yaml
+import sys
+import json
+
+OUT=open('output.yaml','w')
+IN=open(sys.argv[1], 'r')
+
+JSON = json.load(IN)
+IN.close()
+yaml.dump(JSON, OUT)
+OUT.close()
+```
+
+`python3 json2yaml.py /tmp/nginx.json`{{execute T1}}
+
+
 
 #################################################################################
 Справка по [kubectl edit](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
