@@ -207,7 +207,7 @@ import yaml
 import sys
 import json
 
-OUT=open('output.yaml','w')
+OUT=open('nginx.yaml','w')
 IN=open(sys.argv[1], 'r')
 
 JSON = json.load(IN)
