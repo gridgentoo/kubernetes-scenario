@@ -157,10 +157,13 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 
 `kubectl describe deployment nginx-deployment`{{execute}}
 
-#################################################################################
+#########################################################
 
-Редактирование ресурсов 
+
+### Редактирование ресурсов в Кубернетес.
+
 Вы можете отредактировать API-ресурс в любом редакторе.
+
 `kubectl edit deployment nginx-deployment`{{execute}}
 
 Примечание: **kubectl edit** использует vi
@@ -393,10 +396,8 @@ spec:
 
 `kubectl autoscale rs vue-rs --max=10 --min=3 --cpu-percent=50 --dry-run=true -o=yaml`{{execute}}
 
-
 > Обратите внимание на **--dry-run=true**, это означает, что **Kubernetes** не будет применять требуемые изменения состояния к нашему кластеру. 
 > Однако мы предоставили ему **-o=yaml**, что означает вывод конфигурации в виде **YAML**. Это позволяет нам легко генерировать манифест **Manifest**.
-
 
 * Совет:  **-dry-run** с **-o=yaml** - отличный способ создания конфигураций! *
 
