@@ -1,5 +1,5 @@
 {
-    "title": "Kapitan & jsonnet, gоддерживает следующие шаблоны Jinja2, jsonnet, kadet, helm для Kubernetes.",
+    "title": "Kapitan & jsonnet, поддерживает следующие шаблоны Jinja2, jsonnet, kadet, helm для Kubernetes.",
     "description": "Kapitan & jsonnet, Ansible OpenShift-Applier с динамическими параметрами",
     "courses": [
       {
