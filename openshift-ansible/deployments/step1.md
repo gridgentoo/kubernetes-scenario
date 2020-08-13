@@ -29,24 +29,24 @@ Jinja2 Command-Line Tool, reworked
 
 Предположим, вам нужен шаблон файла конфигурации nginx, **nginx.j2**:
 
-`vi nginx.j2`{{execute T1}}
+`vi kuber.j2`{{execute T1}}
 
 ```yaml
-server {
+kubernets {
 
-  root {{ nginx.webroot }};
+  limit {{ docker.kuber_limit }};
 
 }
 ```
 И у вас есть файл **JSON** с данными, **nginx.json**:
 
-`vi nginx.json`{{execute T1}}
+`vi kuber.json`{{execute T1}}
 
 ```yaml
 {
-    "nginx":{
+    "docker":{
 
-        "webroot": "/var/www/project"
+        "kuber_limit": "256"
     }
 }
 ```
