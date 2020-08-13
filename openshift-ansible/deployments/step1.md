@@ -34,9 +34,9 @@ https://github.com/kolypto/j2cli
 
 Список пакетов установленых в виртуальное окружение
 
-Предположим, вам нужен шаблон файла конфигурации nginx, **nginx.j2**:
-
 `pip freeze`{{execute T1}}
+
+Предположим, вам нужен шаблон файла конфигурации nginx, **nginx.j2**:
 
 ```yaml
 server {
@@ -44,6 +44,30 @@ server {
   server_name {{ nginx.hostname }};
 
   root {{ nginx.webroot }};
+  index index.htm;
+}
+```
+И у вас есть файл **JSON** с данными, **nginx.json**:
+
+```yaml
+{
+    "nginx":{
+        "hostname": "localhost",
+        "webroot": "/var/www/project"
+    }
+}
+```
+
+Отрендерим его в рабочий файл конфигурации **nginx.conf** :
+
+`j2 -f json nginx.j2 nginx.json > nginx.conf`{{execute T1}}
+
+```yaml
+server {
+  listen 80;
+  server_name localhost;
+
+  root /var/www/project;
   index index.htm;
 }
 ```
