@@ -275,9 +275,50 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
     }
 }
 ```
+
+######################################################
+
+Создадим файл **nginx.j2**
+`vi ./resources/resources/nginx.j2`{{execute}}
+
+######################################################
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.8.1
+        ports:
+        - containerPort: 80
+        resources:
+          limits: ${{LIMITS}}
+          requests: ${{REQUESTS}}
+          
+```
+
+##############################################################
+
 `j2 -f json nginx.j2 nginx.json > nginx.conf`{{execute T1}}
-
-
 
 
 Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
@@ -353,49 +394,5 @@ We can jump back a version:
 
 `kubectl rollout undo deployment.v1.apps/nginx-deployment`{{execute}}
 
-######################################################
 
-`vi ./resources/resources/nginx.j2`{{execute}}
 
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-  labels:
-    app: nginx
-spec:
-  replicas: 5
-  selector:
-    matchLabels:
-      app: nginx
-  strategy:
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-    type: RollingUpdate
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.8.1
-        ports:
-        - containerPort: 80
-        resources:
-          limits: ${{LIMITS}}
-          requests: ${{REQUESTS}}
-          
-```
-######################################################
-
-И у вас есть файл **JSON** с данными, **nginx.json**:
-
-`vi nginx.json`{{execute T1}}
-
-```yaml
-
-?????
-```
