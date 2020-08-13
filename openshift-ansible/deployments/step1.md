@@ -59,6 +59,7 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 `kubectl describe deployment nginx-deployment`{{execute}}
 
 #################################################################################
+
 Редактирование ресурсов 
 Вы можете отредактировать API-ресурс в любом редакторе.
 `kubectl edit deployment nginx-deployment`{{execute}}
