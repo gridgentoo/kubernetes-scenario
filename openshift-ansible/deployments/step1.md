@@ -34,7 +34,7 @@ Jinja2 Command-Line Tool, reworked
 ```yaml
 kubernets {
 
-  limit {{ docker.kuber_limit }};
+  limit {{ nginx.kuber_limit }};
 
 }
 ```
@@ -44,7 +44,7 @@ kubernets {
 
 ```yaml
 {
-    "docker":{
+    "nginx":{
 
         "kuber_limit": "256"
     }
@@ -53,7 +53,7 @@ kubernets {
 
 Отрендерим его в рабочий файл конфигурации **nginx.conf** :
 
-`j2 -f json nginx.j2 nginx.json > nginx.conf`{{execute T1}}
+`j2 -f json kuber.j2 kuber.json > kuber.conf`{{execute T1}}
 
 ```yaml
 server {
