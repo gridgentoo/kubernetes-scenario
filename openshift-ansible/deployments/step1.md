@@ -69,31 +69,6 @@ server {
 
 `vi nginx.conf`{{execute T1}}
 
-############################################################
-
-Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
-Этот скрипт импортирует оба модуля — **YAML** и **JSON Python**, а также загружает указанный пользователем файл **JSON**, 
-выполняет конвертирование и пишет данные в файл **output.yaml**.
-
-создадим файл **json2yaml.py**:
-`vi json2yaml.py`{{execute T1}}
-
-```yaml
-#!/usr/bin/python3
-import yaml
-import sys
-import json
-
-OUT=open('output.yaml','w')
-IN=open(sys.argv[1], 'r')
-
-JSON = json.load(IN)
-IN.close()
-yaml.dump(JSON, OUT)
-OUT.close()
-```
-
-`python3 json2yaml.py nginx.json`{{execute T1}}
 
 ############################################################
 
@@ -196,7 +171,7 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 
 Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
 Этот скрипт импортирует оба модуля — **YAML** и **JSON Python**, а также загружает указанный пользователем файл **JSON**, 
-выполняет конвертирование и пишет данные в файл **output.yaml**.
+выполняет конвертирование и пишет данные в файл **output.yaml**, в нашем случае выводить будем в **nginx.yaml**.
 
 создадим файл **json2yaml.py**:
 `vi json2yaml.py`{{execute T1}}
