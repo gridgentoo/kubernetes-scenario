@@ -8,6 +8,11 @@
         "description": "Jinja — это шаблонизатор для OpenShift."
       },
       {
+        "course_id": "kapitan-intro",
+        "title": "Kapitan & jsonnet для управления конфигурациями Kubernetes.",
+        "description": "Поддерживает следующие шаблоны Jinja2, jsonnet, kadet, helm для Kubernetes."
+      },  
+      {
         "course_id": "openshift-applier",
         "title": "Введение в OpenShift-Applier.",
         "description": "Openshift-applier это роль Ansible role, поможет вам понять парадигму «Инфраструктура как код»."
