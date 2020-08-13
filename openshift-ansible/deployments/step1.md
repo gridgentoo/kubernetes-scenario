@@ -142,6 +142,10 @@ spec:
         image: nginx:1.8.1
         ports:
         - containerPort: 80
+        resources:
+          limits: ${{LIMITS}}
+          requests: ${{REQUESTS}}
+          
 ```
 
 Теперь применим это изменение конфигурации:: 
