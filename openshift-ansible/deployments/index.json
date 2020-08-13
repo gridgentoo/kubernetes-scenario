@@ -59,6 +59,7 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "editor-terminal",
+    "uilayout": "vscode",
     "dashboards": [
       {
         "name": "Dashboard",
