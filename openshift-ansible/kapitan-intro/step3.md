@@ -1,9 +1,9 @@
 Blog post: https://medium.com/@alessandro.demaria/adb6a488cd77
 
-This example will show you how to work with multiple environments. It comes with 2 environments: `prod-sea` and `dev-sea`. 
+Этот пример покажет вам, как работать с несколькими средами. Поставляется с 2 средами: **`prod-sea`** и **`dev-sea`**.
 
-You can run `kapitan compile`{{execute}} to verify that the compilation works
+Вы можете запустит **`kapitan compile`{{execute}}** чтобы убедиться, что компиляция работает
 
-***kapitan*** compilation is an idempotent operation. If none of the inputs have changed, you can expect no changes in the compiled files.
+***kapitan*** compilation это идемпотентная операция. Если ни один из входных параметров не изменился, можно ожидать, что в скомпилированных файлах не произойдет никаких изменений.
 
-In fact, let's verify that the `git status`{{execute}} is clean
+Фактически, давайте проверим, что  **`git status`{{execute}}** чистый
