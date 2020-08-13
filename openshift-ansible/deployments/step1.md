@@ -194,12 +194,41 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 
 #########################################################
 
+Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
+Этот скрипт импортирует оба модуля — **YAML** и **JSON Python**, а также загружает указанный пользователем файл **JSON**, 
+выполняет конвертирование и пишет данные в файл **output.yaml**.
+
+создадим файл **json2yaml.py**:
+`vi json2yaml.py`{{execute T1}}
+
+```yaml
+#!/usr/bin/python3
+import yaml
+import sys
+import json
+
+OUT=open('output.yaml','w')
+IN=open(sys.argv[1], 'r')
+
+JSON = json.load(IN)
+IN.close()
+yaml.dump(JSON, OUT)
+OUT.close()
+```
+
+`python3 json2yaml.py nginx.json`{{execute T1}}
+
+После применения скриптов, на **Выходе** получим **output.yaml**
+
+############################################################
+
 Справка по [kubectl edit](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
 
 
 Справка по [kubectl edit](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit/)
 
 #########################################################
+
 
 Существует распространенный инструмент Linux под названием **jq**. **jq** похож на **sed** для данных JSON. 
 
