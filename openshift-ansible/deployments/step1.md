@@ -34,7 +34,7 @@ Jinja2 Command-Line Tool, reworked
 ```yaml
 kubernets {
 
-  limit {{ nginx.kuber_limit }};
+  limit {{ quantum_bit.kuber_limit }};
 
 }
 ```
@@ -44,7 +44,7 @@ kubernets {
 
 ```yaml
 {
-    "nginx":{
+    "quantum_bit":{
 
         "kuber_limit": "256"
     }
@@ -55,16 +55,16 @@ kubernets {
 
 `j2 -f json kuber.j2 kuber.json > kuber.yaml`{{execute T1}}
 
-```yaml
-server {
-
-  root /var/www/project;
-
-}
-```
 
 `vi kuber.yaml`{{execute T1}}
 
+```yaml
+kubernets {
+
+  limit 256 ;
+
+}
+```
 
 ############################################################
 
