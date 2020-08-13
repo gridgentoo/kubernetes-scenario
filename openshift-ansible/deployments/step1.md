@@ -27,7 +27,7 @@ Jinja2 Command-Line Tool, reworked
 
 `pip freeze`{{execute T1}}
 
-Предположим, вам нужен шаблон файла конфигурации nginx, **kuber.j2**:
+Предположим, вам нужен шаблон файла конфигурации, **kuber.j2**:
 
 `vi kuber.j2`{{execute T1}}
 
