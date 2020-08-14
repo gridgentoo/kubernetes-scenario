@@ -1,4 +1,67 @@
 
+Теперь, когда мы получили хороший опыт создания наших собственных развертываний **Deployments**, пришло время использовать функции непрерывного обновления **rolling update** и отката **rollback features**.
+
+Во-первых, давайте начнем с полностью настроенного развертывания **Nginx Deployment**, расположенного по адресу **`./resources/resources/nginx.yaml`**
+
+Для нашего **ReplicaSet** мы можем настроить **`strategy`** , которая определяет, как безопасно выполнять скользящее обновление **rolling update**.
+
+```yaml
+strategy:
+  rollingUpdate:
+    maxSurge: 1
+    maxUnavailable: 1
+  type: RollingUpdate
+```
+
+This strategy utilizes Rolling Updates. With rolling updates, Kubernetes will spin up a new Pod, and when it is ready, tear down an old Pod. The `maxSurge` refers to the total number of Pods that can be active at any given time. If `maxSurge` = 6 and `replicas` = 5, that means 1 new Pod (6 - 5) can be created at a time for the rolling update. `maxUnavailable` is the total number (or percentage) of Pods that can be unavailable at a time.
+
+Here is what our Manifest looks like after integrating this:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.8.1
+        ports:
+        - containerPort: 80
+          
+```
+
+Теперь применим это изменение конфигурации:: 
+
+`kubectl create -f ./resources/resources/nginx.yaml`{{execute}}
+
+
+Now that the application is deployed, lets update the Manifest to use a different image: `nginx:alpine`. Now apply the changes.
+
+`kubectl get pods --watch`{{execute}}
+
+We can see that the Pods are being updated one at a time. If we look at the Deployment events, we can see this as well:
+
+`kubectl describe deployment nginx-deployment`{{execute}}
+
+#############################################
+
 Наиболее эффективный и повторяемый **repeatable** способ управления нашими развертываниями **`Deployments`** - это файлы **Manifest**. 
 Вот то, что определяет наше простое приложение vue (**`./resources/resources/vue-simple.yaml`**):
 
