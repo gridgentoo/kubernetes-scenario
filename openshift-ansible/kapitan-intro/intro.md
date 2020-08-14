@@ -1,6 +1,9 @@
 # Введение в Kapitan
 
-Добро пожаловать в это введение в ***Kapitan***. ***Kapitan*** предустановлен в этой среде.
+Добро пожаловать в это введение в ***Kapitan***. 
+***Kapitan*** предустановлен в этой среде.
+
+Шаблонизаторы: сейчас это **Jinja2, Jsonnet, Kadet**. Они берут инвентарь и создают файлы (**yaml, json**, документация или **bash**-скрипты).
 
 **Kapitan** поддерживает следующие типы входных шаблонов:
  - **jinja2**
@@ -8,11 +11,14 @@
  - **kadet (alpha)**
  - **helm (alpha)**
 
+Мы открыли для себя **jsonnet** Дейва Каннингема (**Dave Cunningham**) для шаблонизации **yaml/json** на объектно-ориентированном языке.
+https://habr.com/ru/company/southbridge/blog/442844/
 
 Приведенный ниже фрагмент, взятый из примера класса **elasticsearch**, объявляет, какие параметры необходимы для компонента **elasticsearch**:
 
-```
 $ cat inventory/classes/component/elasticsearch.yml
+
+```
 parameters:
   elasticsearch:
     image: "quay.io/pires/docker-elasticsearch-kubernetes:5.5.0"
