@@ -1,0 +1,46 @@
+{
+    "icon":"fa-jenkins",
+    "pathwayTitle": "Jenkins",
+    "title": "Create a Jenkins Pipeline",
+    "description": "In this lab you will explore the Pipeline functionality",
+    "difficulty": "Advanced",
+    "time": "15-20 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Create a Simple Pipeline",
+                "text": "step1.md"
+            },
+            {
+                "title": "Pipeline Definition in the Jenkinsfile",
+                "text": "step2.md"
+            },
+            {
+                "title": "Try Out a Failing Build",
+                "text": "step3.md"
+            },
+            {
+                "title": "Add a Manual Approval Step",
+                "text": "step4.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "docker",
+        "port": 8080
+    }
+}

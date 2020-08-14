@@ -1,9 +1,19 @@
  
   {
-    "title": "Helm пакетный менеджер для Kubernetes",
+    "title": "Создайте jenkins-triggered-pipelines",
     "icon": "fa-kubernetes",
-    "description": "Откройте для себя Helm.",
+    "description": "Откройте для себя jenkins-triggered-pipelines.",
     "courses": [
+      {
+        "course_id": "devops",
+        "title": "Создайте jenkins & sonarqubes",
+        "description": "Используйте Тестовый стенд в Облаке...."
+      },
+      {
+        "course_id": "jenkins-triggered-pipelines",
+        "title": "Создайте jenkins-triggered-pipelines",
+        "description": "Используйте шаги ручного ввода в jenkins-triggered-pipelines"
+      },
       {
         "course_id": "scenario",
         "title": "Интеграция Jenkins с GIT",

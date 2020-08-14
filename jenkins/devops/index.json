@@ -1,0 +1,36 @@
+{ 
+  "pathwayTitle": "DevOps",
+  "title": "SelfService DevOps Platform Demo",
+  "description": "In this scenario you will learn about self service DevOps platform",
+  "difficulty": "intermediate",
+  "time": "30 minutes",
+  "details": {
+    "steps": [
+      { "title": "Step 1", "text": "01.md" },
+      { "title": "Step 2", "text": "02.md" }
+    ],
+    "intro": {
+      "text": "00-intro.md",
+      "courseData": "env-init.sh",
+      "code": "set-env.sh"
+    },
+    "finish": {
+      "text": "99-outro.md"
+    }
+  },
+  "files": [
+
+  ],
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name":"DevOpsSelfServiceApp","port":8055}, {"name":"Jenkins","port":9080}, {"name":"Sonar","port":9000}, {"name":"BankApplication","port":8800}],
+    "uilayout": "editor-terminal",
+    "uisettings": "java",
+    "hideintro": false,
+    "uieditorpath": "/root/projects",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

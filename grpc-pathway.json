@@ -9,6 +9,11 @@
         "description": "gRPC, Vert.x, Asynchronous APIs, RESTful endpoints, Event Bus"
       },
       {
+        "course_id": "zipkin",
+        "title": "Zipkin is a distributed tracing system.",
+        "description": "Zipkin — это система распределенной трассировки, которая помогает собирать данные о времени выполнения всех разрозненных служб на Twitter"
+      },
+      {
         "course_id": "golang-hotrod-demo",
         "title": "gRPC(Hot R.O.D). Трассировки в Jaeger через API OpenTracing.",
         "description": "Jaeger - это tracing system с открытым исходным кодом, созданная Uber."
