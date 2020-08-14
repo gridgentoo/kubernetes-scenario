@@ -322,7 +322,7 @@ resources {
 ######################################################
 
 Создадим файл **nginx.json**
-`vi ./resources/resources/nginx.json`{{execute}}
+`vi nginx.json`{{execute}}
 
 ######################################################
 
@@ -340,7 +340,7 @@ resources {
 
 
 Создадим файл **nginx.j2**
-`vi ./resources/resources/nginx.j2`{{execute}}
+`vi nginx.j2`{{execute}}
 
 ######################################################
 
