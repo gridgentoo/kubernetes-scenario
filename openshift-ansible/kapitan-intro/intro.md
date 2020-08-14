@@ -19,7 +19,6 @@
 
 https://habr.com/ru/company/southbridge/blog/442844/
 
-Helm charts can take external parameters defined by an values.yaml file which you specify when rendering the chart. A simple example might look like this:
 **Helm charts** могут принимать внешние параметры, определяемые файлом **values.yaml**, который рендерит **Helm charts**. Простой пример может выглядеть так:
 
 Приведенный ниже фрагмент, взятый из примера класса **elasticsearch**, объявляет, какие параметры необходимы для компонента **elasticsearch**:
