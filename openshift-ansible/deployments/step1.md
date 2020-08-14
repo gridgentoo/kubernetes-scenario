@@ -94,9 +94,12 @@ spec:
 
 ##############################################################
 
-**Linux (shell pipe**) для **j2cli**
+**Linux (shell pipe**) для **j2cli** 
+
 **j2cli** - интерфес командной строки CLI  для шаблонов **Template Jinja2**
 
 `j2 -f json nginx.j2 nginx.json > nginx.yaml`{{execute T1}}
+
+`vi nginx.yaml`{{execute T1}}
 
 
