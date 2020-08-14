@@ -348,7 +348,8 @@ spec:
         image: nginx:1.8.1
         ports:
         - containerPort: 80
-        resources {limit: {{ quantum_bit.kuber_limit }};}
+        resources:
+          limit: {{ quantum_bit.kuber_limit }};
           
 ```
 
