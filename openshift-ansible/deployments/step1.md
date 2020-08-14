@@ -34,7 +34,7 @@ Jinja2 Command-Line Tool, reworked
 ```yaml
 kubernets {
 
-  limit {{ quantum_bit.kuber_limit }};
+  limit: {{ quantum_bit.kuber_limit }};
 
 }
 ```
@@ -61,7 +61,7 @@ kubernets {
 ```yaml
 kubernets {
 
-  limit 256 ;
+  limit: 256 ;
 
 }
 ```
