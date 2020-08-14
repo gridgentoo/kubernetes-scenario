@@ -1,3 +1,31 @@
+Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
+Этот скрипт импортирует оба модуля — **YAML** и **JSON Python**, а также загружает указанный пользователем файл **JSON**, 
+выполняет конвертирование и пишет данные в файл **output.yaml**, в нашем случае выводить будем в **nginx.yaml**.
+
+создадим файл **json2yaml.py**:
+`vi json2yaml.py`{{execute T1}}
+
+```yaml
+#!/usr/bin/python3
+import yaml
+import sys
+import json
+
+OUT=open('nginx.yaml','w')
+IN=open(sys.argv[1], 'r')
+
+JSON = json.load(IN)
+IN.close()
+yaml.dump(JSON, OUT)
+OUT.close()
+```
+
+`python3 json2yaml.py nginx.json`{{execute T1}}
+
+После применения скриптов, на **Выходе** получим **nginx.yaml**
+
+`vi nginx.yaml`{{execute T1}}
+
 #########################################################
 
 ### Редактирование ресурсов в Кубернетес.
