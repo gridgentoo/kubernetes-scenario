@@ -354,7 +354,7 @@ spec:
 
 ##############################################################
 
-`j2 -f json nginx.j2 nginx.json > nginx.conf`{{execute T1}}
+`j2 -f json nginx.j2 nginx.json > nginx.yaml`{{execute T1}}
 
 
 Затем создадим простой скрипт-конвертор и сохраним его под именем **json2yaml.py**. 
