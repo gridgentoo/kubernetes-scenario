@@ -173,7 +173,7 @@ We can see that the Pods are being updated one at a time. If we look at the Depl
 ```yaml
 resources {
 
-  limit : {{ quantum_bit.kuber_limit }};
+  limit: {{ quantum_bit.kuber_limit }};
 
 }
 ```
@@ -200,7 +200,7 @@ resources {
 ```yaml
 resources {
 
-  limit 256 ;
+  limit: 256 ;
 
 }
 ```
@@ -424,11 +424,11 @@ OUT.close()
 
 We can see that the Deployment scaled up ReplicaSet for the new Pods, and then scaled down the old ReplicaSet. These actions were done one at a time, as specified by our RollingUpdate configuration.
 
-We can now get our Deployment rollout history:
+Теперь мы можем получить нашу историю развертывания **Deployment rollout history**:
 
 `kubectl rollout history deployment/nginx-deployment`{{execute}}
 
-We can jump back a version:
+Мы можем вернуться к версии:
 
 `kubectl rollout undo deployment.v1.apps/nginx-deployment`{{execute}}
 
