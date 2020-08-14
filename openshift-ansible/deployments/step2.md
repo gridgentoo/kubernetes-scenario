@@ -1,3 +1,98 @@
+Теперь, когда мы получили хороший опыт создания наших собственных развертываний **Deployments**, пришло время использовать функции непрерывного обновления **rolling update** и отката **rollback features**.
+
+Во-первых, давайте начнем с полностью настроенного развертывания **Nginx Deployment**, расположенного по адресу **`./resources/resources/nginx.yaml`**
+
+Для нашего **ReplicaSet** мы можем настроить **`strategy`** , которая определяет, как безопасно выполнять скользящее обновление **rolling update**.
+
+```yaml
+strategy:
+  rollingUpdate:
+    maxSurge: 1
+    maxUnavailable: 1
+  type: RollingUpdate
+```
+
+This strategy utilizes Rolling Updates. With rolling updates, Kubernetes will spin up a new Pod, and when it is ready, tear down an old Pod. The `maxSurge` refers to the total number of Pods that can be active at any given time. If `maxSurge` = 6 and `replicas` = 5, that means 1 new Pod (6 - 5) can be created at a time for the rolling update. `maxUnavailable` is the total number (or percentage) of Pods that can be unavailable at a time.
+
+Here is what our Manifest looks like after integrating this:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.8.1
+        ports:
+        - containerPort: 80
+          
+```
+
+Теперь применим это изменение конфигурации:: 
+
+`kubectl create -f ./resources/resources/nginx.yaml`{{execute}}
+
+
+Now that the application is deployed, lets update the Manifest to use a different image: `nginx:alpine`. Now apply the changes.
+
+`kubectl get pods --watch`{{execute}}
+
+We can see that the Pods are being updated one at a time. If we look at the Deployment events, we can see this as well:
+
+`kubectl describe deployment nginx-deployment`{{execute}}
+
+#########################################################
+
+### Редактирование ресурсов в Кубернетес.
+
+Вы можете отредактировать API-ресурс в любом редакторе.
+
+`kubectl edit deployment nginx-deployment`{{execute}}
+
+Примечание: **kubectl edit** использует vi
+Чтобы войти в режим редактирования нажмите **i** 
+Чтобы выйти и сохранить изменения из режима редактирования нажмите **Shift+Z** два раза
+
+С помощью **edit** вы можете в режиме реального времени **live edit** редактировать конфигурацию ресурса в **Kubernetes**. 
+Однако он не будет редактировать основной файл манифеста **Manifest**, представляющий объект.
+
+Команда **kubectl edit** позволяет вам напрямую редактировать любой ресурс API, который вы можете получить с помощью инструментов командной строки. Он откроет редактор, определенный вашими переменными среды **KUBE_EDITOR**, или откроется на «vi» для Linux
+
+Файлы для редактирования будут выводиться в версии API по умолчанию или в версии, указанной в **–output-version**. Формат по умолчанию - YAML - если вы хотите отредактировать в JSON, укажите **-o json**.
+
+`kubectl edit deployment nginx-deployment -o json`{{execute}}
+
+#########################################################
+
+`kubectl get deployment nginx-deployment -o yaml > nginx.yaml`{{execute}}
+
+`vi nginx.yaml`{{execute}}
+
+#########################################################
+
+`kubectl get deployment nginx-deployment -o json > nginx.json`{{execute}}
+
+`vi nginx.json`{{execute}}
+
+#########################################################
 
 #########################################################
 
@@ -20,72 +115,3 @@
 
 #########################################################
 
-We can see that the Deployment scaled up ReplicaSet for the new Pods, and then scaled down the old ReplicaSet. These actions were done one at a time, as specified by our RollingUpdate configuration.
-
-Теперь мы можем получить нашу историю развертывания **Deployment rollout history**:
-
-`kubectl rollout history deployment/nginx-deployment`{{execute}}
-
-Мы можем вернуться к версии:
-
-`kubectl rollout undo deployment.v1.apps/nginx-deployment`{{execute}}
-
-#################################################
-
-**Kubernetes Deployments** можно создать в командной строке с помощью [`**kubectl run**`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run).
-Это позволяет вам настроить как **Pods**, так и **ReplicaSets**.
-
-```yaml
-kubectl run NAME --image=image
-   --port=port]
-  [--env="key=value"]
-  [--replicas=replicas]
-  [--dry-run=bool]
-  [--overrides=inline-json]
-  [--command]
-  -- [COMMAND] [args...]
-```
-
-Чтобы создать простое **Kubernetes deployment** из командной строки:
-
-`kubectl run vue --image=sylus/vue-hello-world --port 80`{{execute}}
-
-Поздравляю, вы только что создали свое первое **Deployment**. Команда **run** создала **Deployment**, которая автоматически выполнила несколько вещей для вас:
-
-* Создал **ReplicaSet**, который создал Под
-* **scheduler** искал подходящий ноду для запуска Пода и запланировал запуск Пода на этой Нода.
-* Сконфигурировал кластер для ***restart / reschedule*** Пода при необходимости
-
-По сути, он создал все **objects**, которые мы определили, включая **Pod** и **ReplicaSets**. Он запланировал Подв на ноде, способном принимать рабочие нагрузки **workloads**.
-
-Чтобы убедиться, что команда создала **Deployment**:
-
-`kubectl get deployments`{{execute}}
-
-Чтобы увидеть Поды, созданные при **Deployment**:
-
-`kubectl get pods`{{execute}}
-
-Чтобы увидеть набор **ReplicaSet**, созданный при **Deployment**:
-
-`kubectl get replicasets`{{execute}}
-
-Мы также можем получить больше информации о нашем **Deployment**:
-
-`kubectl describe deployment vue`{{execute}}
-
-#### The magic of Deployments
-
-Если Под, созданный при **Deployment**, когда-либо потерпит крах, он автоматически перезапустит его. Чтобы увидеть это в действии, убейте Pod напрямую:
-
-`kubectl delete pod $(kubectl get pods --no-headers=true  | awk '{print $1;}')`{{execute}}
-
-Под должен быть успешно удален. Теперь подождите минуту или две и снова проверьте Под:
-
-`kubectl get pods`{{execute}}
-
-Обратите внимание, что Под снова работает. Это связано с тем, что **Deployment** перезапустит Под в случае сбоя. Что на самом деле перезапускает эти Поды?
-
-Давайте быстро очистим и удалим наш **Deployment**:  
-
-`kubectl delete deployment vue`{{execute}}
