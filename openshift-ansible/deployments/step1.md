@@ -32,47 +32,6 @@ Linux (shell pipe)
 
 ############################################################
 
-Предположим, вам нужен шаблон файла конфигурации, **kuber.j2**:
-
-`vi kuber.j2`{{execute T1}}
-
-```yaml
-kubernets {
-
-  limit: {{ quantum_bit.kuber_limit }};
-
-}
-```
-И у вас есть файл **JSON** с данными, **kuber.json**:
-
-`vi kuber.json`{{execute T1}}
-
-```yaml
-{
-    "quantum_bit":{
-
-        "kuber_limit": "256"
-    }
-}
-```
-
-Отрендерим его в рабочий файл конфигурации **kuber.yaml** :
-
-`j2 -f json kuber.j2 kuber.json > kuber.yaml`{{execute T1}}
-
-
-`vi kuber.yaml`{{execute T1}}
-
-```yaml
-kubernets {
-
-  limit: 256 ;
-
-}
-```
-
-############################################################
-
 Как **Helm charts** могут принимать внешние параметры, определяемые файлом **values.yaml**, 
 так и при Шаблонизации с помощью **jinja2**  параметры мы передаем в шаблон **nginx.j2** с помощью **JSON**
 
@@ -168,12 +127,4 @@ OUT.close()
 
 `vi nginx.yaml`{{execute T1}}
 
-############################################################
-
-Справка по [kubectl edit](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
-
-
-Справка по [kubectl edit](https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_edit/)
-
-#########################################################
 
