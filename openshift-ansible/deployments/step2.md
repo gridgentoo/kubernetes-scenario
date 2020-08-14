@@ -1,3 +1,58 @@
+#########################################################
+
+### Редактирование ресурсов в Кубернетес.
+
+Вы можете отредактировать API-ресурс в любом редакторе.
+
+`kubectl edit deployment nginx-deployment`{{execute}}
+
+Примечание: **kubectl edit** использует vi
+Чтобы войти в режим редактирования нажмите **i** 
+Чтобы выйти и сохранить изменения из режима редактирования нажмите **Shift+Z** два раза
+
+С помощью **edit** вы можете в режиме реального времени **live edit** редактировать конфигурацию ресурса в **Kubernetes**. 
+Однако он не будет редактировать основной файл манифеста **Manifest**, представляющий объект.
+
+Команда **kubectl edit** позволяет вам напрямую редактировать любой ресурс API, который вы можете получить с помощью инструментов командной строки. Он откроет редактор, определенный вашими переменными среды **KUBE_EDITOR**, или откроется на «vi» для Linux
+
+Файлы для редактирования будут выводиться в версии API по умолчанию или в версии, указанной в **–output-version**. Формат по умолчанию - YAML - если вы хотите отредактировать в JSON, укажите **-o json**.
+
+`kubectl edit deployment nginx-deployment -o json`{{execute}}
+
+#########################################################
+
+`kubectl get deployment nginx-deployment -o yaml > nginx.yaml`{{execute}}
+
+`vi nginx.yaml`{{execute}}
+
+#########################################################
+
+`kubectl get deployment nginx-deployment -o json > nginx.json`{{execute}}
+
+`vi nginx.json`{{execute}}
+
+#########################################################
+
+#########################################################
+
+Существует распространенный инструмент Linux под названием **jq**. **jq** похож на **sed** для данных JSON. 
+
+Использование **jq** может значительно облегчить чтение вывода **JSON** из **kubectl** с подсветкой синтаксиса.
+
+`kubectl get --raw /api/v1/namespaces/default | jq .`{{execute}}
+
+Существует также **Python json.tool**.
+
+`kubectl get -v=9 --raw /api/v1/namespaces/default | python -m json.tool`{{execute}}
+
+`kubectl edit rs vue-rs -o json`{{execute}}
+
+Обратите внимание, что в последней команде мы добавили  [verbosity request](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-output-verbosity-and-debugging) `-v=9`. 
+
+Установив уровень 9 (самый высокий), мы получим немного больше информации о том, как команда **kubectl** получает возвращаемую информацию.
+
+#########################################################
+
 Теперь, когда мы получили хороший опыт создания наших собственных развертываний **Deployments**, пришло время использовать функции непрерывного обновления **rolling update** и отката **rollback features**.
 
 Во-первых, давайте начнем с полностью настроенного развертывания **Nginx Deployment**, расположенного по адресу **`./resources/resources/nginx.yaml`**
@@ -58,60 +113,4 @@ Now that the application is deployed, lets update the Manifest to use a differen
 We can see that the Pods are being updated one at a time. If we look at the Deployment events, we can see this as well:
 
 `kubectl describe deployment nginx-deployment`{{execute}}
-
-#########################################################
-
-### Редактирование ресурсов в Кубернетес.
-
-Вы можете отредактировать API-ресурс в любом редакторе.
-
-`kubectl edit deployment nginx-deployment`{{execute}}
-
-Примечание: **kubectl edit** использует vi
-Чтобы войти в режим редактирования нажмите **i** 
-Чтобы выйти и сохранить изменения из режима редактирования нажмите **Shift+Z** два раза
-
-С помощью **edit** вы можете в режиме реального времени **live edit** редактировать конфигурацию ресурса в **Kubernetes**. 
-Однако он не будет редактировать основной файл манифеста **Manifest**, представляющий объект.
-
-Команда **kubectl edit** позволяет вам напрямую редактировать любой ресурс API, который вы можете получить с помощью инструментов командной строки. Он откроет редактор, определенный вашими переменными среды **KUBE_EDITOR**, или откроется на «vi» для Linux
-
-Файлы для редактирования будут выводиться в версии API по умолчанию или в версии, указанной в **–output-version**. Формат по умолчанию - YAML - если вы хотите отредактировать в JSON, укажите **-o json**.
-
-`kubectl edit deployment nginx-deployment -o json`{{execute}}
-
-#########################################################
-
-`kubectl get deployment nginx-deployment -o yaml > nginx.yaml`{{execute}}
-
-`vi nginx.yaml`{{execute}}
-
-#########################################################
-
-`kubectl get deployment nginx-deployment -o json > nginx.json`{{execute}}
-
-`vi nginx.json`{{execute}}
-
-#########################################################
-
-#########################################################
-
-Существует распространенный инструмент Linux под названием **jq**. **jq** похож на **sed** для данных JSON. 
-
-Использование **jq** может значительно облегчить чтение вывода **JSON** из **kubectl** с подсветкой синтаксиса.
-
-`kubectl get --raw /api/v1/namespaces/default | jq .`{{execute}}
-
-Существует также **Python json.tool**.
-
-`kubectl get -v=9 --raw /api/v1/namespaces/default | python -m json.tool`{{execute}}
-
-`kubectl edit rs vue-rs -o json`{{execute}}
-
-Обратите внимание, что в последней команде мы добавили  [verbosity request](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-output-verbosity-and-debugging) `-v=9`. 
-
-Установив уровень 9 (самый высокий), мы получим немного больше информации о том, как команда **kubectl** получает возвращаемую информацию.
-
-
-#########################################################
 
