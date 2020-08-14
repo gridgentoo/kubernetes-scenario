@@ -1,3 +1,44 @@
+############################################################
+
+Предположим, вам нужен шаблон файла конфигурации, **kuber.j2**:
+
+`vi kuber.j2`{{execute T1}}
+
+```yaml
+kubernets {
+
+  limit: {{ quantum_bit.kuber_limit }};
+
+}
+```
+И у вас есть файл **JSON** с данными, **kuber.json**:
+
+`vi kuber.json`{{execute T1}}
+
+```yaml
+{
+    "quantum_bit":{
+
+        "kuber_limit": "256"
+    }
+}
+```
+
+Отрендерим его в рабочий файл конфигурации **kuber.yaml** :
+
+`j2 -f json kuber.j2 kuber.json > kuber.yaml`{{execute T1}}
+
+
+`vi kuber.yaml`{{execute T1}}
+
+```yaml
+kubernets {
+
+  limit: 256 ;
+
+}
+```
+
 
 Теперь, когда мы получили хороший опыт создания наших собственных развертываний **Deployments**, пришло время использовать функции непрерывного обновления **rolling update** и отката **rollback features**.
 
