@@ -6,8 +6,13 @@
     "courses": [
       {
         "course_id": "devops",
-        "title": "Создайте jenkins & sonarqubes",
+        "title": "Создайте Тестовый стенд в Облаке, jenkins & sonarqubes",
         "description": "Используйте Тестовый стенд в Облаке...."
+      },
+      {
+        "course_id": "jenkins-build-docker-images",
+        "title": "Создайте Тестовый стенд в Облаке, для создания Docker Images",
+        "description": "как настроить Jenkins для создания Docker Images на основе файла Dockerfile. "
       },
       {
         "course_id": "jenkins-triggered-pipelines",
