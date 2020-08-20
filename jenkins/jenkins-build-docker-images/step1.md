@@ -4,6 +4,15 @@
 
 1\. Сначала мы запускаем **container**  в автономном режиме с **tail** к **log file** , который мы создадим и будем использовать позже:
 
+```git clone https://github.com/gavriluk/jenkins-pipeline-workshop```{{execute}}
+
+
+```cd jenkins-pipeline-workshop```{{execute}}
+
+
+```docker-compose up -d```{{execute}}
+
+
 `docker run -d -u root --rm --name jenkins \
     -p 8080:8080 -p 50000:50000 \
     --entrypoint bash \
