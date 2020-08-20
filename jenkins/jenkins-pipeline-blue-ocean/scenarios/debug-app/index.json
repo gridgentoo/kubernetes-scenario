@@ -1,0 +1,64 @@
+{
+    "pathwayTitle": "OpenShift Cloud-Native Roadshow",
+    "icon": "fa-openshift",
+    "title": "Debugging Applications",
+    "description": "",
+    "difficulty": "intermediate",
+    "time": "10-15 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Investigate Logs",
+                "text": "01-check-logs.md"
+            },
+            {
+                "title": "Investigate REST Response",
+                "text": "02-check-reponse.md"
+            },
+            {
+                "title": "Enable Debugging",
+                "text": "03-enable-debug.md"
+            },
+            {
+                "title": "Start the JDB Debugger",
+                "text": "04-debug-start.md"
+            },
+            {
+                "title": "Stop at Breakpoint",
+                "text": "05-debug-pause-breakpoint.md"
+            },
+            {
+                "title": "Examine Code Execution",
+                "text": "06-debug-find-bug.md"
+            },
+            {
+                "title": "Fix the Inventory Bug",
+                "text": "07-fix-code.md"
+            },
+            {
+                "title": "Push Fix to Git Repo",
+                "text": "08-push-fix.md"
+            }
+        ],
+        "intro": {
+            "courseData": "run-init.sh",
+            "text": "00-intro.md"
+        }
+    },
+    "files": [
+      "./src/main/java/com/redhat/cloudnative/inventory/InventoryResource.java"
+    ],
+    "environment": {
+        "uilayout": "editor-terminal",
+        "hideintro": false,
+        "uisettings": "java",
+        "uieditorpath": "/root/inventory-wildfly-swarm",
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "openshift-roadshow",
+        "port": 8443
+    }
+}

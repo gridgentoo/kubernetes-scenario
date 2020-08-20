@@ -1,0 +1,67 @@
+{
+    "pathwayTitle": "OpenShift Cloud-Native Roadshow",
+    "icon": "fa-openshift",
+    "title": "Managing Application Configurations",
+    "description": "",
+    "difficulty": "intermediate",
+    "time": "15-20 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Stateful Applications",
+                "text": "01-inmemory-db.md"
+            },
+            {
+                "title": "Deploy PostgreSQL Templates",
+                "text": "02-create-psql.md"
+            },
+            {
+                "title": "Externalize Inventory Config",
+                "text": "03-inventory-config-create.md"
+            },
+            {
+                "title": "Externalize Inventory Config",
+                "text": "04-inventory-config-mount.md"
+            },
+            {
+                "title": "Verify Inventory Config",
+                "text": "05-inventory-config-verify.md"
+            },
+            {
+                "title": "Externalize Catalog Config",
+                "text": "06-catalog-config.md"
+            },
+            {
+                "title": "Verify Catalog Config",
+                "text": "07-catalog-config-verify.md"
+            },
+            {
+                "title": "Sensitive Config Data",
+                "text": "08-secrets.md"
+            }
+        ],
+        "intro": {
+            "courseData": "run-init.sh",
+            "text": "00-intro.md"
+        },
+        "finish": {
+            "text": "99-outro.md"
+        }
+    },
+    "files": [
+      "./application.properties",
+      "./project-stages.yml"
+    ],
+    "environment": {
+        "uilayout": "editor-terminal",
+        "hideintro": false,
+        "uisettings": "java",
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "openshift-roadshow",
+        "port": 8443
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "pathwayTitle": "OpenShift Cloud-Native Roadshow",
+    "icon": "fa-openshift",
+    "title": "Monitoring Application Health",
+    "description": "",
+    "difficulty": "intermediate",
+    "time": "10-15 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Health Probes",
+                "text": "01-health-probes.md"
+            },
+            {
+                "title": "Explore Health Endpoints",
+                "text": "02-explore-endpoints.md"
+            },
+            {
+                "title": "Catalog Health",
+                "text": "03-add-probe-catalog.md"
+            },
+            {
+                "title": "Monitoring Inventory Health",
+                "text": "04-add-probe-inventory.md"
+            },
+            {
+                "title": "Monitoring API Gateway Health",
+                "text": "05-add-probe-gateway.md"
+            },
+            {
+                "title": "Monitoring Web UI Health",
+                "text": "06-add-probe-web.md"
+            },
+            {
+                "title": "Container Metrics",
+                "text": "07-explore-metrics.md"
+            }
+        ],
+        "intro": {
+            "courseData": "run-init.sh",
+            "text": "00-intro.md"
+        },
+        "finish": {
+            "text": "99-outro.md"
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "hideintro": false,
+        "uisettings": "javascript",
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "openshift-roadshow",
+        "port": 8443
+    }
+}

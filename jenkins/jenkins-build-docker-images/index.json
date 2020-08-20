@@ -1,0 +1,54 @@
+{
+    "icon":"fa-jenkins",
+    "pathwayTitle": "Jenkins",
+    "title": "Build Docker Images with Jenkins",
+    "description": "Learn how to build and deploy Docker images with Jenkins",
+    "difficulty": "Intermediate",
+    "time": "45-60 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Launch Jenkins",
+                "text": "step1.md"
+            },
+            {
+                "title": "Configure Docker Plugin",
+                "text": "step2.md"
+            },
+            {
+                "title": "Add Docker Agent",
+                "text": "step3.md"
+            },
+            {
+                "title": "Create Build Project",
+                "text": "step4.md"
+            },
+            {
+                "title": "Build Project",
+                "text": "step5.md"
+            },
+            {
+                "title": "View Console Output",
+                "text": "step6.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh",
+            "credits": "https://github.com/BenHall"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "docker",
+        "port": 8080
+    }
+}

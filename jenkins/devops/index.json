@@ -1,7 +1,7 @@
 { 
   "pathwayTitle": "DevOps",
-  "title": "SelfService DevOps Platform Demo",
-  "description": "In this scenario you will learn about self service DevOps platform",
+  "title": "DevOps Platform Demo",
+  "description": "В этом сценарии вы узнаете о DevOps platform (Jenkins+Sonar)",
   "difficulty": "intermediate",
   "time": "30 minutes",
   "details": {

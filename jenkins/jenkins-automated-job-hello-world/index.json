@@ -1,0 +1,45 @@
+{
+    "icon":"fa-jenkins",
+    "pathwayTitle": "Jenkins",
+    "title": "Building an Automated Job with Jenkins",
+    "description": "Learn how to build and deploy automated jobs with Jenkins",
+    "difficulty": "Advanced",
+    "time": "25-30 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Setup Maven or Gradle",
+                "text": "step1.md"
+            },
+            {
+                "title": "Create a Job",
+                "text": "step2.md"
+            },
+            {
+                "title": "Test Manually Triggered Build",
+                "text": "step3.md"
+            },
+            {
+                "title": "Retrieve and Start an Executable JAR File",
+                "text": "step4.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "docker",
+        "port": 8080
+    }
+}

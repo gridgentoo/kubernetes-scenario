@@ -1,0 +1,58 @@
+{
+    "icon":"fa-jenkins",
+    "pathwayTitle": "Jenkins",
+    "title": "Create an Expanded Jenkins Pipeline",
+    "description": "In this lab you will further explore the Pipeline functionality",
+    "difficulty": "Advanced",
+    "time": "50 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Create a New Worker Node/Agent",
+                "text": "step1.md"
+            },
+            {
+                "title": "Add Stages To The Build",
+                "text": "step2.md"
+            },
+            {
+                "title": "Add Testing Stages",
+                "text": "step3.md"
+            },
+            {
+                "title": "Add SonarQube and Jacoco to our Pipeline",
+                "text": "step4.md"
+            },
+            {
+                "title": "Parameterize our Job",
+                "text": "step5.md"
+            },
+            {
+                "title": "Integration of Jenkins with Gradle and Artifactory",
+                "text": "step6.md"
+            },
+            {
+                "title": "Deploy",
+                "text": "step7.md"
+            }
+		],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "docker",
+        "port": 8080
+    }
+}

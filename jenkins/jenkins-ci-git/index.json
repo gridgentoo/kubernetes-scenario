@@ -1,0 +1,72 @@
+{
+    "title": "Jenkins Integration with GIT",
+    "pathwayTitle": "Jenkins",
+    "description": "Learn how to integrate Jenkins with GIT for CI of code",
+    "difficulty": "advanced",
+    "time": "25-30 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1 - Pull Jenkins Image",
+                "text": "step1.md"
+            },
+            {
+                "title": "Step 2 - Run a Container",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3 - Log into Container",
+                "text": "step3.md"
+            },
+            {
+                "title": "Step 4 - Check Jenkins UI",
+                "text": "step4.md"
+            },
+            {
+                "title": "Step 5 - Unlock Jenkins",
+                "text": "step5.md"
+            },
+            {
+                "title": "Step 6 - Jenkins Configuration",
+                "text": "step6.md"
+            },
+            {
+                "title": "Step 7 - Manage Jenkins",
+                "text": "step7.md"
+            },
+            {
+                "title": "Step 8 - Working with GIT",
+                "text": "step8.md"
+            },
+	    {
+                "title": "Step 9 - Create Jenkins Job",
+                "text": "step9.md"
+            },
+	    {
+                "title": "Step 10 - Continuous Integration",
+                "text": "step10.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "files": [
+        "app.js"
+    ],
+    "environment": {
+	"showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+	"uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "port": 8080,
+        "imageid": "docker"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "icon":"fa-jenkins",
+    "pathwayTitle": "Jenkins",
+    "title": "Add Jenkins Development Metrics",
+    "description": "Integrate code coverage metrics using the Cobertura plugin",
+    "difficulty": "Intermediate",
+    "time": "25-30 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Install the Jenkins Cobertura Plugin",
+                "text": "step1.md"
+            },
+            {
+                "title": "Enable Jenkins Reporting",
+                "text": "step2.md"
+            },
+            {
+                "title": "Commit and Push Changes",
+                "text": "step3.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "docker",
+        "port": 8080
+    }
+}

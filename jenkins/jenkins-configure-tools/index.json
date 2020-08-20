@@ -1,0 +1,43 @@
+{
+	"icon": "fa-jenkins",
+	"pathwayTitle": "Jenkins",
+	"title": "Configure Tools with Jenkins",
+	"description": "Learn how to configure Jenkins to build tools",
+	"difficulty": "Advanced",
+	"time": "15-20 minutes",
+	"details": {
+		"steps": [{
+				"title": "Config Jenkins",
+				"text": "step1.md"
+			},
+			{
+				"title": "Configure a JDK",
+				"text": "step2.md"
+			},
+			{
+				"title": "Add Maven",
+				"text": "step3.md"
+			}
+		],
+		"intro": {
+			"text": "intro.md",
+			"code": "env-init.sh",
+			"credits": ""
+		},
+		"finish": {
+			"text": "finish.md"
+		}
+	},
+
+	"environment": {
+		"showdashboard": true,
+		"dashboard": "Dashboard",
+		"uilayout": "terminal-iframe",
+		"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
+	},
+
+	"backend": {
+		"imageid": "docker",
+		"port": 8080
+	}
+}

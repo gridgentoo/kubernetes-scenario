@@ -1,0 +1,47 @@
+{
+    "pathwayTitle": "OpenShift Cloud-Native Roadshow",
+    "icon": "fa-openshift",
+    "title": "Getting Started with OpenShift",
+    "description": "",
+    "difficulty": "beginner",
+    "time": "5-10 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Explore OpenShift CLI",
+                "text": "01-login.md"
+            },
+            {
+                "title": "Create an OpenShift Project",
+                "text": "02-create-project.md"
+            },
+            {
+                "title": "Projects in OpenShift Web Console",
+                "text": "03-projects-console.md"
+            },
+            {
+                "title": "Explore Maven Projects",
+                "text": "04-maven-projects.md"
+            }
+        ],
+        "intro": {
+            "courseData": "run-init.sh",
+            "text": "00-intro.md"
+        },
+        "finish": {
+          "text": "99-outro.md"
+        }
+    },
+    "environment": {
+        "uilayout": "terminal",
+        "uisettings": "javascript",
+        "showdashboard": true,
+        "hideintro": false,
+        "dashboard": "Dashboard",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "openshift-roadshow",
+        "port": 8443
+    }
+}

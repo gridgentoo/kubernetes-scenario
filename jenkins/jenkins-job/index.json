@@ -1,0 +1,58 @@
+{
+    "icon":"fa-jenkins",
+    "pathwayTitle": "Jenkins",
+    "title": "Create a Jenkins Job",
+    "description": "Create a Jenkins Job that accesses a Git repository",
+    "difficulty": "Advanced",
+    "time": "15-20 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Enable Maven in Jenkins",
+                "text": "step1.md"
+            },
+            {
+                "title": "Create a Git Repository",
+                "text": "step2.md"
+            },
+            {
+                "title": "Create the Jenkins Job",
+                "text": "step3.md"
+            },
+            {
+                "title": "Enable Polling on the Repository",
+                "text": "step4.md"
+            },
+            {
+                "title": "Import the Project into Eclipse",
+                "text": "step5.md"
+            },
+            {
+                "title": "Make Changes and Trigger a Build",
+                "text": "step6.md"
+            },
+			{
+                "title": "Fix the Unit Test Failure",
+                "text": "step7.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "docker",
+        "port": 8080
+    }
+}

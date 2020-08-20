@@ -1,0 +1,58 @@
+{
+    "icon": "fa-jenkins",
+    "pathwayTitle": "Jenkins",
+    "title": "Jenkins Pipelines",
+    "description": "Learn how to use Jenkins Pipelines with Git and Maven",
+    "difficulty": "Intermediate",
+    "time": "25-30 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Launch Jenkins",
+                "text": "step1.md"
+            },
+            {
+                "title": "Install Github and Pipeline Plugins",
+                "text": "step2.md"
+            },
+            {
+                "title": "Configure Maven Plugin",
+                "text": "step3.md"
+            },
+            {
+                "title": "Configure Git Plugin",
+                "text": "step4.md"
+            },
+            {
+                "title": "Start Pre-configured Jenkins Installation",
+                "text": "step5.md"
+            },
+            {
+                "title": "Create Pipeline Build Project",
+                "text": "step6.md"
+            },
+            {
+                "title": "Build Project and Review Results",
+                "text": "step7.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "docker",
+        "port":8080
+    }
+}

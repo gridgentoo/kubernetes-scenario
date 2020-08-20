@@ -1,0 +1,62 @@
+{
+    "pathwayTitle": "OpenShift Cloud-Native Roadshow",
+    "icon": "fa-openshift",
+    "title": "Automating Deployments Using Pipelines",
+    "description": "",
+    "difficulty": "intermediate",
+    "time": "20-30 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Create a Inventory Git Repo",
+                "text": "01-create-repo.md"
+            },
+            {
+                "title": "Push Inventory Code",
+                "text": "02-init-repo.md"
+            },
+            {
+                "title": "Define a Pipeline",
+                "text": "03-define-pipeline.md"
+            },
+            {
+                "title": "Add Pipeline to Git Repo",
+                "text": "04-add-pipeline-git.md"
+            },
+            {
+                "title": "Disable Automatic Deployments",
+                "text": "05-remove-triggers.md"
+            },
+            {
+                "title": "Create an OpenShift Pipeline",
+                "text": "06-create-pipeline.md"
+            },
+            {
+                "title": "Trigger Pipeline on Every Change",
+                "text": "07-webhooks.md"
+            }
+        ],
+        "intro": {
+            "text": "00-intro.md"
+        },
+        "finish": {
+            "text": "99-outro.md"
+        }
+    },
+    "files": [
+      "./Jenkinsfile"
+    ],
+    "environment": {
+        "uilayout": "editor-terminal",
+        "hideintro": false,
+        "uisettings": "java",
+        "uieditorpath": "/root/inventory-wildfly-swarm",
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "openshift-roadshow",
+        "port": 8443
+    }
+}
