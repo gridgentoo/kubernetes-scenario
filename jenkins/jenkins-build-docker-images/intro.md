@@ -1,5 +1,8 @@
 <img style="float: left; padding:5px 20px 5px 10px" src="https://user-images.githubusercontent.com/21102559/39315185-0d9230fe-4944-11e8-9660-0d23401d30ca.png">
 
-In this scenario you'll learn how to configure Jenkins to build Docker Images based on a Dockerfile. The scenario is designed to demonstrate how you can use Docker within a CI/CD pipeline, using Images as a build artifact that can be promoted to different environments and finally production.
+В этом сценарии вы узнаете, как настроить **Jenkins** для создания **Docker Images** на основе файла **Dockerfile**. 
+Сценарий предназначен для демонстрации того, как вы можете использовать **Docker** в **CI/CD pipeline**, 
+используя **Images** в качестве артефакта сборки **build artifact**, который можно продвигать в различные среды и, наконец, в **production**.
 
-The environment pre-configured and running Jenkins build server for you to experiment and learn how it works. The steps guide you to installing the plugin, creating a build and viewing the results.
+В среде предварительно настроен и запущен сервер сборки **Jenkins**, чтобы вы могли поэкспериментировать и узнать, как он работает. 
+Эти шаги помогут вам установить плагин, создать сборку и просмотреть результаты.
