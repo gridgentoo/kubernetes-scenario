@@ -6,3 +6,11 @@
 
 В среде предварительно настроен и запущен сервер сборки **Jenkins**, чтобы вы могли поэкспериментировать и узнать, как он работает. 
 Эти шаги помогут вам установить плагин, создать сборку и просмотреть результаты.
+
+#### Полезные ссылки:
+ * [Jenkins Tutorial](https://jenkins.io/doc/tutorials/)
+ * [sonarqube](https://hub.docker.com/_/sonarqube)
+ * [Artifactory](https://jfrog.com/integration/bintray-docker-hub/)
+ * [ZAP](https://www.zaproxy.org/)
+ * [Aqua](https://github.com/aquasecurity/microscanner#aqua-security-edition-comparison)
+ * [snyk](https://snyk.io/)
