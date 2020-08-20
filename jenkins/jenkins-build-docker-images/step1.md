@@ -1,8 +1,8 @@
-### The Initial Docker File
+### Инициализируем **Docker File**
 
-We will prepare an environment with a Jenkins server running as a Docker Container.
+Мы подготовим среду с сервером **Jenkins**, работающим как **Docker Container**.
 
-1\. First we start the container in detached mode with a tail to a log file we will create and use later:
+1\. Сначала мы запускаем **container**  в автономном режиме с **tail** к **log file** , который мы создадим и будем использовать позже:
 
 `docker run -d -u root --rm --name jenkins \
     -p 8080:8080 -p 50000:50000 \
@@ -10,7 +10,7 @@ We will prepare an environment with a Jenkins server running as a Docker Contain
     jenkins:2.46.2-alpine \
     -c "tail -F /jenkins.log"`{{execute}}
 
-2\. This class doesn't cover Docker, but in order to confirm that the previous command has run successfully, run the following command to confirm that the container 'jenkins' is running:
+2\. Этот класс не покырвает **Docker**, но для подтверждения успешного выполнения предыдущей команды выполните следующую команду, чтобы убедиться, что контейнер **jenkins** запущен.
 
 `docker ps`{{execute}}
 
