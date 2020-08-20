@@ -35,6 +35,106 @@ Jinja2 - это современный и удобный для разработ
 
 ######################################################
 
+
+######################################################
+Подается на вход yml
+
+Создадим файл **configmap.j2**
+
+`vi configmap.j2`{{execute}}
+
+######################################################
+
+```yaml
+apiVersion: template.openshift.io/v1
+kind: Template
+metadata:
+  name: gateway-config-and-service-template
+  labels:
+    type: mq-gateways
+
+objects:
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      name: asbscorp-mq-gateway-sp-config
+
+    data:
+      application.yml: |-
+        mq:
+          connection:
+            receiveQueue: UB.TEST.QUEUE
+            sendToCustomDestination: true
+            sendQueue: UB.TEST.OUT
+            connections:
+              {{MQ_CONNECTIONS}}
+    resources:
+          limit: {{ quantum_bit.hostname }};
+
+
+parameters:
+  - name: QM_TOKEN
+    description: Номер SLC
+    required: false
+    from: "[a-z0-9]"
+
+  - name: QM_HOSTS
+    description: Хост MQ менеджера
+    required: false
+
+  
+######################################################
+
+######################################################
+
+Создадим файл **configmap.json**
+
+`vi configmap.json`{{execute}}
+
+######################################################
+подается на вход Json 
+
+
+```yaml
+{
+    "quantum_bit":{
+
+        "hostname": "ksh-x86-mdm-1.vm.mos.cloud.sbrf.ru"
+    }
+}
+```
+######################################################
+
+{"hostname": "ksh-x86-mdm-1.vm.mos.cloud.sbrf.ru",
+
+[{"hostname": "ksh-x86-mdm-1.vm.mos.cloud.sbrf.ru", "port": "1490", "channel": "SYNAPSE.SVRCONN", "queueManager": "M99.ESB.MDM.PPRB.ADP1"},{"hostname": "ksh-x86-mdm-2.vm.mos.cloud.sbrf.ru", "port": "1491", "channel": "SYNAPSE.SVRCONN", "queueManager": "M99.ESB.MDM.PPRB.ADP2"}]
+
+######################################################
+
+И у вас есть файл JSON с данными, nginx.json:
+
+```yaml
+{
+    "quantum_bit":{
+
+        "kuber_limit": "256"
+    }
+}
+```
+######################################################
+
+
+
+
+
+
+
+
+
+
+######################################################
+######################################################
+
 Создадим файл **nginx.json**
 
 `vi nginx.json`{{execute}}
