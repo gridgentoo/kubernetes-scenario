@@ -29,7 +29,21 @@ Sonar порт: 9000 http://localhost:9000/
 
 BitBucket порт: 7990 http://localhost:7990/
 
+docker ps
+
+docker-compose logs jenkins0
+
 admin:admin
 
 user:user
+
+Примерно через минуту мы должны увидеть, что **jenkins.war** запущен:
+
+`docker exec jenkins ps -ef`{{execute}}
+
+#### Загрузить Dashboard
+
+Откройте **Jenkins dashboard** по следующему URL-адресу https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ или щелкнув вкладку панели управления справа (обратите внимание: иногда вы нужно подождать несколько секунд и в этот момент нажать **"display port"**).
+
+На следующих шагах вы будете использовать **dashboard**, чтобы настроить плагины и начать создавать **Docker Images**.
 
