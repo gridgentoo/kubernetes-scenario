@@ -5,18 +5,25 @@
 **Roadmap**: необходимо добавить **ServiceMonitor** для очистки показателе **hello-world metrics**. На данный момент **metrics** можно в значительной степени увидеть в метриках **node CPU** and **memory metrics**. Рассмотрим эти два **declarations** ():
 
 Создайте пространство имен для цели установки.
+Создайте пространство имен **monitoring** для цели установки.
 
 `kubectl create namespace monitoring`{{execute}}
 
 `helm search repo prometheus-operator`{{execute}}
+
 `helm search repo kube-prometheus`{{execute}}
 
+`helm show values stable/prometheus-operator > values.yaml`{{execute}}
 
-helm show values stable/prometheus-operator > values.yaml
+Откроем в редакторе файл **values.yaml**.
 
-Подготовить **Provisioning RabbitMQ** на **Kubernetes** легко, просто установите это [Helm chart](https://github.com/helm/charts/tree/master/stable/rabbitmq).
+`nano values.yaml`{{execute}}
 
-`helm install stable/prometheus-operator --name prometheus-operator --namespace monitoring -f values.yaml`{{execute}}
+Нажмите **CTRL-X to exit** для выхода из режима **редактирования**.
+
+Чтобы установить **prometheus-operator*
+
+`helm install stable/prometheus-operator --version 9.3.1 --namespace monitoring -f values.yaml`{{execute}}
 
 ####################################################
 `curl https://raw.githubusercontent.com/javajon/kubernetes-observability/master/configurations/prometheus-stack.sh | bash -s`{{execute}}
