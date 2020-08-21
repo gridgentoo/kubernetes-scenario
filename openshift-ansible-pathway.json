@@ -28,6 +28,16 @@
         "description": "Jinja-шаблонизатор в Ansible OpenShift-Applier."
       },
       {
+        "course_id": "kubeflow-playground",
+        "title": "Kubeflow Playground",
+        "description": "Discover Kubeflow on Kubernetes."
+      },
+      {
+        "course_id": "kubeflow-installation",
+        "title": "Установка Kubeflow Raw",
+        "description": "Узнайте, как установить Kubeflow на Kubernetes."
+      }
+      {
         "course_id": "vs-code",
         "title": "Visual Studio Code для и разработки облачных приложений.",
         "description": "Jinja — это шаблонизатор для OpenShift."

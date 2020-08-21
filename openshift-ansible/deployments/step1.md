@@ -1,8 +1,8 @@
 
-#### Python
 В этой среде **environment** вы можете проверить, что Python уже установлен, запустив `python3 --version`{{execute T1}}
 
-Для локальной разработки и запуска кода **Python** рекомендуется использовать виртуальную среду **Python virtual environment**. 
+Для локальной разработки и запуска кода **Python** рекомендуется использовать виртуальную среду **Python virtual environment**.
+
 Выполните следующие команды, чтобы создать и активировать виртуальную среду с именем `.venv`.
 
 `apt-get update`{{execute T1}}
@@ -16,6 +16,7 @@ Jinja2 - это современный и удобный для разработ
 `pip install Jinja2`{{execute T1}}
 
 **j2cli** - интерфес командной строки CLI  для шаблонов **Template Jinja2**
+
 **j2cli[yaml]** - это инструмент командной строки на **Python-Jinja2** для создания шаблонов в сценариях **shell-scripts**.
 
 `pip install j2cli[yaml]`{{execute T1}}
@@ -31,7 +32,7 @@ Jinja2 - это современный и удобный для разработ
 ############################################################
 
 Как **Helm charts** могут принимать внешние параметры, определяемые файлом **values.yaml**, 
-так и при Шаблонизации с помощью **jinja2**  параметры мы передаем в шаблон **nginx.j2** с помощью **JSON**
+так и при Шаблонизации с помощью **jinja2**  параметры мы передаем в шаблон **configmap.j2** с помощью **JSON**
 
 ######################################################
 
@@ -47,44 +48,63 @@ Jinja2 - это современный и удобный для разработ
 
 ```yaml
 apiVersion: template.openshift.io/v1
+
 kind: Template
+
 metadata:
+
   name: gateway-config-and-service-template
+
   labels:
+
     type: mq-gateways
 
 objects:
+
   - apiVersion: v1
+
     kind: ConfigMap
+
     metadata:
+
       name: asbscorp-mq-gateway-sp-config
 
     data:
+
       application.yml: |-
+
         mq:
+
           connection:
+
             receiveQueue: UB.TEST.QUEUE
+
             sendToCustomDestination: true
+
             sendQueue: UB.TEST.OUT
-            connections:
-              {{MQ_CONNECTIONS}}
-    resources:
-          limit: {{ quantum_bit.hostname }};
+
+            connections: {{connections}}
+
 
 
 parameters:
+
   - name: QM_TOKEN
+
     description: Номер SLC
+
     required: false
+
     from: "[a-z0-9]"
 
   - name: QM_HOSTS
-    description: Хост MQ менеджера
-    required: false
 
+    description: Хост MQ менеджера
+
+    required: false
+```
   
 ######################################################
-
 ######################################################
 
 Создадим файл **configmap.json**
@@ -92,114 +112,49 @@ parameters:
 `vi configmap.json`{{execute}}
 
 ######################################################
+JSON форматирования
+
+https://ru.piliapp.com/json/formatter/
+
+######################################################
 подается на вход Json 
 
-
 ```yaml
 {
-    "quantum_bit":{
-
-        "hostname": "ksh-x86-mdm-1.vm.mos.cloud.sbrf.ru"
+  "connections": [
+    {
+      "hostname": "ksh-x86-mdm-1.vm.mos.cloud.sbrf.ru",
+      "port": "1490",
+      "channel": "SYNAPSE.SVRCONN",
+      "queueManager": "M99.ESB.MDM.PPRB.ADP1"
+    },
+    {
+      "hostname": "ksh-x86-mdm-2.vm.mos.cloud.sbrf.ru",
+      "port": "1491",
+      "channel": "SYNAPSE.SVRCONN",
+      "queueManager": "M99.ESB.MDM.PPRB.ADP2"
     }
+  ]
 }
 ```
-######################################################
-
-{"hostname": "ksh-x86-mdm-1.vm.mos.cloud.sbrf.ru",
-
-[{"hostname": "ksh-x86-mdm-1.vm.mos.cloud.sbrf.ru", "port": "1490", "channel": "SYNAPSE.SVRCONN", "queueManager": "M99.ESB.MDM.PPRB.ADP1"},{"hostname": "ksh-x86-mdm-2.vm.mos.cloud.sbrf.ru", "port": "1491", "channel": "SYNAPSE.SVRCONN", "queueManager": "M99.ESB.MDM.PPRB.ADP2"}]
-
-######################################################
-
-И у вас есть файл JSON с данными, nginx.json:
-
-```yaml
-{
-    "quantum_bit":{
-
-        "kuber_limit": "256"
-    }
-}
-```
-######################################################
-
-
-
-
-
-
-
-
-
 
 ######################################################
 ######################################################
 
-Создадим файл **nginx.json**
 
-`vi nginx.json`{{execute}}
+`j2 -f json configmap.j2 configmap.json > configmap.yaml`{{execute T1}}
 
-######################################################
-
-И у вас есть файл JSON с данными, nginx.json:
-
-```yaml
-{
-    "quantum_bit":{
-
-        "kuber_limit": "256"
-    }
-}
-```
-######################################################
+########################################################################
+######   О Кодогенерации из JSON & YAML кода на (Scala) для Kubernetes
+######   на следующем Шаге 
+########################################################################
 
 
-Создадим файл **nginx.j2**
 
-`vi nginx.j2`{{execute}}
-
-######################################################
-
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-  labels:
-    app: nginx
-spec:
-  replicas: 5
-  selector:
-    matchLabels:
-      app: nginx
-  strategy:
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-    type: RollingUpdate
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.8.1
-        ports:
-        - containerPort: 80
-        resources:
-          limit: {{ quantum_bit.kuber_limit }};
-          
-```
-
-##############################################################
-
-**Linux (shell pipe**) для **j2cli** 
-
-**j2cli** - интерфес командной строки CLI  для шаблонов **Template Jinja2**
-
-`j2 -f json nginx.j2 nginx.json > nginx.yaml`{{execute T1}}
-
-`vi nginx.yaml`{{execute T1}}
+########################################################################
+######   Как описать 100 Gitlab джоб в 100 строк на Jsonnet
+######   на следующем Шаге 
+######   https://habr.com/ru/post/483626/
+########################################################################
 
 

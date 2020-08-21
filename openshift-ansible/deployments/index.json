@@ -18,11 +18,11 @@
     },
     "steps": [
       {
-        "title": "ReplicaSets",
+        "title": "ConfigMaps, Jinja2, J2Cli",
         "text": "step1.md"
       },
       {
-        "title": "Deployments on the CLI",
+        "title": "Code generation json2yaml, json2scala, yaml2scala",
         "text": "step2.md"
       },
       {
