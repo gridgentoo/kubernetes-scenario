@@ -15,7 +15,7 @@
       {
         "course_id": "kubeflow-installation",
         "title": "Установка Kubeflow Raw",
-        "description": "В этом сценарии установим Kubeflow на Kubernetes."
+        "description": "В этом сценарии установим Kubeflow в Kubernetes."
       },
       {
         "course_id": "openshift-applier",
