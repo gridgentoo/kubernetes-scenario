@@ -34,7 +34,15 @@ OUT.close()
 
 AirFlow Kubernetes Operator в Bloomberg
 
-https://docs.google.com/presentation/d/12-dyJB6bd2RumpexzoOBCiaVzpqyWmTmKYXCttZPPt0/edit#slide=id.p
+https://docs.google.com/presentation/d/12-dyJB6bd2RumpexzoOBCiaVzpqyWmTmKYXCttZPPt0/
+
+![bloomber Logo](./assets/bloomberg-logo-white-1.png)
+
+<iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/VrsVbuo4ENE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Bloomberg :: Airflow on Kubernetes: Dynamic Workflows Simplified - Daniel Imberman, Bloomberg & Barni Seetharaman**
+
+###########################################################
 
 Kubeflow Pipelines API использует JSON
 
@@ -51,14 +59,32 @@ https://drive.google.com/drive/folders/1U_H8FNM3gpRBf_r1cUSuCbXzgTivpXyO
 ######   https://habr.com/ru/post/483626/
 ###########################################################
 
+
+**(Financial-Times (Jenkins-PipeLine))**
+
+https://github.com/gridgentoo/Financial-Times-Jenkins
+
+###########################################################
+
+**(SAP(Jenkins-PipeLine))** 
+https://github.com/gridgentoo/SAP-jenkins-library
+
 ############################################################
+
+**(Bloomberg(Jenkins-PipeLine-Cookbook))**
+https://github.com/gridgentoo/bloomberg-jenkins-cluster-cookbook
+
+############################################################
+
 ######   О Кодогенерации из JSON & YAML кода на (Scala) для Kubernetes
 ######   на следующем Шаге 
 ###########################################################
 
+![Json2pojo Logo](./assets/json2pojo.png)
 
+Кодогенерация в Uber
 
-
+https://docs.google.com/document/d/1NHeGZ45bLLbOmdoLBQ3f8VFqU0NVtJYSxpNGMwBfZqc/
 
 
 
