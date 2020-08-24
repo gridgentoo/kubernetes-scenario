@@ -1,21 +1,21 @@
 ## Kubeflow CLI
 
-The standard command-line tool for Kubeflow, `kfctl` is also available.
+Также доступен стандартный инструмент командной строки для **Kubeflow**, **`kfctl`**.
 
 `kfctl version`{{execute}}
 
-Whenever you add a CLI tool, often there will be a completion feature that will allow helpfully fill in the context for the command-line parameters using the tab key.
+Всякий раз, когда вы добавляете инструмент **CLI tool**, часто появляется функция завершения, которая позволяет полезно заполнить контекст для параметров командной строки с помощью клавиши табуляции.
 
 `source <(kfctl completion bash)`{{execute}}
 
 ## Kubeflow Dashboard
 
-Navigate to the [Kubeflow dashboard](https://[[HOST_SUBDOMAIN]]-31380-[[KATACODA_HOST]].environments.katacoda.com/) and start exploring its features. The dashboard can also be accessed from the tab above the command line.
+Перейдите на [Kubeflow dashboard](https://[[HOST_SUBDOMAIN]]-31380-[[KATACODA_HOST]].environments.katacoda.com/) и начните изучать его возможности. Доступ к информационной панели также можно получить из вкладки над командной строкой.
 
-Upon first arrival the Dashboard will ask to create a first working space called a Namespace. Use the suggested name `anonymous` This namespace you name will coincide with a created Kubernetes Namespace.
+При первом появлении на панели управления **Dashboard** будет предложено создать первое рабочее пространство, называемое пространством имен **Namespace**. Используйте предложенное имя **`anonymous`**. Это пространство имен, которое вы называете, будет совпадать с созданным пространством имен **Kubernetes**.
 
 `kubectl get namespaces`{{execute}}
 
-You will see also the namespace has been annotated and labeled so it will be recognized by Kubeflow and Istio.
+Вы также увидите, что пространство имен было аннотировано и помечено **annotated and labeled**, чтобы оно было распознано **Kubeflow** и **Istio**.
 
 `kubectl describe namespaces anonymous`{{execute}}
