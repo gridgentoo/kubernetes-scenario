@@ -141,7 +141,7 @@
         "id": "grpc" 
       },
       {
-        "title": "Kapitan & jsonnet для Kubernetes, Ansible OpenShift-Applier.",
+        "title": "Kubeflow, Jsonnet, Kapitan для Kubernetes, Ansible OpenShift-Applier.",
         "description": "Ansible OpenShift-Applier, VSCode, Ansible, Jinja",
         "id": "openshift-ansible" 
       },
