@@ -13,9 +13,14 @@
         "description": "Редактируем ресурсы JSON(kubectl edit rs vue-rs -o json)."
       },
       {
+        "course_id": "kubeflow-playground",
+        "title": "Kubeflow Playground",
+        "description": "В этом сценарии установим Kubeflow в Kubernetes."
+      },
+      {
         "course_id": "kubeflow-installation",
         "title": "Установка Kubeflow Raw",
-        "description": "В этом сценарии установим Kubeflow в Kubernetes."
+        "description": "В этом сценарии установим Kubeflow Raw в Kubernetes."
       },
       {
         "course_id": "openshift-applier",
@@ -36,11 +41,6 @@
         "course_id": "kubeflow-playground",
         "title": "Kubeflow Playground",
         "description": "Discover Kubeflow on Kubernetes."
-      },
-      {
-        "course_id": "vs-code",
-        "title": "Visual Studio Code для и разработки облачных приложений.",
-        "description": "Jinja — это шаблонизатор для OpenShift."
       },
       {
         "course_id": "apache-kafka-message-enrichment",
