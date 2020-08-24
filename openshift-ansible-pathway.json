@@ -3,25 +3,25 @@
     "description": "Kapitan & jsonnet, Ansible OpenShift-Applier с динамическими параметрами",
     "courses": [
       {
-        "course_id": "kapitan-intro",
-        "title": "Kapitan & jsonnet для управления конфигурациями Kubernetes.",
-        "description": "Поддерживает следующие шаблоны Jinja2, jsonnet, kadet, helm для Kubernetes."
-      },  
+        "course_id": "kubeflow-playground",
+        "title": "Kubeflow Playground",
+        "description": "В этом сценарии установим Kubeflow в Kubernetes."
+      },
       {
         "course_id": "deployments",
         "title": "Jinja2 для deployments",
         "description": "Редактируем ресурсы JSON(kubectl edit rs vue-rs -o json)."
       },
       {
-        "course_id": "kubeflow-playground",
-        "title": "Kubeflow Playground",
-        "description": "В этом сценарии установим Kubeflow в Kubernetes."
-      },
+        "course_id": "kapitan-intro",
+        "title": "Kapitan & jsonnet для управления конфигурациями Kubernetes.",
+        "description": "Поддерживает следующие шаблоны Jinja2, jsonnet, kadet, helm для Kubernetes."
+      }, 
       {
         "course_id": "kubeflow-installation",
         "title": "Установка Kubeflow Raw",
         "description": "В этом сценарии установим Kubeflow Raw в Kubernetes."
-      },
+      },      
       {
         "course_id": "openshift-applier",
         "title": "Введение в OpenShift-Applier.",
