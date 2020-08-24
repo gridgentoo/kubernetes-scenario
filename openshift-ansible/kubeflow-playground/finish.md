@@ -2,13 +2,15 @@
 
 <img align="right" src="./assets/kubeflow.jpg" width="300">
 
-Kubeflow is an open, community driven project to make it easy to deploy and manage an Machine Learning stack on Kubernetes.
-
 This scenario is in the process of drafting. However, you will see that a functional Kubeflow instance will be running and is open to experimentation. If you know Kubeflow, your feedback to support@katacoda.com and jonathan.johnson@dijure.com would be helpful.
 
-## Lessons Learned ##
+Kubeflow - это открытый проект, управляемый сообществом **community driven project**, который упрощает развертывание и управление стеком машинного обучения **Machine Learning stack on Kubernetes**.
 
-With these steps you have learned:
+Этот сценарий находится в процессе разработки. Однако вы увидите, что функциональный экземпляр Kubeflow будет запущен и открыт для экспериментов. 
+
+## Сценарии которые выучены ##
+
+С помощью этих шагов вы узнали:
 
 - &#x2714; how to ...
 - &#x2714; how to ...
