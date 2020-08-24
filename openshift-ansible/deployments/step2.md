@@ -30,6 +30,17 @@ OUT.close()
 
 `vi configmap2.yaml`{{execute T1}}
 
+###########################################################
+
+AI Platform Scaling :: с использованием Kubeflow Pipelines API, Kubeflow использует JSON
+
+https://www.kubeflow.org/docs/pipelines/reference/api/kubeflow-pipeline-api-spec/
+
+Kubeflow для поиска кода (Go, Java, Python, JavaScript, Ruby) в наборе данных CodeSearchNet Corpus, 
+охватывающем около 6 млн методов и функций (размер набора около 20 Гб)
+
+https://github.com/gridgentoo/kubeflow_CodeSearchNet
+
 #########################################################
 
 AirFlow Kubernetes Operator в Bloomberg
@@ -41,12 +52,6 @@ https://docs.google.com/presentation/d/12-dyJB6bd2RumpexzoOBCiaVzpqyWmTmKYXCttZP
 <iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/VrsVbuo4ENE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Bloomberg :: Airflow on Kubernetes: Dynamic Workflows Simplified - Daniel Imberman, Bloomberg & Barni Seetharaman**
-
-###########################################################
-
-Kubeflow Pipelines API использует JSON
-
-https://www.kubeflow.org/docs/pipelines/reference/api/kubeflow-pipeline-api-spec/
 
 #########################################################
 
