@@ -2,8 +2,6 @@
 
 <img align="right" src="./assets/kubeflow.jpg" width="300">
 
-This scenario is in the process of drafting. However, you will see that a functional Kubeflow instance will be running and is open to experimentation. If you know Kubeflow, your feedback to support@katacoda.com and jonathan.johnson@dijure.com would be helpful.
-
 Kubeflow - это открытый проект, управляемый сообществом **community driven project**, который упрощает развертывание и управление стеком машинного обучения **Machine Learning stack on Kubernetes**.
 
 Этот сценарий находится в процессе разработки. Однако вы увидите, что функциональный экземпляр Kubeflow будет запущен и открыт для экспериментов. 
