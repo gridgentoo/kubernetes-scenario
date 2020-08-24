@@ -1,5 +1,5 @@
 {
-    "title": "Kapitan & jsonnet, поддерживает следующие шаблоны Jinja2, jsonnet, kadet, helm для Kubernetes.",
+    "title": "Kubeflow, Kapitan & jsonnet, поддерживает следующие шаблоны Jinja2, jsonnet, kadet, helm для Kubernetes.",
     "description": "Kapitan & jsonnet, Ansible OpenShift-Applier с динамическими параметрами",
     "courses": [
       {
@@ -11,6 +11,11 @@
         "course_id": "deployments",
         "title": "Jinja2 для deployments",
         "description": "Редактируем ресурсы JSON(kubectl edit rs vue-rs -o json)."
+      },
+      {
+        "course_id": "kubeflow-installation",
+        "title": "Установка Kubeflow Raw",
+        "description": "Узнайте, как установить Kubeflow на Kubernetes."
       },
       {
         "course_id": "openshift-applier",
@@ -32,11 +37,6 @@
         "title": "Kubeflow Playground",
         "description": "Discover Kubeflow on Kubernetes."
       },
-      {
-        "course_id": "kubeflow-installation",
-        "title": "Установка Kubeflow Raw",
-        "description": "Узнайте, как установить Kubeflow на Kubernetes."
-      }
       {
         "course_id": "vs-code",
         "title": "Visual Studio Code для и разработки облачных приложений.",
