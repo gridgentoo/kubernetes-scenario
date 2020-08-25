@@ -18,6 +18,11 @@
         "description": "Поддерживает следующие шаблоны Jinja2, jsonnet, kadet, helm для Kubernetes."
       }, 
       {
+        "course_id": "lens",
+        "title": "Kontena Lens облачная IDE для Kubernetes.",
+        "description": "Управляйте несколькими кластерами Kubernetes с помощью этой Smart Dashboard."
+      },  
+      {
         "course_id": "kubeflow-installation",
         "title": "Установка Kubeflow Raw",
         "description": "В этом сценарии установим Kubeflow Raw в Kubernetes."
