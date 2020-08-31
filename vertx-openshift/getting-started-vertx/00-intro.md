@@ -1,9 +1,3 @@
-Vert.x код генератор для асинхронного **asynchronous polyglot APIs**
-https://github.com/vert-x3/vertx-codegen
-
-В этом сценарии вы узнаете больше о  [Eclipse Vert.x](https://vertx.io), одной из сред выполнения, включенных в [Red Hat OpenShift Application Runtimes](https://developers.redhat.com/products/rhoar).
-
-
 [Архитектура] Vert.X [30 августа 2020]
 
 https://drive.google.com/drive/folders/1PKKuAnIqLoX3IrHefyQl1BD8I22kCXz5
@@ -11,6 +5,8 @@ https://drive.google.com/drive/folders/1PKKuAnIqLoX3IrHefyQl1BD8I22kCXz5
 [Архитектура] Hazelcast [30 августа 2020]
 
 https://drive.google.com/drive/folders/1wi_Kg5mKDUbftnNXPo442BOinxaSjmN6
+
+В этом сценарии вы узнаете больше о  [Eclipse Vert.x](https://vertx.io), одной из сред выполнения, включенных в [Red Hat OpenShift Application Runtimes](https://developers.redhat.com/products/rhoar).
 
 ## What you will learn
 You will learn how to get started with building a reactive web application that can serve static content as well as server-side business logic using Eclipse Vert.x.
