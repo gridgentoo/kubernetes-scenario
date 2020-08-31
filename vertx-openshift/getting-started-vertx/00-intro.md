@@ -5,9 +5,11 @@ https://github.com/vert-x3/vertx-codegen
 
 
 [Архитектура] Vert.X [30 августа 2020]
+
 https://drive.google.com/drive/folders/1PKKuAnIqLoX3IrHefyQl1BD8I22kCXz5
 
 [Архитектура] Hazelcast [30 августа 2020]
+
 https://drive.google.com/drive/folders/1wi_Kg5mKDUbftnNXPo442BOinxaSjmN6
 
 ## What you will learn
