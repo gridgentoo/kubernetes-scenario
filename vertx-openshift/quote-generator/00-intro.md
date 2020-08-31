@@ -1,3 +1,17 @@
+[Архитектура] Vert.X [30 августа 2020]
+
+https://drive.google.com/drive/folders/1PKKuAnIqLoX3IrHefyQl1BD8I22kCXz5
+
+[Архитектура] Vert.X + Hazelcast [30 августа 2020].  
+
+https://drive.google.com/drive/folders/1wi_Kg5mKDUbftnNXPo442BOinxaSjmN6
+
+[Архитектура] ServiceFabric Microsoft [30 августа 2020]   
+
+https://drive.google.com/drive/folders/1N9P7M2eAGCtbkMrcjcfVJQkqynD1g3XZ
+
+[Архитектура] Vert.X + Ignite [30 августа 2020]
+
 In this scenario, you will learn more about Reactive Microservices using [Eclipse Vert.x](https://vertx.io), one of the runtimes included in [Red Hat OpenShift Application Runtimes](https://developers.redhat.com/products/rhoar).
 
 This scenario is the first one in a list of scenarios that will walk you through building a Reactive application using Vert.x illustrating what Vert.x is. These scenarios offer an intermediate, hands-on session with Vert.x, from the first line of code, to making services, to consuming them and finally to assembling everything in a consistent reactive system. It illustrates what reactive systems are, what reactive programming is, and how to build applications based on reactive microservices (and the s is important).
