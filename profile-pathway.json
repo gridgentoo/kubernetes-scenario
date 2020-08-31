@@ -16,6 +16,11 @@
         "id": "envoyproxy"
       },
       {
+        "title": "Reactive Microservices c фреймворком Vert.x в OpenShift",
+        "description": "Vert.x и In-Memory Hazelcast(или Ignite) для Reactive Microservices.",
+        "id": "vertx-openshift"
+      }, 
+      {
         "title": "ELK on Kubernetes",
         "description": "Изучите, как использовании ELK в Kubernetes.",
         "id": "elk"
@@ -34,11 +39,6 @@
         "title": "Mastering Ethereum",
         "description": "Технология ETHEREUM — платформа для создания децентрализованных онлайн-сервисов на базе блокчейна.",
         "id": "mastering-ethereum"
-      }, 
-      {
-        "title": "Vert.x модель биржевых сценариев для микросервисов в OpenShift",
-        "description": "Vert.x называется Micro-Trader и состоит из нескольких микросервисов.",
-        "id": "vertx-openshift"
       }, 
       {
         "title": "Portworx, Cloud Native Storage",
