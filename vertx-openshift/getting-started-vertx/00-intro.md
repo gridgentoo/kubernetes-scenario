@@ -2,9 +2,14 @@
 
 https://drive.google.com/drive/folders/1PKKuAnIqLoX3IrHefyQl1BD8I22kCXz5
 
-[Архитектура] Hazelcast [30 августа 2020]
+[Архитектура] Hazelcast + Vert.X [30 августа 2020]
 
 https://drive.google.com/drive/folders/1wi_Kg5mKDUbftnNXPo442BOinxaSjmN6
+
+[Архитектура] ServiceFabric Microsoft [30 августа 2020] 
+https://drive.google.com/drive/folders/1N9P7M2eAGCtbkMrcjcfVJQkqynD1g3XZ
+
+[Архитектура] Ignite + Vert.X [30 августа 2020]
 
 В этом сценарии вы узнаете больше о  [Eclipse Vert.x](https://vertx.io), одной из сред выполнения, включенных в [Red Hat OpenShift Application Runtimes](https://developers.redhat.com/products/rhoar).
 
