@@ -1,7 +1,7 @@
 {
     "title": "Vert.X",
     "icon": "fa-kubernetes",
-    "description": "Введение в Vert.x в OpenShift.",
+    "description": "Введение в Reactive Microservices c фреймворком Vert.x в OpenShift.",
     "courses": [
       {
         "course_id": "getting-started-vertx",
