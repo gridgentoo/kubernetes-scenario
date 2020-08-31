@@ -2,32 +2,32 @@
 
 https://drive.google.com/drive/folders/1PKKuAnIqLoX3IrHefyQl1BD8I22kCXz5
 
-[Архитектура] Hazelcast + Vert.X [30 августа 2020]
+[Архитектура] Vert.X + Hazelcast [30 августа 2020].  
 
 https://drive.google.com/drive/folders/1wi_Kg5mKDUbftnNXPo442BOinxaSjmN6
 
-[Архитектура] ServiceFabric Microsoft [30 августа 2020] 
+[Архитектура] ServiceFabric Microsoft [30 августа 2020]   
 
 https://drive.google.com/drive/folders/1N9P7M2eAGCtbkMrcjcfVJQkqynD1g3XZ
 
-[Архитектура] Ignite + Vert.X [30 августа 2020]
+[Архитектура] Vert.X + Ignite [30 августа 2020]
 
 В этом сценарии вы узнаете больше о  [Eclipse Vert.x](https://vertx.io), одной из сред выполнения, включенных в [Red Hat OpenShift Application Runtimes](https://developers.redhat.com/products/rhoar).
 
-## What you will learn
-You will learn how to get started with building a reactive web application that can serve static content as well as server-side business logic using Eclipse Vert.x.
+## Что вы узнаете
+Вы узнаете, как начать создавать реактивное веб-приложение, которое может обслуживать статический контент, а также бизнес-логику на стороне сервера, используя **Eclipse Vert.x**.
 
-## What is Eclipse Vert.x?
+## Что такое Eclipse Vert.x?
 
 ![Local Web Browser Tab](/openshift/assets/middleware/rhoar-getting-started-vertx/vertx-logo.png)
 
-Eclipse Vert.x is a reactive toolkit for the Java Virtual Machine that is polyglot (e.g., supports multiple programming languages).
-In this session, we will focus on Java, but it would be possible to build the same application in JavaScript, Groovy, Ruby, Ceylon, Scala, and Kotlin.
+Eclipse Vert.x - это реактивный инструментарий для виртуальной машины Java, которая является многоязычной (например, поддерживает несколько языков программирования).
+В этом сессии мы сосредоточимся на Java, но можно было бы создать такое же приложение на JavaScript, Groovy, Ruby, Ceylon, Scala и Kotlin.
 
-Eclipse Vert.x is event-driven and non-blocking, which means that applications in Vert.x can handle a lot of concurrent requests using a small number of kernel threads.
-Vert.x lets your app scale with minimal hardware.
+Eclipse Vert.x является **event-driven** and **non-blocking**, что означает, что приложения в **Vert.x** могут обрабатывать множество одновременных запросов с использованием небольшого количества потоков ядра.
+Vert.x позволяет вашему приложению масштабироваться с минимальным количеством оборудования.
 
-Vert.x is incredibly flexible - whether it's network utilities, sophisticated modern web applications, HTTP/REST microservices, high volume event processing or a full-blown back-end message-bus application, Vert.x is a great fit.
+Vert.x невероятно гибок - будь то сетевые утилиты, сложные современные веб-приложения, микросервисы **HTTP/REST microservices**, обработка большого объема событий или полноценное серверное приложение для передачи сообщений, Vert.x отлично подходит.
 
 Vert.x is used by many [different companies](http://vertx.io/whos_using/) from real-time gaming to banking and everything in between.
 
