@@ -6,11 +6,6 @@
         "id": "istio"
       },
       {
-        "title": "Envoy Proxy",
-        "description": "Изучите, как использовании Envoy.",
-        "id": "envoyproxy"
-      },
-      {
         "title": "Reactive Microservices c фреймворком Vert.x в OpenShift",
         "description": "Vert.x и In-Memory Hazelcast(или Ignite) для Reactive Microservices.",
         "id": "vertx-openshift"
@@ -24,6 +19,11 @@
         "title": "Protobuf, gRPC, Jaeger, Zipkin",
         "description": "protobuf, gRPC, Jaeger, Zipkin",
         "id": "grpc" 
+      },
+      {
+        "title": "Envoy Proxy",
+        "description": "Изучите, как использовании Envoy.",
+        "id": "envoyproxy"
       },
       {
         "title": "Helm пакетный менеджер для Kubernetes",
