@@ -16,7 +16,7 @@
         "id": "vertx-openshift"
       }, 
       {
-        "title": "Quarkus: субатомная Java созданная для Kubernetes",
+        "title": "Quarkus: Reactive Microservices c GraalVM в OpenShift",
         "description": "Quarkus - Java-стек Kubernetes, созданный специально для GraalVM.",
         "id": "quarkus-openshift"
       }, 
@@ -34,6 +34,11 @@
         "title": "Kafka on OpenShift",
         "description": "Изучите, как использовании Kafka в OpenShift.",
         "id": "kafka-openshift"
+      },
+      {
+        "title": "Jenkins для CI кода",
+        "description": "мы рассмотрим использование Jenkins для CI.",
+        "id": "jenkins" 
       },
       {
         "title": "ELK on Kubernetes",
@@ -129,11 +134,6 @@
         "title": "Infrastructure as Code: Terraform for Kubernetes",
         "description": "мы рассмотрим использование Terraform для настройки ресурсов Kubernetes.",
         "id": "infrastructure-as-code" 
-      },
-      {
-        "title": "Jenkins для CI кода",
-        "description": "мы рассмотрим использование Jenkins для CI.",
-        "id": "jenkins" 
       },
       {
         "title": "YamlBuilder",
