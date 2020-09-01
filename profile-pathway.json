@@ -41,6 +41,11 @@
         "id": "jenkins" 
       },
       {
+        "title": "Kubeflow, Jsonnet, J2Cli",
+        "description": "Kubeflow, Jsonnet, Kapitan, Ansible OpenShift-Applier, Jinja",
+        "id": "openshift-ansible" 
+      },
+      {
         "title": "ELK on Kubernetes",
         "description": "Изучите, как использовании ELK в Kubernetes.",
         "id": "elk"
@@ -139,11 +144,6 @@
         "title": "YamlBuilder",
         "description": "мы рассмотрим использование YamlBuilder для CI.",
         "id": "yamlbuilder" 
-      },
-      {
-        "title": "Kubeflow, Jsonnet, J2Cli",
-        "description": "Kubeflow, Jsonnet, Kapitan, Ansible OpenShift-Applier, Jinja",
-        "id": "openshift-ansible" 
       },
       {
         "title": "Основы OpenShift",
