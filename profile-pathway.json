@@ -16,19 +16,24 @@
         "id": "vertx-openshift"
       }, 
       {
-        "title": "Kafka on OpenShift",
-        "description": "Изучите, как использовании Kafka в OpenShift.",
-        "id": "kafka-openshift"
-      },
-      {
         "title": "Quarkus: субатомная Java созданная для Kubernetes",
         "description": "Quarkus - Java-стек Kubernetes, созданный специально для GraalVM.",
         "id": "quarkus-openshift"
       }, 
       {
+        "title": "Protobuf, gRPC, Jaeger, Zipkin",
+        "description": "protobuf, gRPC, Jaeger, Zipkin",
+        "id": "grpc" 
+      },
+      {
         "title": "Helm пакетный менеджер для Kubernetes",
         "description": "Откройте для себя пакетный менеджер Helm.",
         "id": "helm"
+      },
+      {
+        "title": "Kafka on OpenShift",
+        "description": "Изучите, как использовании Kafka в OpenShift.",
+        "id": "kafka-openshift"
       },
       {
         "title": "ELK on Kubernetes",
@@ -134,11 +139,6 @@
         "title": "YamlBuilder",
         "description": "мы рассмотрим использование YamlBuilder для CI.",
         "id": "yamlbuilder" 
-      },
-      {
-        "title": "Protobuf, gRPC, Jaeger",
-        "description": "protobuf, gRPC, Jaeger, Vert.X",
-        "id": "grpc" 
       },
       {
         "title": "Kubeflow, Jsonnet, J2Cli",
