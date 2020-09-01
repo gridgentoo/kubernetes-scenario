@@ -1,11 +1,6 @@
 {
     "courses": [
       {
-        "title": "Kafka on OpenShift",
-        "description": "Изучите, как использовании Kafka в OpenShift.",
-        "id": "kafka-openshift"
-      },
-      {
         "title": "Istio on OpenShift",
         "description": "Изучите, как использовании Istio в OpenShift.",
         "id": "istio"
@@ -21,6 +16,21 @@
         "id": "vertx-openshift"
       }, 
       {
+        "title": "Kafka on OpenShift",
+        "description": "Изучите, как использовании Kafka в OpenShift.",
+        "id": "kafka-openshift"
+      },
+      {
+        "title": "Quarkus: субатомная Java созданная для Kubernetes",
+        "description": "Quarkus - Java-стек Kubernetes, созданный специально для GraalVM.",
+        "id": "quarkus-openshift"
+      }, 
+      {
+        "title": "Helm пакетный менеджер для Kubernetes",
+        "description": "Откройте для себя пакетный менеджер Helm.",
+        "id": "helm"
+      },
+      {
         "title": "ELK on Kubernetes",
         "description": "Изучите, как использовании ELK в Kubernetes.",
         "id": "elk"
@@ -31,11 +41,6 @@
         "id": "spark"
       },  
       {
-        "title": "Quarkus: субатомная Java созданная для Kubernetes",
-        "description": "Quarkus - Java-стек Kubernetes, созданный специально для GraalVM.",
-        "id": "quarkus-openshift"
-      }, 
-      {
         "title": "Mastering Ethereum",
         "description": "Технология ETHEREUM — платформа для создания децентрализованных онлайн-сервисов на базе блокчейна.",
         "id": "mastering-ethereum"
@@ -45,11 +50,6 @@
         "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
         "id": "portworx-cloud"
       }, 
-      {
-        "title": "Helm пакетный менеджер для Kubernetes",
-        "description": "Откройте для себя пакетный менеджер Helm.",
-        "id": "helm"
-      },
       {
         "title": "OpenShift Приложения",
         "description": "Сборка приложений на OpenShift с практическими объяснениями.",
