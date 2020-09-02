@@ -60,4 +60,6 @@ OpenTracing не только для распределенной трассир
 
 - OpenShift templates: https://github.com/jaegertracing/jaeger-openshift
 
+## Architecture Jaeger
 
+https://www.jaegertracing.io/docs/1.18/architecture/
