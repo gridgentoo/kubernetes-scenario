@@ -1,3 +1,5 @@
+![istio version](./assets/istio-logo.png)
+
 Полигон для отработки основных навыков работы с Istio Service Mesh. 
 С примерами на основе учебного модуля [Istio Hands-On for Kubernetes](https://www.udemy.com/course/istio-hands-on-for-kubernetes/)
 

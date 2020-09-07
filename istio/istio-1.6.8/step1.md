@@ -14,6 +14,8 @@ Kubernetes started
 
 ## Istio
 
+![istio version](./assets/istio.png)
+
 Запустите установку istio `/usr/local/bin/istio-install.sh`{{execute T1}}
 
 Примечание: если вас как-то смущает `error: taint "node-role.kubernetes.io/master" not found`, проигнорируйте это сообщение пожалуйста, оно ни на что не влияет.
