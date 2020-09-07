@@ -18,7 +18,8 @@ kubectl get pods --all-namespaces
 # untaint control plane
 kubectl taint nodes --all node-role.kubernetes.io/master-
 
-export ISTIO_VERSION=1.6.8
+export ISTIO_VERSION=1.7.0
+# export ISTIO_VERSION=1.6.8
 
 [ ! -d "$HOME/istio-$ISTIO_VERSION/bin" ] && curl -sS -L https://istio.io/downloadIstio | sh -
 
