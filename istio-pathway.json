@@ -27,6 +27,11 @@
         "course_id": "5-advanced-routerules",
         "title": "Расширенные правила маршрутизации.",
         "description": "Как управлять умной маршрутизацией в Istio, управленить доступом, балансировкой нагрузки и ограничением скорости."
+      },
+      {
+        "course_id": "istio-test",
+        "title": "Istio Hands-On for Kubernetes",
+        "description": "Istio Hands-On for Kubernetes."
       }
 
     ]
