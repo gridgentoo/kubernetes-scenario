@@ -1,0 +1,7 @@
+spec:
+  ports:
+  - name: http-query
+    nodePort: 31547
+    port: 80
+    targetPort: 16686
+    protocol: TCP

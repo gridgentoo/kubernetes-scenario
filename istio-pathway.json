@@ -29,9 +29,19 @@
         "description": "Как управлять умной маршрутизацией в Istio, управленить доступом, балансировкой нагрузки и ограничением скорости."
       },
       {
+        "course_id": "istio-1.0.5",
+        "title": "export ISTIO_VERSION=1.0.5",
+        "description": "Istio version 1.0.5"
+      },
+      {
+        "course_id": "istio-1.6.8",
+        "title": "export ISTIO_VERSION=1.6.8",
+        "description": "Istio version 1.6.8"
+      },
+      {
         "course_id": "istio-test",
-        "title": "Istio Hands-On for Kubernetes",
-        "description": "Istio Hands-On for Kubernetes."
+        "title": "export ISTIO_VERSION=1.7.0",
+        "description": "Istio version 1.7.0"
       }
 
     ]

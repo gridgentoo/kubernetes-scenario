@@ -1,0 +1,13 @@
+spec:
+  template:
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - istio-ingressgateway
+            topologyKey: "kubernetes.io/hostname"
