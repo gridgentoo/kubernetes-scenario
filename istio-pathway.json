@@ -31,17 +31,17 @@
       {
         "course_id": "istio-1.0.5",
         "title": "export ISTIO_VERSION=1.5.1",
-        "description": "Istio version 1.5.1"
+        "description": "Istio version 1.5.1. Customize Istio settings using the Helm API"
       },
       {
         "course_id": "istio-1.6.8",
         "title": "export ISTIO_VERSION=1.6.8",
-        "description": "Istio version 1.6.8"
+        "description": "Istio version 1.6.8. Customize Istio settings using the Helm API"
       },
       {
         "course_id": "istio-test",
         "title": "export ISTIO_VERSION=1.7.0",
-        "description": "Istio version 1.7.0"
+        "description": "Istio version 1.7.0. Customize Istio settings using the Helm API"
       }
 
     ]
