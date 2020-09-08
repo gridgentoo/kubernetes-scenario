@@ -6,9 +6,13 @@ For monitoring, Istio offers out of the box monitoring via Prometheus and Grafan
 
 `while true; do curl http://customer-tutorial.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com; sleep .2; done`{{execute T2}}
 
-Проверьте **`grafana`** route, набрав
+Проверьте есть ли **`grafana`** route, набрав:
 
 `oc get route -n istio-system`{{execute interrupt T1}}
+
+Проверьте версию **istio**, набрав:
+
+`istioctl version`{{execute interrupt T1}}
 
 Теперь, когда вы знаете URL-адрес **`Grafana`**, откройте его по адресу 
 
