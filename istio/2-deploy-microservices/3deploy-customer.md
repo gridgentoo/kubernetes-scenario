@@ -6,7 +6,21 @@ Now execute `mvn package`{{execute T1}} to create the `customer.jar` file.
 
 ## Create the customer docker image.
 
-We will now use the provided `/customer/java/springboot/Dockerfile`{{open}} to create a docker image.
+We will now use the provided 
+`/customer/java/springboot/Dockerfile`{{open}} 
+to create a docker image.
+
+```
+FROM fabric8/java-jboss-openjdk8-jdk:1.5.2
+ENV JAVA_APP_DIR=/deployments
+ENV JAEGER_SERVICE_NAME=customer\
+  JAEGER_ENDPOINT=http://jaeger-collector.istio-system.svc:14268/api/traces\
+  JAEGER_PROPAGATION=b3\
+  JAEGER_SAMPLER_TYPE=const\
+  JAEGER_SAMPLER_PARAM=1
+EXPOSE 8080 8778 9779
+COPY target/customer.jar /deployments/
+```
 
 This image will be called `example/customer`.
 
