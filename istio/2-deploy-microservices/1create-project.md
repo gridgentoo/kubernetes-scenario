@@ -8,6 +8,8 @@
 Чтобы создать новый проект, выполните
 `oc new-project tutorial`{{execute T1}}
 
+`pwd`{{execute T1}}
+
 Теперь давайте добавим  **`privileged`** **SCC** к этому проекту.
 
 **Execute:** `oc adm policy add-scc-to-user privileged -z default -n tutorial`{{execute T1}}
