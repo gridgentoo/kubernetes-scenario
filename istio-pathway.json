@@ -29,7 +29,7 @@
         "description": "Как управлять умной маршрутизацией в Istio, управленить доступом, балансировкой нагрузки и ограничением скорости."
       },
       {
-        "course_id": "istio-1.5.1",
+        "course_id": "istio-1.0.5",
         "title": "export ISTIO_VERSION=1.5.1",
         "description": "Istio version 1.5.1"
       },
