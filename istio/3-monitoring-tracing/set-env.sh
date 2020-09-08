@@ -13,7 +13,7 @@ make -i -f /root/projects/istio-tutorial/Makefile cleanup istio new-project micr
 until $(oc get project istio-system &> /dev/null); do sleep 1; done
 until (oc get pods -n tutorial -l app=recommendation 2>/dev/null | grep Running); do sleep 1; done
 mkdir -p ~/projects && cd ~/projects
-# export PATH=$PATH:/root/installation/istio-1.0.5/bin
-export PATH=$PATH:/root/installation/istio-1.6.8/bin
+export PATH=$PATH:/root/installation/istio-1.0.5/bin
+# export PATH=$PATH:/root/installation/istio-1.6.8/bin
 clear
 echo "Tutorial Ready."
