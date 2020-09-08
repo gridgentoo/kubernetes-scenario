@@ -1,0 +1,40 @@
+{
+  "title": "Установить istio",
+  "icon": "fa-istio",
+  "description": "Сценарий, как установить istio с помощью istioctl",
+  "difficulty": "Beginner",
+  "time": "10 minutes",
+  "authenticated": false,
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - Проверьте кластер Kubernetes",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - загрузите istio",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - быстрый старт",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - просто запустите пример Bookinfo",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

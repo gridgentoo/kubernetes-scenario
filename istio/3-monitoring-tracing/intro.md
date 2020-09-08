@@ -60,6 +60,10 @@ https://drive.google.com/drive/folders/1N9P7M2eAGCtbkMrcjcfVJQkqynD1g3XZ
 
 [Uber Open Summit 2018] Jaeger: Distributed Tracing at Uber
 
+<iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/WRntQsUajow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[Yuri Shkuro, Uber & Pavol Loffay, Red Hat] Intro: Jaeger
+
 <iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/fsHb0qK37bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Serghei Iakovlev] “Маленькая история большой победы: OpenTracing, AWS и Jaeger”
