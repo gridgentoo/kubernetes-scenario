@@ -22,3 +22,15 @@ Kubernetes started
 
 Проверьте, что все поды Istio в состоянии Running `kubectl get pods -n istio-system`{{execute T1}}
 
+### Проверьте, что установлено
+https://istio.io/latest/docs/setup/install/istioctl/
+
+Команда **istioctl** сохраняет **IstioOperator CR**, который использовался для установки Istio, в копию CR с именем **installed-state**. Вместо проверки развертываний, модулей, служб и других ресурсов, установленных **Istio**, например:
+
+`kubectl -n istio-system get deploy`{{execute T1}}
+
+Вы можете проверить **installed-state CR**, чтобы увидеть, что установлено в кластере, а также все пользовательские настройки. Например, выгрузите содержимое **installed-state** в файл YAML, используя следующую команду:
+
+`kubectl -n istio-system get IstioOperator installed-state -o yaml > installed-state.yaml`{{execute T1}}
+
+The installed-state CR is also used to perform checks in some istioctl commands and should therefore not be removed.
