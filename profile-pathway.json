@@ -6,17 +6,17 @@
         "id": "istio"
       },
       {
-        "title": "Reactive Microservices c фреймворком Vert.x в OpenShift",
+        "title": "Reactive Microservices c фреймворком Vert.x в Istio",
         "description": "Vert.x и In-Memory Hazelcast(или Ignite) для Reactive Microservices.",
         "id": "vertx-openshift"
       }, 
       {
-        "title": "Quarkus: Reactive Microservices c GraalVM в OpenShift",
+        "title": "Quarkus: Reactive Microservices c GraalVM в Istio",
         "description": "Quarkus - Java-стек Kubernetes, созданный специально для GraalVM.",
         "id": "quarkus-openshift"
       }, 
       {
-        "title": "Protobuf, gRPC, Jaeger, Zipkin",
+        "title": "Protobuf, gRPC, Jaeger, Zipkin в Istio",
         "description": "protobuf, gRPC, Jaeger, Zipkin",
         "id": "grpc" 
       },
