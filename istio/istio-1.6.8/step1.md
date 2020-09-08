@@ -33,4 +33,22 @@ https://istio.io/latest/docs/setup/install/istioctl/
 
 `kubectl -n istio-system get IstioOperator installed-state -o yaml > installed-state.yaml`{{execute T1}}
 
-The installed-state CR is also used to perform checks in some istioctl commands and should therefore not be removed.
+**installed-state CR** состояния также используется для выполнения проверок в некоторых командах **istioctl**, поэтому его не следует удалять.
+
+### Customize Istio settings using the Helm API
+
+The IstioOperator API includes a pass-through interface to the Helm API using the values field.
+
+The following YAML file configures global and Pilot settings through the Helm API:
+```
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+spec:
+  values:
+    pilot:
+      traceSampling: 0.1 # override from 1.0
+    global:
+      monitoringPort: 15050
+```
+
+Some parameters will temporarily exist in both the Helm and IstioOperator APIs, including Kubernetes resources, namespaces and enablement settings. The Istio community recommends using the IstioOperator API as it is more consistent, is validated, and follows the community graduation process.
