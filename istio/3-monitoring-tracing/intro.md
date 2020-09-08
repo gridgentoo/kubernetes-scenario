@@ -15,6 +15,22 @@
 
 **Jaeger** - это  **tracing system** с открытым исходным кодом, созданная **Uber**. **Jaeger** позволяет разработчикам визуализировать данные **OpenTracing**.
 
+[Архитектура] Vert.X [30 августа 2020]
+
+https://drive.google.com/drive/folders/1PKKuAnIqLoX3IrHefyQl1BD8I22kCXz5
+
+[Архитектура] Vert.X + Hazelcast [30 августа 2020].
+
+https://drive.google.com/drive/folders/1wi_Kg5mKDUbftnNXPo442BOinxaSjmN6
+
+[Архитектура] ServiceFabric Microsoft Azure [30 августа 2020]
+
+https://drive.google.com/drive/folders/1N9P7M2eAGCtbkMrcjcfVJQkqynD1g3XZ
+
+[Архитектура] Vert.X + Ignite [30 августа 2020]
+
+В этом сценарии вы узнаете больше о Трейсинге реактивных микросервисах **Reactive Microservices, Vert.x**.
+
 ### Opentracing, Jagger 
 
 Есть общий стандарт **Opentracing**, который описывает как и что должно собираться, не привязываясь трассировкой к конкретной реализации в каком-либо языке. Например, в Java вся работа с трейсами ведется через общий **API Opentracing**, а под ним может скрываться, например, **Jaeger** или пустая дефолтная реализация которая ничего не делает.
