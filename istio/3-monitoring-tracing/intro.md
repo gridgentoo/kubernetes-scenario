@@ -54,6 +54,9 @@ OpenTracing не только для распределенной трассир
 
 Игорь Чакрыгин «Использование OpenTracing в .NET»
 
+<iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/RK_ojRbpDJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Егор Гришечко — Распределенная трассировка запросов в .NET
+
 ### Kubernetes and OpenShift
 
 - Kubernetes templates: https://github.com/jaegertracing/jaeger-kubernetes
