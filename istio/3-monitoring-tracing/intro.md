@@ -44,18 +44,19 @@
 
 <iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/fsHb0qK37bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Serghei Iakovlev, “Маленькая история большой победы: OpenTracing, AWS и Jaeger”
+[Serghei Iakovlev] “Маленькая история большой победы: OpenTracing, AWS и Jaeger”
 
 <iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/nHgfJ943z2I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-OpenTracing не только для распределенной трассировки. Константин Черкасов, Lazada
+[Константин Черкасов] OpenTracing не только для распределенной трассировки.
 
 <iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/YG67VTunG_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Игорь Чакрыгин «Использование OpenTracing в .NET»
+[Игорь Чакрыгин] «Использование OpenTracing в .NET»
 
 <iframe style="width: 700px;height: 400px;" src="https://www.youtube-nocookie.com/embed/RK_ojRbpDJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-Егор Гришечко — Распределенная трассировка запросов в .NET
+
+[Егор Гришечко] Zipkin&Jaeger - Распределенная трассировка запросов в .NET
 
 ### Kubernetes and OpenShift
 
