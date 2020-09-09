@@ -6,12 +6,12 @@
       {
         "course_id": "istio-1.7.0",
         "title": "export ISTIO_VERSION=1.6.2",
-        "description": "Инструкция по развертыванию ванильного Istio в ванильном kubernetes."
+        "description": "Инструкция по развертыванию ванильного Istio в ванильном Kubernetes."
       },
       {
         "course_id": "istio-1.6.8",
         "title": "export ISTIO_VERSION=1.6.8",
-        "description": "Инструкция по развертыванию ванильного Istio в ванильном kubernetes."
+        "description": "Инструкция по развертыванию ванильного Istio в ванильном Kubernetes."
       },
       {
         "course_id": "1-introduction",
