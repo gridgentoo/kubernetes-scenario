@@ -6,12 +6,12 @@
       {
         "course_id": "istio-1.7.0",
         "title": "export ISTIO_VERSION=1.5.10",
-        "description": "Istio version 1.5.10."
+        "description": "Инструкция по развертыванию ванильного Istio в ванильном kubernetes."
       },
       {
         "course_id": "istio-1.6.8",
         "title": "export ISTIO_VERSION=1.6.8",
-        "description": "Istio version 1.6.8. Customize Istio settings using the Helm API"
+        "description": "Инструкция по развертыванию ванильного Istio в ванильном kubernetes."
       },
       {
         "course_id": "1-introduction",
