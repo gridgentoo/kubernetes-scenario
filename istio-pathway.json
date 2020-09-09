@@ -5,8 +5,8 @@
     "courses": [
       {
         "course_id": "istio-1.7.0",
-        "title": "export ISTIO_VERSION=1.6.1",
-        "description": "Istio version 1.6.1."
+        "title": "export ISTIO_VERSION=1.5.10",
+        "description": "Istio version 1.5.10."
       },
       {
         "course_id": "istio-1.6.8",
