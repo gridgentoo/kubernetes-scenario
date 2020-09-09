@@ -8,10 +8,11 @@
 
 Используйте следующую команду для загрузки istio:
 
-`curl -L https://istio.io/downloadIstio | sh -`{{execute}}
+`curl -L https://istio.io/downloadIstio | sh -`
 
+`export ISTIO_VERSION=1.6.1; curl -L https://istio.io/downloadIstio | sh -`{{execute}}
 
-Загруженный пакет istio называется **`istio-1.7.*`** (Последняя версия **istio 1.7**) и содержит:
+Загруженный пакет istio называется **`istio-1.6.*`** (Последняя версия **istio 1.6**) и содержит:
 -**`install/kubernetes`**: содержит установочные файлы YAML, связанные с Kubernetes.
 -**`examples/`**: содержит примеры приложений.
 -**`bin/`**: содержит клиентский файл istioctl.
