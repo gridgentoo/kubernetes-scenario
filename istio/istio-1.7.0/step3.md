@@ -6,7 +6,7 @@
 Install a different profile
 Other Istio configuration profiles can be installed in a cluster by passing the profile name on the command line. For example, the following command can be used to install the demo profile:
 
-https://istio.io/v1.5/docs/setup/install/istioctl/
+https://istio.io/v1.6/docs/setup/install/istioctl/
 
 Используйте **`demo`** для настройки и установки **istio**:
 
