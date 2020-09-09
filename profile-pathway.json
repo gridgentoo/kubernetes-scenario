@@ -1,8 +1,8 @@
 {
     "courses": [
       {
-        "title": "Istio on OpenShift",
-        "description": "Изучите, как использовании Istio в OpenShift.",
+        "title": "Микросервисам вместе с Istio",
+        "description": "Сценарии использовании Istio.",
         "id": "istio"
       },
       {
