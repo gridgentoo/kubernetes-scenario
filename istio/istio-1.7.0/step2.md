@@ -1,5 +1,5 @@
 
-Начиная с версии **istio v1.1.5**, метод [установки istio с помощью helm перестали использовать](https://istio.io/zh/docs/setup/install/helm/), вам необходимо использовать [установка istioctl](https://istio.io/zh/docs/setup/install/istioctl/).
+Начиная с версии **istio v1.1.5**, метод [установки istio с помощью helm перестали использовать](https://istio.io/zh/docs/setup/install/helm/), вам необходимо использовать [установку istioctl](https://istio.io/zh/docs/setup/install/istioctl/).
 
 ## Скачать istio
 
