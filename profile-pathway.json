@@ -1,7 +1,7 @@
 {
     "courses": [
       {
-        "title": "Микросервисам вместе с Istio",
+        "title": "Микросервисы вместе с Istio",
         "description": "Сценарии использовании Istio.",
         "id": "istio"
       },
