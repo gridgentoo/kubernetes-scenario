@@ -15,7 +15,7 @@
       },
       {
         "course_id": "1-introduction",
-        "title": "Введение в Istio. На примере ранней версии istio-1.0.5.",
+        "title": "Введение в Istio-1.0.5 в OpenShift.",
         "description": "Знакомимся с Service Mesh. В этом сценарии, мы устанавим Istio в кластере OpenShift."
       },
       {
