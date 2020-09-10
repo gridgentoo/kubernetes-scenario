@@ -1,7 +1,7 @@
-Congratulations, you successfully configured Envoy Proxy to handle HTTPS traffic.
+Поздравляем, вы успешно настроили **Envoy Proxy** для обработки трафика **HTTPS**.
 
-In this scenario you learned how to:
+В этом сценарии вы узнали, как:
 
-* Apply SSL certificates for securing HTTP traffic.
+* Применяйте сертификаты **SSL** для защиты **HTTP-трафика**.
 
-* Redirecting HTTP traffic to HTTPS.
+* Перенаправление **HTTP-трафика** на **HTTPS**.
