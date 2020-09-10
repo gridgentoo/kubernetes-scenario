@@ -1,1 +1,1 @@
-Through this scenario, you can have closer look at mutual TLS and learn its settings. 
+Благодаря этому сценарию вы можете более внимательно изучить **mutual TLS** и изучить его настройки.
