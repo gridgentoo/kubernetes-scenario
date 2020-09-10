@@ -1,0 +1,60 @@
+{
+  "title": "Detecting Down Services with Health Checks",
+  "description": "Understand how health checks and outlier detection ensure traffic only goes to healthy, available, services",
+  "icon": "fa-envoyproxy",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - Proxy Configuration",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - Add Health Check",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - Start Proxy",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Failed Services",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Healthy Services",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - Total Failure",
+        "text": "step6.md"
+      },
+      {
+        "title": "Step 7 - Outlier Detection Configuration",
+        "text": "step7.md"
+      },
+      {
+        "title": "Step 8 - Testing Outlier Detection",
+        "text": "step8.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+        "host01": [
+            {"file": "envoy.yaml", "target": "/root"},
+            {"file": "envoy1.yaml", "target": "/root"},
+            {"file": "envoy-completed.yaml", "target": "/root"}
+        ]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "envoy-docker"
+  }
+}

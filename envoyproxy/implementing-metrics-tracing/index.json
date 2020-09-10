@@ -1,0 +1,66 @@
+{
+  "title": "Implementing Metrics and Tracing Capabilities",
+  "description": "Gain visibility into production traffic with Metrics and Tracing",
+  "icon": "fa-envoyproxy",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - Start Envoy",
+        "text": "step-start.md"
+      },
+      {
+        "title": "Step 2 - Adding Metrics",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 3 - Adding Tracing",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 4 - Generating Traffic",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 5 - Viewing Metrics",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 6 - Dashboarding Metrics with Grafana",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 7 - Viewing Tracing",
+        "text": "step6.md"
+      }
+    ],
+    "intro": {
+      "courseData": "env-init.sh",
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+        "host01": [
+            {"file": "envoy.yaml", "target": "/root/envoy"},
+            {"file": "envoy-completed.yaml", "target": "/root/envoy"},
+            {"file": "prometheus.yml", "target": "/root/envoy"}
+        ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [
+      {"name": "Prometheus", "port": 9090},
+      {"name": "Grafana", "port": 3000},
+      {"name": "Envoy Stats", "href": "https://[[HOST_SUBDOMAIN]]-9901-[[KATACODA_HOST]].environments.katacoda.com/stats/prometheus"},
+      {"name": "Jaeger Tracing", "port": 16686}
+    ],
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/envoy",
+    "hideuieditortree": true
+  },
+  "backend": {
+    "imageid": "envoy-docker"
+  }
+}

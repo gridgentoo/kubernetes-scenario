@@ -1,0 +1,47 @@
+{
+  "live": false,
+  "title": "Debugging Envoy Proxy",
+  "description": "Understand how to identify potential problems",
+  "icon": "fa-envoyproxy",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - Start Envoy",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - Logs",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - Upstream Node Unavailable",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Domain Not Found",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Community",
+        "text": "step-contact.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+        "host01": [
+            {"file": "envoy.yaml", "target": "/root/envoy"}
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "envoy-docker"
+  }
+}
