@@ -2,11 +2,18 @@ To secure HTTP traffic the addition of a ***`tls_context`*** is required as a fi
 
 In this case, the certificates are our self-signed generated in the first step.
 
-## Add TLS Context to HTTPS Listener
+Для защиты HTTP-трафика необходимо добавить ***`tls_context`*** в качестве фильтра. **TLS context** предоставляет возможность указать набор сконфигурированных с **Envoy Proxy**. При обработке запроса **HTTPS** будет использоваться соответствующий сертификат.
 
-Open the `envoy.yaml`{{open}} configuration file. It contains an outline of the required HTTPS support. It has two listeners configured, one on port 8080 for HTTP traffic and another on 8443 for HTTPS traffic.
+В этом случае сертификаты являются самоподписанными **self-signed generated**, созданными на первом шаге.
 
-The HTTPS listener has HTTP Connection Manager defined that will proxy incoming requests for `/service/1` and `/service/2` endpoints. This needs to be extended to include the required ***`tls_context`***  as shown below.
+## Добавить **TLS Context** в прослушиватель **HTTPS Listener**
+
+Откройте файл конфигурации `envoy.yaml`{{open}}. 
+Он содержит схему необходимой поддержки **HTTPS**. 
+Он имеет два настроенных прослушивателя **listeners**: один на порт **8080 для HTTP-трафика**, а другой на порт **8443 для HTTPS-трафика**.
+
+Для прослушивателя **HTTPS listener** определен диспетчер подключений **HTTP Connection Manager**, который будет проксировать входящие запросы для конечных точек **`/service/1`** and **`/service/2`** endpoints. 
+Это должно быть расширено, чтобы включить требуемый  ***`tls_context`***, как показано ниже.
 
 <pre class="file" data-filename="envoy.yaml" data-target="insert" data-marker="#TODO:TLS-Context">
 tls_context:
@@ -18,6 +25,7 @@ tls_context:
                 filename: "/etc/envoy/certs/example-com.key"
 </pre>
 
-Within the context, the certificate and key generated are defined. If we had multiple domains each with their own certificate, then multiple certificate chains would be defined.
+В контексте определяются **certificate and key generated**. 
+Если бы у нас было несколько доменов, каждый со своим собственным сертификатом, тогда было бы определено несколько цепочек сертификатов.
 
-The completed configuration can be viewed at `envoy-completed.yaml`{{open}}.
+Завершенную конфигурацию можно просмотреть на сайте `envoy-completed.yaml`{{open}}.
