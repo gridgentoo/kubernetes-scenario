@@ -1,5 +1,5 @@
-At some point when you are developing your microservice architecture, you will need to visualize what is happening in your service mesh. You will have questions like “Which service is connected to which other service?” and “How much traffic goes to each microservice?” But because of the loosely tied nature of microservice architectures , these questions can be difficult to answer.
+В какой-то момент, когда вы разрабатываете архитектуру микросервисов, вам нужно будет визуализировать, что происходит в вашей **service mesh**. У вас возникнут вопросы, например «Какая служба связана с какой другой службой?» и "Сколько трафика идет на каждый микросервис?" Но из-за слабо связанной природы микросервисных архитектур на эти вопросы может быть трудно ответить.
 
-Those are the kinds of question that Kiali has the ability to answer, by giving you a big picture of the mesh, and showing the whole flow of your requests and data.
+Это вопросы, на которые **Kiali** может ответить, предоставив вам полную картину **service mesh** и показывая весь поток ваших запросов и данных.
 
-Kiali builds upon the same concepts as Istio, and you can check the [glossary](https://www.kiali.io/documentation/glossary/concepts/) for a refresher.
+**Kiali** основывается на тех же концепциях, что и **Istio**, и вы можете ознакомиться с [glossary](https://www.kiali.io/documentation/glossary/concepts/).

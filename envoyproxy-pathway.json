@@ -15,8 +15,13 @@
       },
       {
         "course_id": "mTLS",
-        "title": "Istio 1.6.x Advanced: Mutual TLS",
+        "title": "Istio 1.6.x Расширение: Mutual TLS",
         "description": "Узнайте, как использовать Mutual TLS с Envoy."
+      },
+      {
+        "course_id": "kiali",
+        "title": "Istio 1.6.x Расширение: Observing с Kiali",
+        "description": "Узнайте, как использовать Observing с Kiali."
       }
 
     ]
