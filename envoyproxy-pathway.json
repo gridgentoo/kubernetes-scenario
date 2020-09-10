@@ -12,6 +12,11 @@
         "course_id": "securing-traffic-with-https",
         "title": "Защита трафика с помощью HTTPS и SSL/TLS",
         "description": "Узнайте, как использовать SSL-сертификаты с Envoy."
+      },
+      {
+        "course_id": "mTLS",
+        "title": "Istio 1.6.x Advanced: Mutual TLS",
+        "description": "Узнайте, как использовать Mutual TLS с Envoy."
       }
 
     ]
