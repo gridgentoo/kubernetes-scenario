@@ -1,8 +1,4 @@
-To secure HTTP traffic the addition of a ***`tls_context`*** is required as a filter. The TLS context provides the ability to specify a collection of certificates for the domains configured within Envoy Proxy. When an HTTPS request is being processed, the matching certificate will be used.
-
-In this case, the certificates are our self-signed generated in the first step.
-
-Для защиты HTTP-трафика необходимо добавить ***`tls_context`*** в качестве фильтра. **TLS context** предоставляет возможность указать набор сконфигурированных с **Envoy Proxy**. При обработке запроса **HTTPS** будет использоваться соответствующий сертификат.
+ Для защиты HTTP-трафика необходимо добавить ***`tls_context`*** в качестве фильтра. **TLS context** предоставляет возможность указать набор сконфигурированных с **Envoy Proxy**. При обработке запроса **HTTPS** будет использоваться соответствующий сертификат.
 
 В этом случае сертификаты являются самоподписанными **self-signed generated**, созданными на первом шаге.
 
@@ -12,7 +8,7 @@ In this case, the certificates are our self-signed generated in the first step.
 Он содержит схему необходимой поддержки **HTTPS**. 
 Он имеет два настроенных прослушивателя **listeners**: один на порт **8080 для HTTP-трафика**, а другой на порт **8443 для HTTPS-трафика**.
 
-Для прослушивателя **HTTPS listener** определен диспетчер подключений **HTTP Connection Manager**, который будет проксировать входящие запросы для конечных точек **`/service/1`** and **`/service/2`** endpoints. 
+Для прослушивателя **HTTPS listener** определен диспетчер подключений **HTTP Connection Manager**, который будет проксировать входящие запросы для конечных точек **`/service/1`** и **`/service/2`** **endpoints**. 
 Это должно быть расширено, чтобы включить требуемый  ***`tls_context`***, как показано ниже.
 
 <pre class="file" data-filename="envoy.yaml" data-target="insert" data-marker="#TODO:TLS-Context">
