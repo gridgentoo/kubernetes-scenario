@@ -39,6 +39,16 @@
         "description": "Как управлять умной маршрутизацией в Istio, управленить доступом, балансировкой нагрузки и ограничением скорости."
       },
       {
+        "course_id": "mTLS",
+        "title": "Istio 1.6.x Расширение: Mutual TLS",
+        "description": "Узнайте, как использовать Mutual TLS с Envoy."
+      },
+      {
+        "course_id": "kiali",
+        "title": "Istio 1.6.x Расширение: Observing с Kiali",
+        "description": "Узнайте, как использовать Observing с Kiali."
+      },
+      {
         "course_id": "istio-1.0.5",
         "title": "export ISTIO_VERSION=1.5.1",
         "description": "Istio version 1.5.1. Customize Istio settings using the Helm API"
