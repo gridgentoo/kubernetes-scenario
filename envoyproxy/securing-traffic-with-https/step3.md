@@ -1,10 +1,10 @@
-With the *TLS Context* defined, the site will be able to serve traffic over HTTPS. If a user happens to land on the HTTP version of the site, we want them to redirect them to the HTTPS version to ensure they are secure.
+С определенным  **TLS Context** сайт сможет обслуживать трафик через **HTTPS**. Если пользователь попадает на **HTTP**-версию сайта, мы хотим, чтобы он перенаправлял его на **HTTPS** версию, чтобы обеспечить безопасность.
 
 ## Edit HTTP Filter
 
-Within our HTTP configuration, as part of the filter match for the domain, a flag of ***`https_redirect: true`*** needs to be added to the filter configuration.
+В нашей конфигурации **HTTP**, как часть соответствия фильтра для домена, в конфигурацию **фильтра** необходимо добавить флаг  ***`https_redirect: true`*** .
 
-Our standard Envoy Proxy configuration looks like below.
+Наша стандартная конфигурация **Envoy Proxy** выглядит так, как показано ниже.
 
 <pre class="file">
 route_config:
@@ -17,7 +17,7 @@ route_config:
       prefix: "/"
 </pre>
 
-This needs to be extended to include the field HTTPS Redirect.
+Его необходимо расширить, чтобы включить поле **HTTPS Redirect**.
 
 <pre class="file" data-filename="envoy.yaml" data-target="insert" data-marker="#TODO:HTTP-Redirect">
 redirect:
@@ -25,6 +25,7 @@ redirect:
                   https_redirect: true
 </pre>
 
-When a user visits the HTTP version of the site, Envoy Proxy matches the domain and path based on the filter configuration. This cause the user to be redirected to the HTTPS version of the site.
+Когда пользователь посещает HTTP-версию сайта, **Envoy Proxy** сопоставляет домен и путь на основе **filter configuration**. 
+Это приводит к перенаправлению пользователя на **HTTPS* версию сайта.
 
-This can be seen within the completed example at `envoy-completed.yaml`{{open}}.
+Это можно увидеть в завершенном примере по адресу `envoy-completed.yaml`{{open}}.
