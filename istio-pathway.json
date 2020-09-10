@@ -9,11 +9,6 @@
         "description": "Инструкция по развертыванию ванильного Istio в ванильном Kubernetes."
       },
       {
-        "course_id": "istio-1.6.8",
-        "title": "export ISTIO_VERSION=1.6.8",
-        "description": "Инструкция по развертыванию ванильного Istio в ванильном Kubernetes."
-      },
-      {
         "course_id": "1-introduction",
         "title": "Введение в Istio-1.0.5 в OpenShift.",
         "description": "Знакомимся с Service Mesh. В этом сценарии, мы устанавим Istio в кластере OpenShift."
@@ -52,6 +47,11 @@
         "course_id": "istio-1.0.5",
         "title": "export ISTIO_VERSION=1.5.1",
         "description": "Istio version 1.5.1. Customize Istio settings using the Helm API"
+      },
+      {
+        "course_id": "istio-1.6.8",
+        "title": "export ISTIO_VERSION=1.6.8",
+        "description": "Инструкция по развертыванию ванильного Istio в ванильном Kubernetes."
       },
       {
         "course_id": "istio-test",
