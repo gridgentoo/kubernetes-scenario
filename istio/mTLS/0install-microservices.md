@@ -1,11 +1,11 @@
-Before we start this scenario, we need to deploy all microservices (customer, preference, recommendation).
+Прежде чем мы начнем этот сценарий, нам нужно развернуть все микросервисы **microservices** (**customer**, **preference**, **recommendation**).
 
-There's a script called `install-microservices.sh` that will
+Есть скрипт **`install-microservices.sh`**, который
 
-- Checkout the source code from https://github.com/redhat-developer-demos/istio-tutorial
-- Run `mvn package` on all projects
-- Create a docker image
-- Deploy the microservices with the sidecar proxy
+- **Ознакомьтесь** с исходным кодом на https://github.com/redhat-developer-demos/istio-tutorial
+- Запустить **`mvn package`** во всех проектах
+- Создать образ докера **docker image**
+- Разверните микросервисы с помощью дополнительного **sidecar proxy**
 
 Execute this script: `./install-microservices.sh`{{execute T1}}
 
