@@ -1,34 +1,38 @@
-Now that Istio gateway is in place, you can enable mTLS by applying next Istio resources:
+Теперь, когда шлюз **Istio gateway** установлен, вы можете включить **mTLS**, применив следующие ресурсы **Istio**:
 
-Check the file `istiofiles/authentication-enable-tls.yml`{{open}} that enables mTLS into tutorial namespace.
+Проверьте файл `istiofiles/authentication-enable-tls.yml`{{open}} , который включает **mTLS** в пространство этого Сценария.
 
-Check the file `istiofiles/destination-rule-tls.yml`{{open}} that makes services within tutorial namespace communicates with mTLS
+Проверьте файл `istiofiles/destination-rule-tls.yml`{{open}} который заставляет службы в пространстве имен этого Сценария, взаимодействовать с **mTLS**
 
-Apply these files:
+Примените эти файлы:
 
 `istioctl create -f ~/projects/istio-tutorial/istiofiles/authentication-enable-tls.yml; \
 istioctl create -f ~/projects/istio-tutorial/istiofiles/destination-rule-tls.yml `{{execute T1}}
 
-Then you can run:
+Тогда вы можете запустить:
 
 `curl ${GATEWAY_URL}`{{execute T1}}
 
-**Note:** The command above migh return `customer => 503 upstream connect error or disconnect/reset before headers`. In that case, **repeat the command** `curl ${GATEWAY_URL}`{{execute T1}} until you see `customer => preference => recommendation v1 from 'b87789c58-mfrhr': X`
+**Примечание:** Приведенная выше команда может вернуть `customer => 503 upstream connect error or disconnect/reset before headers`. В этом случае **repeat the command** `curl ${GATEWAY_URL}`{{execute T1}}, пока не увидите `customer => preference => recommendation v1 from 'b87789c58-mfrhr': X`
 
-And you’ll see exactly the same but now the communication between the services has been secured. How can you check that?
+Вы увидите то же самое, но теперь связь между сервисами защищена. Как это проверить?
 
-By sniffing traffic between services, which is a bit more tedious, open a new terminal tab and run next command:
+Отслеживая трафик между сервисами **sniffing traffic between services**, что немного утомительнее, откройте новую вкладку терминала и выполните следующую команду:
 
 `CUSTOMER_POD=$(oc get pod | grep cust | awk '{ print $1}' ); \
 oc exec -it $CUSTOMER_POD -c istio-proxy /bin/bash`{{execute T2}}
 
-Inside pod shell execute:
+Внутри  **pod shell** выполните:
 
 `IP=$(ifconfig |grep inet |grep 10.|awk '{ print $2}'|sed -e 's/addr://g'); sudo tcpdump -vvvv -A -i eth0 '((dst port 8080) and (net '$IP'))'`{{execute T2}}
 
 Now all communication that happens between customer service and preference service is dumped in the console.
 
 So now go back to Terminal 1 and execute:
+
+Теперь все коммуникации, которые происходят между **customer service** и службой предпочтений, сбрасываются в консоль.
+
+Итак, теперь вернитесь в Терминал 1 и выполните:
 
 `curl ${GATEWAY_URL}`{{execute T1}}
 
