@@ -11,12 +11,12 @@ Execute this script: `./install-microservices.sh`{{execute T1}}
 
 > The script will take between 2-5 minutes to complete. Don't worry if you see error messages.
 
-When the scripts ends, watch the creation of the pods, execute `oc get pods -w`{{execute T1}}
+Когда скрипты закончатся **scripts ends**, наблюдайте за созданием подов, выполните `oc get pods -w`{{execute T1}}
 
-Once that the microservices pods READY column are 2/2, you can hit `CTRL+C`. 
+Как только столбец READY для **microservices pods** станет 2/2, вы можете нажать `CTRL+C`.
 
-Try the microservice by typing `curl http://customer-tutorial.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com`{{execute interrupt T1}}
+Попробуйте микросервис, набрав `curl http://customer-tutorial.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com`{{execute interrupt T1}}
 
-It should return:
+Он должен вернуть:
 
 `customer => preference => recommendation v1 from {hostname}: 1`
