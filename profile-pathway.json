@@ -21,6 +21,11 @@
         "id": "quarkus-openshift"
       }, 
       {
+        "title": "Микросервисы и Автоматизации Бизнес Процессов с Kogito",
+        "description": "Кубики для автоматизации Бизнес Процессов с Kogito",
+        "id": "kogito" 
+      },
+      {
         "title": "Protobuf, gRPC, Jaeger, Zipkin в Istio",
         "description": "protobuf, gRPC, Jaeger, Zipkin",
         "id": "grpc" 
