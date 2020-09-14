@@ -6,9 +6,9 @@
         "id": "istio"
       },
       {
-        "title": "Микросервисы вместе с Envoy Proxy",
-        "description": "Изучите, как использовании Envoy.",
-        "id": "envoyproxy"
+        "title": "Микросервисы и Автоматизации Бизнес Процессов с Kogito",
+        "description": "Кубики для автоматизации Бизнес Процессов с Kogito",
+        "id": "kogito" 
       },
       {
         "title": "Reactive Microservices c фреймворком Vert.x в Istio",
@@ -21,9 +21,9 @@
         "id": "quarkus-openshift"
       }, 
       {
-        "title": "Микросервисы и Автоматизации Бизнес Процессов с Kogito",
-        "description": "Кубики для автоматизации Бизнес Процессов с Kogito",
-        "id": "kogito" 
+        "title": "Микросервисы вместе с Envoy Proxy",
+        "description": "Изучите, как использовании Envoy.",
+        "id": "envoyproxy"
       },
       {
         "title": "Protobuf, gRPC, Jaeger, Zipkin в Istio",
