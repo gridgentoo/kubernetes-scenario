@@ -15,13 +15,13 @@
       },
       { 
         "course_id": "file-based-dynamic-routing-configuration", 
-        "title": "FDynamic Routing, Конфигурация динамической маршрутизации на основе файлов",
+        "title": "Dynamic Routing, Конфигурация динамической маршрутизации на основе файлов",
         "description": "Узнайте, как динамически обновлять конфигурацию для маршрутизации трафика Route Traffic через файлы"    
       },
       { 
         "course_id": "api-based-dynamic-routing-configuration",
         "title": "API based dynamic endpoint discovery, Конфигурация динамического обнаружения конечных точек на основе API",
-        "description": "Сконфигурируйте Discovery Mechanism механизм обнаружения на основе REST-JSON API используемого Envoy для получения fetch cluster members."        
+        "description": "Сконфигурируйте Discovery Mechanism механизм на основе REST-JSON API используемого Envoy для fetch cluster members."        
       },
       {  
         "course_id": "detecting-service-health-with-healthchecks",
