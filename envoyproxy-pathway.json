@@ -12,7 +12,43 @@
         "course_id": "securing-traffic-with-https",
         "title": "Защита трафика с помощью HTTPS и SSL/TLS",
         "description": "Узнайте, как использовать SSL-сертификаты с Envoy."
+      },
+      { 
+        "course_id": "file-based-dynamic-routing-configuration", 
+        "title": "FDynamic Routing, Конфигурация динамической маршрутизации на основе файлов",
+        "description": "Узнайте, как динамически обновлять конфигурацию для маршрутизации трафика Route Traffic через файлы"    
+      },
+      { 
+        "course_id": "api-based-dynamic-routing-configuration",
+        "title": "API based dynamic endpoint discovery, Конфигурация динамического обнаружения конечных точек на основе API",
+        "description": "Сконфигурируйте Discovery Mechanism механизм обнаружения на основе REST-JSON API используемого Envoy для получения fetch cluster members."        
+      },
+      {  
+        "course_id": "detecting-service-health-with-healthchecks",
+        "title": "Обнаружение неработающих Сервисов с помощью Health Checks",
+        "description": "Понять, как проверки работоспособности Health Checks гарантируют, что трафик идет только на исправные доступные Сервисы"        
+      },
+      {
+        "course_id": "blue-green-deployments",
+        "title": "Имплемментация Blue / Green Rollouts",
+        "description": "Управляйте Canary releases для ваших приложений с помощью Envoy Proxy"        
+      },
+      {
+        "course_id": "load-balancing",
+        "title": "Управление политиками балансировки нагрузки Load Balancing Policies",
+        "description": "Узнайте, как настроить методы балансировки нагрузки load balancing techniques"        
+      },
+      {
+        "course_id": "implementing-metrics-tracing",
+        "title": "Имплементация метрик и возможностей Трейсинга",
+        "description": "Получите прозрачность Production Traffic с помощью Метрик и Трейсинга"        
+      },
+      { 
+        "course_id": "debugging-envoy-proxy",
+        "title": "Debugging Envoy Proxy",
+        "description": "Понять, как определять потенциальные проблемы"
       }
+
 
 
     ]
