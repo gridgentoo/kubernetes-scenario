@@ -6,17 +6,17 @@
         "id": "istio"
       },
       {
-        "title": "Микросервисы и Автоматизации Бизнес Процессов с Kogito",
-        "description": "Кубики для автоматизации Бизнес Процессов с Kogito",
+        "title": "Микросервисы и Автоматизации Бизнес Процессов с Kogito в Istio.",
+        "description": "Кубики для автоматизации Бизнес Процессов с Kogito, Swagger",
         "id": "kogito" 
       },
       {
-        "title": "Reactive Microservices c фреймворком Vert.x в Istio",
+        "title": "Reactive Microservices c фреймворком Vert.x в Istio.",
         "description": "Vert.x и In-Memory Hazelcast(или Ignite) для Reactive Microservices.",
         "id": "vertx-openshift"
       }, 
       {
-        "title": "Quarkus: Reactive Microservices c GraalVM в Istio",
+        "title": "Quarkus: Reactive Microservices c GraalVM в Istio.",
         "description": "Quarkus - Java-стек Kubernetes, созданный специально для GraalVM.",
         "id": "quarkus-openshift"
       }, 
