@@ -1,9 +1,9 @@
-In this scenario you will learn how to transform the Envoy static configuration to be dynamic, allowing changes to be made and automatically updated within Envoy.
+В этом сценарии вы узнаете, как преобразовать статическую конфигурацию Envoy в динамическую, позволяющую вносить изменения и автоматически обновляться в Envoy.
 
-You will learn:
+В сценарии Вы узнаете:
 
-* The Dynamic Configuration APIs available.
+     Доступные API для динамической конфигурации.
 
-* How to configure Envoy to use a dynamic file-based upstream configuration.
+     Как настроить Envoy для использования динамической конфигурации **dynamic file-based upstream** на основе файлов.
 
-* How to make changes to the configuration and see the results in Envoy.
+     Как внести изменения в конфигурацию и увидеть результат в Envoy.
