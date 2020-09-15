@@ -4,17 +4,17 @@
 
 ![Logo](/openshift/assets/middleware/middleware-kogito/logo.png)
 
-Реверс инжиниринг архитектуры Kogito-Runtimes
+Реверс инжиниринг архитектуры Kogito-Runtimes  
 
-https://github.com/gridgentoo/kogito-runtimes
+https://github.com/gridgentoo/kogito-runtimes. 
 
-Реверс инжиниринг архитектуры jbpm, a Business Process Management (BPM) Suite
+Реверс инжиниринг архитектуры jbpm, a Business Process Management (BPM) Suite. 
 
-https://github.com/gridgentoo/jbpm
+https://github.com/gridgentoo/jbpm. 
 
-Реверс инжиниринг архитектуры drools, Drools is a rule engine, DMN engine and complex event processing (CEP) engine for Java.
+Реверс инжиниринг архитектуры drools, Drools is a rule engine, DMN engine and complex event processing (CEP) engine for Java. 
 
-https://github.com/gridgentoo/drools/
+https://github.com/gridgentoo/drools/. 
 
 ### Cloud Native Business Automation
 
