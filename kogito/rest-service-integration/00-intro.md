@@ -1,11 +1,11 @@
 
-В этом сценарии вы узнаете 2 способа вызова микросервиса **RESTful** из **process/workflow** [Kogito](https://kogito.kie.org) process/workflow.
+В этом сценарии вы узнаете 2 способа вызова микросервиса **RESTful** из **process/workflow** [Kogito](https://kogito.kie.org).
 
 ## Что такое Kogito?
 
 ![Logo](/openshift/assets/middleware/middleware-kogito/logo.png)
 
-### BPMN2 and Services
+### BPMN2 и Services
 
 Спецификация **BPMN2** определяет **_Service Task_** узел активности **activity node**, используемый для вызова автоматизированного приложения (или Сервиса) для выполнения задачи. В [Kogito](https://kogito.kie.org) **_Service Task_** может быть реализован с использованием bean-компонента **CDI bean (Quarkus)** или компонента **Spring bean (Spring Boot)**.
 
