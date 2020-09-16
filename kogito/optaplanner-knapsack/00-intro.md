@@ -1,21 +1,34 @@
-In this scenario, you will learn how to implement an [OptaPlanner](https://www.optaplanner.org) application on [Quarkus](https://www.quarkus.io).
+В этом сценарии вы узнаете, как имплементировать [OptaPlanner](https://www.optaplanner.org) приложение на [Quarkus](https://www.quarkus.io).
 
 ![Logo](/openshift/assets/middleware/middleware-kogito/logo.png)
 ![Logo](/openshift/assets/middleware/middleware-kogito/optaPlannerLogo.png)
 
+Реверс инжиниринг архитектуры Kogito-Runtimes  
+
+https://github.com/gridgentoo/kogito-runtimes. 
+
+Реверс инжиниринг архитектуры jbpm, a Business Process Management (BPM) Suite. 
+
+https://github.com/gridgentoo/jbpm. 
+
+Реверс инжиниринг архитектуры drools, Drools is a rule engine, DMN engine and complex event processing (CEP) engine for Java. 
+
+https://github.com/gridgentoo/drools/. 
+
 ### Knapsack Problem
 
-The knapsack problem is a problem in combinatoral optimization: given a knapsack that can contain a maximum weight and a set of items with a certain
-weight and value, determine the combination of items to include in the knapsack that maximizes the value of the contents without exceeding the knapsack weight limit.
+Задача о рюкзаке **knapsack problem**  - это проблема комбинаторной оптимизации **combinatoral optimization**: задан рюкзак, который может содержать максимальный вес, и набор предметов с определенным весом и стоимость, определяют комбинацию предметов, которые нужно положить в рюкзак, чтобы максимизировать ценность содержимого, не превышая предельного веса рюкзака.
 
 ![Knapsack Problem](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Knapsack.svg/500px-Knapsack.svg.png)
 
 (image source: https://commons.wikimedia.org/wiki/File:Knapsack.svg , license: https://creativecommons.org/licenses/by-sa/2.5/deed.en)
 
-In this example, we have ingots of different weights and values that we want to put in our knapsack. OptaPlanner will select the combination of ingots that won't exceed the knapsack's maximum weight but will provide the highest value possible.
+В этом примере у нас есть слитки разного веса и стоимости, которые мы хотим положить в рюкзак. OptaPlanner выберет комбинацию слитков, которая не будет превышать максимальный вес ранца, но обеспечит максимально возможное значение.
 
-OptaPlanner is an A.I. constraint satisfaction solver that provides a highly scalable platform to find optimal solutions to NP-complete and NP-hard problems. OptaPlanner enables us to write these solutions in plain Java, which makes this technology available to a large group of software developers. Furthermore, the OptaPlanner Quarkus extension lets us write our OptaPlanner application as a cloud-native micro-service.
+**OptaPlanner** - это **A.I.** решатель удовлетворения ограничений - **constraint satisfaction solver**, который обеспечивает масштабируемую платформу для поиска оптимальных решений NP-полных и NP-сложных проблем, **NP-complete and NP-hard problems**. 
 
-### Other possibilities
+**OptaPlanner** позволяет нам писать эти решения на простом языке **Java**, что делает эту технологию доступной для большой группы разработчиков программного обеспечения. Кроме того, расширение **OptaPlanner Quarkus** позволяет нам писать наше приложение **OptaPlanner** как облачный микросервис.
 
-Learn more at [optaplanner.org](https://optaplanner.org), [kogito.kie.org](https://kogito.kie.org), and [quarkus.io](https://quarkus.io), or just drive on and get hands-on!
+### Другие возможности
+
+Узнайте больше на [kogito.kie.org](https://kogito.kie.org), или просто попробуйте далее!
