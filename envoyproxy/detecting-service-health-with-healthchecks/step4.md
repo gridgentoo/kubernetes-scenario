@@ -1,17 +1,18 @@
-Next we want to test how Envoy handles a node becoming unhealthy.
 
-In a separate terminal window, launch a loop that will send requests. This will allow you to identify the changes in status.
+Затем мы хотим проверить, как **Envoy handles** обрабатывает выход из строя ноды.
+
+В отдельном окне терминала запустите цикл, который будет отправлять запросы. Это позволит вам определить изменения статуса.
 
 `while true; do curl localhost; sleep .5; done`{{execute T2}}
 
 ## Mark Node Unhealthy
 
-With the following command, you can identify which Docker Container has the IP `172.18.0.3`. This will be the node that will become unhealthy and later be removed from the load balancing rotation.
+С помощью следующей команды вы можете определить, какой **Docker Container** имеет IP-адрес `172.18.0.3`. Это будет Нода, который выйдя из строя и позже будет удалена из ротации балансировки нагрузки.
 
 `docker ps -q | xargs -n 1 docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .Config.Hostname }}' | sed 's/ \// /'`{{execute T1}}
 
-To make the node unhealthy, call the endpoint `curl 172.18.0.3/unhealthy`{{execute T1}}
+Чтобы сделать ноды **unhealthy**, вызовите **endpoint** `curl 172.18.0.3/unhealthy`{{execute T1}}
 
-This will cause all future requests to return a 500 error message `curl 172.18.0.3 -i`{{execute T1}}
+Это приведет к тому, что все будущие запросы будут возвращать сообщение об ошибке **500 error message** `curl 172.18.0.3 -i`{{execute T1}}
 
-During this time, Envoy is sending requests to the health endpoint. If the health endpoint fails, it will continue to send traffic to the service until the `unhealthy_threshold` has been reached. At this point it will remove it from the load balancer rotation.
+В это время Envoy отправляет запросы в конечную точку работоспособности **health endpoint**. Если конечная точка работоспособности **health endpoint**, выходит из строя, она будет продолжать отправлять трафик в **service** до тех пор, пока не будет достигнут **`unhealthy_threshold`**. На этом этапе он удалит его из ротации балансировщика нагрузки **load balancer rotation**.
