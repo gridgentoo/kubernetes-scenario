@@ -1,9 +1,9 @@
-In this scenario, you will learn how to add a health check that will check if a service within the cluster is available to receive traffic or not. With a health check enabled, if a service crashes then Envoy will stop sending traffic. Also you will learn how to configure Outlier Detection to eject hosts based on the responses from real requests.
+В этом сценарии вы узнаете, как добавить проверку работоспособности **health check**, которая будет проверять, доступна ли служба в кластере для приема трафика. Если **health check**, проверка работоспособности включена, в случае сбоя службы **Envoy**, когда **Envoy** перестанет отправлять трафик. Также вы узнаете, как настроить обнаружение **Outlier Detection** для **eject hosts** на основе ответов от **real requests**.
 
-You will learn how to:
+Вы изучите:
 
-* Add a HTTP health check / Outlier Detection.
+* Добавить проверку работоспособности HTTP **HTTP health check** / обнаружение **Outlier Detection**.
 
-* Test load balancing options when a service is unavailable.
+* Тестируйте параметры балансировки нагрузки **load balancing**, когда сервис недоступен.
 
-* Ensure how to continue to deliver successful requests when services are unavailable.
+* Убедитесь, как продолжать отправлять успешные запросы  **successful requests**, когда сервисы недоступны.
