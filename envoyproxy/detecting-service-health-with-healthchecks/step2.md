@@ -22,3 +22,29 @@
 * **http_health_check.path**: указывает путь **HTTP path**, который будет запрошен во время проверки работоспособности **health checking**.
 
 Более подробную информацию об **API** можно найти по адресу [with the documentation](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/core/health_check.proto).
+
+### core.HealthCheck
+
+```
+{
+  "timeout": "{...}",
+  "interval": "{...}",
+  "initial_jitter": "{...}",
+  "interval_jitter": "{...}",
+  "interval_jitter_percent": "...",
+  "unhealthy_threshold": "{...}",
+  "healthy_threshold": "{...}",
+  "reuse_connection": "{...}",
+  "http_health_check": "{...}",
+  "tcp_health_check": "{...}",
+  "grpc_health_check": "{...}",
+  "custom_health_check": "{...}",
+  "no_traffic_interval": "{...}",
+  "unhealthy_interval": "{...}",
+  "unhealthy_edge_interval": "{...}",
+  "healthy_edge_interval": "{...}",
+  "event_log_path": "...",
+  "always_log_health_check_failures": "...",
+  "tls_options": "{...}"
+}
+```
