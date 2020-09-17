@@ -1,5 +1,5 @@
 {
-  "title": "Detecting Down Services with Health Checks",
+  "title": "Детектирование неработающих сервисов с помощью проверок Health Checks",
   "description": "Understand how health checks and outlier detection ensure traffic only goes to healthy, available, services",
   "icon": "fa-envoyproxy",
   "details": {
