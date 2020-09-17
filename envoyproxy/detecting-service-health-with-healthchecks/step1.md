@@ -1,7 +1,9 @@
-An initial envoy configuration file has been created at `envoy.yaml`{{open}}
+Первоначальный файл **envoy configuration** был создан на `envoy.yaml`{{open}}
 
-This is configured to proxy all incoming requests for any domain to `172.18.0.3` and `172.18.0.4`.
+Это настроено для проксирования всех входящих запросов для любого домена на `172.18.0.3` и `172.18.0.4`.
 
-However, at the moment, if `172.18.0.3` went down then Envoy would still continue to deliver traffic to the service. As a result, users would have a degraded experience and encounter errors.
+Однако на данный момент, если `172.18.0.3` выйдет из строя, **Envoy** все равно продолжит доставлять трафик в **service**. 
+В результате пользователи могли бы столкнуться c **degraded experience** и столкнуться с ошибками **encounter errors**.
 
-Instead, we want Envoy to automatically detect that the service is unavailable and remove it from the load balancer rotation. This is done by adding health checks to the cluster which will be defined in the next step.
+Вместо этого мы хотим, чтобы **Envoy** автоматически определял, что служба недоступна, и удаляла ее из **load balancer rotation**. 
+Это делается путем добавления проверок работоспособности в кластер, который будет определен на следующем шаге.
