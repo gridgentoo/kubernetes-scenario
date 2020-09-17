@@ -16,6 +16,13 @@ https://github.com/gridgentoo/jbpm.
 
 https://github.com/gridgentoo/drools/. 
 
+Opta Planner - Фреймворк оптимизации бизнес-ресурсов.  
+
+Drools - Движок принятия решений на базе бизнес-правил.  
+
+jBPM - Исполнение процессов в нотации BPMN.  
+
+
 ### Cloud Native Business Automation
 
 Бизнес-автоматизация охватывает прикладную область **business processes**, **workflows**, **decisions**, **rules** и **optimization**. **Kogito** привносит эти возможности в мир **Cloud Native**, используя последние инновации в среде **Java**, такие как [Quarkus](https://quarkus.io) и  [GraalVM](https://graalvm.org).
