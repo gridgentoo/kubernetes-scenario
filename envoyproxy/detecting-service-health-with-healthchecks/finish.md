@@ -1,10 +1,10 @@
-Congratulations! You successfully added health checks to your cluster configuration to ensure that users have the best experience possible!
+Поздравляю! Вы успешно добавили проверки работоспособности **health checks** в конфигурацию кластера, чтобы обеспечить максимальную эффективность работы пользователей!
 
-In this sceanario, you learned how to:
+В этом сценарии вы узнали, как:
 
-* Add a HTTP health check / Outlier Detection.
+* Добавить проверку работоспособности **HTTP health check** / **Outlier Detection**.
 
-* Test load balancing options when a service is unavailable.
+* Проверить параметры балансировки нагрузки **load balancing**, когда **service** недоступен.
 
-* Ensure how to continue to deliver successful requests when services are unavailable.
+* Убедились, как продолжать отправлять успешные запросы **deliver successful request**, когда **service** недоступны.
 
