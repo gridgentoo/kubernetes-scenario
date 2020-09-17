@@ -1,11 +1,13 @@
-In the background, Envoy will continue to check the health endpoint to see if it becomes available again. Once it has, it will be returned to the load balancer rotation.
+
+В фоновом режиме **Envoy** продолжит проверять конечную точку работоспособности **health endpoint**, чтобы увидеть, станет ли она снова доступной. 
+Как только это произойдет, он будет возвращен в ротацию балансировщика нагрузки **load balancer rotation**.
 
 ## Task
 
-Make the unavailable server healthy again with the command `curl 172.18.0.3/healthy`{{execute T1}}
+Восстановите работоспособность недоступного  **server healthy** с помощью команды `curl 172.18.0.3/healthy`{{execute T1}}
 
-After a few moments, 10s based on the envoy `internal` value, Envoy should detect that the service is healthy again.
+Через несколько секунд, 10s секунд на основе значения **envoy `internal`**, **Envoy** должен определить, что ***service** снова **healthy**.
 
-When Envoy Proxy now handles the incoming requests, they should be load balanced across the two services again.
+Когда **Envoy Proxy** теперь обрабатывает входящие запросы **incoming requests***, они снова должны быть сбалансированы **load balanced** по нагрузке между двумя сервисами.
 
 `curl localhost -i`{{execute T1}}
