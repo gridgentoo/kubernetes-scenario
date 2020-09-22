@@ -1,6 +1,6 @@
-Distributed tracing allows developers to obtain visualizations of call flows in large service oriented architectures. It can be invaluable in understanding serialization, parallelism, and sources of latency. For this example we will use Jaeger, an open source, end-to-end distributed tracing.
+Распределенная трассировка **Distributed tracing** позволяет разработчикам получать визуализации потоков вызовов **visualizations of call flows** в больших сервис-ориентированных архитектурах. Это может быть бесценным для понимания сериализации, параллелизма и источников задержки **latency**. В этом примере мы будем использовать **Jaeger**, сквозную распределенную трассировку **end-to-end distributed tracing** с открытым исходным кодом.
 
-We can see the tracing configuration in `envoy.yaml`{{open}}
+Мы можем увидеть конфигурацию трассировки в `envoy.yaml`{{open}}
 
 <pre class="file">
 tracing:
