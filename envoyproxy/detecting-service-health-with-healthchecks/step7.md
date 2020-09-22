@@ -18,3 +18,30 @@
 * **base_ejection_time**: базовое время, в течение которого хост **ejected**. Реальное время равно базовому времени, умноженному на количество раз, когда хост был удален. По умолчанию **30000ms or 30s**.
 
 Более подробную информацию об API можно найти в [Envoy documentation](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/cluster/outlier_detection.proto).
+
+См. [Обзор архитектуры](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/outlier#arch-overview-outlier-detection)для получения дополнительной информации об обнаружении выбросов **outlier detection**.
+
+```
+{
+  "consecutive_5xx": "{...}",
+  "interval": "{...}",
+  "base_ejection_time": "{...}",
+  "max_ejection_percent": "{...}",
+  "enforcing_consecutive_5xx": "{...}",
+  "enforcing_success_rate": "{...}",
+  "success_rate_minimum_hosts": "{...}",
+  "success_rate_request_volume": "{...}",
+  "success_rate_stdev_factor": "{...}",
+  "consecutive_gateway_failure": "{...}",
+  "enforcing_consecutive_gateway_failure": "{...}",
+  "split_external_local_origin_errors": "...",
+  "consecutive_local_origin_failure": "{...}",
+  "enforcing_consecutive_local_origin_failure": "{...}",
+  "enforcing_local_origin_success_rate": "{...}",
+  "failure_percentage_threshold": "{...}",
+  "enforcing_failure_percentage": "{...}",
+  "enforcing_failure_percentage_local_origin": "{...}",
+  "failure_percentage_minimum_hosts": "{...}",
+  "failure_percentage_request_volume": "{...}"
+}
+```
