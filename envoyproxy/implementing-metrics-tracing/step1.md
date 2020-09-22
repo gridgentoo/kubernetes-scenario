@@ -1,18 +1,18 @@
-Prometheus is an open-source monitoring solution that can be integrated with Envoy's own stats.
 
-Now, let's see the prometheus configuration:
+**Prometheus** - это решение для мониторинга с открытым исходным кодом, которое можно интегрировать с собственной статистикой **Envoy-я**.
+
+Теперь давайте посмотрим на конфигурацию **prometheus**:
 
 `prometheus.yml`{{open}}
 
-We can see that the prometheus config is using a job named  `envoy`.
+Мы видим, что конфигурация **prometheus** использует **job** с именем **`envoy`**.
 
 ```
 scrape_configs:
   - job_name: 'envoy'
     metrics_path: /stats/prometheus
 ```
-
-Start prometheus with command:
+Запустите **prometheus** командой:
 
 ```
 docker run -d -p 9090:9090 \
@@ -21,6 +21,6 @@ docker run -d -p 9090:9090 \
     prom/prometheus
 ```{{execute}}
 
-You can access to the prometheus dashboard using this link:
+Вы можете получить доступ к панели управления **Prometheus** по этой ссылке:
 
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/targets
