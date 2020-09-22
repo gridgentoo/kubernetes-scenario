@@ -12,10 +12,11 @@ tracing:
       shared_span_context: false
 </pre>
 
-Ensure that Jaeger is configured to accept Zipkin requests via the *COLLECTOR_ZIPKIN_HTTP_PORT* Environment Variable.
 
-One important configuration for our example is telling to the connection manager that generates the
- `x-request-id` header if it does not exist.
+Убедитесь, что **Jaeger** настроен на прием запросов **Zipkin** через переменную среды  **COLLECTOR_ZIPKIN_HTTP_PORT**.
+
+Одна из важных конфигураций для нашего примера - это сообщение **connection manager**, который генерирует
+ `x-request-id` **header** заголовок, если он не открыт.
 
  <pre class="file">
  generate_request_id: true
