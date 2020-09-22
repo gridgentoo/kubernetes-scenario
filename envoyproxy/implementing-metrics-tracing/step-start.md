@@ -51,3 +51,4 @@ docker run -d katacoda/docker-http-server:healthy;
 **Envoy** отвечает на **request** и балансирует между двумя узлами с помощью стратегии **`ROUND_ROBIN`** в соответствии с нашей конфигурацией.
 
 Кроме того, вы можете проверить это через локальный браузер с URL-адресом https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+
