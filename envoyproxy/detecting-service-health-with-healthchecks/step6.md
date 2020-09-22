@@ -1,15 +1,18 @@
-This step will show what happens when all services are unavailable. In an ideal world, this will never happen but when it does it's important to understand the response to aid debugging and responsiveness. More information on [Debugging Envoy Proxy]() can be found within the [Interactive Scenario]().
 
-At the moment there are two healthy HTTP servers running which Envoy Proxy is load balancing between them.
+Этот шаг покажет, что происходит, когда все **services** недоступны. В идеальном мире этого никогда не произойдет, но когда это произойдет, важно понять реакцию, чтобы облегчить **debugging** и скорость реагирования. 
+
+На данный момент работают два исправных **healthy HTTP servers**, между которыми выполняется балансировка нагрузки **Envoy Proxy**.
 
 ## Task
 
-To make all the HTTP servers unhealthy, run the command `curl 172.18.0.3/unhealthy; curl 172.18.0.4/unhealthy;`{{execute T1}}. As before, this will trigger an endpoint to cause the HTTP server to fail.
+Чтобы вывести все **HTTP**-серверы из строя, выполните команду `curl 172.18.0.3/unhealthy; curl 172.18.0.4/unhealthy;`{{execute T1}}. 
+
+Как и раньше, это приведет к срабатыванию конечной точки, которая вызовет сбой **HTTP**-сервера.
 
 ## Envoy Response
 
-Envoy Proxy's configuration has defined two endpoints, but they are now both unavailable.
+В конфигурации **Envoy Proxy** определены две конечные точки **endpoints**, но теперь обе они недоступны.
 
-When new requests come into Envoy, the proxy will return a 503 message with an error relating to upstream servers being unavailable.
+Когда в **Envoy** поступают новые запросы, прокси возвращает сообщение **503 message** с ошибкой, связанной с недоступностью вышестоящих серверов.
 
 `curl localhost -i`{{execute T1}}
