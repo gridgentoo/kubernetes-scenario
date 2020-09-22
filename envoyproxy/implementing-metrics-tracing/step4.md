@@ -1,14 +1,14 @@
-You can see the statistics generated in plan text in this URL:
+Вы можете увидеть **statistics generated**, созданную в тексте плана по этому URL:
 
 https://[[HOST_SUBDOMAIN]]-9901-[[KATACODA_HOST]].environments.katacoda.com/stats/prometheus
 
-And you can use one particular field to build a graph, for example:
+И вы можете использовать одно конкретное поле для построения графика, например:
 `envoy_cluster_external_upstream_rq`
 
 ![](/envoyproxy/scenarios/implementing-metrics-tracing/assets/envoy_cluster_external_upstream_rq.png)
 
-To build the graph, go to the dashboard:
+Чтобы построить график, перейдите в панель управления **dashboard**:
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/graph
 
-And use this query:
+И используйте этот запрос **query**:
 ```envoy_cluster_external_upstream_rq{envoy_cluster_name="targetCluster"}```{{copy}}
