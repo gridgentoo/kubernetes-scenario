@@ -1,11 +1,11 @@
-With the  Outlier Detection in place, Envoy will remove a host based on the responses from real requests.
+При наличии функции обнаружения выбросов **Outlier Detection**, **Envoy** удалит хост на основе ответов на **real requests**.
 
 ## Testing
 
-Start two nodes, both start in a healthy state.
+Запустите две ноды, оба запускаются в **healthy state**.
 `docker run -d katacoda/docker-http-server:healthy; docker run -d katacoda/docker-http-server:healthy;`{{execute T1}}
 
-Start Envoy with the command:
+Запустите **Envoy** командой:
 
 ```
 docker run -d --name proxy2 -p 81:8080 \
@@ -14,20 +14,21 @@ docker run -d --name proxy2 -p 81:8080 \
     envoyproxy/envoy
 ```{{execute T1}}
 
-In a separate terminal window, launch a loop that will send requests. This will allow you to identify the changes in status.
+В отдельном окне терминала запустите цикл, который будет отправлять запросы **send requests**. Это позволит вам определить изменения статуса.
 
 `while true; do curl localhost:81; sleep .5; done`{{execute T3}}
 
-## Mark Node Unhealthy
+## **Mark Node Unhealthy** - отметить ноду как нездоровый
 
-To make the node unhealthy, call the endpoint `curl 172.18.0.5/unhealthy`{{execute T1}}
+Чтобы сделать узел неработоспособным **unhealthy**, вызовите конечную точку `curl 172.18.0.5/unhealthy`{{execute T1}}
 
-This will cause all future requests to return a 500 error message `curl 172.18.0.5 -i`{{execute T1}}.
+Это приведет к тому, что все будущие **requests** будут возвращать сообщение об ошибке 500 `curl 172.18.0.5 -i`{{execute T1}}.
 
-During this time, after the 3rd request with code `5xx`, Envoy will eject the node. You can see in the second terminal this behavior.
+В это время, после **3rd request** с кодом `5xx`, **Envoy** **eject** Ноду. Вы можете увидеть это поведение во втором терминале.
 
-## Mark Node Healthy
+## **Mark Node Healthy** - отметить ноду как работоспособный
 
-You can mark the node healthy again, and see how Envoy will send traffic to that node again.
+Вы можете снова отметить узел как работоспособный **healthy**  и посмотреть, как **Envoy** снова будет отправлять трафик на этот узел.  
+
 `curl 172.18.0.5/healthy`{{execute T1}}.
 
