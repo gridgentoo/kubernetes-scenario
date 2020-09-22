@@ -1,7 +1,7 @@
-Congratulations. You have successfully:
+Поздравляю. Вы успешно:
 
-- Configured Envoy to expose statistics in Prometheus
-- Learned how to use Graphana to build dashboards with Envoy statistics
-- Made the configuration to send traces to Jaeger
+- Сконфигурировали **Envoy** для отображения статистики в **Prometheus**
+- Изучили как использовать **Graphana** для создания информационных панелей **dashboards** c **Envoy statistics**
+- Сделалb конфигурацию для отправки трассировки в **Jaeger**
 
-Continue completing Katacoda scenarios to learn more about the potential of [Envoy](https://www.envoyproxy.io/).
+Продолжайте выполнять сценарии Katacoda, чтобы узнать больше о потенциале [Envoy](https://www.envoyproxy.io/).
