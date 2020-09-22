@@ -26,14 +26,14 @@ URL-адрес **phometheus** должен быть:
 
 ## Build a dashboard
 
-In order to build a dashboard you can build one from scratch or you can use an existing one, for example:
+Чтобы создать информационную панель **dashboard**, вы можете создать ее с нуля или использовать уже существующую, например:
 https://grafana.com/dashboards/6693
 
-Let's use this existing dashboard. Copy the ID, and use the option `Import`.
+Давайте использовать эту существующую панель управления **dashboard**. Скопируйте идентификатор и используйте опцию `Import`.
 
 `6693`{{copy}}
 
-Select **Prometheus** as the data source and Import.
+Выберите **Prometheus**  в качестве источника данных и **Import**.
 
 ![](/envoyproxy/scenarios/implementing-metrics-tracing/assets/import.png)
 
