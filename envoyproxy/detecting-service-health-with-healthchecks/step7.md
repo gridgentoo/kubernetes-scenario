@@ -1,8 +1,8 @@
-Unlike active health checking, *Outlier Detection* (sometimes called passive health checking) uses the responses from real requests to determine whether an endpoint is healthy. Once an endpoint is removed, Envoy uses a time-out based approach for re-insertion, where unhealthy hosts are re-added to the cluster after a configurable interval. Each subsequent removal increases the interval, so a persistently unhealthy endpoint does as little damage as possible to user traffic.
+В отличие от активной проверки работоспособности **health checking**, обнаружение выбросов *Outlier Detection*  (иногда называемое пассивной проверкой работоспособности **passive health checking**) использует ответы от реальных запросов, чтобы определить, исправна ли конечная точка **endpoint is healthy**. После удаления конечной точки **endpoint is removed** Envoy использует подход, основанный на тайм-ауте, для повторной вставки, при котором неработоспособные хосты повторно добавляются в кластер после настраиваемого интервала. При каждом последующем удалении интервал увеличивается, поэтому постоянно неработоспособная конечная точка **unhealthy endpoint** наносит минимальный ущерб пользовательскому трафику **user traffic**.
 
-Like health checks, outlier detection is configured per-cluster. This configuration removes a host for 30 seconds when it returns 3 consecutive 5xx errors:
+Как и проверки работоспособности **health checks**, обнаружение выбросов настраивается для каждого кластера. Эта конфигурация удаляет хост на 30 секунд, когда он возвращает 3 раз последовательно **5xx errors**:
 
-Open the file `envoy1.yaml`{{open}} and add the following configuration:
+Откройте файл `envoy1.yaml`{{open}} и добавьте следующую конфигурацию:
 
 <pre class="file" data-filename="envoy1.yaml" data-target="append">
     outlier_detection:
@@ -10,10 +10,11 @@ Open the file `envoy1.yaml`{{open}} and add the following configuration:
         base_ejection_time: "30s"
 </pre>
 
-The key fields are:
+Ключевые поля **key fields**:
 
-* **consecutive_5xx**: If an upstream host returns some number of consecutive 5xx, it will be ejected. Note that in this case a 5xx means an actual 5xx respond code, or an event that would cause the HTTP router to return one on the upstream’s behalf (reset, connection failure, etc.).
+* **sequence_5xx**: если **upstream host** возвращает некоторое количество последовательных 5xx, он будет удален. 
+Обратите внимание, что в этом случае **5xx** означает фактический код ответа **5xx** или событие, которое заставит маршрутизатор HTTP вернуть его от имени потока **upstream’s behalf (reset, connection failure, etc.)**.
 
-* **base_ejection_time**: The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.
+* **base_ejection_time**: базовое время, в течение которого хост **ejected**. Реальное время равно базовому времени, умноженному на количество раз, когда хост был удален. По умолчанию **30000ms or 30s**.
 
-More details on the API can be found at [Envoy documentation](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/cluster/outlier_detection.proto).
+Более подробную информацию об API можно найти в [Envoy documentation](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/cluster/outlier_detection.proto).
