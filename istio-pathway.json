@@ -39,8 +39,13 @@
         "description": "Узнайте, как использовать Mutual TLS с Envoy."
       },
       {
-        "course_id": "kiali",
-        "title": "Istio 1.6.x Расширение: Observing с Kiali",
+        "course_id": "adv1-kiali",
+        "title": "Istio 1.0.5: Observing с Kiali",
+        "description": "Узнайте, как использовать Observing с Kiali."
+      },
+      {
+        "course_id": "istio-1.7.2",
+        "title": "Istio 1.7.2: Observing с Kiali",
         "description": "Узнайте, как использовать Observing с Kiali."
       },
       {

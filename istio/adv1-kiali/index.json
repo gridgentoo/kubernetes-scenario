@@ -19,11 +19,6 @@
     "imageid": "openshift-3-11", "port": 8443
   },
   "details": {
-    "assets": {
-      "host01": [
-          { "file": "install-microservices.sh", "target": "/root/", "chmod": "+x" }
-      ]
-    },
     "finish": {
         "text": "finish.md"
     },
@@ -34,7 +29,6 @@
       "courseData": "run-init.sh"
     },
     "steps": [
-        { "title": "Install microservices", "text": "0install-microservices.md" },
         { "title": "How to install Kiali?", "text": "1installing-kiali.md" },
         { "title": "Explore Kiali", "text": "2explore-kiali.md" }
     ]

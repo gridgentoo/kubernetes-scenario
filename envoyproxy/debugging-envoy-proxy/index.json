@@ -1,5 +1,5 @@
 {
-  "live": false,
+  "live": true,
   "title": "Debugging Envoy Proxy",
   "description": "Understand how to identify potential problems",
   "icon": "fa-envoyproxy",
