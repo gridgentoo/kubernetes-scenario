@@ -43,13 +43,13 @@ https://grafana.com/dashboards/6693
 
 `while true; do curl localhost; sleep .1; done`{{execute interrupt T2}}
 
-Should see a big spike in the traffic on the dashboard.
+Должен увидеть большой всплеск **big spike** трафика на панели инструментов **dashboard**.
 
 ## Generate Errors
 
 `curl 172.18.0.3/unhealthy; curl 172.18.0.4/unhealthy;`{{execute}}
 
-Within Prometheus, you will also see a increase in the number of 500 error messages.
+В **Prometheus** вы также увидите увеличение количества сообщений об ошибках **500 error messages**.
 
 https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/graph
 
