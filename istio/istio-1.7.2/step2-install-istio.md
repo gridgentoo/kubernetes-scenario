@@ -1,22 +1,23 @@
-This scenario has been tested with this version of Istio:
+Этот сценарий был протестирован с этой версией Istio:
 
-`export ISTIO_VERSION=1.7.0`{{execute}}
+`export ISTIO_VERSION=1.7.2`{{execute}}
 
-As new versions arrive, this scenario will be upgraded. This `ISTIO_VERSION` will be referenced by the installer.
+По мере поступления новых версий этот сценарий будет обновляться. На эту версию `ISTIO_VERSION` будет ссылаться установщик.
 
 ## Istio operator
 
-The Kubernetes Operator pattern is vital for multi-component solutions that are installed on Kubernetes. Often these Operators are installed with the Helm package manager for Kubernetes. While the Istio operator is installed using Helm, the Istio install isolates you from that dependency. This scenario follows the recommendations (since version 1.6) for installing the Istio operator using its installer.
+**Kubernetes Operator pattern** жизненно важен для многокомпонентных решений, инсталлируемых на **Kubernetes**. Часто эти **Operators** инсталлируются вместе с **Helm package manager** для **Kubernetes**. Хотя **Istio operator** инсталлируются с помощью Helm, установка **Istio** изолирует вас от этой **dependency**. 
+В этом сценарии мы следуем рекомендациям (начиная с версии **1.6**) по инсталляции **Istio operator** с помощью его установщика.
 
-Download the Istio package:
+Загрузите **Istio package**:
 
 `curl -L https://istio.io/downloadIstio | sh -`{{execute}}
 
-Install the Istio client, command-line tool:
+Инсталлируйте **Istio** в командной строке:
 
 `export PATH="$PATH:/root/istio-${ISTIO_VERSION}/bin"`{{execute}}
 
-Verify the version of the command-line tool:
+Проверьте версию **istio** в командной строке:
 
 `istioctl version`{{execute}}
 
