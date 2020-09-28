@@ -44,6 +44,11 @@
         "description": "Узнайте, как использовать Observing с Kiali."
       },
       {
+        "course_id": "istio-1.7.1",
+        "title": "Istio 1.7.1: Observing с Kiali",
+        "description": "Узнайте, как использовать Observing с Kiali."
+      },
+      {
         "course_id": "istio-1.7.2",
         "title": "Istio 1.7.2: Observing с Kiali",
         "description": "Узнайте, как использовать Observing с Kiali."

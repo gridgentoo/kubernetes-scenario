@@ -1,0 +1,33 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: integrations-gateway
+spec:
+  selector:
+    istio: ingressgateway # use Istio default gateway implementation
+  servers:
+  - port:
+      number: 8080
+      name: http
+      protocol: HTTP
+    hosts:
+    - "2886795283-8080-ollie02.environments.katacoda.com"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: grafana
+spec:
+  hosts:
+  - "2886795283-8080-ollie02.environments.katacoda.com"
+  gateways:
+  - integrations-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /grafana
+    route:
+    - destination:
+        port:
+          number: 3000
+        host: grafana.istio-system
