@@ -1,0 +1,94 @@
+{
+  "title": "Istio Getting Started",
+  "description": "Introduction to Istio with the Bookinfo App.",
+  "difficulty":	"Introduction",
+  "time":	"25 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Kubernetes Cluster",
+        "text": "step1-k8s.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Istio",
+        "text": "step2-install-istio.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Istio Architecture",
+        "text": "step3-istio-arch.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Istio Integrations",
+        "text": "step4-integrations.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install Bookinfo App",
+        "text": "step5-install-bookinfo.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Bookinfo Architecture",
+        "text": "step6-bookinfo-arch.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Istio Networking",
+        "text": "step7-networking.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Service Destination Rules",
+        "text": "step8-destinations.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Traffic Management",
+        "text": "step9-traffic.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Access Metrics",
+        "text": "step10-metrics.md",
+        "code": "clear.sh"
+      }
+    ],
+  "intro": {
+    "text": "intro.md",
+    "courseData": "init-background.sh",
+    "code": "init-foreground.sh",
+    "credits": "[Jonathan Johnson](http://www.dijure.com)"
+  },
+  "finish": {
+      "text": "finish.md"
+  },
+  "assets": {
+      "host01": [
+        {"file": "katacoda-template.yaml", "target": "/root"},
+        {"file": "virtualservices.yaml", "target": "/root"},
+        {"file": "token.sh", "target": "/usr/local/bin", "chmod": "+x"}
+      ]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000},
+      {"name": "Bookinfo", "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
+      {"name": "Prometheus", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
+      {"name": "Grafana", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
+      {"name": "Kiali", "href": "https://[[HOST_SUBDOMAIN]]-20001-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
+      {"name": "Jaeger", "href": "https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/productpage"},
+      {"name": "Zipkin", "href": "https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/productpage"}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}

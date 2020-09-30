@@ -22,6 +22,11 @@
         "course_id": "chaos-mesh",
         "title": "Chaos Mesh",
         "description": "Применение облачной chaos engineering к вашим приложениям с помощью Chaos Mesh."
+      },
+      {
+        "course_id": "istio-intro",
+        "title": "Istio 1.7.3 начало работы",
+        "description": "Знакомство с Istio с приложением BookInfo."
       }
    
     ]
