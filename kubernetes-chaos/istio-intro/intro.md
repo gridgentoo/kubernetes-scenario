@@ -1,9 +1,9 @@
 <img align="right" src="./assets/istio.png" width="300">
 
-Istio 1.7.3	September 29, 2020
-Istio 1.7.2	September 18, 2020
-Istio 1.7.1	September 10, 2020
-Istio 1.7	August 21, 2020
+Istio 1.7.3	September 29, 2020  
+Istio 1.7.2	September 18, 2020  
+Istio 1.7.1	September 10, 2020  
+Istio 1.7	August 21, 2020  
 
 Networking layers have traditionally been a burden on engineering organization to get networking right. Networking layers such as meshes look as clusters as a whole and attempt to add networking controls. An efficient mesh is one that can be declared with infrastructure-as-code ([IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)).
 

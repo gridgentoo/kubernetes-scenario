@@ -1,9 +1,16 @@
-The chaos dashboard accessible via a NodePort. For this scenario we need the nodePort at a specific value, rather than it's current random port number. Set the nodePort to a specific port:
+Панель управления хаосом **chaos dashboard**, доступная через **NodePort**. Для этого сценария нам нужен **nodePort** с определенным значением, а не текущий случайный номер порта. Установите **nodePort** на определенный порт:
 
 `kubectl patch service chaos-dashboard -n chaos-mesh --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'`{{execute}}
 
-With the correct port value set, the web interface for Chaos Mesh dashboard can be seen from the tab "Chaos Mesh" above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
+В чем разница между NodePorts, LoadBalancers и Ingress. Все это разные способы получить внешний трафик в кластер. Давайте посмотрим, чем они отличаются, и когда использовать каждый из них.
+ https://habr.com/ru/company/southbridge/blog/358824/
 
-There are no experiments yet, but take a few moments to explore the general layout of the dashboard. There is a way through the user interface to create, update, and delete experiments. In the next steps, you will define and submit an experiment trough a YAML manifest rather than this interface.
+### NodePort
 
-Leave the dashboard tab open so you can reference it again once you have some experiments running.
+Сервис NodePort — самый примитивный способ направить внешний трафик в сервис. NodePort, как следует из названия, открывает указанный порт для всех Nodes, и трафик на этот порт перенаправляется сервису.
+
+Если задано правильное значение порта **port value set**, веб-интерфейс для панели управления **Chaos Mesh** можно увидеть на вкладке **"Chaos Mesh"** над областью командной строки или по этой ссылке: https://[[HOST_SUBDOMAIN]]-31111-[[KATACODA_HOST]].environments.katacoda.com/.
+
+Пока нет экспериментов, но потратьте немного времени, чтобы изучить общий вид панели инструментов **Chaos dashboard**. Через пользовательский интерфейс можно создавать, обновлять и удалять эксперименты. На следующих шагах вы определите и отправите эксперимент через **YAML manifest**, а не через этот интерфейс.
+
+Оставьте вкладку панели инструментов **dashboard** открытой, чтобы вы могли снова сослаться на нее после проведения экспериментов.

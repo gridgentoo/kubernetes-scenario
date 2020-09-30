@@ -1,4 +1,4 @@
-Chaos Mesh project offers a rich selection of experiment types. Currently, here are the choices:
+Проект **Chaos Mesh** предлагает богатый выбор типов экспериментов. В настоящее время доступны следующие варианты:
 
 | Category      | Type             | Experiment Description  |
 |:-------------:|------------------|-------------------------|
@@ -20,4 +20,6 @@ Chaos Mesh project offers a rich selection of experiment types. Currently, here 
 | Stress        | Memory           | Simulate pod memory stress. |
 | Stress        | CPU & Memory     | Simulate both CPU and memory stress on Pods. |
 
-You can also use this scenario as a sandbox to create other experiments and experience the growing list of Chaos Mesh features. In the next steps, you will create some experiments.
+
+Вы также можете использовать этот сценарий в качестве песочницы для создания других экспериментов и изучения растущего списка функций **Chaos Mesh**. 
+На следующих этапах мы проведем несколько экспериментов.

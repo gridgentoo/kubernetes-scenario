@@ -1,26 +1,27 @@
-Your first experiment will apply a network delay to an application.
+Ваш первый эксперимент применит к приложению **network delay** сетевую задержку.
 
-## Install Example Web-show application
+## Инсталлируйте пример Web-show приложения 
 
-Install an example application as a target for the experiment. This application is designed by the Chaos Mesh project as a _hello world_ example for your first experiment. The Deployment and Service YAMLs have been provided. The application needs an environment variable for the TARGET_IP, which is the cluster IP, so this context you provide as a ConfigMap. That ConfigMap variable is referenced in the Deployment YAML.
+Инсталлируйте пример приложения в качестве цели для эксперимента. Это приложение разработано проектом **Chaos Mesh** как пример **_hello world_** для вашего первого эксперимента. Предоставляются **YAML** для развертывания и обслуживания. Приложению требуется переменная среды для **TARGET_IP**, который является **IP-адресом** кластера, поэтому этот контекст вы предоставляете как **ConfigMap**. Эта переменная **ConfigMap** упоминается в **Deployment YAML**.
 
-Create the ConfigMap with the IP context:
+
+Создайте **ConfigMap** с контекстом **IP context**:
 
 `TARGET_IP=$(kubectl get pod -n kube-system -o wide| grep kube-controller | head -n 1 | awk '{print $6}')`{{execute}}
 
 `kubectl create configmap web-show-context --from-literal=target.ip=${TARGET_IP}`{{execute}}
 
-Apply the Deployment and Service declarations:
+Примените декларации **declarations** о развертывании для **Deployment и Service**:
 
 `kubectl apply -f web-show-deployment.yaml`{{execute}}
 
 `kubectl apply -f web-show-service.yaml`{{execute}}
 
-It will take a moment to start. You can see the application status in the default namespace:
+Для начала потребуется некоторое время. Вы можете увидеть статус приложения в пространстве имен по умолчанию **default namespace**:
 
 `kubectl get deployments,pods,services`{{execute}}
 
-With the web-show application running, its web interface can be accessed from the "Web Show" above the command-line area or this link: https://[[HOST_SUBDOMAIN]]-30081-[[KATACODA_HOST]].environments.katacoda.com/.
+При запущенном приложении **web-show** к его **web interface** можно получить доступ из **"Web Show"** над областью командной строки или по этой ссылке: https://[[HOST_SUBDOMAIN]]-30081-[[KATACODA_HOST]].environments.katacoda.com/.
 
 ## Define Experiment
 
