@@ -1,0 +1,16 @@
+(function(){
+  window['optimizely'] = window['optimizely'] || [];
+  window['optimizely'].push(['activateGeoDelayedExperiments', {
+    'location':{
+      'city': "HARTFORD",
+      'continent': "NA",
+      'country': "US",
+      'region': "CT"
+    },
+    'ip':"73.38.186.8"
+  }]);
+})
+//
+()
+
+;

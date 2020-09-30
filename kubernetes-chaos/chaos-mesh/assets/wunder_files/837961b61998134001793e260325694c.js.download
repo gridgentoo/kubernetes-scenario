@@ -1,0 +1,2 @@
+Bootstrapper.bindImmediate(function(){Bootstrapper.bindImmediate(function(){var Bootstrapper=window["Bootstrapper"];var ensightenOptions=Bootstrapper.ensightenOptions;Bootstrapper.registerDataDefinition(function(){Bootstrapper.data.define({extract:function(){return Bootstrapper.data.local.utils.get("kxkuid")},transform:function(val){return val?val:""},load:"instance",trigger:Bootstrapper.data.immediateTrigger,dataDefName:"ADBP - Krux ID",collection:"ADBP",source:"Manage",priv:"false"},{id:"49318"})},
+49318)},-1,-1)},-1,-1);

@@ -1,0 +1,69 @@
+//<script>
+bouncex.tryCatch(function reloadCampaigns(){
+	var newCampaigns = false;
+	bouncex.creatives = false;
+	bouncex.brandStyles = false;
+	bouncex.webfonts = false;
+
+	if (bouncex.gbi) {
+		bouncex.gbi.stacks = false;
+	}
+
+	var newCookie = {"v":{"completed_signup":false,"last_session_vid":1599057792654898,"session_count":83,"submitted_underscored":false,"submitted_thepoint":false,"submitted_fareedsglobalbriefing":false,"submitted_resultsarein":false,"submitted_fivethings":false,"submitted_reliablesources":false,"submitted_provokepersuade":false,"submitted_goodstuff":false,"submitted_5cosas":false,"submitted_livevideo":false,"submitted_indiaalerts":false,"submitted_beforethebell":false,"submitted_impeachment":false,"submitted_meanwhile":false,"submitted_breakingnews":false,"submitted_electioncenter":false,"submitted_coronavirus":false,"submitted_what_matters":false,"submitted_cnn10":false,"submitted_worktransformed":false,"submitted_business":false,"submitted_sleep":false,"submitted_nightcap":false},"fvt":1597250096,"vid":1599057792654898,"ao":7,"lp":"https%3A%2F%2Fwww.cnn.com%2F","as":0,"vpv":1,"d":"d","r":"","cvt":1599057792,"sid":1,"gcr":76,"m":0,"did":"2711042497492506589","lvt":1599057792,"campaigns":{"889194":{"lvt":1598608503,"lavid":1},"917423":{"lvt":1598628816,"lavid":1},"917425":{"lvt":1598582826,"lavid":1},"1121066":{"lvt":1598074274,"lavid":1},"1152861":{"lvt":1597322244,"lavid":1,"la":1597322244,"fsa":1597322244,"as":1,"ao":1,"oa":[1597322244],"io":1,"wc":1597322284},"1152870":{"lvt":1598074010,"lavid":1,"la":1598073942,"fsa":1597294059,"as":1,"ao":2,"oa":[]},"1152879":{"lvt":1598896792,"lavid":1,"la":1598896732,"fsa":1598896732,"as":1,"ao":1,"oa":[1598896732],"io":1},"1173757":{"lvt":1597322107,"lavid":1,"la":1597322107,"fsa":1597249711,"as":1,"ao":2,"oa":[]},"1173764":{"lvt":1597322107,"lavid":1},"1187346":{"lvt":1598878434,"lavid":1,"la":1598878434,"fsa":1597249700,"as":1,"ao":3,"oa":[1597249700,1597757816,1598878434],"io":1,"wc":1597757819},"1191325":{"lvt":1598359428,"lavid":1,"la":1598359428,"fsa":1597803798,"as":1,"ao":2,"oa":[]},"1191579":{"lvt":1598359213,"lavid":1,"la":1598359214,"fsa":1597249727,"as":1,"ao":2,"oa":[]},"1191635":{"lvt":1598905675,"lavid":1,"la":1597290763,"fsa":1597290763,"as":0,"ao":1,"oa":[]},"1192190":{"lvt":1598304487,"lavid":1,"la":1598304486,"fsa":1598304486,"as":1,"ao":1,"oa":[1598304486],"io":1,"wc":1598304489},"1194331":{"lvt":1597294128,"lavid":1,"la":1597294128,"fsa":1597294128,"as":1,"ao":1,"oa":[1597294128],"io":1},"1195195":{"lvt":1598359336,"lavid":1,"la":1598359336,"fsa":1597757892,"as":1,"ao":2,"oa":[]},"1200274":{"lvt":1598734240,"lavid":1,"la":1597250042,"fsa":1597250042,"as":0,"ao":1,"oa":[]},"1204292":{"lvt":1598896718,"lavid":1,"la":1598734376,"fsa":1597250099,"as":0,"ao":5,"oa":[]},"1205880":{"lvt":1598730541,"lavid":1,"la":1598730541,"fsa":1598730541,"as":1,"ao":1,"oa":[]},"1206371":{"lvt":1598728498,"lavid":1,"la":1598728480,"fsa":1597857012,"as":1,"ao":2,"oa":[]}},"lastClose":1598304489033};	
+	var campaignAdded = false;
+	for (var campaignId in newCampaigns) {
+		if (newCampaigns.hasOwnProperty(campaignId)) {
+			// if campaign cookie does not exist
+			if (!bouncex.cookie.campaigns) {
+				bouncex.cookie.campaigns = {};
+			}
+			if (!bouncex.cookie.campaigns[campaignId]) {
+				campaignAdded = true;
+				bouncex.cookie.campaigns[campaignId] = {lvt:bouncex.cookie.lvt, vv:0};
+			} else if (newCookie.campaigns[campaignId]) {
+				// need to set campaign cookie's activations_sessions to the new cookie as it gets modified in reloadCampaigns
+				campaignAdded = true;
+				bouncex.cookie.campaigns[campaignId].as = newCookie.campaigns[campaignId].as;
+			}
+		}
+	}
+	if (campaignAdded) {
+		bouncex.setBounceCookie();
+	}
+
+	for (var campaignId in bouncex.campaigns) {
+		if (bouncex.campaigns.hasOwnProperty(campaignId)) { //copy state vars
+			if (newCampaigns[campaignId]) {
+				newCampaigns[campaignId].ap = bouncex.campaigns[campaignId].ap;
+				newCampaigns[campaignId].repressed = Boolean(bouncex.campaigns[campaignId].repressed);
+			}
+
+			if (newCampaigns[campaignId] &&
+				bouncex.campaigns[campaignId].ad_visible &&
+				newCampaigns[campaignId].html.replace(/fsa=(\d+)&|width=(\d+)&|height=(\d+)&/gi,'') == bouncex.campaigns[campaignId].html.replace(/fsa=(\d+)&|width=(\d+)&|height=(\d+)&/gi,'')) {
+								newCampaigns[campaignId] = bouncex.campaigns[campaignId];
+			} else if (newCampaigns[campaignId] && bouncex.isGbi2Campaign(campaignId) && bouncex.campaigns[campaignId].gbi.hasBegunAuction) {
+								newCampaigns[campaignId] = bouncex.campaigns[campaignId];
+			} else {
+				bouncex.destroy_ad(campaignId);
+			}
+		}
+	}
+
+	bouncex.campaigns = newCampaigns;
+	newCampaigns = {};
+
+	bouncex.debug = false;
+		bouncex.setBounceCookie();
+	if (bouncex.campaigns) {
+		for (var campaignId in bouncex.campaigns) {
+			if (bouncex.campaigns[campaignId].ad_visible && typeof bouncex.repressCampaigns === 'function') {
+				bouncex.repressCampaigns(campaignId);
+			}
+		}
+		bouncex.loadBounceCss(bouncex.initActivationFuncs);
+	}
+		bouncex.loadBrandStyles();
+	bouncex.loadWebfonts();
+
+	})();

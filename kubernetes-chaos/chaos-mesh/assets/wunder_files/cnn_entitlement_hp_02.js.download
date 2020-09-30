@@ -1,0 +1,22 @@
+
+AdFuel.registry.push([
+{
+  "rktr_deployed_date": "2018-10-12 13:09:52",
+  "rktr_slot_id": "page",
+  "rktr_id": "cnn_entitlement_hp_02",
+  "gpt_id": "8663477",
+  "site": "cnn",
+  "root": "CNN",
+  "child_directed_treatment": "false",
+  "targeting": []
+}
+,
+{
+  "rktr_slot_id": "ad_mod_1963034fc",
+  "rktr_ad_id": "CNN/homepage",
+  "sizes": [[200,60],[300,25],[300,35]],
+  "targeting": [["pos",["mod"]]],
+  "responsive":[]
+}
+
+]);

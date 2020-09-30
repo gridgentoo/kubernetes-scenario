@@ -1,0 +1,15 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata:
+  name: pod-kill-example
+  namespace: chaos-mesh
+spec:
+  action: pod-kill
+  mode: one
+  selector:
+    namespaces:
+      - chaos-sandbox
+    labelSelectors:
+      chaos: "blast-here"
+  scheduler:
+    cron: "@every 15s"
