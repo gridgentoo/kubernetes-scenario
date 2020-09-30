@@ -1,13 +1,14 @@
 <img align="right" src="./assets/k8s-logo.png" width="100">
 
-For this scenario, Katacoda has just started a fresh Kubernetes cluster for you. Verify it's ready for your use.
+В этом сценарии, через пару минут **Katacoda** запустит для вас новый кластер **Kubernetes**.
+Убедитесь, что кластер готов к использованию.
 
 `kubectl version --short && \
 kubectl get componentstatus && \
 kubectl get nodes && \
 kubectl cluster-info`{{execute}}
 
-The [Helm](https://helm.sh/) package manager used for installing applications on Kubernetes is also available.
+Также доступен менеджер пакетов [Helm](https://helm.sh/), используемый **helm** для инсталлйции приложений в **Kubernetes**.
 
 `helm version --short`{{execute}}
 
@@ -15,6 +16,6 @@ The [Helm](https://helm.sh/) package manager used for installing applications on
 
 ## Kubernetes Dashboard ##
 
-You can administer your cluster with the `kubectl` CLI tool or use the visual Kubernetes Dashboard. Use this script to access the protected Dashboard.
+Вы можете администрировать свой кластер с помощью **CLI tool** инструмента командной строки **`kubectl`** и использовать визуальную панель **Kubernetes Dashboard**. Используйте этот скрипт для доступа к защищенной панели инструментов **Kubernetes Dashboard**.
 
 `token.sh`{{execute}}

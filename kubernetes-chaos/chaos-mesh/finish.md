@@ -14,7 +14,7 @@
 
 ## Ссылки ##
 
-- [Chaos Mesh project](github.com/chaos-mesh/chaos-mesh)
+- [Chaos Mesh project](https://github.com/chaos-mesh/chaos-mesh)
 - [Chaos Mesh documentation](https://chaos-mesh.org/docs/)
 - [K8s Chaos Dive, Chaos-Mesh Part 1, Craig Morten](https://dev.to/craigmorten/k8s-chaos-dive-2-chaos-mesh-part-1-2i96)
 - [Principles of Chaos Engineering](http://principlesofchaos.org/)
@@ -25,5 +25,5 @@
 <img align="left" src="./assets/yunusov.png" width="100" style="border-radius: 12px">
 For a deeper understanding of these topics and more join <br>[Yunusov Temur](https://github.com/gridgentoo?tab=repositories)<br> at various conferences, symposiums, workshops, and meetups.
 <br><br>
-<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Java Specialist</b>
+<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Golang Specialist</b>
 </p>

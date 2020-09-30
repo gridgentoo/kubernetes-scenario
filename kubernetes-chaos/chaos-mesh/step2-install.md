@@ -1,18 +1,18 @@
-The project provides a script that will install the Chaos Mesh operator. However, to avoid reinventing a wheel we prefer the projects Helm chart as it offers commonly used package management with parameters, updates, and uninstall.
+В проекте есть скрипт, который установит **Chaos Mesh operator**. Однако, чтобы не изобретать колесо, мы предпочитаем **Helm chart** для проектов, поскольку она предлагает часто используемое **package management** с параметрами, обновлениями и удалением.
 
-Create a namespace for the Chaos Mesh operator:
+Создайте **namespace** для оператора **Chaos Mesh operator**:
 
 `kubectl create namespace chaos-mesh`{{execute}}
 
-Add the chart repository for the Helm chart to be installed:
+Добавьте **chart repository** для установки **Helm chart**:
 
 `helm repo add chaos-mesh https://charts.chaos-mesh.org`{{execute}}
 
-Add the Custom Resource definitions that allow you to control chaos through declarations:
+Добавьте **Custom Resource definitions**, которые позволяют управлять хаосом с помощью **declarations**:
 
 `curl -sSL https://mirrors.chaos-mesh.org/v0.9.0/crd.yaml | kubectl apply -f -`{{execute}}
 
-Install the chart:
+Инсталлируйте chart:
 
 ```bash
 helm install chaos-mesh chaos-mesh/chaos-mesh \
@@ -21,14 +21,15 @@ helm install chaos-mesh chaos-mesh/chaos-mesh \
   --set dashboard.create=true
 ```{{execute}}
 
-Verify the Chaos Mesh operator has started its control plane:
+Убедитесь, что оператор **Chaos Mesh operator** запустил свою плоскость управления **control plane**:
 
 `kubectl get deployments,pods,services --namespace chaos-mesh`{{execute}}
 
-Optimally, everything should be running in about ~15 seconds.
+В оптимальном случае все должно быть в статусе **running** примерно за ~20 секунд.
 
-The control plane components for the Chaos Mesh are:
+Компоненты плоскости управления **control plane** для **Chaos Mesh**:
 
-- controller-manager - used to schedule and manage the lifecycle of chaos experiments. (This is a misnomer. This should be just named _controller_, not _controller-manager_, as its the controller based on the Operator Pattern. The controller-manager is the Kubernetes control plane component that manages all the controllers like this one).
-- chaos-daemon - These are the Pods that control the chaos mesh. The Pods run on every cluster Node and wrapped in a DaemonSet. These DaemonSets have privileged system permissions to access each Node's network, cgroups, chroot, and other resources that are accessed based on your experiments.
-- chaos-dashboard - An optional web interface providing you an alternate means to administer the engine and experiments. It's use is for convenience and any production use of the engine should be through the YAML resources for the Chaos Mesh CRDs.
+- controller-manager - используется для планирования и управления жизненным циклом **lifecycle** экспериментов с хаосом **chaos experiments**..
+- chaos-daemon - это Поды, которые управляют сеткой хаоса **chaos mesh**. Pods работают на каждом узле кластера и завернуты в **DaemonSet**. Эти DaemonSets имеют привилегированные системные разрешения для доступа к сети каждого **Node's network**, **cgroups**, **chroot** и другим ресурсам, к которым осуществляется доступ на основе ваших экспериментов.
+- chaos-dashboard - дополнительный веб-интерфейс, предоставляющий вам альтернативные средства для администрирования **chaos engine** и экспериментов. Он используется для удобства, и любое производственное использование движка должно осуществляться через ресурсы **YAML** для **Chaos Mesh CRDs**.
+

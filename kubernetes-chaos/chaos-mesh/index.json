@@ -1,18 +1,18 @@
 {
    "pathwayTitle": "chaos-mesh",
-  "title": "Chaos Mesh®",
-  "description": "Applying cloud native chaos engineering to your applications using Chaos Mesh",
+  "title": "Chaos Mesh",
+  "description": "Применение облачной инженерии хаоса chaos engineering к вашим приложениям с помощью Chaos Mesh",
   "difficulty":	"Introduction",
   "time":	"15 minutes",
   "details": {
     "steps": [
       {
-        "title": "Your Kubernetes Cluster",
+        "title": "Ваш кластер Kubernetes",
         "text": "step1-k8s.md",
         "code": "clear.sh"
       },
       {
-        "title": "Install Chaos Mesh",
+        "title": "Инсталлируйте Chaos Mesh",
         "text": "step2-install.md"
       },
       {
@@ -20,27 +20,27 @@
         "text": "step3-dashboard.md"
       },
       {
-        "title": "Chaos Mesh Experiment Types",
+        "title": "Типы экспериментов с Chaos Mesh",
         "text": "step4-experiment-types.md",
         "code": "clear.sh"
       },
       {
-        "title": "Network Delay Experiment",
+        "title": "Эксперимент network delay - задержками в сети",
         "text": "step5-experiment1.md",
         "code": "clear.sh"
       },
       {
-        "title": "Pod Removal Experiment",
+        "title": "Эксперимент по удалению Подов",
         "text": "step6-experiment2.md",
         "code": "clear.sh"
       }
     ],
     "intro": {
-      "title": "Chaos Mesh on Kubernetes",
+      "title": "Chaos Mesh в Kubernetes",
       "text": "intro.md",
       "courseData": "init-background.sh",
       "code": "init-foreground.sh",
-      "credits": "[Jonathan Johnson](http://www.dijure.com)"
+      "credits": "[Yunusov Temur](https://github.com/gridgentoo?tab=repositories)"
     },
     "finish": {
       "text": "finish.md"
