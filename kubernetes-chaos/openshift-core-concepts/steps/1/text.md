@@ -13,6 +13,7 @@
     oc new-project <projectname>
 ```
 
+
 **Openshift CLI** во многом похож на **Kubernetes CLI**.  
 **oc** - это сокращение от **OpenShift client**, который работает аналогично **kubectl Kubernetes**. 
 По мере продвижения вы обнаружите много общего между этими двумя командами.
