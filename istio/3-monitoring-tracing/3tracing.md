@@ -11,3 +11,6 @@ Now that you know the URL of Jaeger, access it at http://tracing-istio-system.[[
 Select `customer` from the list of services and click on `Find Traces`:
 
 ![](../../assets/servicemesh/monitoring/jaegerUI.png)
+
+
+
