@@ -1,5 +1,3 @@
-For monitoring, Istio offers out of the box monitoring via Prometheus and Grafana.
-
 Для мониторинга **Istio** предлагает готовый мониторинг из коробки через **Prometheus** и **Grafana**.
 
 **Note:** Прежде чем мы взглянем на **Grafana**, нам нужно отправить несколько запросов нашему приложению, используя **`Terminal 2`**: 
@@ -13,24 +11,6 @@ For monitoring, Istio offers out of the box monitoring via Prometheus and Grafan
 Проверьте версию **istio**, набрав:
 
 `istioctl version`{{execute interrupt T1}}
-
-###   Установим Istio-1.6.8
-
-![istio version](./assets/istio.png)
-
-Запустите установку **Istio-1.6.8**
-
-`/usr/local/bin/istio-install.sh`{{execute T1}}
-
-Примечание: если вас как-то смущает `error: taint "node-role.kubernetes.io/master" not found`, проигнорируйте это сообщение пожалуйста, оно ни на что не влияет.
-
-Проверьте, что все поды Istio в состоянии Running `kubectl get pods -n istio-system`{{execute T1}}
-
-
-### Upgrading to Istio 1.6 with Operator
-
-https://cloud.google.com/istio/docs/istio-on-gke/upgrade-with-operator
-
 
 Теперь, когда вы знаете URL-адрес **`Grafana`**, откройте его по адресу 
 
