@@ -27,6 +27,11 @@
         "course_id": "istio-intro",
         "title": "Istio 1.7.3 начало работы",
         "description": "Знакомство с Istio с приложением BookInfo."
+      },
+      {
+        "course_id": "adv1-kiali",
+        "title": "Observing with Kiali",
+        "description": "Знакомство с Kiali в istio-1.2.10."
       }
    
     ]
