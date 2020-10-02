@@ -34,7 +34,7 @@
         "description": "Знакомство с Kiali в istio-1.2.10."
       },
       {
-        "course_id": "openshift-core-concepts",
+        "course_id": "openshift-core",
         "title": "Core OpenShift Concepts",
         "description": "Знакомство с Core OpenShift Concepts."
       }
