@@ -1,9 +1,11 @@
-OpenShift project is a Kubernetes namespace with additional features called annotations that provide user multi-tenancy and role-based access control in OpenShift. Each project has its own set of policies, constraints, and service accounts. You can see that the number of namespaces and projects in OpenShift is the same. The commands we are going to need are oc get namespaces and oc get projects:
+Проект **OpenShift** - это **Kubernetes namespace** с дополнительными функциями, называемыми аннотациями, которые обеспечивают многопользовательский режим и управление доступом на основе ролей **role-based access** в **OpenShift**. Каждый проект имеет собственный набор политик, ограничений и учетных записей сервисов. Как видите, количество пространств имен и проектов в **OpenShift** одинаковое. Нам понадобятся команды **oc get namespaces** и **oc get projects**:
+
 `oc get projects`{{execute}}
 
 `oc get namespaces`{{execute}}
 
-As we mentioned previously, each namespace, or rather project, is separated from another by a set of rules. This allows different teams to work independently from each other. In order to identify what project we are currently working in, you can use the oc projects command. This command gives you a list of OpenShift projects available for you, and it also tells you what projects you are currently working on:
+Как мы упоминали ранее, каждое пространство имен **namespace** или, скорее, проект отделен от другого набором правил **rules**. Это позволяет различным командам работать независимо друг от друга. Чтобы определить, над каким проектом мы сейчас работаем, вы можете использовать команду **oc projects**. Эта команда дает вам список доступных вам проектов **OpenShift**, а также сообщает, над какими проектами вы сейчас работаете:
+
 `oc projects`{{execute}}
 
 ```
