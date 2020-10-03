@@ -31,7 +31,7 @@
       {
         "course_id": "adv1-kiali",
         "title": "Observing with Kiali",
-        "description": "Знакомство с Kiali в istio-1.2.10."
+        "description": "Знакомство с Kiali в istio-1.0.5."
       }
 
    
