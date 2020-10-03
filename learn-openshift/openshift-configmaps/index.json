@@ -1,0 +1,62 @@
+{
+  "icon": "fa-openshift",
+  "title": "OpenShift ConfigMaps",
+  "description": "Get started with openshift",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Openshift SCC",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "OpenShift Project",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Separating configuration from application code using ConfigMaps",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "OpenShift ConfigMaps",
+      "text": "steps/4/text.md"
+    },
+    {
+        "title": "ConfigMaps with command-line arguments",
+        "text": "steps/5/text.md"
+    },
+    {
+        "title": "Nginx Web Server",
+        "text": "steps/6/text.md"
+    },
+    {
+        "title": "Nginx Service",
+        "text": "steps/7/text.md"
+    }],
+    "intro": {
+      "code": "set-env.sh",
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "example.env",
+    "example-pod-1.yml",
+    "example-pod-2.yml",
+    "nginx_custom_default.conf",
+    "example-pod-3.yml"
+	],
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 8443}],
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+    "backend": {
+        "trainingid": "openshift-3-11",
+        "imageid": "openshift-3-11"
+    }
+}

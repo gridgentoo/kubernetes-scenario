@@ -1,0 +1,1 @@
+In this Lab we will get learn about Openshift Authorization and RBAC.

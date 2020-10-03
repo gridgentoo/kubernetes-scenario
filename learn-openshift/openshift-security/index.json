@@ -1,0 +1,55 @@
+{
+  "icon": "fa-openshift",
+  "title": "OpenShift Users and ServiceAccounts",
+  "description": "",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Users and identities",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Delete User and its Identity",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Openshift Service Account",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Create/Delete Service Accounts",
+      "text": "steps/4/text.md"
+    },
+	{
+      "title": "Security context constraints",
+      "text": "steps/5/text.md"
+    },
+	{
+      "title": "Using Service Account",
+      "text": "steps/6/text.md"
+    }],
+    "intro": {
+        "courseData": "env-init.sh",
+        "code": "set-env.sh",
+        "text": "intro.md"
+    },
+    "finish": {
+        "text": "finish.md"
+    }
+  },
+	"files": [
+	"nginx-pod2.yml"
+	],
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 8443}],
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "trainingid": "openshift-3-11", 
+    "imageid": "openshift-3-11", 
+    "port": 8443
+  }
+}

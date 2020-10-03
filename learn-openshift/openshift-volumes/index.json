@@ -1,0 +1,66 @@
+{
+  "icon": "fa-openshift",
+  "title": "OpenShift Volumes",
+  "description": "",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Create Project",
+      "text": "steps/1/text.md",
+	    "verify": "steps/1/verify.sh",
+      "answer": "steps/1/answer.md"
+    },
+    {
+      "title": "Step 2 - PersistentVolume",
+      "text": "steps/2/text.md",
+      "verify": "steps/2/verify.sh",
+      "answer": "steps/2/answer.md"
+    },    
+	{
+      "title": "Step 3 - PersistentVolume Claim",
+      "text": "steps/3/text.md",
+      "verify": "steps/3/verify.sh",
+      "answer": "steps/3/answer.md"
+    },
+	{
+      "title": "Step 4 - Volume and Claim",
+      "text": "steps/4/text.md",
+      "verify": "steps/4/verify.sh",
+      "answer": "steps/4/answer.md"
+    },
+	{
+      "title": "Step 5 - Using Persistent Volume",
+      "text": "steps/5/text.md",
+      "verify": "steps/5/verify.sh",
+      "answer": "steps/5/answer.md"
+    },
+	{
+      "title": "Step 6 - Interactive Shell",
+      "text": "steps/6/text.md",
+      "verify": "steps/6/verify.sh"
+    }],
+    "intro": {
+        "courseData": "env-init.sh",
+        "code": "set-env.sh",
+        "text": "intro.md"
+    },
+    "finish": {
+        "text": "finish.md"
+    }
+  },
+	"files": [
+	"volume.yaml",
+	"volume-claim.yaml",
+  "pod.yaml"
+	],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "trainingid": "openshift-3-6", 
+    "imageid": "openshift-3-6", 
+    "port": 8443
+  }
+}

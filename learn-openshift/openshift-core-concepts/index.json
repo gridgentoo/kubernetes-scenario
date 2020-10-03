@@ -1,0 +1,55 @@
+{
+  "icon": "fa-openshift",
+  "title": "Core OpenShift Concepts",
+  "description": "Get started with openshift concepts",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Openshift CLI",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "OpenShift Project",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Managing projects in OpenShift",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Managing users in OpenShift",
+      "text": "steps/4/text.md"
+    },
+    {
+        "title": "Creating new applications in OpenShift",
+        "text": "steps/5/text.md"
+    },
+    {
+        "title": "Managing pods in OpenShift",
+        "text": "steps/6/text.md"
+    },
+    {
+        "title": "Managing services in OpenShift",
+        "text": "steps/7/text.md"
+    }],
+    "intro": {
+      "code": "set-env.sh",
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 8443}],
+    "uilayout": "terminal-iframe",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+    "backend": {
+        "trainingid": "openshift-3-11",
+        "imageid": "openshift-3-11"
+    }
+}

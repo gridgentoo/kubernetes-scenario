@@ -1,0 +1,59 @@
+{
+  "icon": "fa-openshift",
+  "title": "OpenShift Wordpress",
+  "description": "",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Create Project",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Building a multi-tier application",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "WordPress Template",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Building a WordPress application",
+      "text": "steps/4/text.md"
+    },
+	{
+      "title": "Build & Deploy",
+      "text": "steps/5/text.md"
+    },
+	{
+      "title": "Access WordPress Application",
+      "text": "steps/6/text.md"
+    },
+    {
+        "title": "Delete WordPress Application",
+        "text": "steps/7/text.md"
+  }],
+    "intro": {
+        "courseData": "env-init.sh",
+        "code": "set-env.sh",
+        "text": "intro.md"
+    },
+    "finish": {
+        "text": "finish.md"
+    },
+    "assets": {
+      "host01": [{"file": "volumes.yaml", "target": "~/"}]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Wordpress", "port": 80}],
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+        "trainingid": "openshift-3-6",
+        "imageid": "openshift",
+        "port": 8443
+  }
+}

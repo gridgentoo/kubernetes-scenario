@@ -1,0 +1,52 @@
+{
+  "title": "Docker Advanced Commands",
+  "description": "Get started with the advanced docker commands",
+  "difficulty": "Intermediate",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Docker architecture",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Docker Images",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Docker Save",
+      "text": "steps/3/text.md",
+      "verify": "steps/3/verify.sh"
+    },
+	{
+      "title": "Running Container",
+      "text": "steps/4/text.md",
+      "verify": "steps/4/verify.sh"
+    },
+	{
+      "title": "Executing Commands Inside Container",
+      "text": "steps/5/text.md"
+    },
+	{
+      "title": "Docker port mapping",
+      "text": "steps/6/text.md"
+    },
+  	{
+      "title": "Remove Container",
+      "text": "steps/7/text.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}

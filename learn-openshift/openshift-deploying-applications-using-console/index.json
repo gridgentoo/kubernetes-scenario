@@ -1,0 +1,48 @@
+{
+  "title": "Deploying Applications Using Web Console",
+  "description": "",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Creating Project",
+      "text": "steps/1/text.md",
+	    "verify": "steps/1/verify.sh",
+      "answer": "steps/1/answer.md"
+    },
+    {
+      "title": "Step 2 - Deploying Image",
+      "text": "steps/2/text.md",
+      "verify": "steps/2/verify.sh"
+    },    
+	{
+      "title": "Step 3 - Create Route",
+      "text": "steps/3/text.md",
+      "verify": "steps/3/verify.sh"
+    },
+	{
+      "title": "Step 4 - Delete Application",
+      "text": "steps/4/text.md",
+      "verify": "steps/4/verify.sh",
+      "answer": "steps/4/answer.md"
+    }],
+    "intro": {
+      "courseData": "env-init.sh",
+      "code": "set-env.sh",
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 8443}],
+    "uilayout": "terminal-iframe",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+      "trainingid": "openshift-3-11",
+      "imageid": "openshift-3-11"
+  }
+}

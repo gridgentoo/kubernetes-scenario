@@ -1,0 +1,56 @@
+{
+  "icon": "fa-openshift",
+  "title": "OpenShift ResourceQuotas & LimitRanges",
+  "description": "Get started with openshift resource quotas & limit ranges",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Openshift CLI",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Controlling resource consumption using ResourceQuotas",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Edit ResourceQuotas",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Controlling resource consumption using LimitRanges",
+      "text": "steps/4/text.md"
+    },
+    {
+        "title": "Openshift Pods",
+        "text": "steps/5/text.md"
+    },
+    {
+        "title": "Using LimitRange with Pods",
+        "text": "steps/6/text.md"
+    }],
+    "intro": {
+      "code": "set-env.sh",
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "nginx-pod.yml",
+    "httpd-pod.yml",
+    "my-limits.yaml",
+    "limits-example-pod.yml"
+	],
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 8443}],
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+    "backend": {
+        "imageid":  "openshift-3-11"
+    }
+}

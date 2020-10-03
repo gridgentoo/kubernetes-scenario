@@ -1,0 +1,1 @@
+In this Lab we will deploy wordpress in OpenShift.

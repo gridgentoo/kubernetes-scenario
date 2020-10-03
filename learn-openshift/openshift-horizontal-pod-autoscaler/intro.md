@@ -1,0 +1,1 @@
+In this Lab we will get introduced to HorizontalPodAutoscaler in OpenShift.

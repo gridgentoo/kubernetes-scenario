@@ -1,0 +1,63 @@
+{
+  "icon": "fa-openshift",
+  "title": "Deploying Multi-Tier Applications Using Templates",
+  "description": "Get started with openshift templates",
+  "difficulty": "Advanced",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Openshift CLI",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Template Overview",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Template Overview",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Adding templates",
+      "text": "steps/4/text.md"
+    },
+    {
+        "title": "Displaying template parameters",
+        "text": "steps/5/text.md"
+    },
+    {
+        "title": "Deploy Jenkins Using Templates",
+        "text": "steps/6/text.md"
+    },
+    {
+        "title": "Openshift Explain",
+        "text": "steps/7/text.md"
+    },
+    {
+        "title": "Export Template",
+        "text": "steps/8/text.md"
+    }],
+    "intro": {
+
+      "code": "set-env.sh",
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "mytemplate.yaml"
+	],
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 8443}],
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+    "backend": {
+        "trainingid": "openshift-3-11",
+        "imageid": "openshift-3-11"
+    }
+}

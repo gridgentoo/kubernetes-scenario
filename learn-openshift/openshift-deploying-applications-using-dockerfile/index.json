@@ -1,0 +1,59 @@
+{
+  "icon": "fa-openshift",
+  "title": "Deploying Applications Using DockerFile",
+  "description": "Get started with openshift",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Openshift CLI",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Building an application from Dockerfile",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "A simple Dockerfile build",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Build & Deploy",
+      "text": "steps/4/text.md"
+    },
+    {
+        "title": "Trigger New Build",
+        "text": "steps/5/text.md"
+    },
+    {
+        "title": "Patch Redis Deployment",
+        "text": "steps/6/text.md"
+    },
+    {
+        "title": "Cleanup",
+        "text": "steps/7/text.md"
+    }],
+    "intro": {
+
+      "code": "set-env.sh",
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "example-template.yml"
+	],
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 8443}],
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+    "backend": {
+        "trainingid": "openshift-3-11",
+        "imageid": "openshift-3-11"
+    }
+}

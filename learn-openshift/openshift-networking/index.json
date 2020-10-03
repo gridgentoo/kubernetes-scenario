@@ -1,0 +1,53 @@
+{
+  "icon": "fa-openshift",
+  "title": "OpenShift Networking",
+  "description": "Get started with openshift",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "SDN plugins",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "OpenShift Project",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Openshift DNS",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Openshift DNS",
+      "text": "steps/4/text.md"
+    },
+    {
+        "title": "Dig",
+        "text": "steps/5/text.md"
+    },
+    {
+        "title": "Openshift Networking",
+        "text": "steps/6/text.md"
+    }],
+    "intro": {
+      "code": "set-env.sh",
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "httpd-pod.yml"
+  ],
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 8443}],
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+    "backend": {
+        "imageid": "openshift-3-6"
+    }
+}

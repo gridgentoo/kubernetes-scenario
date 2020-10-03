@@ -1,0 +1,62 @@
+{
+  "icon": "fa-openshift",
+  "title": "OpenShift HorizontalPodAutoscaler",
+  "description": "Get started with openshift management",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Openshift CLI",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "OpenShift Metrics",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "CPU-based autoscaling",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Create Application",
+      "text": "steps/4/text.md"
+    },
+    {
+        "title": "Expose Application",
+        "text": "steps/5/text.md"
+    },
+    {
+        "title": "Managing pods in OpenShift",
+        "text": "steps/6/text.md"
+    },
+    {
+        "title": "Memory-based autoscaling",
+        "text": "steps/7/text.md"
+    },
+    {
+        "title": "Managing services in OpenShift",
+        "text": "steps/8/text.md"
+    }],
+    "intro": {
+      "courseData": "env-init.sh",
+      "code": "set-env.sh",
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "my-limits.yaml",
+    "hpa-memory.yml"
+	],
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 8443}],
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+    "backend": {
+      "imageid": "openshift-3-6-metrics"
+    }
+}

@@ -1,0 +1,112 @@
+{
+  "title": "Learn OpenShift",
+  "icon": "fa-openshift",
+  "description": "Gain Hands-on experience with OpenShift Origin",
+  "courses": [
+    {
+      "course_id": "openshift-docker-overview",
+      "title": "Docker Overview",
+      "description": ""
+    },
+    {
+      "course_id": "openshift-docker-overview-advanced",
+      "title": "Containers & Docker Advanced",
+      "description": ""
+    },
+    {
+      "course_id": "openshift-kubernetes-overview",
+      "title": "Kubernetes Overview",
+      "description": ""
+    },
+    {
+      "course_id": "openshift-kubernetes-overview-advanced",
+      "title": "Kubernetes Overview Advanced",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-volumes",
+      "title": "OpenShift Managing Persistent Storage",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-core-concepts",
+      "title": "Core OpenShift Concepts",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-imagestreams",
+      "title": "OpenShift ImageStreams",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-configmaps",
+      "title": "OpenShift ConfigMaps",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-quotas-limits",
+      "title": "OpenShift ResourceQuotas & LimitRanges",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-templates",
+      "title": "OpenShift Templates",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-horizontal-pod-autoscaler",
+      "title": "OpenShift HorizontalPodAutoscaler",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-security",
+      "title": "OpenShift Users and ServiceAccounts",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-authorization-rbac",
+      "title": "Openshift Authorization and RBAC",
+      "description": ""
+    },
+    {
+      "course_id": "openshift-networking",
+      "title": "OpenShift Networking",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-deploying-simple-applications",
+      "title": "Deploying Simple Applications in OpenShift",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-deploying-applications-using-templates",
+      "title": "Deploying Multi-Tier Applications Using Templates",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-deploying-applications-using-console",
+      "title": "Deploying Applications Using WebConsole",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-deploying-applications-using-dockerfile",
+      "title": "Deploying Applications Using DockerFile",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-building-applications-from-sourcecode",
+      "title": "Building PHP Applications from Source Code",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-wordpress",
+      "title": "OpenShift Wordpress",
+      "description": ""
+    },
+	{
+      "course_id": "openshift-cicd-jenkins",
+      "title": "CI/CD Pipelines in OpenShift",
+      "description": ""
+    }
+  ]
+}

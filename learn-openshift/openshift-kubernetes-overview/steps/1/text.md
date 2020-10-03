@@ -1,0 +1,6 @@
+There are multiple container management solutions available, with the most popular being Kubernetes and Docker Swarm:
+
+**Kubernetes:** It's built around the concept of resources—complex API entities that serve as an interface to the underlying mechanisms and serialized in YAML or JSON. All software components run on two types of machine: masters and nodes. Masters perform management, dispatching, and synchronization functions, while nodes provide a runtime environment for running containers.
+
+
+**Docker Swarm:** Docker Swarm is a native container orchestration solution provided by the Docker project. It has many features that Kubernetes provides, but does this using different mechanisms and can be used to quickly deploy a single service or even a stack of services on worker nodes. Swarm Cluster consists of two types of node: managers and workers. Managers control the placement of containers, which are referred to as tasks in Swarm terminology, and workers do the heavy lifting of running containers.

@@ -1,0 +1,54 @@
+{
+  "title": "Kubernetes Advanced Overview",
+  "description": "Get started with the kubernetes",
+  "difficulty": "Intermediate",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "Minikube Installation",
+      "text": "steps/1/text.md"
+    },{
+      "title": "Using Kubernetes labels",
+      "text": "steps/2/text.md"
+    },
+    {
+      "title": "Deleting Kubernetes resources",
+      "text": "steps/3/text.md"
+    },    
+	{
+      "title": "Kubernetes Events",
+      "text": "steps/4/text.md"
+    },
+    {
+        "title": "Create Pod",
+        "text": "steps/5/text.md",
+        "answer": "steps/5/answer.md"
+      },
+      {
+          "title": "Delete Pod",
+          "text": "steps/6/text.md",
+          "answer": "steps/6/answer.md"
+  },
+	{
+      "title": "Stopping your virtual environment",
+      "text": "steps/7/text.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+	"files": [
+    "pod.yaml"
+	],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}

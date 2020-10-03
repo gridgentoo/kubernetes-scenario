@@ -151,7 +151,12 @@
         "id": "yamlbuilder" 
       },
       {
-        "title": "Основы OpenShift",
+        "title": "Лабораторные по OpenShift",
+        "description": "Получите практический опыт работы с OpenShift Origin.",
+        "id": "learn-openshift"
+      },
+      {
+        "title": "Сценарии OpenShift",
         "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
         "id": "openshift-fundamentals"
       }

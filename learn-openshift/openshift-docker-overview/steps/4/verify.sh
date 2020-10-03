@@ -1,0 +1,1 @@
+docker ps | grep backgroundcontainer > /dev/null && echo "done"

@@ -1,0 +1,59 @@
+{
+  "icon": "fa-openshift",
+  "title": "CI/CD Pipelines in OpenShift",
+  "description": "Get started with CI/CD pipelines in OpenShift",
+  "difficulty": "Advanced",
+  "time": "15 minutes",
+  "details": {
+    "steps": [{
+      "title": "CI/CD and CI/CD pipelines",
+      "text": "steps/1/text.md"
+    },
+    {
+      "title": "Jenkins as CI/CD",
+      "text": "steps/2/text.md"
+    },    
+	{
+      "title": "Jenkins in OpenShift",
+      "text": "steps/3/text.md"
+    },
+	{
+      "title": "Creating Jenkins pipelines in OpenShift",
+      "text": "steps/4/text.md"
+    },
+    {
+        "title": "Starting a Jenkins pipeline",
+        "text": "steps/5/text.md"
+    },
+    {
+        "title": "Editing Jenkinsfile",
+        "text": "steps/6/text.md"
+    },
+    {
+        "title": "Managing pipeline execution",
+        "text": "steps/7/text.md"
+    }],
+    "intro": {
+      "courseData": "env-init.sh",
+      "code": "set-env.sh",
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "example-template.yml"
+	],
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Dashboard", "port": 8443}],
+    "uilayout": "terminal-iframe",
+    "uimessage1": "\u001b[32mBrought to you by https://LearningVoyage.com\u001b[m\r\n"
+  },
+    "backend": {
+        "trainingid": "openshift-3-11",
+        "imageid": "openshift-3-11"
+    }
+}
