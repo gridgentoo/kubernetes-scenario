@@ -1,32 +1,70 @@
-Graal VM comes with a set of component included in the core packages, 
-some others component are not part of this core and should be installed seperately using the graal-updater.
+**Graal VM** поставляется с набором компонентов, включенных в базовые пакеты **core packages**,
+некоторые другие компоненты не являются частью этого ядра **core** и должны устанавливаться отдельно с помощью **graal-updater**.
 
 ## Task
 
-List the component of your Graal install using 
+**gu list** перечислит компоненты вашей установки Graal:  
+
 `gu list`{{execute}}
 
 
-Check the packages available in the GraalVM remote catalog 
+```
+ComponentId              Version             Component name      Origin
+--------------------------------------------------------------------------------
+js                       20.2.0              Graal.js
+graalvm                  20.2.0              GraalVM Core
+```
+
+Проверьте пакеты, доступные в удаленном каталоге **GraalVM remote**
+
 `gu available `{{execute}}
 
-Install the `native-image` , `python` and `R`  
+Инсталлируйте **`native-image`** , **`python`** и **`R`**  
+
 `gu install python native-image R`{{execute}} 
 
-Check the installed package again 
+Еще раз проверьте установленные пакеты:  
+
 ` gu list `{{execute }}
 
-The new list should now be similar the the following one.
+```
+ComponentId              Version             Component name      Origin
+--------------------------------------------------------------------------------
+js                       20.2.0              Graal.js
+graalvm                  20.2.0              GraalVM Core
+R                        20.2.0              FastR               github.com
+llvm-toolchain           20.2.0              LLVM.org toolchain  github.com
+native-image             20.2.0              Native Image        github.com
+python                   20.2.0              Graal.Python        github.com
+```
+
+Инсталлируйте **`ruby`**
+
+`gu install ruby`{{execute}} 
+
+Еще раз проверьте установленные пакеты:  
+
+` gu list `{{execute }}
+
+Теперь новый список должен быть похож на следующий.
 
 ```
 $ gu list
 ComponentId              Version             Component name      Origin
 --------------------------------------------------------------------------------
-graalvm                  20.0.0              GraalVM Core
-R                        20.0.0              FastR               github.com
-llvm-toolchain           20.0.0              LLVM.org toolchain  github.com
-native-image             20.0.0              Native Image        github.com
-python                   20.0.0              Graal.Python        github.com
+js                       20.2.0              Graal.js
+graalvm                  20.2.0              GraalVM Core
+R                        20.2.0              FastR               github.com
+llvm-toolchain           20.2.0              LLVM.org toolchain  github.com
+native-image             20.2.0              Native Image        github.com
+python                   20.2.0              Graal.Python        github.com
+ruby                     20.2.0              TruffleRuby         github.com
 ```
 
+Высокопроизводительная реализация языка программирования R, построенная на GraalVM.
 
+https://github.com/oracle/fastr
+
+Высокопроизводительная реализация языка программирования Ruby. Построен на GraalVM от Oracle Labs.
+
+https://github.com/oracle/truffleruby

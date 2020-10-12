@@ -1,31 +1,35 @@
-
-GraalVM comes with a new powerfull compiler called Graal compiler .
+**GraalVM** поставляется с новым мощным компилятором, который называется **Graal compiler**.
 
 
 ## Environment Setup
-> :warning: ** Please wait for GraalVM and Maven 3 to be installed on your environment ...**
+> :warning: Подождите, пока **GraalVM** и **Maven 3** будут установлены в вашей среде **environment**... 
 
-## Build the benchmark project 
+## Создайте benchmark project
 
-Verify Maven is up and running on your environment <br>
+Убедитесь, что **Maven** запущен и работает в вашей среде **environment** <br>
+
 ` mvn -version `{{execute}}
 
-Check the installed Java version  <br>
+Проверить установленную версию **Java**  <br>
+
 ` java --version `{{execute}}
 
-Clone the demo repository <br>
+Клонировать **demo repository** <br>
 `git clone https://github.com/graalvm/graalvm-demos.git `{{execute}}
 
+Откройте  benchmark java source `./graalvm-demos/java-simple-stream-benchmark/src/main/java/org/graalvm/demos/JavaSimpleStreamBenchmark.java`{{open}}
 
-Open the benchmark java source `./graalvm-demos/java-simple-stream-benchmark/src/main/java/org/graalvm/demos/JavaSimpleStreamBenchmark.java`{{open}}
-In this file, we perform a set of streams operations on integers to compute the following expression
+В этом файле мы выполняем набор потоковых операций с целыми числами для вычисления следующего **expression**
 
 ![ Expression](./assets/javaExpression.png)
-Move to the `java-simple-stream-benchmark` maven project <br>
+
+Перейти к проекту `java-simple-stream-benchmark` maven проекту <br>
+
 `cd graalvm-demos/java-simple-stream-benchmark`{{execute}}
 
-Build the project with maven <br>
+Создайте проект с помощью maven <br>
+
 `mvn clean install `{{execute}}
 
-In the next steps, we will be evaluating the performances of this expression towards the GraalVM new JIT compiler and the Hotspot
+На следующих шагах мы будем оценивать производительность этого **expression** в отношении нового JIT-компилятора GraalVM и Hotspot.
 

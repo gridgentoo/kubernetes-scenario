@@ -1,1 +1,0 @@
-(( $(gu list | wc -l) >5 )) && echo \"done\"

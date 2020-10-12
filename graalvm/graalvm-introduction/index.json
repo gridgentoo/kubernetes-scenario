@@ -5,8 +5,7 @@
         "steps": [
             {
                 "title": "Step 1 - Install GraalVM CE",
-                "text": "step1.md",
-                "verify": "step1-verify.sh"
+                "text": "step1.md"
             },
             {
                 "title": "Step 2 - Explore GraalVM installation Folder",
@@ -14,9 +13,7 @@
             },
             {
                 "title": "Step 3 - Install GraalVM addons",
-                "text": "step3.md",
-                "verify": "step3-verify.sh"
-
+                "text": "step3.md"
             }
         ],
         "intro": {

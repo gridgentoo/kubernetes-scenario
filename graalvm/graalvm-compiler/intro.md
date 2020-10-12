@@ -1,2 +1,2 @@
 
-In this scenario, you will rely on a simple Java benchmark to compare performance of the GraalVM compiler against the native  Hotspot JIT compiler .
+В этом сценарии вы будете полагаться на простой тест  **Java benchmark** для сравнения производительности компилятора **GraalVM compiler** с **native  Hotspot JIT compile**.

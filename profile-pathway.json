@@ -1,14 +1,14 @@
 {
     "courses": [
       {
+        "title": "GraalVM",
+        "description": "Сценарии с polyglot VM.",
+        "id": "graalvm"
+      },
+      {
         "title": "Микросервисы вместе с Istio",
         "description": "Сценарии использовании Istio.",
         "id": "istio"
-      },
-      {
-        "title": "Микросервисы и Автоматизации Бизнес Процессов с Kogito в Istio.",
-        "description": "Кубики для автоматизации Бизнес Процессов с Kogito, Swagger",
-        "id": "kogito" 
       },
       {
         "title": "Reactive Microservices c фреймворком Vert.x в Istio.",
@@ -26,9 +26,14 @@
         "id": "envoyproxy"
       },
       {
-        "title": "Protobuf, gRPC, Jaeger, Zipkin в Istio",
-        "description": "protobuf, gRPC, Jaeger, Zipkin",
-        "id": "grpc" 
+        "title": "Микросервисы и Автоматизации Бизнес Процессов с Kogito в Istio.",
+        "description": "Кубики для автоматизации Бизнес Процессов с Kogito, Swagger",
+        "id": "kogito" 
+      },
+      {
+        "title": "Kafka on OpenShift",
+        "description": "Изучите, как использовании Kafka в OpenShift.",
+        "id": "kafka-openshift"
       },
       {
         "title": "Helm пакетный менеджер для Kubernetes",
@@ -36,9 +41,9 @@
         "id": "helm"
       },
       {
-        "title": "Kafka on OpenShift",
-        "description": "Изучите, как использовании Kafka в OpenShift.",
-        "id": "kafka-openshift"
+        "title": "Protobuf, gRPC, Jaeger, Zipkin в Istio",
+        "description": "protobuf, gRPC, Jaeger, Zipkin",
+        "id": "grpc" 
       },
       {
         "title": "Jenkins для CI кода",
@@ -55,87 +60,7 @@
         "description": "Изучите, как использовании ELK в Kubernetes.",
         "id": "elk"
       },
-      {
-        "title": "Spark on Kubernetes",
-        "description": "Изучите, как использовании Spark в Kubernetes.",
-        "id": "spark"
-      },  
-      {
-        "title": "Mastering Ethereum",
-        "description": "Технология ETHEREUM — платформа для создания децентрализованных онлайн-сервисов на базе блокчейна.",
-        "id": "mastering-ethereum"
-      }, 
-      {
-        "title": "Portworx, Cloud Native Storage",
-        "description": "Изучите, как использовании Portworx, Cloud Native Storage.",
-        "id": "portworx-cloud"
-      }, 
-      {
-        "title": "OpenShift Приложения",
-        "description": "Сборка приложений на OpenShift с практическими объяснениями.",
-        "id": "openshift-middleware"
-      },
-      {
-        "title": "Контейнеры для Kubernetes",
-        "description": "Изучите, как строить distilled containers, особенно когда они работают в Kubernetes..",
-        "id": "kubernetes-containers"
-      },
-      {
-        "title": "Kubernetes Serverless",
-        "description": "Откройте  для себя различные методы запуска приложений и функций в Kubernetes.",
-        "id": "kubernetes-serverless"
-      },
-      {
-        "title": "Kubernetes Observability",
-        "description": "Изучите техники проверки-inspecting Kubernetes и ваших приложений, распределенных-distributed по cluster.",
-        "id": "kubernetes-observability"
-      },
-      {
-        "title": "Kubernetes Extensibility (Расширяемость)",
-        "description": "Изучите методы расширения Kubernetes за пределы возможностей и ресурсов по умолчанию",
-        "id": "kubernetes-extensibility"
-      },
-      {
-        "title": "Kubernetes Chaos",
-        "description": "Chaos Engineering это дисциплина экспериментов над системой, чтобы укрепить уверенность в способности системы противостоять турбулентным условиям - turbulent conditions in production.",
-        "id": "kubernetes-chaos"
-      },
-      {
-        "title": "Kubernetes и Машинное обучение",
-        "description": "Изучите методы построения, моделирования и обслуживания решений для машинного обучения в Kubernetes.",
-        "id": "kubernetes-ml"
-      },
-      {
-        "title": "OpenShift::Subsystems, Components, and Internals",
-        "description": "Изучите методы построения, Подсистемы, компоненты и внутренние компоненты в OpenShift.",
-        "id": "subsystems"
-      },
-      {
-        "title": "OpenShift::Operators в OpenShift",
-        "description": "Изучите методы построения, Building Operators в OpenShift.",
-        "id": "operatorframework"
-      },
-      {
-        "title": "OpenShift::AI (Искусственный интеллект) и машинное обучение на OpenShift",
-        "description": "Изучите методы построения, AI and Machine Learning в OpenShift.",
-        "id": "ai-machine-learning"
-      },    
-      {
-        "title": "OpenShift::Adding Persistence",
-        "description": "Изучите методы построения, Persistence хранилище на основе OpenShift Container Storage в OpenShift.",
-        "id": "persistence"
-      },
-      {
-        "title": "Ansible Operator and the Operator SDK",
-        "description": "Изучите, как использовании Ansible для управления жизненным циклом приложений в Kubernetes.",
-        "id": "ansibleop"
-      },
-      {
-        "title": "Docker начало работы.",
-        "description": "Узнайте все о docker, runtimes и docker swarm",
-        "id": "docker"
-      },
-      {
+       {
         "title": "Основы Kubernetes",
         "description": "Изучите основные строительные блоки Kubernetes с практическими объяснениями.",
         "id": "kubernetes" 
@@ -154,16 +79,6 @@
         "title": "Лабораторные по OpenShift",
         "description": "Получите практический опыт работы с OpenShift Origin.",
         "id": "learn-openshift"
-      },
-      {
-        "title": "Сценарии OpenShift",
-        "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
-        "id": "openshift-fundamentals"
-      },
-      {
-        "title": "GraalVM",
-        "description": "Узнайте, как быстрее build/run программы в любом месте с помощью polyglot VM.",
-        "id": "graalvm"
       }
     ],
     "scenarios": []

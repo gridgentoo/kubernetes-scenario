@@ -1,2 +1,2 @@
-Congratulations. You have completed the scenario on the foundations of using GraalVM. 
-Continue exploring GraalVM capabilities at  [katacoda.com/graalvm-scenarios](https://katacoda.com/nelvadas/graalvm)
+Поздравляю. Вы завершили сценарий по основам использования GraalVM.
+Продолжайте изучать возможности GraalVM на  [katacoda.com/graalvm-scenarios](https://www.katacoda.com/kuber-ru/courses/graalvm)

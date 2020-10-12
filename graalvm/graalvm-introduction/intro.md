@@ -1,4 +1,5 @@
-In this scenario, you will :
-1. Download and install GraalVM Community Edition. 
-2. Diagnose your installation, explore the directory structure of a GraalVM setup .
-3. Augment your installation capabilities by Installing Graal extensions using `Graal-updater`
+В этом сценарии вы:
+1. Загрузите и установите **GraalVM Community Edition**. 
+2. Проведите диагностику вашей инсталяции, изучите структуру каталогов установки **GraalVM**.
+3. Расширьте возможности инсталяции, инсталлируйте расширения **Graal** с помощью **Graal-updater**
+

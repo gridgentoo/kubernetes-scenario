@@ -1,12 +1,11 @@
 {   "pathwayTitle": "GraalVM 101",
     "title": "Faster rutimes with GraalVM JIT Compiler",
-    "description": "Getting started with the new GraalVM JIT Compiler ",
+    "description": "Начало работы с новым GraalVM JIT Compiler ",
     "details": {
         "steps": [
             {
-                "title": "Step 1 - Prepare a Benchmarks",
-                "text": "step1.md",
-                "verify": "step1-verify.sh"
+                "title": "Step 1 - Подготовить Benchmarks",
+                "text": "step1.md"
             },
             {
                 "title": "Step 2 - Hotspot JIT Compiler ",
@@ -21,7 +20,7 @@
             "text": "intro.md",
             "courseData": "intro-course-data-bg.sh",
             "code": "intro-course-data-fg.sh",
-            "credits": "This course was inpired by [GraalVM Demos](https://github.com/graalvm/graalvm-demos)"
+            "credits": "Этот курс был вдохновлен демонстрациями [GraalVM Demos](https://github.com/graalvm/graalvm-demos)"
         },
         "finish": {
             "text": "finish.md"

@@ -1,5 +1,5 @@
 
-GraalVM is a polyglot Virtual Machine,n allowing you to write applications that pass values from one language to another in a seamless way.
+**GraalVM** - это виртуальная машина-полиглот **polyglot Virtual Machine**, позволяющая писать приложения, которые беспрепятственно передают значения с одного языка на другой.
 
 
-In this scenario, you will learn how to build and run a native image with GraalVM.
+В этом сценарии вы узнаете, как создать и запустить собственный **native image** с **GraalVM**.

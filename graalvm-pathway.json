@@ -1,0 +1,33 @@
+{
+    "title": "GraalVM",
+    "description": "Сценарии с polyglot VM",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "title": "Добро пожаловать в Graal",
+        "description": "Установим расширения в GraalVM, для языков Python, Ruby, R, llvm, JS",
+        "course_id": "graalvm-introduction"       
+      },      
+      {
+        "title": "Graal JIT Compiler",
+        "description": "Поэкспериментируйте с новым оптимизированным JIT-компилятором Graal",
+        "course_id": "graalvm-compiler"
+      },
+      {
+        "title": "Native Image",
+        "description": "Используйте Graal AOT для создания более быстрых faster standalone исполняемых Java-программ.",
+        "course_id": "graalvm-nativeimage"
+      },
+      {
+        "title": "Начало работы с multilanguage VM ",
+        "description": "(WIP)Пишите на любом языке, запускайте на GraalVM",
+        "course_id": "graalvm-polyglot"
+      },
+      {
+        "title": "Profile гайд оптимизация",
+        "description": "(WIP)  Enterprise Feature only: Машинное обучение JVM для Push perforamces limits",
+        "course_id": "graalvm-pgo"
+      }
+    ]
+  } 
+  

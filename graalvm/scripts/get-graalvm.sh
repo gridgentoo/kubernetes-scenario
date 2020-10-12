@@ -5,7 +5,7 @@
 # $ sh get-graalvm.sh
 
 JDK_VERSION=${JDK_VERSION:-11}
-GRAAL_VERSION=${GRAAL_VERSION:-20.1.0}
+GRAAL_VERSION=${GRAAL_VERSION:-20.2.0}
 curl -L -o /tmp/graalvm-ce.tar.gz https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-${GRAAL_VERSION}/graalvm-ce-java${JDK_VERSION}-linux-amd64-${GRAAL_VERSION}.tar.gz
 tar -C /opt/ -xf /tmp/graalvm-ce.tar.gz
 export PATH=/opt/graalvm-ce-java${JDK_VERSION}-${GRAAL_VERSION}/bin:$PATH
