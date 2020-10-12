@@ -159,6 +159,11 @@
         "title": "Сценарии OpenShift",
         "description": "Изучите основные концепции OpenShift с практическими объяснениями.",
         "id": "openshift-fundamentals"
+      },
+      {
+        "title": "GraalVM",
+        "description": "Узнайте, как быстрее build/run программы в любом месте с помощью polyglot VM.",
+        "id": "graalvm"
       }
     ],
     "scenarios": []

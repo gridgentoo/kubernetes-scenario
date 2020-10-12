@@ -1,0 +1,40 @@
+{   "pathwayTitle": "GraalVM",
+    "title": "Profile Guided Optimization",
+    "description": "Use JVM machine learning to improve performances",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1 - Project setup",
+                "text": "step1.md",
+                "verify": "step1-verify.sh"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "intro-course-data-bg.sh",
+            "code": "intro-course-data-fg.sh",
+            "credits": "This course was inpired by [GraalVM Demos](https://github.com/graalvm/graalvm-demos)"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "client": [
+                {
+                    "file": "notes.txt",
+                    "target": "/home/scrapbook/tutorial",
+                    "chmod": "+x"
+                }
+            ]
+        }
+    },
+    "files": [ "/home/scrapbook/tutorial/notes.txt" ], 
+    "environment": {
+        "uimessage1": "Setup Environment",
+        "icon": "fa-java",
+        "uilayout": "editor-terminal"
+    },
+    "backend": {
+        "imageid": "docker"
+    }
+}

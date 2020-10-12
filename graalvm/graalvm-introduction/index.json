@@ -1,0 +1,35 @@
+{
+    "title": "Getting started with GraalVM",
+    "description": "Install and Verify a GraalVM instance  ",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1 - Install GraalVM CE",
+                "text": "step1.md",
+                "verify": "step1-verify.sh"
+            },
+            {
+                "title": "Step 2 - Explore GraalVM installation Folder",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3 - Install GraalVM addons",
+                "text": "step3.md",
+                "verify": "step3-verify.sh"
+
+            }
+        ],
+        "intro": {
+            "text": "intro.md"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "uilayout": "editor-terminal"
+    },
+    "backend": {
+        "imageid": "docker"
+    }
+}

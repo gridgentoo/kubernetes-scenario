@@ -1,0 +1,1 @@
+[ -d  /home/scrapbook/tutorial/graalvm-examples/native-helloworld/target/classes/org/graalvm/demos/ ] && echo \"done\"
