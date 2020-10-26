@@ -21,12 +21,7 @@
       {
         "course_id": "spring-messaging",
         "title": "ActiveMQ & Spring Messaging, обмен сообщениями в Openshift.",
-        "description": "Современные распределенные микросервисы с использованием сообщений Red Hat AMQ."
-      },
-      {
-        "course_id": "amq-getting-started-broker",
-        "title": "ActiveMQ и обмен сообщениями в Openshift.",
-        "description": "AMQ Broker - это многопротокольный брокер сообщений на Java. Red Hat AMQ построен на эффективном асинхронном ядре."
+        "description": "Современные распределенные микросервисы с использованием сообщений Red Hat AMQ. Red Hat AMQ построен на эффективном асинхронном ядре."
       },
       {
         "course_id": "camel-k-basic",
