@@ -17,8 +17,26 @@ Switch to the application directory in the command line by issuing the following
 
 ```cd /root/projects/amq-examples/amq-js-demo```{{execute}}
 
-Dependencies are listed in the `package.json` file and declare which external projects this sample app requires.
-To download and install them, run the following command:
+############################################################
+
+``oc create -f /opt/amq-broker-71-basic.yaml -n openshift``{{execute}}
+
+``oc create -f /opt/amq-7-image-streams.json -n openshift``{{execute}}
+
+``curl -k --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -``{{execute}}
+
+``touch /etc/rhsm/ca/redhat-uep.pem``{{execute}}
+
+############################################################
+
+Установить Node.js и NVM в систему. npm – это менеджер пакетов, который входит в состав Node.js
+
+``yum -y install nodejs npm``{{execute}}
+
+npm – это менеджер пакетов, который входит в состав Node.js
+
+Зависимости **Dependencies** перечислены в файле `package.json` и объявляют, какие внешние проекты требуются для этого примера приложения.
+Чтобы загрузить и установить их, выполните следующую команду:
 
 ``npm install``{{execute}}
 
