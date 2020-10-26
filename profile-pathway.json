@@ -1,6 +1,11 @@
 {
     "courses": [
       {
+        "title": "МикроCервисы с OpenShift(Istio(Service))",
+        "description": "Изучите, как использовании Сервисы, Service(mq, activemq, rabbitmq, camel, kafka, ignite, nats)).",
+        "id": "mq"
+      },
+      {
         "title": "GraalVM",
         "description": "Сценарии с polyglot VM.",
         "id": "graalvm"
@@ -35,12 +40,7 @@
         "description": "Изучите, как использовании Kafka в OpenShift.",
         "id": "kafka-openshift"
       },
-      {
-        "title": "Helm пакетный менеджер для Kubernetes",
-        "description": "Откройте для себя пакетный менеджер Helm.",
-        "id": "helm"
-      },
-      {
+     {
         "title": "Protobuf, gRPC, Jaeger, Zipkin в Istio",
         "description": "protobuf, gRPC, Jaeger, Zipkin",
         "id": "grpc" 

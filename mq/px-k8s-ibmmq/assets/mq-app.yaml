@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ibm-mq
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mq
+    spec:
+      schedulerName: stork
+      containers:
+      - name: mq
+        image: ibmcom/mq:9.1.1.0
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 1414
+        - containerPort: 9443
+        env:
+        - name: LICENSE
+          value: "accept"
+        - name: MQ_QMGR_NAME
+          value: "QM1"
+        - name: MQ_APP_PASSWORD
+          value: "passw0rd"
+        volumeMounts:
+        - mountPath: /mnt/mqm
+          name: mq-data
+      volumes:
+      - name: mq-data
+        persistentVolumeClaim:
+          claimName: mq-data

@@ -1,0 +1,43 @@
+{
+  "title": "HA IBM MQ on Kubernetes with Portworx",
+  "icon": "fa-kubernetes",
+  "description": "Deploying IBM MQ on Kubernetes and showing an HA failover scenario",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      }
+    ],
+    "assets": {
+      "host01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+      "node01": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+      "node02": [ {"file": "*", "target": "/root", "chmod": "+x" } ],
+      "node03": [ {"file": "*", "target": "/root", "chmod": "+x" } ]
+    },
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "portworx-kubernetes-running"
+  }
+}

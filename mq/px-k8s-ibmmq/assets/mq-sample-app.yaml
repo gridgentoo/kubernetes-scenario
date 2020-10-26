@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mq-app
+  labels:
+    name: mq-app
+spec:
+  containers:
+  - name: mq-app
+    image: grdnr/mq-demo:latest
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 30; done;" ]

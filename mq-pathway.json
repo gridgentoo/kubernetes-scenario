@@ -1,0 +1,68 @@
+{
+    "title": "МикроCервисы с OpenShift(Istio(Service))",
+    "icon": "fa-kubernetes",
+    "description": "Интерактивные сценарии обучения предоставляют вам, в предварительно настроенном pre-configured OpenShift® инстансе, доступном из вашего браузера.",
+    "courses": [
+      {
+        "course_id": "openshift42",
+        "title": "OpenShift 4.2, Экперементальная площадка.",
+        "description": "Экперементальная площадка."
+      },
+      {
+        "course_id": "openshift44",
+        "title": "OpenShift 4.4, Экперементальная площадка.",
+        "description": "Экперементальная площадка."
+      },
+      {
+        "course_id": "openshift45",
+        "title": "OpenShift 4.5, Экперементальная площадка.",
+        "description": "Экперементальная площадка."
+      },
+      {
+        "course_id": "amq-getting-started-broker",
+        "title": "ActiveMQ и обмен сообщениями в Openshift.",
+        "description": "AMQ Broker - это многопротокольный брокер сообщений на Java. Red Hat AMQ построен на эффективном асинхронном ядре."
+      },
+      {
+        "course_id": "spring-messaging",
+        "title": "ActiveMQ & Spring Messaging, обмен сообщениями в Openshift.",
+        "description": "Современные распределенные микросервисы с использованием сообщений Red Hat AMQ."
+      },
+      {
+        "course_id": "camel-k-basic",
+        "title": "Camel K Basics",
+        "description": "Простой базовый пример Camel K, hello world example ."
+      },
+      {
+        "course_id": "px-k8s-ibmmq",
+        "title": "MQ в Kubernetes.",
+        "description": "Развертывание IBM MQ в Kubernetes и демонстрация сценария аварийного переключения HA failover."
+      },
+      {
+        "course_id": "rabbitmq",
+        "title": "RabbitMQ Cluster on Kubernetes",
+        "description": "Запустим RabbitMQ в Kubernetes."
+      },
+      {
+        "course_id": "apache-ignite",
+        "title": "Apache Ignite Cluster (In-Memory) on Kubernetes",
+        "description": "In-Memory Cluster, Apache Ignite - это распределенная база данных, предназначенная для хранения и вычисления больших объемов данных в кластере узлов."
+      },
+      {
+        "course_id": "facebook-memcached",
+        "title": "Memcached Cluster with McRouter on Kubernetes",
+        "description": "Mcrouter основной компонент инфраструктуры кеша в Facebook и Instagram, где mcrouter обрабатывает почти 5 миллиардов запросов в секунду"
+      },
+      {
+        "course_id": "strimzi-kafka-operator",
+        "title": "Strimzi - Kafka Cluster on Kubernetes",
+        "description": "Strimzi - Распределенная потоковая передача с Apache Kafka в Kubernetes."
+      },
+      {
+        "course_id": "apache-airflow",
+        "title": "Airflow Cluster on Kubernetes",
+        "description": "Apache Airflow - workflow менеджер, для разработки, планирования и мониторинга batch-процессов."
+      }
+
+    ]
+  }
