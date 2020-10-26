@@ -1,8 +1,8 @@
 {
     "courses": [
       {
-        "title": "МикроCервисы с OpenShift(Istio(Service))",
-        "description": "Изучите, как использовании Сервисы, Service(mq, activemq, rabbitmq, camel, kafka, ignite, nats)).",
+        "title": "OpenShift(Istio(Service)) - МикроCервисы",
+        "description": "Изучите, как использовании МикроCервисы, Service(mq, activemq, rabbitmq, camel, kafka, ignite, nats)).",
         "id": "mq"
       },
       {
@@ -16,12 +16,12 @@
         "id": "istio"
       },
       {
-        "title": "Reactive Microservices c фреймворком Vert.x в Istio.",
+        "title": "Reactive Microservices c фреймворком Vert.x в Istio",
         "description": "Vert.x и In-Memory Hazelcast(или Ignite) для Reactive Microservices.",
         "id": "vertx-openshift"
       }, 
       {
-        "title": "Quarkus: Reactive Microservices c GraalVM в Istio.",
+        "title": "Quarkus: Reactive Microservices c GraalVM в Istio",
         "description": "Quarkus - Java-стек Kubernetes, созданный специально для GraalVM.",
         "id": "quarkus-openshift"
       }, 
@@ -34,11 +34,6 @@
         "title": "Микросервисы и Автоматизации Бизнес Процессов с Kogito в Istio.",
         "description": "Кубики для автоматизации Бизнес Процессов с Kogito, Swagger",
         "id": "kogito" 
-      },
-      {
-        "title": "Kafka on OpenShift",
-        "description": "Изучите, как использовании Kafka в OpenShift.",
-        "id": "kafka-openshift"
       },
      {
         "title": "Protobuf, gRPC, Jaeger, Zipkin в Istio",
@@ -74,6 +69,11 @@
         "title": "YamlBuilder",
         "description": "мы рассмотрим использование YamlBuilder для CI.",
         "id": "yamlbuilder" 
+      },
+      {
+        "title": "Golang",
+        "description": "Введение в контейнеры для программистов Go.",
+        "id": "containers-and-go" 
       },
       {
         "title": "Лабораторные по OpenShift",

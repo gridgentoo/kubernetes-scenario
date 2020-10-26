@@ -1,49 +1,55 @@
-In this next experiment explore how Chaos Mesh carries out the common experiment of periodic and random Pod removal.
+В этом следующем эксперименте исследуйте, как **Chaos Mesh** выполняет обычный эксперимент периодического и случайного удаления Подов.
 
-## Install Example Nginx application
+## Установим пример приложения Nginx
 
-Install an example application as a target for the experiment. It's just a deployment of the common Nginx web server with Pod replications. Apply the Deployment to the _chaos-sandbox_ namespace:
+
+Установите пример приложения в качестве цели для эксперимента. 
+Это просто развертывание обычного веб-сервера **Nginx** с репликациями Подов. 
+Примените развертывание к пространству имен **_chaos-sandbox_**:
 
 `kubectl create namespace chaos-sandbox`{{execute}}
 
 `kubectl apply -f nginx.yaml -n chaos-sandbox`{{execute}}
 
-It will take a moment to start all the Pods. You can see the application status in the default namespace:
+Для запуска всех Подов потребуется некоторое время. 
+Вы можете увидеть статус приложения в пространстве имен по умолчанию **default namespace**:
 
 `kubectl get -n chaos-sandbox deployments,pods,services`{{execute}}
 
-## Define Experiment
+## Define - определить эксперимент
 
-The Chaos Mesh has installed several custom resources:
+В **Chaos Mesh** установим несколько пользовательских ресурсов **custom resources**:
 
 `kubectl get crds`{{execute}}
 
-For this experiment well create a declarative YAML manifests that defines an experiment around `podchaos.chaos-mesh.org`. The experiment specification for the _PodChaos_ manifest appears this way:
+Для этого эксперимента создайте декларативный **YAML**-манифест, который определяет эксперимент вокруг **`podchaos.chaos-mesh.org`**. 
+Спецификация эксперимента для манифеста **_PodChaos_** выглядит следующим образом:
 
 `ccat pod-removal-experiment.yaml`{{execute}}
 
-The experiment declares that the specific pod should be killed every 15s. The removal will only be applied to the target pod labeled "chaos": "blast here", which is the _blast radius_:
+Эксперимент заявляет, что конкретный Под должен уничтожаться каждые **15s**. 
+Удаление будет применено только к целевому Поду с пометкой **"chaos"**: **"blast here"**, который равен **_blast radius_**:
 
 `kubectl get -n chaos-sandbox deployments,pods,services -l chaos=blast-here`{{execute}}
 
 ## Apply Experiment
 
-Because the Chaos Mesh follows the Kubernetes Operator pattern with CRDs, the experiment can be applied like any other Kubernetes object.
+Поскольку **Chaos Mesh** следует паттерну **Kubernetes Operator** с **CRD**, эксперимент может быть применен как любой другой объект **Kubernetes**.
 
 `kubectl apply -f pod-removal-experiment.yaml`{{execute}}
 
-The experiment is now running.
+Сейчас идет эксперимент.
 
 `kubectl get PodChaos -n chaos-mesh`{{execute}}
 
 ## Observe
 
-Based on the cron time in the experiment, watch the Pods randomly terminate and new ones start:
+Основываясь на **cron time** в эксперименте, наблюдайте, как поды случайным образом завершаются, и запускаются новые Поды:
 
 `watch kubectl get -n chaos-sandbox deployments,pods,services`{{execute}}
 
-Use this `clear`{{execute interrupt}} to break out of the watch or press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+Используйте этот `clear`{{execute interrupt}}, чтобы прервать наблюдение **watch**, или нажмите <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-Look at the Chaos Mesh dashboard, find the experiment, and drill down to explore the experiment details.
+Посмотрите на панель инструментов **Chaos Mesh dashboard**, найдите эксперимент и разверните его, чтобы изучить детали эксперимента.
 
-There are many more types of experiments. Which ones appeal to you that could help your application increase its availability in times of chaos?
+Есть еще много видов экспериментов. Какие из них могут помочь вашему приложению повысить его доступность во времена хаоса **times of chaos**?

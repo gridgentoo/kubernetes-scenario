@@ -4,8 +4,13 @@
     "description": "Интерактивные сценарии обучения предоставляют вам, в предварительно настроенном pre-configured OpenShift® инстансе, доступном из вашего браузера.",
     "courses": [
       {
+        "course_id": "istio-1.7.5",
+        "title": "Istio 1.7.5: Observing с Kiali",
+        "description": "Узнайте, как использовать Observing с Kiali."
+      },
+      {
         "course_id": "istio-1.7.0",
-        "title": "export ISTIO_VERSION=1.6.2",
+        "title": "export ISTIO_VERSION=1.7.0",
         "description": "Инструкция по развертыванию ванильного Istio в ванильном Kubernetes."
       },
       {
@@ -34,6 +39,11 @@
         "description": "Как управлять умной маршрутизацией в Istio, управленить доступом, балансировкой нагрузки и ограничением скорости."
       },
       {
+        "course_id": "adv2-mTLS",
+        "title": "Mutual TLS",
+        "description": "Узнайте, как использовать Mutual TLS."
+      },
+      {
         "course_id": "mTLS",
         "title": "Istio 1.6.x Расширение: Mutual TLS",
         "description": "Узнайте, как использовать Mutual TLS с Envoy."
@@ -46,11 +56,6 @@
       {
         "course_id": "istio-1.7.1",
         "title": "Istio 1.7.1: Observing с Kiali",
-        "description": "Узнайте, как использовать Observing с Kiali."
-      },
-      {
-        "course_id": "istio-1.7.2",
-        "title": "Istio 1.7.2: Observing с Kiali",
         "description": "Узнайте, как использовать Observing с Kiali."
       }
     ]

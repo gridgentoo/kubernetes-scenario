@@ -21,9 +21,4 @@
 - [Fallacies of Distributed Computing Explained (PDF)](http://www.rgoarchitects.com/Files/fallacies.pdf)
 
 ------
-<p style="width: 100%; text-align: center; padding: 1em; margin: 3em; margin-left: 10em; margin-right: 10em; border-; 1px; border-color: olive;  border-radius: 12px; border-style:outset">
-<img align="left" src="./assets/yunusov.png" width="100" style="border-radius: 12px">
-For a deeper understanding of these topics and more join <br>[Yunusov Temur](https://github.com/gridgentoo?tab=repositories)<br> at various conferences, symposiums, workshops, and meetups.
-<br><br>
-<b>Software Architectures ★ Speaker ★ Workshop Hosting ★ Kubernetes & Golang Specialist</b>
-</p>
+

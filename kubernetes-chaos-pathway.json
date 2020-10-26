@@ -4,6 +4,11 @@
     "description": "Chaos Engineering is the discipline of experimenting on a system in order to build confidence in the system’s capability to withstand turbulent conditions in production.",
     "courses": [
       {
+        "course_id": "chaos-mesh",
+        "title": "Chaos Mesh",
+        "description": "Применение облачной chaos engineering к вашим приложениям с помощью Chaos Mesh."
+      },
+      {
         "course_id": "kubeinvaders",
         "title": "KubeInvaders",
         "description": "Destroy Pods as if they were aliens."
@@ -17,23 +22,7 @@
         "course_id": "chaoskube",
         "title": "Chaoskube",
         "description": "Periodically kills random pods in your Kubernetes cluster."
-      },
-      {
-        "course_id": "chaos-mesh",
-        "title": "Chaos Mesh",
-        "description": "Применение облачной chaos engineering к вашим приложениям с помощью Chaos Mesh."
-      },
-      {
-        "course_id": "istio-intro",
-        "title": "Istio 1.7.3 начало работы",
-        "description": "Знакомство с Istio с приложением BookInfo."
-      },
-      {
-        "course_id": "adv1-kiali",
-        "title": "Observing with Kiali",
-        "description": "Знакомство с Kiali в istio-1.0.5."
       }
-
    
     ]
   }

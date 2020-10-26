@@ -23,50 +23,56 @@
 
 При запущенном приложении **web-show** к его **web interface** можно получить доступ из **"Web Show"** над областью командной строки или по этой ссылке: https://[[HOST_SUBDOMAIN]]-30081-[[KATACODA_HOST]].environments.katacoda.com/.
 
-## Define Experiment
+## Define - определить эксперимент
 
-The Chaos Mesh has installed several custom resources:
+В Chaos Mesh установлено несколько пользовательских ресурсов **custom resources**:
 
 `kubectl get crds`{{execute}}
 
-You can reference these resources to create declarative YAML manifests that define your experiment. For your first experiment, you will impose a _network delay_. The delay is defined in the _NetworkChaos_ manifest this way:
+Вы можете ссылаться на эти ресурсы для создания декларативных манифестов **YAML**, которые определяют ваш эксперимент.
+Для вашего первого эксперимента вы наложите (_задержку сети_ ) **_network delay_**. 
+Задержка определяется в манифесте **_NetworkChaos_** следующим образом:
 
 `ccat network-delay-experiment.yaml`{{execute}}
 
-The experiment declares that a 10ms network delay should be injected every minute that lasts for 30 seconds. The delay will only be applied to the target service labeled "app": "web-show". This is the _blast radius_. Only the web-show app has that label:
+Эксперимент заявляет, что каждую минуту следует вводить сетевую задержку **network delay** 10ms, которая длится 30 секунд. 
+Задержка будет применена только к целевой службе с меткой **"app": "web-show"**. 
+Это радиус взрыва **_blast radius_**. Только приложение **web-show** имеет такой **label**:
 
 `kubectl get deployments,pods -l app='web-show'`{{execute}}
 
 ## Apply Experiment
 
-Because the Chaos Mesh follows the Kubernetes Operator pattern with CRDs, the experiment can be applied like any other Kubernetes object.
+Поскольку **Chaos Mesh** следует паттерну **Kubernetes Operator** с **CRD**, эксперимент может быть применен как любой другой объект **Kubernetes**.
 
 `kubectl apply -f network-delay-experiment.yaml`{{execute}}
 
-The experiment is now running.
+Сейчас идет эксперимент **running**.
 
 `kubectl get NetworkChaos`{{execute}}
 
 ## Observe
 
 <img align="right" width="250" src="./assets/network-delay.png">
-Access the [web-show application](https://[[HOST_SUBDOMAIN]]-30081-[[KATACODA_HOST]].environments.katacoda.com/.
-) (or use the tab). The application has a built-in graph that will show the latency it's experiencing. With the experiment applied you will see the 10ms delay every 30 seconds. Look at the dashboard, find the experiment, and drill down on its details.
+Откройте [web-show application](https://[[HOST_SUBDOMAIN]]-30081-[[KATACODA_HOST]].environments.katacoda.com/.
+) (или воспользуйтесь вкладкой). Приложение имеет встроенный график, показывающий задержку **latency**, с которой оно сталкивается. 
+После проведенного эксперимента вы будете видеть задержку **10ms** каждые **30 секунд**. 
+Посмотрите на информационную панель **dashboard**, найдите эксперимент и углубитесь в его детали.
 
-## Update Experiment
+## Обновить эксперимент
 
-At any time you can change the YAML declaration and apply further experiment updates with:
+В любое время вы можете изменить **YAML declaration** и применить дальнейшие обновления эксперимента с помощью:
 
 `kubectl apply -f network-delay-experiment.yaml`{{execute}}
 
-The experiment can be paused:
+Эксперимент можно приостановить:
 
 `kubectl annotate networkchaos web-show-network-delay experiment.chaos-mesh.org/pause=true`{{execute}}
 
-and resumed:
+и возобновить:
 
 `kubectl annotate networkchaos web-show-network-delay experiment.chaos-mesh.org/pause-`{{execute}}
 
-Since the NetworkChaos is like any other Kubernetes resource, the experiment can be easily removed.
+Поскольку **NetworkChaos** похож на любой другой ресурс **Kubernetes**, эксперимент можно легко удалить.
 
 `kubectl delete -f network-delay-experiment.yaml`{{execute}}

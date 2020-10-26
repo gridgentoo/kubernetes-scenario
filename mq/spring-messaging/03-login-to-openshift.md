@@ -26,7 +26,7 @@ For this scenario, let's create a project that you will use to house your applic
 **3. Open the OpenShift Web Console**
 
 
-Кликните [Console](https://console-openshift-console-[[HOST_SUBDOMAIN]]-443-[[KATACODA_HOST]].environments.katacoda.com) tab чтобы открыть dashboard.
+Кликните [Console](https://console-openshift-console-[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com) tab чтобы открыть dashboard.
 
 OpenShift ships with a web-based console that will allow users to
 perform various tasks via a browser. To get a feel for how the web console

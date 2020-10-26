@@ -1,0 +1,18 @@
+{
+    "title": "Введение в контейнеры для программистов Go",
+    "icon": "fa-kubernetes",
+    "description": "Интерактивные сценарии обучения предоставляют вам, в предварительно настроенном pre-configured OpenShift® инстансе, доступном из вашего браузера.",
+    "courses": [
+      {
+        "course_id": "hello",
+        "title": "1-1: Начало работы с контейнерами",
+        "description": "Напишите простое приложение Go и запустите его внутри контейнера."
+      },
+      {
+        "course_id": "apache-airflow",
+        "title": "Airflow Cluster on Kubernetes",
+        "description": "Apache Airflow - workflow менеджер, для разработки, планирования и мониторинга batch-процессов."
+      }
+
+    ]
+  }

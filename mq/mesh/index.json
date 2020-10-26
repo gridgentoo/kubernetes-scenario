@@ -1,0 +1,90 @@
+{
+    "title": " Demo 4 - Kube Cluster, Kafka, Istio, and multiple versions of Calendar App",
+    "description": "Learn how to deploy a Kube cluster, Kafka, Istio  and multiple versions of Calendar App",
+    "difficulty": "intermediate",
+    "time": "45 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1 - Kubernetes Deployment",
+                "text": "step1.md"
+            },
+            {
+                "title": "Step 2 - Install istio",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3 - Setup BookInfo example and validate isto elements",
+                "text": "step3.md"
+            },
+            {
+              "title": "Step 4 - Deploy kafka elements",
+              "text": "step4.md"
+            },
+            {
+              "title": "Step 5 - Deploy elements of Calendar App",
+              "text": "step5.md"
+            },
+            {
+              "title": "Step 6 - Validate Calendar App deployment",
+              "text": "step6.md"
+            },
+            {
+              "title": "Step 7 - Validate the fix to the Calendar App",
+              "text": "step7.md"
+            },
+            {
+              "title": "Step 8 - Changing user's experience by changing header values",
+              "text": "step8.md"
+            }
+        ],
+        "intro": {
+          "text": "intro.md",
+          "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+          "host01": [
+                      {"file": "dashboard.yaml", "target": "/root"},
+                      {"file": "000storageclass.yml", "target": "/opt"},
+                      {"file": "010pv-volume.yml", "target": "/opt"},
+                      {"file": "100zookeeper.yml", "target": "/opt"},
+                      {"file": "110zookeeper-headless.yml", "target": "/opt"},
+                      {"file": "120zookeeper-statefulset.yml", "target": "/opt"},
+                      {"file": "130zookeeper-disruptionbudget.yml", "target": "/opt"},
+                      {"file": "200kafka.yml", "target": "/opt"},
+                      {"file": "210kafka-headless.yml", "target": "/opt"},
+                      {"file": "220kafka-statefulset.yml", "target": "/opt"},
+                      {"file": "init.sh", "target": "/opt"},
+                      {"file": "istio-services.yml", "target": "/opt"},
+                      {"file": "calendarapp.yml", "target": "/opt"},
+                      {"file": "calendarservice_v1.yml", "target": "/opt"},
+                      {"file": "calendarservice_v2.yml", "target": "/opt"},
+                      {"file": "userservice.yml", "target": "/opt"},
+                      {"file": "calendarapp-m-gateway.yml", "target": "/opt"},
+                      {"file": "calendarapp-m2-gateway.yml", "target": "/opt"},
+                      {"file": "calendarapp-m.yml", "target": "/opt"},
+                      {"file": "calendarapp-m2.yml", "target": "/opt"},
+                      {"file": "calendarservice-m.yml", "target": "/opt"},
+                      {"file": "calendarservice-m2.yml", "target": "/opt"},
+                      {"file": "calendarservice-m-gateway.yml", "target": "/opt"},
+                      {"file": "destination-rule-all-mtls.yml", "target": "/opt"},
+                      {"file": "virtual-service-calendarservice-m-v1-v2.yml", "target": "/opt"},
+                      {"file": "userservice-m.yml", "target": "/opt"},
+                      {"file": "helloworld.yaml", "target": "/opt"},
+                      {"file": "calendara.yaml", "target": "/opt"},
+                      {"file": "kafka-producer-consumer.yml", "target": "/opt"},
+		              {"file": "kafka-producer-consumer-gateway.yml", "target": "/opt"}
+	            ]
+        }
+    },
+    "environment": {
+        "uilayout": "terminal-terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    },
+    "backend": {
+      "imageid": "kubernetes-cluster"
+    }
+}

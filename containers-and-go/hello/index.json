@@ -1,0 +1,52 @@
+{
+  "pathwayTitle": "Введение в контейнеры для программистов на Go",
+  "title": "Container basics: containers and images",
+  "description": "В этом разделе мы рассмотрим, что такое контейнер и что такое container image",
+  "difficulty": "beginner",
+  "time": "30 minutes",
+  "details": {
+    "steps": [{
+      "title": "Напишим простой веб-сервер",
+      "text": "step1.md"
+    },
+    {
+      "title": "Поместите свое приложение в container image",
+      "text": "step2.md"
+    },
+    {
+      "title": "Запустите container image",
+      "text": "step3.md"
+    },
+    {
+      "title": "Container port mapping",
+      "text": "step4.md"
+    },
+    {
+      "title": "Открытие порта через Dockerfile",
+      "text": "step5.md"
+    },
+    {
+      "title": "Запустите свой контейнер на собственном ноутбуке",
+      "text": "step6.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uisettings": "go",
+    "uimessage1": "\u001b[36mYour Interactive Bash Terminal.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  },
+  "files": [
+    "hello.go",
+    "Dockerfile"
+  ]
+}

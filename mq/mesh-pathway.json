@@ -1,0 +1,37 @@
+{
+    "title": "Operator для OpenShift4.5",
+    "description": "Operator для OpenShift4.5",
+    "paid": false,
+    "courses": [
+      {
+        "course_id": "microservices",
+        "title": "Istio, пример от Google, c 10 микросервисами",
+        "description": "Пример от Google, c 10 микросервисами, демонстрирующих Istio, gRPC и OpenCensus."
+      },
+      {
+        "course_id": "mattermost",
+        "title": "Istio, Slack-alternative in Golang and React - Mattermost",
+        "description": "Telegram-alternative, Slack-alternative in Golang and React - Mattermosts."
+      },
+      {
+        "course_id": "control-plane",
+        "title": "Operator Service Mesh для установка Control Plane в OpenShift4.5",
+        "description": "Control Plane для OpenShift4.5"
+      },
+      {
+        "course_id": "kafka-istio",
+        "title": "Istio & Kafka, и несколько версий приложения Calendar App",
+        "description": "Istio - Kafka, Istio, и несколько версий приложения Calendar App"
+      },
+      {
+        "course_id": "data-plane",
+        "title": "Data Plane для OpenShift4.5",
+        "description": "OpenShift Service Mesh - Data Plane"
+      },
+      {
+        "course_id": "features-routing",
+        "title": "Features: Routing для OpenShift4.5",
+        "description": "OpenShift Service Mesh - Features: Routing"
+      }
+    ]
+  }

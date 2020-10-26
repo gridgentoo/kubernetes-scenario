@@ -1,0 +1,27 @@
+{
+  "title": "Developing with Camel",
+  "description": "Camel K and Camel Kafka Connector",
+  "paid": false,
+  "courses": [
+    {
+      "course_id": "camel-k-basic",
+      "title": "Camel K Basics",
+      "description": "Это простой базовый пример Camel K hello world"
+    },
+    {
+      "course_id": "camel-k-serving",
+      "title": "Serverless Camel K",
+      "description": "Это простой serverless RESTful Camel K"
+    },
+    {
+      "course_id": "camel-k-eventing",
+      "title": "Serverless Eventing с Camel K",
+      "description": "В этом упражнении показано, как создать event driven serverless Camel K приложение"
+    },
+    {
+      "course_id": "camel-kafka-connector",
+      "title": "Основы работы с Camel Kafka Connector",
+      "description": "Сценарий простой управляемой передачи файлов File Transfer с использованием Camel Kafka Connector"
+    }
+  ]
+}

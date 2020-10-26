@@ -1,5 +1,0 @@
-spec:
-  ports:
-  - name: http-kiali
-    nodePort: 31546
-    port: 20001
